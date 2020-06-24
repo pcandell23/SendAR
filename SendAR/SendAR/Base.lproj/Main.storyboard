@@ -21,13 +21,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="okh-Bq-gjG">
+                                <rect key="frame" x="152" y="421" width="110" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="Tracker"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="okh-Bq-gjG" firstAttribute="top" secondItem="k2U-ye-gXB" secondAttribute="bottom" constant="250" id="8ru-8G-Xo9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="k2U-ye-gXB" secondAttribute="bottom" constant="691" id="9mS-Bf-qV9"/>
+                            <constraint firstItem="okh-Bq-gjG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="152" id="DZM-5M-JhL"/>
                             <constraint firstItem="k2U-ye-gXB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="109" id="K18-Xx-h14"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="k2U-ye-gXB" secondAttribute="trailing" constant="108" id="WyL-zw-218"/>
                             <constraint firstItem="k2U-ye-gXB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="58" id="oZn-pj-33i"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="okh-Bq-gjG" secondAttribute="bottom" constant="387" id="wKL-bs-DGE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="okh-Bq-gjG" secondAttribute="trailing" constant="152" id="ykz-4y-36q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
