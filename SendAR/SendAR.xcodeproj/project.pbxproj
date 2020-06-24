@@ -1,0 +1,612 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		96A6B04624A2E2E700AB0794 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6B04524A2E2E700AB0794 /* AppDelegate.swift */; };
+		96A6B04824A2E2E700AB0794 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6B04724A2E2E700AB0794 /* SceneDelegate.swift */; };
+		96A6B04A24A2E2E700AB0794 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6B04924A2E2E700AB0794 /* ViewController.swift */; };
+		96A6B04D24A2E2E700AB0794 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96A6B04B24A2E2E700AB0794 /* Main.storyboard */; };
+		96A6B05024A2E2E700AB0794 /* SendAR.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 96A6B04E24A2E2E700AB0794 /* SendAR.xcdatamodeld */; };
+		96A6B05224A2E2EA00AB0794 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96A6B05124A2E2EA00AB0794 /* Assets.xcassets */; };
+		96A6B05524A2E2EA00AB0794 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96A6B05324A2E2EA00AB0794 /* LaunchScreen.storyboard */; };
+		96A6B06024A2E2EA00AB0794 /* SendARTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6B05F24A2E2EA00AB0794 /* SendARTests.swift */; };
+		96A6B06B24A2E2EA00AB0794 /* SendARUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6B06A24A2E2EA00AB0794 /* SendARUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		96A6B05C24A2E2EA00AB0794 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96A6B03A24A2E2E700AB0794 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 96A6B04124A2E2E700AB0794;
+			remoteInfo = SendAR;
+		};
+		96A6B06724A2E2EA00AB0794 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96A6B03A24A2E2E700AB0794 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 96A6B04124A2E2E700AB0794;
+			remoteInfo = SendAR;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		96A6B04224A2E2E700AB0794 /* SendAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SendAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		96A6B04524A2E2E700AB0794 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		96A6B04724A2E2E700AB0794 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		96A6B04924A2E2E700AB0794 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		96A6B04C24A2E2E700AB0794 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		96A6B04F24A2E2E700AB0794 /* SendAR.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SendAR.xcdatamodel; sourceTree = "<group>"; };
+		96A6B05124A2E2EA00AB0794 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		96A6B05424A2E2EA00AB0794 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		96A6B05624A2E2EA00AB0794 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96A6B05B24A2E2EA00AB0794 /* SendARTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SendARTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		96A6B05F24A2E2EA00AB0794 /* SendARTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendARTests.swift; sourceTree = "<group>"; };
+		96A6B06124A2E2EA00AB0794 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96A6B06624A2E2EA00AB0794 /* SendARUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SendARUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		96A6B06A24A2E2EA00AB0794 /* SendARUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendARUITests.swift; sourceTree = "<group>"; };
+		96A6B06C24A2E2EA00AB0794 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		96A6B03F24A2E2E700AB0794 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96A6B05824A2E2EA00AB0794 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96A6B06324A2E2EA00AB0794 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		96A6B03924A2E2E700AB0794 = {
+			isa = PBXGroup;
+			children = (
+				96A6B04424A2E2E700AB0794 /* SendAR */,
+				96A6B05E24A2E2EA00AB0794 /* SendARTests */,
+				96A6B06924A2E2EA00AB0794 /* SendARUITests */,
+				96A6B04324A2E2E700AB0794 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		96A6B04324A2E2E700AB0794 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				96A6B04224A2E2E700AB0794 /* SendAR.app */,
+				96A6B05B24A2E2EA00AB0794 /* SendARTests.xctest */,
+				96A6B06624A2E2EA00AB0794 /* SendARUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		96A6B04424A2E2E700AB0794 /* SendAR */ = {
+			isa = PBXGroup;
+			children = (
+				96A6B04524A2E2E700AB0794 /* AppDelegate.swift */,
+				96A6B04724A2E2E700AB0794 /* SceneDelegate.swift */,
+				96A6B04924A2E2E700AB0794 /* ViewController.swift */,
+				96A6B04B24A2E2E700AB0794 /* Main.storyboard */,
+				96A6B05124A2E2EA00AB0794 /* Assets.xcassets */,
+				96A6B05324A2E2EA00AB0794 /* LaunchScreen.storyboard */,
+				96A6B05624A2E2EA00AB0794 /* Info.plist */,
+				96A6B04E24A2E2E700AB0794 /* SendAR.xcdatamodeld */,
+			);
+			path = SendAR;
+			sourceTree = "<group>";
+		};
+		96A6B05E24A2E2EA00AB0794 /* SendARTests */ = {
+			isa = PBXGroup;
+			children = (
+				96A6B05F24A2E2EA00AB0794 /* SendARTests.swift */,
+				96A6B06124A2E2EA00AB0794 /* Info.plist */,
+			);
+			path = SendARTests;
+			sourceTree = "<group>";
+		};
+		96A6B06924A2E2EA00AB0794 /* SendARUITests */ = {
+			isa = PBXGroup;
+			children = (
+				96A6B06A24A2E2EA00AB0794 /* SendARUITests.swift */,
+				96A6B06C24A2E2EA00AB0794 /* Info.plist */,
+			);
+			path = SendARUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		96A6B04124A2E2E700AB0794 /* SendAR */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96A6B06F24A2E2EB00AB0794 /* Build configuration list for PBXNativeTarget "SendAR" */;
+			buildPhases = (
+				96A6B03E24A2E2E700AB0794 /* Sources */,
+				96A6B03F24A2E2E700AB0794 /* Frameworks */,
+				96A6B04024A2E2E700AB0794 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SendAR;
+			productName = SendAR;
+			productReference = 96A6B04224A2E2E700AB0794 /* SendAR.app */;
+			productType = "com.apple.product-type.application";
+		};
+		96A6B05A24A2E2EA00AB0794 /* SendARTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96A6B07224A2E2EB00AB0794 /* Build configuration list for PBXNativeTarget "SendARTests" */;
+			buildPhases = (
+				96A6B05724A2E2EA00AB0794 /* Sources */,
+				96A6B05824A2E2EA00AB0794 /* Frameworks */,
+				96A6B05924A2E2EA00AB0794 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				96A6B05D24A2E2EA00AB0794 /* PBXTargetDependency */,
+			);
+			name = SendARTests;
+			productName = SendARTests;
+			productReference = 96A6B05B24A2E2EA00AB0794 /* SendARTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		96A6B06524A2E2EA00AB0794 /* SendARUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96A6B07524A2E2EB00AB0794 /* Build configuration list for PBXNativeTarget "SendARUITests" */;
+			buildPhases = (
+				96A6B06224A2E2EA00AB0794 /* Sources */,
+				96A6B06324A2E2EA00AB0794 /* Frameworks */,
+				96A6B06424A2E2EA00AB0794 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				96A6B06824A2E2EA00AB0794 /* PBXTargetDependency */,
+			);
+			name = SendARUITests;
+			productName = SendARUITests;
+			productReference = 96A6B06624A2E2EA00AB0794 /* SendARUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		96A6B03A24A2E2E700AB0794 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = SendAR;
+				TargetAttributes = {
+					96A6B04124A2E2E700AB0794 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					96A6B05A24A2E2EA00AB0794 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 96A6B04124A2E2E700AB0794;
+					};
+					96A6B06524A2E2EA00AB0794 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 96A6B04124A2E2E700AB0794;
+					};
+				};
+			};
+			buildConfigurationList = 96A6B03D24A2E2E700AB0794 /* Build configuration list for PBXProject "SendAR" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 96A6B03924A2E2E700AB0794;
+			productRefGroup = 96A6B04324A2E2E700AB0794 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				96A6B04124A2E2E700AB0794 /* SendAR */,
+				96A6B05A24A2E2EA00AB0794 /* SendARTests */,
+				96A6B06524A2E2EA00AB0794 /* SendARUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		96A6B04024A2E2E700AB0794 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96A6B05524A2E2EA00AB0794 /* LaunchScreen.storyboard in Resources */,
+				96A6B05224A2E2EA00AB0794 /* Assets.xcassets in Resources */,
+				96A6B04D24A2E2E700AB0794 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96A6B05924A2E2EA00AB0794 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96A6B06424A2E2EA00AB0794 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		96A6B03E24A2E2E700AB0794 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96A6B05024A2E2E700AB0794 /* SendAR.xcdatamodeld in Sources */,
+				96A6B04A24A2E2E700AB0794 /* ViewController.swift in Sources */,
+				96A6B04624A2E2E700AB0794 /* AppDelegate.swift in Sources */,
+				96A6B04824A2E2E700AB0794 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96A6B05724A2E2EA00AB0794 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96A6B06024A2E2EA00AB0794 /* SendARTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96A6B06224A2E2EA00AB0794 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96A6B06B24A2E2EA00AB0794 /* SendARUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		96A6B05D24A2E2EA00AB0794 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 96A6B04124A2E2E700AB0794 /* SendAR */;
+			targetProxy = 96A6B05C24A2E2EA00AB0794 /* PBXContainerItemProxy */;
+		};
+		96A6B06824A2E2EA00AB0794 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 96A6B04124A2E2E700AB0794 /* SendAR */;
+			targetProxy = 96A6B06724A2E2EA00AB0794 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		96A6B04B24A2E2E700AB0794 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96A6B04C24A2E2E700AB0794 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		96A6B05324A2E2EA00AB0794 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96A6B05424A2E2EA00AB0794 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		96A6B06D24A2E2EB00AB0794 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		96A6B06E24A2E2EB00AB0794 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		96A6B07024A2E2EB00AB0794 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9B6C5XW645;
+				INFOPLIST_FILE = SendAR/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.SendAR.SendAR;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		96A6B07124A2E2EB00AB0794 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9B6C5XW645;
+				INFOPLIST_FILE = SendAR/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.SendAR.SendAR;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		96A6B07324A2E2EB00AB0794 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9B6C5XW645;
+				INFOPLIST_FILE = SendARTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.SendAR.SendARTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SendAR.app/SendAR";
+			};
+			name = Debug;
+		};
+		96A6B07424A2E2EB00AB0794 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9B6C5XW645;
+				INFOPLIST_FILE = SendARTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.SendAR.SendARTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SendAR.app/SendAR";
+			};
+			name = Release;
+		};
+		96A6B07624A2E2EB00AB0794 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9B6C5XW645;
+				INFOPLIST_FILE = SendARUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.SendAR.SendARUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SendAR;
+			};
+			name = Debug;
+		};
+		96A6B07724A2E2EB00AB0794 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9B6C5XW645;
+				INFOPLIST_FILE = SendARUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.SendAR.SendARUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SendAR;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		96A6B03D24A2E2E700AB0794 /* Build configuration list for PBXProject "SendAR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96A6B06D24A2E2EB00AB0794 /* Debug */,
+				96A6B06E24A2E2EB00AB0794 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96A6B06F24A2E2EB00AB0794 /* Build configuration list for PBXNativeTarget "SendAR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96A6B07024A2E2EB00AB0794 /* Debug */,
+				96A6B07124A2E2EB00AB0794 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96A6B07224A2E2EB00AB0794 /* Build configuration list for PBXNativeTarget "SendARTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96A6B07324A2E2EB00AB0794 /* Debug */,
+				96A6B07424A2E2EB00AB0794 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96A6B07524A2E2EB00AB0794 /* Build configuration list for PBXNativeTarget "SendARUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96A6B07624A2E2EB00AB0794 /* Debug */,
+				96A6B07724A2E2EB00AB0794 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		96A6B04E24A2E2E700AB0794 /* SendAR.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				96A6B04F24A2E2E700AB0794 /* SendAR.xcdatamodel */,
+			);
+			currentVersion = 96A6B04F24A2E2E700AB0794 /* SendAR.xcdatamodel */;
+			path = SendAR.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 96A6B03A24A2E2E700AB0794 /* Project object */;
+}
