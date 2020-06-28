@@ -35,7 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		40EAA78D24A8152300F41366 /* FrontPageLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrontPageLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		40EAA78D24A8152300F41366 /* SendAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SendAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40EAA79024A8152300F41366 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40EAA79224A8152300F41366 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		40EAA79424A8152300F41366 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,7 +89,7 @@
 		40EAA78E24A8152300F41366 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				40EAA78D24A8152300F41366 /* FrontPageLayout.app */,
+				40EAA78D24A8152300F41366 /* SendAR.app */,
 				40EAA7A324A8152400F41366 /* FrontPageLayoutTests.xctest */,
 				40EAA7AE24A8152400F41366 /* FrontPageLayoutUITests.xctest */,
 			);
@@ -145,7 +145,7 @@
 			);
 			name = FrontPageLayout;
 			productName = FrontPageLayout;
-			productReference = 40EAA78D24A8152300F41366 /* FrontPageLayout.app */;
+			productReference = 40EAA78D24A8152300F41366 /* SendAR.app */;
 			productType = "com.apple.product-type.application";
 		};
 		40EAA7A224A8152400F41366 /* FrontPageLayoutTests */ = {
@@ -442,7 +442,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bennettbaker.FrontPageLayout;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SendAR;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -460,7 +460,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bennettbaker.FrontPageLayout;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SendAR;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
