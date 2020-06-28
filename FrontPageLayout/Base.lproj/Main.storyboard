@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FrontPageLayout" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SendAR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,7 +57,7 @@
                                     <constraint firstAttribute="height" constant="49" id="936-Wb-DDP"/>
                                 </constraints>
                                 <items>
-                                    <tabBarItem title="Refresh Location" image="arrow.clockwise" catalog="system" id="nmY-U1-Txr" userLabel="Refresh Location"/>
+                                    <tabBarItem title="Settings" image="gear" catalog="system" id="nmY-U1-Txr" userLabel="Settings"/>
                                     <tabBarItem title="SendAR" image="viewfinder" catalog="system" id="GFT-Lf-pdE" userLabel="AR View"/>
                                     <tabBarItem title="Profile" image="person.circle" catalog="system" id="FfR-Mp-qXu" userLabel="Profile"/>
                                 </items>
@@ -69,6 +69,11 @@
                                 </constraints>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t1k-hR-7B2">
+                                <rect key="frame" x="348" y="50" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -96,7 +101,7 @@
     </scenes>
     <resources>
         <image name="NoseCoverImage" width="769" height="505"/>
-        <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
+        <image name="gear" catalog="system" width="128" height="119"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
         <image name="viewfinder" catalog="system" width="128" height="114"/>
     </resources>
