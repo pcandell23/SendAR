@@ -43,10 +43,10 @@
 		40EAA79924A8152400F41366 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40EAA79C24A8152400F41366 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40EAA79E24A8152400F41366 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		40EAA7A324A8152400F41366 /* FrontPageLayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrontPageLayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		40EAA7A324A8152400F41366 /* SendARTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SendARTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		40EAA7A724A8152400F41366 /* FrontPageLayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontPageLayoutTests.swift; sourceTree = "<group>"; };
 		40EAA7A924A8152400F41366 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		40EAA7AE24A8152400F41366 /* FrontPageLayoutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrontPageLayoutUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		40EAA7AE24A8152400F41366 /* SendARUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SendARUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		40EAA7B224A8152400F41366 /* FrontPageLayoutUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontPageLayoutUITests.swift; sourceTree = "<group>"; };
 		40EAA7B424A8152400F41366 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,8 +90,8 @@
 			isa = PBXGroup;
 			children = (
 				40EAA78D24A8152300F41366 /* SendAR.app */,
-				40EAA7A324A8152400F41366 /* FrontPageLayoutTests.xctest */,
-				40EAA7AE24A8152400F41366 /* FrontPageLayoutUITests.xctest */,
+				40EAA7A324A8152400F41366 /* SendARTests.xctest */,
+				40EAA7AE24A8152400F41366 /* SendARUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -131,9 +131,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		40EAA78C24A8152300F41366 /* FrontPageLayout */ = {
+		40EAA78C24A8152300F41366 /* SendAR */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 40EAA7B724A8152400F41366 /* Build configuration list for PBXNativeTarget "FrontPageLayout" */;
+			buildConfigurationList = 40EAA7B724A8152400F41366 /* Build configuration list for PBXNativeTarget "SendAR" */;
 			buildPhases = (
 				40EAA78924A8152300F41366 /* Sources */,
 				40EAA78A24A8152300F41366 /* Frameworks */,
@@ -143,14 +143,14 @@
 			);
 			dependencies = (
 			);
-			name = FrontPageLayout;
+			name = SendAR;
 			productName = FrontPageLayout;
 			productReference = 40EAA78D24A8152300F41366 /* SendAR.app */;
 			productType = "com.apple.product-type.application";
 		};
-		40EAA7A224A8152400F41366 /* FrontPageLayoutTests */ = {
+		40EAA7A224A8152400F41366 /* SendARTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 40EAA7BA24A8152400F41366 /* Build configuration list for PBXNativeTarget "FrontPageLayoutTests" */;
+			buildConfigurationList = 40EAA7BA24A8152400F41366 /* Build configuration list for PBXNativeTarget "SendARTests" */;
 			buildPhases = (
 				40EAA79F24A8152400F41366 /* Sources */,
 				40EAA7A024A8152400F41366 /* Frameworks */,
@@ -161,14 +161,14 @@
 			dependencies = (
 				40EAA7A524A8152400F41366 /* PBXTargetDependency */,
 			);
-			name = FrontPageLayoutTests;
+			name = SendARTests;
 			productName = FrontPageLayoutTests;
-			productReference = 40EAA7A324A8152400F41366 /* FrontPageLayoutTests.xctest */;
+			productReference = 40EAA7A324A8152400F41366 /* SendARTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		40EAA7AD24A8152400F41366 /* FrontPageLayoutUITests */ = {
+		40EAA7AD24A8152400F41366 /* SendARUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 40EAA7BD24A8152400F41366 /* Build configuration list for PBXNativeTarget "FrontPageLayoutUITests" */;
+			buildConfigurationList = 40EAA7BD24A8152400F41366 /* Build configuration list for PBXNativeTarget "SendARUITests" */;
 			buildPhases = (
 				40EAA7AA24A8152400F41366 /* Sources */,
 				40EAA7AB24A8152400F41366 /* Frameworks */,
@@ -179,9 +179,9 @@
 			dependencies = (
 				40EAA7B024A8152400F41366 /* PBXTargetDependency */,
 			);
-			name = FrontPageLayoutUITests;
+			name = SendARUITests;
 			productName = FrontPageLayoutUITests;
-			productReference = 40EAA7AE24A8152400F41366 /* FrontPageLayoutUITests.xctest */;
+			productReference = 40EAA7AE24A8152400F41366 /* SendARUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -207,7 +207,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 40EAA78824A8152200F41366 /* Build configuration list for PBXProject "FrontPageLayout" */;
+			buildConfigurationList = 40EAA78824A8152200F41366 /* Build configuration list for PBXProject "SendAR" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -220,9 +220,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				40EAA78C24A8152300F41366 /* FrontPageLayout */,
-				40EAA7A224A8152400F41366 /* FrontPageLayoutTests */,
-				40EAA7AD24A8152400F41366 /* FrontPageLayoutUITests */,
+				40EAA78C24A8152300F41366 /* SendAR */,
+				40EAA7A224A8152400F41366 /* SendARTests */,
+				40EAA7AD24A8152400F41366 /* SendARUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -286,12 +286,12 @@
 /* Begin PBXTargetDependency section */
 		40EAA7A524A8152400F41366 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 40EAA78C24A8152300F41366 /* FrontPageLayout */;
+			target = 40EAA78C24A8152300F41366 /* SendAR */;
 			targetProxy = 40EAA7A424A8152400F41366 /* PBXContainerItemProxy */;
 		};
 		40EAA7B024A8152400F41366 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 40EAA78C24A8152300F41366 /* FrontPageLayout */;
+			target = 40EAA78C24A8152300F41366 /* SendAR */;
 			targetProxy = 40EAA7AF24A8152400F41366 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -441,7 +441,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bennettbaker.FrontPageLayout;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bennettbaker.SendAR;
 				PRODUCT_NAME = SendAR;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -459,7 +459,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bennettbaker.FrontPageLayout;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bennettbaker.SendAR;
 				PRODUCT_NAME = SendAR;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -484,7 +484,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FrontPageLayout.app/FrontPageLayout";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SendAR.app/SendAR";
 			};
 			name = Debug;
 		};
@@ -506,7 +506,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FrontPageLayout.app/FrontPageLayout";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SendAR.app/SendAR";
 			};
 			name = Release;
 		};
@@ -553,7 +553,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		40EAA78824A8152200F41366 /* Build configuration list for PBXProject "FrontPageLayout" */ = {
+		40EAA78824A8152200F41366 /* Build configuration list for PBXProject "SendAR" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				40EAA7B524A8152400F41366 /* Debug */,
@@ -562,7 +562,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		40EAA7B724A8152400F41366 /* Build configuration list for PBXNativeTarget "FrontPageLayout" */ = {
+		40EAA7B724A8152400F41366 /* Build configuration list for PBXNativeTarget "SendAR" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				40EAA7B824A8152400F41366 /* Debug */,
@@ -571,7 +571,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		40EAA7BA24A8152400F41366 /* Build configuration list for PBXNativeTarget "FrontPageLayoutTests" */ = {
+		40EAA7BA24A8152400F41366 /* Build configuration list for PBXNativeTarget "SendARTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				40EAA7BB24A8152400F41366 /* Debug */,
@@ -580,7 +580,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		40EAA7BD24A8152400F41366 /* Build configuration list for PBXNativeTarget "FrontPageLayoutUITests" */ = {
+		40EAA7BD24A8152400F41366 /* Build configuration list for PBXNativeTarget "SendARUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				40EAA7BE24A8152400F41366 /* Debug */,
