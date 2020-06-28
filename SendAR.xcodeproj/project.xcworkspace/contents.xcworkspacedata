@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:FrontPageLayout.xcodeproj">
+      location = "self:/Users/bennettbaker/Documents/XCode Projects/SendAR/SendAR/SendAR.xcodeproj">
    </FileRef>
 </Workspace>
