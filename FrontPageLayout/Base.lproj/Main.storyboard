@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FrontPageLayout" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SendAR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,10 +22,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="VqC-eh-k3d">
-                                <rect key="frame" x="20" y="364" width="374" height="429"/>
+                                <rect key="frame" x="20" y="364" width="374" height="409"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnk-Gs-unY">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="129.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="123"/>
                                         <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <state key="normal" title="Crag List">
@@ -33,7 +33,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAk-Th-qgw">
-                                        <rect key="frame" x="0.0" y="149.5" width="374" height="130"/>
+                                        <rect key="frame" x="0.0" y="143" width="374" height="123"/>
                                         <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <state key="normal" title="Map">
@@ -41,7 +41,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rhm-b6-WP6">
-                                        <rect key="frame" x="0.0" y="299.5" width="374" height="129.5"/>
+                                        <rect key="frame" x="0.0" y="286" width="374" height="123"/>
                                         <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <state key="normal" title="Manage Areas">
@@ -57,7 +57,7 @@
                                     <constraint firstAttribute="height" constant="49" id="936-Wb-DDP"/>
                                 </constraints>
                                 <items>
-                                    <tabBarItem title="Refresh Location" image="arrow.clockwise" catalog="system" id="nmY-U1-Txr" userLabel="Refresh Location"/>
+                                    <tabBarItem title="Settings" image="gear" catalog="system" id="nmY-U1-Txr" userLabel="Settings"/>
                                     <tabBarItem title="SendAR" image="viewfinder" catalog="system" id="GFT-Lf-pdE" userLabel="AR View"/>
                                     <tabBarItem title="Profile" image="person.circle" catalog="system" id="FfR-Mp-qXu" userLabel="Profile"/>
                                 </items>
@@ -69,13 +69,17 @@
                                 </constraints>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t1k-hR-7B2">
+                                <rect key="frame" x="149" y="779" width="116" height="30"/>
+                                <state key="normal" title="Refresh Location"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ggP-Wo-bLo" secondAttribute="trailing" constant="20" id="2TC-W4-TmU"/>
                             <constraint firstItem="oP7-h4-cvz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="9Ml-nz-f3c"/>
                             <constraint firstItem="fKb-5y-D3p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ggb-r3-FxV"/>
-                            <constraint firstItem="fKb-5y-D3p" firstAttribute="top" secondItem="VqC-eh-k3d" secondAttribute="bottom" constant="20" id="Jwj-10-7Xx"/>
+                            <constraint firstItem="fKb-5y-D3p" firstAttribute="top" secondItem="VqC-eh-k3d" secondAttribute="bottom" constant="40" id="Jwj-10-7Xx"/>
                             <constraint firstItem="VqC-eh-k3d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ry7-g1-E9F"/>
                             <constraint firstItem="ggP-Wo-bLo" firstAttribute="top" secondItem="oP7-h4-cvz" secondAttribute="bottom" constant="10" id="Sc7-FE-xdw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VqC-eh-k3d" secondAttribute="trailing" constant="20" id="T3v-cl-5Vc"/>
@@ -83,6 +87,9 @@
                             <constraint firstItem="fKb-5y-D3p" firstAttribute="centerX" secondItem="VqC-eh-k3d" secondAttribute="centerX" id="VLN-6f-Hus"/>
                             <constraint firstItem="VqC-eh-k3d" firstAttribute="top" secondItem="ggP-Wo-bLo" secondAttribute="bottom" constant="20" id="WeH-wb-JfP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oP7-h4-cvz" secondAttribute="trailing" constant="20" id="ZcE-ku-Quy"/>
+                            <constraint firstItem="t1k-hR-7B2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="149" id="hhg-fm-aHD"/>
+                            <constraint firstItem="t1k-hR-7B2" firstAttribute="top" secondItem="VqC-eh-k3d" secondAttribute="bottom" constant="6" id="kyI-jL-rpZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="t1k-hR-7B2" secondAttribute="trailing" constant="149" id="pDx-5e-9MO"/>
                             <constraint firstItem="ggP-Wo-bLo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="rfk-8m-RVx"/>
                             <constraint firstItem="fKb-5y-D3p" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="rhd-JK-SPa"/>
                         </constraints>
@@ -96,7 +103,7 @@
     </scenes>
     <resources>
         <image name="NoseCoverImage" width="769" height="505"/>
-        <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
+        <image name="gear" catalog="system" width="128" height="119"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
         <image name="viewfinder" catalog="system" width="128" height="114"/>
     </resources>
