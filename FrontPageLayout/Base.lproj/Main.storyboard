@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FrontPageLayout" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SEND AR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oP7-h4-cvz">
+                                <rect key="frame" x="20" y="44" width="374" height="43"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="VqC-eh-k3d">
+                                <rect key="frame" x="20" y="364" width="374" height="429"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnk-Gs-unY">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="129.5"/>
+                                        <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="Crag List">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAk-Th-qgw">
+                                        <rect key="frame" x="0.0" y="149.5" width="374" height="130"/>
+                                        <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="Map">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rhm-b6-WP6">
+                                        <rect key="frame" x="0.0" y="299.5" width="374" height="129.5"/>
+                                        <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="Manage Areas">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fKb-5y-D3p">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="936-Wb-DDP"/>
+                                </constraints>
+                                <items>
+                                    <tabBarItem title="Refresh Location" image="arrow.clockwise" catalog="system" id="nmY-U1-Txr" userLabel="Refresh Location"/>
+                                    <tabBarItem title="SendAR" image="viewfinder" catalog="system" id="GFT-Lf-pdE" userLabel="AR View"/>
+                                    <tabBarItem title="Profile" image="person.circle" catalog="system" id="FfR-Mp-qXu" userLabel="Profile"/>
+                                </items>
+                            </tabBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NoseCoverImage" translatesAutoresizingMaskIntoConstraints="NO" id="ggP-Wo-bLo">
+                                <rect key="frame" x="20" y="97" width="374" height="247"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ggP-Wo-bLo" secondAttribute="height" multiplier="374:247" id="kPs-Yv-BuC"/>
+                                </constraints>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ggP-Wo-bLo" secondAttribute="trailing" constant="20" id="2TC-W4-TmU"/>
+                            <constraint firstItem="oP7-h4-cvz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="9Ml-nz-f3c"/>
+                            <constraint firstItem="fKb-5y-D3p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ggb-r3-FxV"/>
+                            <constraint firstItem="fKb-5y-D3p" firstAttribute="top" secondItem="VqC-eh-k3d" secondAttribute="bottom" constant="20" id="Jwj-10-7Xx"/>
+                            <constraint firstItem="VqC-eh-k3d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ry7-g1-E9F"/>
+                            <constraint firstItem="ggP-Wo-bLo" firstAttribute="top" secondItem="oP7-h4-cvz" secondAttribute="bottom" constant="10" id="Sc7-FE-xdw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VqC-eh-k3d" secondAttribute="trailing" constant="20" id="T3v-cl-5Vc"/>
+                            <constraint firstItem="oP7-h4-cvz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="TfW-mo-tVM"/>
+                            <constraint firstItem="fKb-5y-D3p" firstAttribute="centerX" secondItem="VqC-eh-k3d" secondAttribute="centerX" id="VLN-6f-Hus"/>
+                            <constraint firstItem="VqC-eh-k3d" firstAttribute="top" secondItem="ggP-Wo-bLo" secondAttribute="bottom" constant="20" id="WeH-wb-JfP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oP7-h4-cvz" secondAttribute="trailing" constant="20" id="ZcE-ku-Quy"/>
+                            <constraint firstItem="ggP-Wo-bLo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="rfk-8m-RVx"/>
+                            <constraint firstItem="fKb-5y-D3p" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="rhd-JK-SPa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.875" y="137.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="NoseCoverImage" width="769" height="505"/>
+        <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
+        <image name="person.circle" catalog="system" width="128" height="121"/>
+        <image name="viewfinder" catalog="system" width="128" height="114"/>
+    </resources>
+</document>
