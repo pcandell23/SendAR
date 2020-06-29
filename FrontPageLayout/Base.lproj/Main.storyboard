@@ -39,15 +39,25 @@
                                 </constraints>
                                 <state key="normal" title="Refresh Location"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OjY-4F-GWQ">
+                                <rect key="frame" x="369" y="53" width="25" height="24"/>
+                                <state key="normal" image="person.crop.circle" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="ggP-Wo-bLo" firstAttribute="top" secondItem="OjY-4F-GWQ" secondAttribute="bottom" constant="20" id="5Q9-jy-HQp"/>
                             <constraint firstItem="t1k-hR-7B2" firstAttribute="centerX" secondItem="8Mj-ly-rMF" secondAttribute="centerX" id="70H-k8-5hv"/>
                             <constraint firstItem="8Mj-ly-rMF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="816" id="8eB-4h-kUF"/>
                             <constraint firstItem="ggP-Wo-bLo" firstAttribute="leading" secondItem="oP7-h4-cvz" secondAttribute="leading" id="Gx4-ch-KwS"/>
+                            <constraint firstItem="OjY-4F-GWQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="369" id="IuY-yD-6za"/>
                             <constraint firstItem="t1k-hR-7B2" firstAttribute="centerX" secondItem="ggP-Wo-bLo" secondAttribute="centerX" id="KwW-OM-cze"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OjY-4F-GWQ" secondAttribute="trailing" constant="20" id="MHO-qz-H1d"/>
                             <constraint firstItem="8Mj-ly-rMF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="OAy-Gl-Swc"/>
                             <constraint firstItem="ggP-Wo-bLo" firstAttribute="top" secondItem="oP7-h4-cvz" secondAttribute="bottom" constant="10" id="RaE-zG-bc0"/>
+                            <constraint firstItem="OjY-4F-GWQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="9" id="TJ7-Pk-RYN"/>
                             <constraint firstAttribute="bottom" secondItem="8Mj-ly-rMF" secondAttribute="bottom" constant="-48" id="TZW-ho-t6z"/>
                             <constraint firstItem="ggP-Wo-bLo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="97" id="XTI-PK-De0"/>
                             <constraint firstItem="8Mj-ly-rMF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZeV-Do-HLe"/>
@@ -168,10 +178,10 @@
             </objects>
             <point key="canvasLocation" x="2683" y="-287"/>
         </scene>
-        <!--More-->
+        <!--Settings-->
         <scene sceneID="Nh2-oV-VXT">
             <objects>
-                <tableViewController id="5Qj-KA-Nc0" userLabel="More" customClass="Settings" customModule="SendAR" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="5Qj-KA-Nc0" userLabel="Settings" customClass="Settings" customModule="SendAR" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="YSl-Je-Xv9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -191,7 +201,7 @@
                             <outlet property="delegate" destination="5Qj-KA-Nc0" id="hui-xl-roP"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="More" image="ellipsis" catalog="system" id="v5A-z8-gMS"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" id="v5A-z8-gMS"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1GO-gI-RrT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -202,8 +212,9 @@
         <image name="NoseCoverImage" width="769" height="505"/>
         <image name="arkit" catalog="system" width="128" height="128"/>
         <image name="book" catalog="system" width="128" height="101"/>
-        <image name="ellipsis" catalog="system" width="128" height="37"/>
+        <image name="gear" catalog="system" width="128" height="119"/>
         <image name="house" catalog="system" width="128" height="110"/>
         <image name="map" catalog="system" width="128" height="113"/>
+        <image name="person.crop.circle" catalog="system" width="128" height="121"/>
     </resources>
 </document>
