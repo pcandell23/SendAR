@@ -15,7 +15,9 @@
 		40EAA79D24A8152400F41366 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40EAA79B24A8152400F41366 /* LaunchScreen.storyboard */; };
 		40EAA7A824A8152400F41366 /* FrontPageLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EAA7A724A8152400F41366 /* FrontPageLayoutTests.swift */; };
 		40EAA7B324A8152400F41366 /* FrontPageLayoutUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EAA7B224A8152400F41366 /* FrontPageLayoutUITests.swift */; };
+		969C9EAB24A969BF003D76DA /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 969C9EAA24A969BF003D76DA /* Settings.storyboard */; };
 		96A492CE24A94BE00029CDCE /* CragsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96A492CD24A94BE00029CDCE /* CragsList.storyboard */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +52,9 @@
 		40EAA7AE24A8152400F41366 /* SendARUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SendARUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		40EAA7B224A8152400F41366 /* FrontPageLayoutUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontPageLayoutUITests.swift; sourceTree = "<group>"; };
 		40EAA7B424A8152400F41366 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		969C9EAA24A969BF003D76DA /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		96A492CD24A94BE00029CDCE /* CragsList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CragsList.storyboard; sourceTree = "<group>"; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,7 @@
 				40EAA79224A8152300F41366 /* SceneDelegate.swift */,
 				40EAA79424A8152300F41366 /* ViewController.swift */,
 				40EAA79624A8152300F41366 /* Main.storyboard */,
+				969C9EAA24A969BF003D76DA /* Settings.storyboard */,
 				96A492CD24A94BE00029CDCE /* CragsList.storyboard */,
 				40EAA79924A8152400F41366 /* Assets.xcassets */,
 				40EAA79B24A8152400F41366 /* LaunchScreen.storyboard */,
@@ -238,6 +243,7 @@
 				40EAA79D24A8152400F41366 /* LaunchScreen.storyboard in Resources */,
 				40EAA79A24A8152400F41366 /* Assets.xcassets in Resources */,
 				40EAA79824A8152300F41366 /* Main.storyboard in Resources */,
+				969C9EAB24A969BF003D76DA /* Settings.storyboard in Resources */,
 				96A492CE24A94BE00029CDCE /* CragsList.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
