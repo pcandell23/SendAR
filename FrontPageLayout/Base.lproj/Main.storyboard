@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--FrontPage-->
+        <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="FrontPageVC" title="FrontPage" id="BYZ-38-t0r" customClass="ViewController" customModule="SendAR" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FrontPageVC" title="FrontPage" id="BYZ-38-t0r" userLabel="Home" customClass="HomeViewController" customModule="SendAR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,6 +70,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="1XD-Et-igr" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HGT-ct-MZX">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -78,7 +79,7 @@
                         <segue destination="dWF-ma-L6a" kind="relationship" relationship="viewControllers" id="UCw-5A-6XU"/>
                         <segue destination="1iB-PC-hEe" kind="relationship" relationship="viewControllers" id="KSE-3E-Ie2"/>
                         <segue destination="nsZ-eY-3A4" kind="relationship" relationship="viewControllers" id="2NY-Nn-tFC"/>
-                        <segue destination="Pr0-rw-8Tv" kind="relationship" relationship="viewControllers" id="WZ8-9r-4dd"/>
+                        <segue destination="5Qj-KA-Nc0" kind="relationship" relationship="viewControllers" id="dt0-wT-K36"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zIH-vx-FWj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -88,7 +89,7 @@
         <!--MapView-->
         <scene sceneID="zjg-fw-c1w">
             <objects>
-                <viewController title="MapView" id="dWF-ma-L6a" sceneMemberID="viewController">
+                <viewController title="MapView" id="dWF-ma-L6a" customClass="MapViewController" customModule="SendAR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gnJ-bz-TXE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -99,18 +100,20 @@
                                     <constraint firstAttribute="height" constant="719" id="QeU-Pt-7A0"/>
                                 </constraints>
                             </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMD-ON-WyW">
-                                <rect key="frame" x="190" y="65.5" width="34" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="09o-dP-DNN">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <items>
+                                    <navigationItem title="Map" id="XIB-lN-x3Z"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="jGH-AL-dKP" firstAttribute="bottom" secondItem="Bqt-aR-O0a" secondAttribute="bottom" id="0jj-Wj-oCx"/>
-                            <constraint firstItem="jGH-AL-dKP" firstAttribute="centerX" secondItem="KMD-ON-WyW" secondAttribute="centerX" id="ZgZ-8A-2h5"/>
-                            <constraint firstItem="jGH-AL-dKP" firstAttribute="top" secondItem="KMD-ON-WyW" secondAttribute="bottom" constant="8" id="b2B-NP-G0J"/>
+                            <constraint firstItem="jGH-AL-dKP" firstAttribute="top" secondItem="09o-dP-DNN" secondAttribute="bottom" id="2yK-BO-Tf0"/>
+                            <constraint firstItem="09o-dP-DNN" firstAttribute="leading" secondItem="Bqt-aR-O0a" secondAttribute="leading" id="7Z3-34-PlG"/>
+                            <constraint firstItem="09o-dP-DNN" firstAttribute="trailing" secondItem="Bqt-aR-O0a" secondAttribute="trailing" id="PYS-6K-i9K"/>
+                            <constraint firstItem="09o-dP-DNN" firstAttribute="top" secondItem="Bqt-aR-O0a" secondAttribute="top" id="RKH-iy-QqA"/>
                             <constraint firstItem="jGH-AL-dKP" firstAttribute="leading" secondItem="gnJ-bz-TXE" secondAttribute="leadingMargin" constant="-20" id="iv0-WT-krw"/>
                             <constraint firstItem="jGH-AL-dKP" firstAttribute="trailing" secondItem="gnJ-bz-TXE" secondAttribute="trailingMargin" constant="20" id="uRI-cW-ldR"/>
                         </constraints>
@@ -125,14 +128,14 @@
         <!--ARView-->
         <scene sceneID="gae-nE-u87">
             <objects>
-                <viewController title="ARView" id="1iB-PC-hEe" sceneMemberID="viewController">
+                <viewController title="ARView" id="1iB-PC-hEe" customClass="ARViewController" customModule="SendAR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Eg-mB-3th">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="7N8-cd-3cH"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Send AR" image="camera.viewfinder" catalog="system" id="HAj-Fp-gm5"/>
+                    <tabBarItem key="tabBarItem" title="Send AR" image="arkit" catalog="system" id="HAj-Fp-gm5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cmZ-c8-ihU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -141,11 +144,22 @@
         <!--MyAreas-->
         <scene sceneID="v0C-Dl-6eG">
             <objects>
-                <viewController title="MyAreas" id="nsZ-eY-3A4" sceneMemberID="viewController">
+                <viewController title="MyAreas" id="nsZ-eY-3A4" customClass="MyAreasViewController" customModule="SendAR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T0K-ql-vhu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="hgT-9L-FhU">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                            </searchBar>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hgT-9L-FhU" firstAttribute="trailing" secondItem="5ja-s0-Cge" secondAttribute="trailing" id="Gg5-Pq-dJd"/>
+                            <constraint firstItem="hgT-9L-FhU" firstAttribute="top" secondItem="5ja-s0-Cge" secondAttribute="top" id="ReY-vN-mWA"/>
+                            <constraint firstItem="hgT-9L-FhU" firstAttribute="leading" secondItem="5ja-s0-Cge" secondAttribute="leading" id="VxM-8B-B9M"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="5ja-s0-Cge"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Areas" image="book" catalog="system" id="ndf-ck-bT6"/>
@@ -154,28 +168,41 @@
             </objects>
             <point key="canvasLocation" x="2683" y="-287"/>
         </scene>
-        <!--Settings-->
-        <scene sceneID="0Sr-43-TIK">
+        <!--More-->
+        <scene sceneID="Nh2-oV-VXT">
             <objects>
-                <viewController title="Settings" id="Pr0-rw-8Tv" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ckR-eB-Nh0">
+                <tableViewController id="5Qj-KA-Nc0" userLabel="More" customClass="MoreTableViewController" customModule="SendAR" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="YSl-Je-Xv9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="NJn-OX-1co"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" id="QUr-Hu-6iG"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wKp-2A-AOZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="HTb-Y9-SbV">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HTb-Y9-SbV" id="gRo-p2-zEV">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="5Qj-KA-Nc0" id="Yfj-ZB-DUA"/>
+                            <outlet property="delegate" destination="5Qj-KA-Nc0" id="hui-xl-roP"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="More" image="ellipsis" catalog="system" id="v5A-z8-gMS"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1GO-gI-RrT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3594" y="-287"/>
+            <point key="canvasLocation" x="3587" y="-287"/>
         </scene>
     </scenes>
     <resources>
         <image name="NoseCoverImage" width="769" height="505"/>
+        <image name="arkit" catalog="system" width="128" height="128"/>
         <image name="book" catalog="system" width="128" height="101"/>
-        <image name="camera.viewfinder" catalog="system" width="128" height="114"/>
-        <image name="gear" catalog="system" width="128" height="119"/>
+        <image name="ellipsis" catalog="system" width="128" height="37"/>
         <image name="house" catalog="system" width="128" height="110"/>
         <image name="map" catalog="system" width="128" height="113"/>
     </resources>
