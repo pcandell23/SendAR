@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--FrontPage-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SendAR" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FrontPageVC" title="FrontPage" id="BYZ-38-t0r" customClass="ViewController" customModule="SendAR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,6 +31,10 @@
                                         <state key="normal" title="Crag List">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="OpenCragsList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="obz-mh-Y8E"/>
+                                            <segue destination="0mt-iE-7SK" kind="presentation" modalPresentationStyle="fullScreen" id="37W-Ab-XYy"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAk-Th-qgw">
                                         <rect key="frame" x="0.0" y="143" width="374" height="123"/>
@@ -95,10 +99,21 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="2l0-I9-Yhp"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.875" y="137.5"/>
+            <point key="canvasLocation" x="454" y="59"/>
+        </scene>
+        <!--CragListVC-->
+        <scene sceneID="xdb-4a-0Lg">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CragsList" referencedIdentifier="CragListVC" id="0mt-iE-7SK" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="QB2-Dx-dSo"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="edL-eG-0d3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1128" y="-238"/>
         </scene>
     </scenes>
     <resources>
