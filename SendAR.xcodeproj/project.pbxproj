@@ -15,6 +15,11 @@
 		40EAA79D24A8152400F41366 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40EAA79B24A8152400F41366 /* LaunchScreen.storyboard */; };
 		40EAA7A824A8152400F41366 /* FrontPageLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EAA7A724A8152400F41366 /* FrontPageLayoutTests.swift */; };
 		40EAA7B324A8152400F41366 /* FrontPageLayoutUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EAA7B224A8152400F41366 /* FrontPageLayoutUITests.swift */; };
+		961F055F24AA64E8006DE4C5 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961F055E24AA64E8006DE4C5 /* HomeVC.swift */; };
+		961F056124AA64F8006DE4C5 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961F056024AA64F8006DE4C5 /* MapVC.swift */; };
+		961F056324AA6517006DE4C5 /* MyAreasVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961F056224AA6517006DE4C5 /* MyAreasVC.swift */; };
+		961F056524AA658F006DE4C5 /* ARviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961F056424AA658F006DE4C5 /* ARviewVC.swift */; };
+		961F056724AA66FC006DE4C5 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961F056624AA66FC006DE4C5 /* SettingsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		40EAA7AE24A8152400F41366 /* SendARUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SendARUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		40EAA7B224A8152400F41366 /* FrontPageLayoutUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontPageLayoutUITests.swift; sourceTree = "<group>"; };
 		40EAA7B424A8152400F41366 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		961F055E24AA64E8006DE4C5 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		961F056024AA64F8006DE4C5 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		961F056224AA6517006DE4C5 /* MyAreasVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAreasVC.swift; sourceTree = "<group>"; };
+		961F056424AA658F006DE4C5 /* ARviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARviewVC.swift; sourceTree = "<group>"; };
+		961F056624AA66FC006DE4C5 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +109,9 @@
 		40EAA78F24A8152300F41366 /* FrontPageLayout */ = {
 			isa = PBXGroup;
 			children = (
+				961F055D24AA6346006DE4C5 /* ViewControllers */,
 				40EAA79024A8152300F41366 /* AppDelegate.swift */,
 				40EAA79224A8152300F41366 /* SceneDelegate.swift */,
-				40EAA79424A8152300F41366 /* ViewController.swift */,
 				40EAA79624A8152300F41366 /* Main.storyboard */,
 				40EAA79924A8152400F41366 /* Assets.xcassets */,
 				40EAA79B24A8152400F41366 /* LaunchScreen.storyboard */,
@@ -126,6 +136,19 @@
 				40EAA7B424A8152400F41366 /* Info.plist */,
 			);
 			path = FrontPageLayoutUITests;
+			sourceTree = "<group>";
+		};
+		961F055D24AA6346006DE4C5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				40EAA79424A8152300F41366 /* ViewController.swift */,
+				961F055E24AA64E8006DE4C5 /* HomeVC.swift */,
+				961F056024AA64F8006DE4C5 /* MapVC.swift */,
+				961F056224AA6517006DE4C5 /* MyAreasVC.swift */,
+				961F056424AA658F006DE4C5 /* ARviewVC.swift */,
+				961F056624AA66FC006DE4C5 /* SettingsVC.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,9 +282,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				961F056124AA64F8006DE4C5 /* MapVC.swift in Sources */,
 				40EAA79524A8152300F41366 /* ViewController.swift in Sources */,
+				961F055F24AA64E8006DE4C5 /* HomeVC.swift in Sources */,
 				40EAA79124A8152300F41366 /* AppDelegate.swift in Sources */,
 				40EAA79324A8152300F41366 /* SceneDelegate.swift in Sources */,
+				961F056724AA66FC006DE4C5 /* SettingsVC.swift in Sources */,
+				961F056324AA6517006DE4C5 /* MyAreasVC.swift in Sources */,
+				961F056524AA658F006DE4C5 /* ARviewVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
