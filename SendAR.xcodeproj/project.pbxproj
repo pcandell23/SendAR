@@ -19,6 +19,7 @@
 		961F056124AA64F8006DE4C5 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961F056024AA64F8006DE4C5 /* MapVC.swift */; };
 		961F056324AA6517006DE4C5 /* MyAreasVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961F056224AA6517006DE4C5 /* MyAreasVC.swift */; };
 		961F056524AA658F006DE4C5 /* ARviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961F056424AA658F006DE4C5 /* ARviewVC.swift */; };
+		961F056724AA66FC006DE4C5 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961F056624AA66FC006DE4C5 /* SettingsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		961F056024AA64F8006DE4C5 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		961F056224AA6517006DE4C5 /* MyAreasVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAreasVC.swift; sourceTree = "<group>"; };
 		961F056424AA658F006DE4C5 /* ARviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARviewVC.swift; sourceTree = "<group>"; };
+		961F056624AA66FC006DE4C5 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 				961F056024AA64F8006DE4C5 /* MapVC.swift */,
 				961F056224AA6517006DE4C5 /* MyAreasVC.swift */,
 				961F056424AA658F006DE4C5 /* ARviewVC.swift */,
+				961F056624AA66FC006DE4C5 /* SettingsVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				961F055F24AA64E8006DE4C5 /* HomeVC.swift in Sources */,
 				40EAA79124A8152300F41366 /* AppDelegate.swift in Sources */,
 				40EAA79324A8152300F41366 /* SceneDelegate.swift in Sources */,
+				961F056724AA66FC006DE4C5 /* SettingsVC.swift in Sources */,
 				961F056324AA6517006DE4C5 /* MyAreasVC.swift in Sources */,
 				961F056524AA658F006DE4C5 /* ARviewVC.swift in Sources */,
 			);
