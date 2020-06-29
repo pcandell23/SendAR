@@ -33,7 +33,7 @@
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25"/>
                                         </state>
                                         <connections>
-                                            <segue destination="EgB-uO-RaS" kind="presentation" modalPresentationStyle="fullScreen" id="zqD-gR-VmQ"/>
+                                            <segue destination="EgB-uO-RaS" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="zqD-gR-VmQ"/>
                                         </connections>
                                     </button>
                                 </subviews>
