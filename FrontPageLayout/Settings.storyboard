@@ -27,7 +27,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Home"/>
                                 <connections>
-                                    <segue destination="hJl-gO-Z4h" kind="presentation" modalPresentationStyle="fullScreen" id="Fx6-fQ-3Fs"/>
+                                    <segue destination="hJl-gO-Z4h" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Fx6-fQ-3Fs"/>
                                 </connections>
                             </button>
                         </subviews>
