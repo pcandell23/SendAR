@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4087FA1024ABA33900723BCF /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4087FA0F24ABA33900723BCF /* ProfileVC.swift */; };
 		40EAA79124A8152300F41366 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EAA79024A8152300F41366 /* AppDelegate.swift */; };
 		40EAA79324A8152300F41366 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EAA79224A8152300F41366 /* SceneDelegate.swift */; };
 		40EAA79524A8152300F41366 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EAA79424A8152300F41366 /* ViewController.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4087FA0F24ABA33900723BCF /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		40EAA78D24A8152300F41366 /* SendAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SendAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40EAA79024A8152300F41366 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40EAA79224A8152300F41366 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				961F056224AA6517006DE4C5 /* MyAreasVC.swift */,
 				961F056424AA658F006DE4C5 /* ARviewVC.swift */,
 				961F056624AA66FC006DE4C5 /* SettingsVC.swift */,
+				4087FA0F24ABA33900723BCF /* ProfileVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				961F056124AA64F8006DE4C5 /* MapVC.swift in Sources */,
 				40EAA79524A8152300F41366 /* ViewController.swift in Sources */,
 				961F055F24AA64E8006DE4C5 /* HomeVC.swift in Sources */,
+				4087FA1024ABA33900723BCF /* ProfileVC.swift in Sources */,
 				40EAA79124A8152300F41366 /* AppDelegate.swift in Sources */,
 				40EAA79324A8152300F41366 /* SceneDelegate.swift in Sources */,
 				961F056724AA66FC006DE4C5 /* SettingsVC.swift in Sources */,
