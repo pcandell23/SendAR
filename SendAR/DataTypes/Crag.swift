@@ -45,8 +45,9 @@ class Crag: Area {
         // TODO: Will probs log an error once we have that set up
     }
     
-    override func removeSubArea() {
+    override func removeSubArea(index: Int) -> Area? {
         // Does nothing.
         // TODO: Again will log an error and let the user know they cant do this with some helpful message
+        return nil
     }
 }

@@ -69,7 +69,8 @@ class Area {
         subAreas += newSubAreasArray
     }
     
-    func removeSubArea(index: Int) -> Area{
+    //This returns an optional for future error checking and so the subClass can return nil
+    func removeSubArea(index: Int) -> Area?{
         return subAreas.remove(at: index)
     }
     
