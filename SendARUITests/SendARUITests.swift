@@ -1,6 +1,6 @@
 //
-//  FrontPageLayoutUITests.swift
-//  FrontPageLayoutUITests
+//  SendARUITests.swift
+//  SendARUITests
 //
 //  Created by Bennett Baker on 6/27/20.
 //  Copyright © 2020 Bennett Baker. All rights reserved.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class FrontPageLayoutUITests: XCTestCase {
+class SendARUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

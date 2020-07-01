@@ -1,13 +1,13 @@
 //
-//  FrontPageLayoutTests.swift
-//  FrontPageLayoutTests
+//  SendARTests.swift
+//  SendARTests
 //
 //  Created by Bennett Baker on 6/27/20.
 //  Copyright © 2020 Bennett Baker. All rights reserved.
 //
 
 import XCTest
-@testable import FrontPageLayout
+@testable import SendAR
 
 class FrontPageLayoutTests: XCTestCase {
 
