@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="A0n-df-EAh">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--FrontPage-->
+        <scene sceneID="2nR-C8-zj2">
+            <objects>
+                <navigationController id="A0n-df-EAh" userLabel="FrontPage" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="JBu-NZ-6fs"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Z4Q-Z6-jyx">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="cLH-4d-9NL" kind="relationship" relationship="rootViewController" id="Tit-e9-ELW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xwi-J3-pVZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-30" y="-287"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="LQo-nq-IrR">
+            <objects>
+                <viewController storyboardIdentifier="FrontPageVC" title="FrontPage" id="cLH-4d-9NL" userLabel="Home" customClass="HomeViewController" customModule="SendAR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d9G-6c-BEg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NoseCoverImage" translatesAutoresizingMaskIntoConstraints="NO" id="DZN-9M-fvQ">
+                                <rect key="frame" x="20" y="108" width="374" height="245"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="245" id="949-kK-1cC"/>
+                                    <constraint firstAttribute="width" constant="374" id="FS0-c1-eWv"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="DZN-9M-fvQ" firstAttribute="leading" secondItem="vJf-rP-6sY" secondAttribute="leading" constant="20" id="9vW-JE-dd0"/>
+                            <constraint firstItem="DZN-9M-fvQ" firstAttribute="centerX" secondItem="d9G-6c-BEg" secondAttribute="centerX" id="qHy-aJ-pxa"/>
+                            <constraint firstItem="DZN-9M-fvQ" firstAttribute="top" secondItem="vJf-rP-6sY" secondAttribute="top" constant="20" id="sNz-TT-7zH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vJf-rP-6sY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="pfh-AZ-Ybt"/>
+                    <navigationItem key="navigationItem" title="SendAR" id="JcK-57-T1Y">
+                        <barButtonItem key="rightBarButtonItem" id="fo1-3m-TVz">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="V5Y-KK-X6W" userLabel="Profile">
+                                <rect key="frame" x="369" y="10" width="25" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="person.crop.circle" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Tdd-KI-RNj" kind="show" id="ZXk-d2-ZOK"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f1R-Xi-lQW" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="772" y="-287"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="O6A-oz-7kR">
+            <objects>
+                <tableViewController id="Tdd-KI-RNj" userLabel="Profile" customClass="ProfileViewController" customModule="SendAR" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bQa-eb-pao">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="xmy-tu-U8C">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xmy-tu-U8C" id="vJg-Wx-4rj">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Tdd-KI-RNj" id="zdR-jT-cYA"/>
+                            <outlet property="delegate" destination="Tdd-KI-RNj" id="zXO-we-s1j"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="2ap-Ij-x3f"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5p7-gA-4k7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1574" y="-287"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="NoseCoverImage" width="769" height="505"/>
+        <image name="house" catalog="system" width="128" height="110"/>
+        <image name="person.crop.circle" catalog="system" width="128" height="121"/>
+    </resources>
+</document>

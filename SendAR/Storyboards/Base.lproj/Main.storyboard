@@ -7,102 +7,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--FrontPage-->
-        <scene sceneID="Xlm-59-nyc">
-            <objects>
-                <navigationController id="VSd-Nv-8SI" userLabel="FrontPage" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="FVi-ef-fcV"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="l1A-Jp-M8H">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Rr1-Lg-lVL"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="D2Q-2e-9Uz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-30" y="-287"/>
-        </scene>
-        <!--Home-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController storyboardIdentifier="FrontPageVC" title="FrontPage" id="BYZ-38-t0r" userLabel="Home" customClass="HomeViewController" customModule="SendAR" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NoseCoverImage" translatesAutoresizingMaskIntoConstraints="NO" id="OAk-En-4NQ">
-                                <rect key="frame" x="20" y="108" width="374" height="245"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
-                                </accessibility>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="245" id="fZc-93-fdh"/>
-                                    <constraint firstAttribute="width" constant="374" id="xcV-Xa-8Ke"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="OAk-En-4NQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NRN-rR-eU7"/>
-                            <constraint firstItem="OAk-En-4NQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="YEF-lf-fwy"/>
-                            <constraint firstItem="OAk-En-4NQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="wIi-MR-P0U"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="cEc-r3-rJD"/>
-                    <navigationItem key="navigationItem" title="SendAR" id="2l0-I9-Yhp">
-                        <barButtonItem key="rightBarButtonItem" id="3jW-bB-bh6">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="OjY-4F-GWQ" userLabel="Profile">
-                                <rect key="frame" x="369" y="10" width="25" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="person.crop.circle" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
-                                </state>
-                                <connections>
-                                    <segue destination="ckX-zl-dsX" kind="show" id="HlK-nF-Zfn"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-30.434782608695656" y="443.97321428571428"/>
-        </scene>
-        <!--Profile-->
-        <scene sceneID="mAW-Su-zV9">
-            <objects>
-                <tableViewController id="ckX-zl-dsX" userLabel="Profile" customClass="ProfileViewController" customModule="SendAR" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="5RV-P6-oDd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="I9b-pO-QGm">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="I9b-pO-QGm" id="9rG-h1-sAh">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="ckX-zl-dsX" id="1kz-5h-T2B"/>
-                            <outlet property="delegate" destination="ckX-zl-dsX" id="sd6-69-tAc"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="lNs-yU-3mA"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RFy-RT-4tv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-30" y="1189"/>
-        </scene>
         <!--Map-->
         <scene sceneID="8Ec-Za-mgS">
             <objects>
@@ -151,6 +55,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gV9-rm-uDD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="850.72463768115949" y="443.97321428571428"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="D30-Kl-ls8">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" id="FCL-r0-6zX" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="gjl-sh-cuL"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="77E-JJ-cM9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="104" y="-598"/>
         </scene>
         <!--Map-->
         <scene sceneID="UJs-eY-TAJ">
@@ -272,7 +186,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="VSd-Nv-8SI" kind="relationship" relationship="viewControllers" id="x0C-a3-VrO"/>
+                        <segue destination="FCL-r0-6zX" kind="relationship" relationship="viewControllers" id="Xkw-Vs-H0P"/>
                         <segue destination="Zge-v8-Hng" kind="relationship" relationship="viewControllers" id="ZIa-Bl-aqI"/>
                         <segue destination="1iB-PC-hEe" kind="relationship" relationship="viewControllers" id="KSE-3E-Ie2"/>
                         <segue destination="nrq-RV-gFb" kind="relationship" relationship="viewControllers" id="gNs-XN-yjU"/>
@@ -313,13 +227,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="NoseCoverImage" width="769" height="505"/>
         <image name="arkit" catalog="system" width="128" height="128"/>
         <image name="book" catalog="system" width="128" height="101"/>
         <image name="gear" catalog="system" width="128" height="119"/>
-        <image name="house" catalog="system" width="128" height="110"/>
         <image name="location" catalog="system" width="128" height="115"/>
         <image name="map" catalog="system" width="128" height="113"/>
-        <image name="person.crop.circle" catalog="system" width="128" height="121"/>
     </resources>
 </document>
