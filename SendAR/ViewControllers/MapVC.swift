@@ -14,8 +14,13 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
     @IBAction func refreshLocation(_ sender: Any) {
-        checkLocationServices()
-        print("Refreshing Location")
+        if CLLocationManager.locationServicesEnabled() {
+            checkLocationAuthorization()
+            print("Refreshing Location")
+        } else {
+            print("Unable to refresh")
+        }
+        
     }
     
     let locationManager = CLLocationManager()
@@ -71,31 +76,26 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             centerViewOnUserLocation()
             locationManager.startUpdatingLocation()
             print("Case: authorized when in use")
-            break
             
         case .denied:
             // show alert instructing them how to turn on permissions
             locationServiceDeniedAlert()
             print("Case: location service denied")
-            break
             
         case .notDetermined:
             // request permission
             locationManager.requestWhenInUseAuthorization()
             print("Case: requesting location authorization")
-            break
             
         case .restricted:
             // show alert that user can't change this setting (parental controls)
             locationServiceRestrictedAlert()
             print("Case: location restricted")
-            break
             
         case .authorizedAlways:
             locationManager.startUpdatingLocation()
             locationManager.startUpdatingHeading()
             print("Case: authorized always")
-            break
             
         @unknown default:
             //covers future cases with break to avoid crash
@@ -123,6 +123,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
 
 extension MapViewController: CLLocationManagerDelegate {
     
+    /*
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
         
@@ -131,9 +132,10 @@ extension MapViewController: CLLocationManagerDelegate {
         
         mapView.setRegion(region, animated: true)
         
-        self.locationManager.stopUpdatingLocation()
-        self.locationManager.stopUpdatingHeading()
+        //self.locationManager.stopUpdatingLocation()
+        //self.locationManager.stopUpdatingHeading()
     }
+ */
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         checkLocationAuthorization()
