@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PEx-Hc-ueI">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ARView-->
+        <scene sceneID="yjE-bu-cMX">
+            <objects>
+                <viewController title="ARView" id="PEx-Hc-ueI" customClass="ARViewController" customModule="SendAR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rue-tj-4i1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AR Functionality Coming Soon!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzc-Ig-l3Z">
+                                <rect key="frame" x="72" y="436" width="270" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hzc-Ig-l3Z" firstAttribute="centerX" secondItem="Rue-tj-4i1" secondAttribute="centerX" id="WCc-TY-pWu"/>
+                            <constraint firstItem="hzc-Ig-l3Z" firstAttribute="centerY" secondItem="Rue-tj-4i1" secondAttribute="centerY" id="lNx-Qq-Shi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ORH-la-98X"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="SendAR" image="arkit" catalog="system" id="7rx-yI-bL3"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jTm-vu-w9F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1756.521739130435" y="-287.27678571428572"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arkit" catalog="system" width="128" height="128"/>
+    </resources>
+</document>

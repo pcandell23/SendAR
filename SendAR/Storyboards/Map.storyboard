@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZfW-1i-Xrj">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map-->
+        <scene sceneID="YCL-NK-jbC">
+            <objects>
+                <viewController id="28U-ib-OeJ" customClass="MapViewController" customModule="SendAR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="C8d-uN-c7o">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="3Dk-Ar-zdl">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <connections>
+                                    <outlet property="delegate" destination="28U-ib-OeJ" id="tQa-In-UR7"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3Dk-Ar-zdl" firstAttribute="trailing" secondItem="n0l-yW-02u" secondAttribute="trailing" id="D0O-YJ-jJT"/>
+                            <constraint firstItem="3Dk-Ar-zdl" firstAttribute="top" secondItem="n0l-yW-02u" secondAttribute="top" id="IH2-uD-GKd"/>
+                            <constraint firstItem="3Dk-Ar-zdl" firstAttribute="leading" secondItem="n0l-yW-02u" secondAttribute="leading" id="aIe-sH-K6t"/>
+                            <constraint firstItem="3Dk-Ar-zdl" firstAttribute="bottom" secondItem="n0l-yW-02u" secondAttribute="bottom" id="dwg-xG-4cv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="n0l-yW-02u"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Map" id="m1D-e1-aeS">
+                        <barButtonItem key="rightBarButtonItem" image="location" catalog="system" id="LDf-4z-9Wz">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="W0l-Hm-AQg" userLabel="recenterLocation">
+                                <rect key="frame" x="368.5" y="9.5" width="25.5" height="25.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="location" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="refreshLocation:" destination="28U-ib-OeJ" eventType="touchUpInside" id="iaj-tc-6cC"/>
+                                </connections>
+                            </button>
+                            <connections>
+                                <action selector="refreshLocation:" destination="28U-ib-OeJ" id="9Nq-vM-o1Y"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="3Dk-Ar-zdl" id="i23-t5-vsP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P3q-9Y-Z4O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1652" y="-287"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="Rz6-Ra-KAg">
+            <objects>
+                <navigationController id="ZfW-1i-Xrj" userLabel="Map" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" id="cMf-qf-NC5"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PWF-3l-LDO">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="28U-ib-OeJ" kind="relationship" relationship="rootViewController" id="bMY-1o-YoK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Miz-qg-gAM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="851" y="-287"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="location" catalog="system" width="128" height="115"/>
+        <image name="map" catalog="system" width="128" height="113"/>
+    </resources>
+</document>

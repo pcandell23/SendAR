@@ -3,177 +3,58 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Map-->
-        <scene sceneID="8Ec-Za-mgS">
-            <objects>
-                <viewController id="aM7-tb-qJg" customClass="MapViewController" customModule="SendAR" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5Oy-lT-2h8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="fNn-4i-MkC">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <connections>
-                                    <outlet property="delegate" destination="aM7-tb-qJg" id="4Ab-A3-rmJ"/>
-                                </connections>
-                            </mapView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="fNn-4i-MkC" firstAttribute="top" secondItem="yrr-tI-Aod" secondAttribute="top" id="AVj-rz-ezX"/>
-                            <constraint firstItem="fNn-4i-MkC" firstAttribute="bottom" secondItem="yrr-tI-Aod" secondAttribute="bottom" id="J5p-qm-XOa"/>
-                            <constraint firstItem="fNn-4i-MkC" firstAttribute="leading" secondItem="yrr-tI-Aod" secondAttribute="leading" id="b1o-gq-ccJ"/>
-                            <constraint firstItem="fNn-4i-MkC" firstAttribute="trailing" secondItem="yrr-tI-Aod" secondAttribute="trailing" id="qYg-cl-Xok"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="yrr-tI-Aod"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Map" id="xaC-1V-Me5">
-                        <barButtonItem key="rightBarButtonItem" image="location" catalog="system" id="F08-Mi-Hf5">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rlP-FM-e88" userLabel="recenterLocation">
-                                <rect key="frame" x="368.5" y="9.5" width="25.5" height="25.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="location" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
-                                </state>
-                                <connections>
-                                    <action selector="refreshLocation:" destination="aM7-tb-qJg" eventType="touchUpInside" id="WSS-f2-ChK"/>
-                                </connections>
-                            </button>
-                            <connections>
-                                <action selector="refreshLocation:" destination="aM7-tb-qJg" id="wQ3-2f-WOE"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="mapView" destination="fNn-4i-MkC" id="qQF-LK-lIT"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gV9-rm-uDD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="850.72463768115949" y="443.97321428571428"/>
-        </scene>
         <!--Home-->
         <scene sceneID="D30-Kl-ls8">
             <objects>
                 <viewControllerPlaceholder storyboardName="Home" id="FCL-r0-6zX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="gjl-sh-cuL"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="gjl-sh-cuL"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="77E-JJ-cM9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="104" y="-598"/>
+            <point key="canvasLocation" x="1381" y="-599"/>
         </scene>
         <!--Map-->
-        <scene sceneID="UJs-eY-TAJ">
+        <scene sceneID="Kpw-gt-ryD">
             <objects>
-                <navigationController id="Zge-v8-Hng" userLabel="Map" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" id="deQ-EO-OQF"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="q83-F7-65X">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="aM7-tb-qJg" kind="relationship" relationship="rootViewController" id="buN-1X-27c"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x2b-wZ-Rwg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Map" id="uWV-Jk-aHh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" id="K9A-xS-g0P"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qp8-SW-zdE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="851" y="-287"/>
+            <point key="canvasLocation" x="1580" y="-599"/>
         </scene>
-        <!--My Areas-->
-        <scene sceneID="GGB-fB-Bgp">
+        <!--AR-->
+        <scene sceneID="1Ys-vf-xBL">
             <objects>
-                <tableViewController id="9NJ-ED-beC" customClass="MyAreasViewController" customModule="SendAR" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fsy-Hh-gn6">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="HFq-xR-oCt">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HFq-xR-oCt" id="ev7-KX-CdS">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="9NJ-ED-beC" id="vWn-c2-t1I"/>
-                            <outlet property="delegate" destination="9NJ-ED-beC" id="2GU-Xh-8rd"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="My Areas" id="OFu-OD-31s"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wmL-VQ-W2n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="AR" id="hNk-ya-wxK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="SendAR" image="arkit" catalog="system" id="nhP-tK-sXS"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5vP-Zx-P6W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2683" y="444"/>
+            <point key="canvasLocation" x="1757" y="-599"/>
         </scene>
-        <!--My Areas-->
-        <scene sceneID="oEa-Ff-wg7">
+        <!--MyAreas-->
+        <scene sceneID="Hfc-eN-UJh">
             <objects>
-                <navigationController id="nrq-RV-gFb" userLabel="My Areas" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Areas" image="book" catalog="system" id="5DH-6f-ekZ" userLabel="My Areas"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FbM-I2-Msr">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="9NJ-ED-beC" kind="relationship" relationship="rootViewController" id="lQ1-8G-bU2"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uKX-Dn-qn8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="MyAreas" id="teT-5z-ZL3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="My Areas" image="book" catalog="system" id="aX7-CA-qan"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rQV-xU-Z1T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2683" y="-287"/>
+            <point key="canvasLocation" x="1941" y="-599"/>
         </scene>
         <!--Settings-->
-        <scene sceneID="MnP-sO-BmL">
+        <scene sceneID="nVc-qN-orn">
             <objects>
-                <tableViewController id="h7K-C3-RUB" customClass="SettingsViewController" customModule="SendAR" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="K1a-bK-KuW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="KrM-7p-7Bp">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KrM-7p-7Bp" id="SSa-CM-aMf">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="h7K-C3-RUB" id="nnZ-m9-4Zh"/>
-                            <outlet property="delegate" destination="h7K-C3-RUB" id="XJc-2T-r68"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Settings" id="1aZ-3V-R8l"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="t7i-kd-X1c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Settings" id="EiU-4D-lKC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" id="6UV-Hy-42J"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n4T-7A-Lto" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3577" y="444"/>
-        </scene>
-        <!--Settings-->
-        <scene sceneID="DPk-o5-GQy">
-            <objects>
-                <navigationController id="ojr-hN-Tj3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" id="wLj-qg-QaL"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hqb-Us-atD">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="h7K-C3-RUB" kind="relationship" relationship="rootViewController" id="y2T-uo-zy1"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="reJ-Z9-8JL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3577" y="-287"/>
+            <point key="canvasLocation" x="2117" y="-599"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="iyR-bc-lY7">
@@ -187,50 +68,22 @@
                     </tabBar>
                     <connections>
                         <segue destination="FCL-r0-6zX" kind="relationship" relationship="viewControllers" id="Xkw-Vs-H0P"/>
-                        <segue destination="Zge-v8-Hng" kind="relationship" relationship="viewControllers" id="ZIa-Bl-aqI"/>
-                        <segue destination="1iB-PC-hEe" kind="relationship" relationship="viewControllers" id="KSE-3E-Ie2"/>
-                        <segue destination="nrq-RV-gFb" kind="relationship" relationship="viewControllers" id="gNs-XN-yjU"/>
-                        <segue destination="ojr-hN-Tj3" kind="relationship" relationship="viewControllers" id="7So-P0-nA3"/>
+                        <segue destination="uWV-Jk-aHh" kind="relationship" relationship="viewControllers" id="k62-wX-Ytg"/>
+                        <segue destination="hNk-ya-wxK" kind="relationship" relationship="viewControllers" id="nD0-Zj-Tkw"/>
+                        <segue destination="teT-5z-ZL3" kind="relationship" relationship="viewControllers" id="VLd-ZJ-YiU"/>
+                        <segue destination="EiU-4D-lKC" kind="relationship" relationship="viewControllers" id="NhY-HR-Aae"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zIH-vx-FWj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1757" y="-1090"/>
         </scene>
-        <!--ARView-->
-        <scene sceneID="gae-nE-u87">
-            <objects>
-                <viewController title="ARView" id="1iB-PC-hEe" customClass="ARViewController" customModule="SendAR" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8Eg-mB-3th">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AR Functionality Coming Soon!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ia9-MC-mTh">
-                                <rect key="frame" x="72" y="436" width="270" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="ia9-MC-mTh" firstAttribute="centerY" secondItem="8Eg-mB-3th" secondAttribute="centerY" id="dfh-ky-yAw"/>
-                            <constraint firstItem="ia9-MC-mTh" firstAttribute="centerX" secondItem="8Eg-mB-3th" secondAttribute="centerX" id="hIv-az-hk2"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="7N8-cd-3cH"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="SendAR" image="arkit" catalog="system" id="HAj-Fp-gm5"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cmZ-c8-ihU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1756.521739130435" y="-287.27678571428572"/>
-        </scene>
     </scenes>
     <resources>
         <image name="arkit" catalog="system" width="128" height="128"/>
         <image name="book" catalog="system" width="128" height="101"/>
         <image name="gear" catalog="system" width="128" height="119"/>
-        <image name="location" catalog="system" width="128" height="115"/>
+        <image name="house" catalog="system" width="128" height="110"/>
         <image name="map" catalog="system" width="128" height="113"/>
     </resources>
 </document>
