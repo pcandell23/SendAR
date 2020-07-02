@@ -65,7 +65,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Tdd-KI-RNj" kind="show" id="ZXk-d2-ZOK"/>
+                                    <segue destination="Tdd-KI-RNj" kind="show" id="da6-SE-Ofk"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -102,7 +102,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5p7-gA-4k7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1574" y="-287"/>
+            <point key="canvasLocation" x="1616" y="-287"/>
         </scene>
     </scenes>
     <resources>
