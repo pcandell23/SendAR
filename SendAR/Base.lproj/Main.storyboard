@@ -30,15 +30,12 @@
         <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="FrontPageVC" title="FrontPage" id="BYZ-38-t0r" userLabel="Home" customClass="HomeViewController" customModule="SendAR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Mj-ly-rMF">
-                                <rect key="frame" x="0.0" y="816" width="414" height="128"/>
-                                <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NoseCoverImage" translatesAutoresizingMaskIntoConstraints="NO" id="OAk-En-4NQ">
                                 <rect key="frame" x="20" y="108" width="374" height="245"/>
                                 <accessibility key="accessibilityConfiguration">
@@ -52,12 +49,8 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="8Mj-ly-rMF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="816" id="8eB-4h-kUF"/>
                             <constraint firstItem="OAk-En-4NQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NRN-rR-eU7"/>
-                            <constraint firstItem="8Mj-ly-rMF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="OAy-Gl-Swc"/>
-                            <constraint firstAttribute="bottom" secondItem="8Mj-ly-rMF" secondAttribute="bottom" constant="-48" id="TZW-ho-t6z"/>
                             <constraint firstItem="OAk-En-4NQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="YEF-lf-fwy"/>
-                            <constraint firstItem="8Mj-ly-rMF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZeV-Do-HLe"/>
                             <constraint firstItem="OAk-En-4NQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="wIi-MR-P0U"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -77,11 +70,7 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="coverImage" destination="OAk-En-4NQ" id="Pwp-3T-8cF"/>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-30.434782608695656" y="443.97321428571428"/>
         </scene>
