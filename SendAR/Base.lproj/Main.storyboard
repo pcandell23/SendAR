@@ -30,7 +30,6 @@
         <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="FrontPageVC" title="FrontPage" id="BYZ-38-t0r" userLabel="Home" customClass="HomeViewController" customModule="SendAR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -71,6 +70,7 @@
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-30.434782608695656" y="443.97321428571428"/>
         </scene>
@@ -128,11 +128,11 @@
                         <viewLayoutGuide key="safeArea" id="yrr-tI-Aod"/>
                     </view>
                     <navigationItem key="navigationItem" title="Map" id="xaC-1V-Me5">
-                        <barButtonItem key="rightBarButtonItem" image="arrow.clockwise" catalog="system" id="F08-Mi-Hf5">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rlP-FM-e88" userLabel="RefreshLocation">
-                                <rect key="frame" x="372" y="9.5" width="22" height="25.5"/>
+                        <barButtonItem key="rightBarButtonItem" image="location" catalog="system" id="F08-Mi-Hf5">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rlP-FM-e88" userLabel="recenterLocation">
+                                <rect key="frame" x="368.5" y="9.5" width="25.5" height="25.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="arrow.clockwise" catalog="system">
+                                <state key="normal" image="location" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                 </state>
                                 <connections>
@@ -303,10 +303,10 @@
     <resources>
         <image name="NoseCoverImage" width="769" height="505"/>
         <image name="arkit" catalog="system" width="128" height="128"/>
-        <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
         <image name="book" catalog="system" width="128" height="101"/>
         <image name="gear" catalog="system" width="128" height="119"/>
         <image name="house" catalog="system" width="128" height="110"/>
+        <image name="location" catalog="system" width="128" height="115"/>
         <image name="map" catalog="system" width="128" height="113"/>
         <image name="person.crop.circle" catalog="system" width="128" height="121"/>
     </resources>
