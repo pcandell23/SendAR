@@ -41,6 +41,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         checkLocationServices()
+        centerViewOnUserLocation()
     }
     
     func setupLocationManager() {

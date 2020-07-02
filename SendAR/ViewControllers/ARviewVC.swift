@@ -13,11 +13,9 @@ class ARViewController: UIViewController {
     
     let locationManager = CLLocationManager()
     let settingsAction = UIAlertAction(title: "Settings", style: .default) { (_) -> Void in
-        
         guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
             return
         }
-        
         if UIApplication.shared.canOpenURL(settingsUrl) {
             UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
                 print("Settings opened: \(success)") // prints true
@@ -28,7 +26,28 @@ class ARViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         checkLocationServices()
+/*
+        if checkARPermissions() {
+            //do AR
+        } else {
+            //throw error
+        }
+ */
     }
+    
+/*
+    func checkARPermissions() -> Bool {
+        if verifyDeviceSupport() && checkCameraAccess() {
+            return true
+        } else {
+            //throw error
+            return false
+        }
+    }
+ */
+    
+     //MARK: - Location Usage
+    
     
     func setupLocationManager() {
         locationManager.delegate = self
@@ -101,6 +120,28 @@ class ARViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
         present(alert, animated: true)
     }
+    
+    //MARK: - Verify Device Support
+    
+/*
+    func verifyDeviceSupport() -> Bool {
+        // if supported, check camera access, true
+        // if not supported, throw error, false
+        return false
+    }
+ 
+ */
+    
+    //MARK: - Camera Usage
+    
+/*
+    func checkCameraAccess() -> Bool {
+        // if camera access is granted, true
+        // if camera not set up -> ask for it
+        // if disabled, throw error, false
+        return false
+    }
+ */
     
 }
 
