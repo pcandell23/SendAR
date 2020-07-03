@@ -65,6 +65,69 @@
                                     <segue destination="Pve-vr-WFk" kind="show" id="gBf-0d-OcB"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3fT-nw-Km7">
+                                <rect key="frame" x="20" y="425" width="374" height="250"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uQ0-Q8-FtS">
+                                        <rect key="frame" x="0.0" y="54" width="177" height="142"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Starting Altitude:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b16-UJ-aaF">
+                                                <rect key="frame" x="21.5" y="0.0" width="134" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[start altitude]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23k-Vg-3bn">
+                                                <rect key="frame" x="34" y="40.5" width="109.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Altitude:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qlx-S1-DDP">
+                                                <rect key="frame" x="23.5" y="81" width="130.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[current altitude]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mx3-2i-GDB">
+                                                <rect key="frame" x="24" y="121.5" width="129" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="6zq-Cf-LfR">
+                                        <rect key="frame" x="197" y="54" width="177" height="142"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n7z-Jq-CtP" userLabel="Start Time:">
+                                                <rect key="frame" x="45" y="0.0" width="87.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[start time]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Km-r2-T2P">
+                                                <rect key="frame" x="46" y="40.5" width="85.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elapsed Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ca-6b-z8f">
+                                                <rect key="frame" x="33.5" y="81" width="110.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[elapsed time]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LpH-yw-fsU">
+                                                <rect key="frame" x="33.5" y="121.5" width="110" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -74,10 +137,14 @@
                             <constraint firstItem="vJf-rP-6sY" firstAttribute="trailing" secondItem="rx0-j5-q3Z" secondAttribute="trailing" constant="20" id="aVc-RJ-day"/>
                             <constraint firstItem="vJf-rP-6sY" firstAttribute="trailing" secondItem="p97-sc-kJV" secondAttribute="trailing" constant="20" id="eCN-bx-w5P"/>
                             <constraint firstItem="vJf-rP-6sY" firstAttribute="bottom" secondItem="rx0-j5-q3Z" secondAttribute="bottom" constant="20" id="gqs-jg-CaC"/>
+                            <constraint firstItem="vJf-rP-6sY" firstAttribute="trailing" secondItem="3fT-nw-Km7" secondAttribute="trailing" constant="20" id="hgx-s6-MqG"/>
+                            <constraint firstItem="p97-sc-kJV" firstAttribute="top" secondItem="3fT-nw-Km7" secondAttribute="bottom" constant="20" id="l8G-cO-Y1h"/>
                             <constraint firstItem="rx0-j5-q3Z" firstAttribute="leading" secondItem="vJf-rP-6sY" secondAttribute="leading" constant="20" id="mhL-yP-N8C"/>
                             <constraint firstItem="p97-sc-kJV" firstAttribute="leading" secondItem="vJf-rP-6sY" secondAttribute="leading" constant="20" id="oDs-Fx-xsV"/>
                             <constraint firstItem="DZN-9M-fvQ" firstAttribute="centerX" secondItem="d9G-6c-BEg" secondAttribute="centerX" id="qHy-aJ-pxa"/>
+                            <constraint firstItem="3fT-nw-Km7" firstAttribute="leading" secondItem="vJf-rP-6sY" secondAttribute="leading" constant="20" id="qjH-fy-dZL"/>
                             <constraint firstItem="DZN-9M-fvQ" firstAttribute="top" secondItem="vJf-rP-6sY" secondAttribute="top" constant="20" id="sNz-TT-7zH"/>
+                            <constraint firstItem="3fT-nw-Km7" firstAttribute="top" secondItem="DZN-9M-fvQ" secondAttribute="bottom" constant="20" id="vKt-5G-1tF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vJf-rP-6sY"/>
                     </view>
