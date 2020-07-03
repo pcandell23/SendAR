@@ -13,15 +13,16 @@ import CoreLocation
 class MapViewController: UIViewController, MKMapViewDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
-    @IBAction func refreshLocation(_ sender: Any) {
+    
+    @IBAction func recenterLocation(_ sender: Any) {
         if CLLocationManager.locationServicesEnabled() {
             checkLocationAuthorization()
             print("Refreshing Location")
         } else {
             print("Unable to refresh")
         }
-        
     }
+    
     
     let locationManager = CLLocationManager()
     let regionInMeters: Double = 10000
@@ -42,6 +43,20 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         super.viewDidLoad()
         checkLocationServices()
         centerViewOnUserLocation()
+    }
+    
+    //hides nav bar on map
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    //shows nav bar on next page
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
     func setupLocationManager() {

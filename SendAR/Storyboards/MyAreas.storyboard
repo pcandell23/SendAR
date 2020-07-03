@@ -39,10 +39,10 @@
         <scene sceneID="sDv-b7-OTE">
             <objects>
                 <navigationController id="G0G-0R-v69" userLabel="My Areas" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Areas" image="book" catalog="system" id="ALW-yf-FXh"/>
+                    <tabBarItem key="tabBarItem" title="My Areas" image="star" catalog="system" id="ALW-yf-FXh"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qg3-E8-Soi">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="qg3-E8-Soi">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -55,6 +55,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="book" catalog="system" width="128" height="101"/>
+        <image name="star" catalog="system" width="128" height="116"/>
     </resources>
 </document>

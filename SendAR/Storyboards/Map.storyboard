@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Map-->
+        <!--Map View Controller-->
         <scene sceneID="YCL-NK-jbC">
             <objects>
                 <viewController id="28U-ib-OeJ" customClass="MapViewController" customModule="SendAR" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,57 +16,65 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="3Dk-Ar-zdl">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                                 <connections>
                                     <outlet property="delegate" destination="28U-ib-OeJ" id="tQa-In-UR7"/>
                                 </connections>
                             </mapView>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mtb-xu-Zzv" userLabel="recenterLocation" customClass="MapButton" customModule="SendAR" customModuleProvider="target">
+                                <rect key="frame" x="350" y="675" width="44" height="44"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="L1e-Xo-YV9"/>
+                                    <constraint firstAttribute="width" constant="44" id="LpJ-Sl-6WV"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="WJG-o5-8s1"/>
+                                    <constraint firstAttribute="height" constant="44" id="WfQ-My-yKe"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="location" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="semibold"/>
+                                </state>
+                                <connections>
+                                    <action selector="recenterLocation:" destination="28U-ib-OeJ" eventType="touchUpInside" id="hb9-fR-d19"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iJt-lO-rIg" userLabel="nearbyAreas" customClass="MapButton" customModule="SendAR" customModuleProvider="target">
+                                <rect key="frame" x="350" y="729" width="44" height="44"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="JHp-0g-cfo"/>
+                                    <constraint firstAttribute="width" constant="44" id="ZQe-qX-9lB"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="line.horizontal.3" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="semibold"/>
+                                </state>
+                                <connections>
+                                    <segue destination="6zw-br-HQe" kind="show" id="6Lh-Vx-RqY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="3Dk-Ar-zdl" firstAttribute="trailing" secondItem="n0l-yW-02u" secondAttribute="trailing" id="D0O-YJ-jJT"/>
-                            <constraint firstItem="3Dk-Ar-zdl" firstAttribute="top" secondItem="n0l-yW-02u" secondAttribute="top" id="IH2-uD-GKd"/>
+                            <constraint firstItem="3Dk-Ar-zdl" firstAttribute="top" secondItem="n0l-yW-02u" secondAttribute="top" constant="-140" id="IH2-uD-GKd"/>
+                            <constraint firstItem="iJt-lO-rIg" firstAttribute="top" secondItem="Mtb-xu-Zzv" secondAttribute="bottom" constant="10" id="Lyf-gf-QNg"/>
                             <constraint firstItem="3Dk-Ar-zdl" firstAttribute="leading" secondItem="n0l-yW-02u" secondAttribute="leading" id="aIe-sH-K6t"/>
+                            <constraint firstItem="n0l-yW-02u" firstAttribute="trailing" secondItem="Mtb-xu-Zzv" secondAttribute="trailing" constant="20" id="cpN-PI-2y9"/>
+                            <constraint firstItem="n0l-yW-02u" firstAttribute="bottom" secondItem="iJt-lO-rIg" secondAttribute="bottom" constant="40" id="cyG-tH-Ttq"/>
                             <constraint firstItem="3Dk-Ar-zdl" firstAttribute="bottom" secondItem="n0l-yW-02u" secondAttribute="bottom" id="dwg-xG-4cv"/>
+                            <constraint firstItem="iJt-lO-rIg" firstAttribute="trailing" secondItem="C8d-uN-c7o" secondAttribute="trailingMargin" id="mUA-WN-X1p"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="n0l-yW-02u"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Map" id="m1D-e1-aeS">
-                        <barButtonItem key="leftBarButtonItem" image="location" catalog="system" id="LDf-4z-9Wz">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="W0l-Hm-AQg" userLabel="recenterLocation">
-                                <rect key="frame" x="20" y="9.5" width="25.5" height="25.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="location" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
-                                </state>
-                                <connections>
-                                    <action selector="refreshLocation:" destination="28U-ib-OeJ" eventType="touchUpInside" id="iaj-tc-6cC"/>
-                                </connections>
-                            </button>
-                            <connections>
-                                <action selector="refreshLocation:" destination="28U-ib-OeJ" id="9Nq-vM-o1Y"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="line.horizontal.3" catalog="system" id="VX4-4F-wa4">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gnY-wy-d0r" userLabel="listView">
-                                <rect key="frame" x="368" y="11" width="26" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="line.horizontal.3" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
-                                </state>
-                                <connections>
-                                    <segue destination="6zw-br-HQe" kind="show" id="KbX-Ml-nY0"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="m1D-e1-aeS"/>
                     <connections>
                         <outlet property="mapView" destination="3Dk-Ar-zdl" id="i23-t5-vsP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P3q-9Y-Z4O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1652" y="-287"/>
+            <point key="canvasLocation" x="1650.7246376811595" y="-287.27678571428572"/>
         </scene>
         <!--Nearby Areas-->
         <scene sceneID="liS-Ru-DbG">
@@ -103,8 +111,8 @@
                 <navigationController id="ZfW-1i-Xrj" userLabel="Map" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" id="cMf-qf-NC5"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PWF-3l-LDO">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="PWF-3l-LDO">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>

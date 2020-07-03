@@ -40,7 +40,7 @@
         <scene sceneID="Hfc-eN-UJh">
             <objects>
                 <viewControllerPlaceholder storyboardName="MyAreas" id="teT-5z-ZL3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Areas" image="book" catalog="system" id="aX7-CA-qan"/>
+                    <tabBarItem key="tabBarItem" title="My Areas" image="star" catalog="system" id="aX7-CA-qan"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rQV-xU-Z1T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -81,9 +81,9 @@
     </scenes>
     <resources>
         <image name="arkit" catalog="system" width="128" height="128"/>
-        <image name="book" catalog="system" width="128" height="101"/>
         <image name="gear" catalog="system" width="128" height="119"/>
         <image name="house" catalog="system" width="128" height="110"/>
         <image name="map" catalog="system" width="128" height="113"/>
+        <image name="star" catalog="system" width="128" height="116"/>
     </resources>
 </document>

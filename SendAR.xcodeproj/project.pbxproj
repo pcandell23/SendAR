@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		404FDE1424AEA524006AA33E /* NearbyAreas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404FDE1324AEA524006AA33E /* NearbyAreas.swift */; };
+		407A645A24AF8C83006CDFCE /* TrackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A645924AF8C83006CDFCE /* TrackButton.swift */; };
+		407A645C24AF963C006CDFCE /* LogRouteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A645B24AF963C006CDFCE /* LogRouteVC.swift */; };
+		407A645E24AF9698006CDFCE /* LogNewRoute.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 407A645D24AF9698006CDFCE /* LogNewRoute.storyboard */; };
+		407A646024AFA64F006CDFCE /* MapButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A645F24AFA64F006CDFCE /* MapButton.swift */; };
 		4087FA1024ABA33900723BCF /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4087FA0F24ABA33900723BCF /* ProfileVC.swift */; };
 		40DC780F24AE465900DC5AF2 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40DC780E24AE465900DC5AF2 /* Home.storyboard */; };
 		40E0977F24AE530B0022E965 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40E0977E24AE530B0022E965 /* Map.storyboard */; };
@@ -51,6 +55,10 @@
 
 /* Begin PBXFileReference section */
 		404FDE1324AEA524006AA33E /* NearbyAreas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyAreas.swift; sourceTree = "<group>"; };
+		407A645924AF8C83006CDFCE /* TrackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackButton.swift; sourceTree = "<group>"; };
+		407A645B24AF963C006CDFCE /* LogRouteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogRouteVC.swift; sourceTree = "<group>"; };
+		407A645D24AF9698006CDFCE /* LogNewRoute.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogNewRoute.storyboard; sourceTree = "<group>"; };
+		407A645F24AFA64F006CDFCE /* MapButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapButton.swift; sourceTree = "<group>"; };
 		4087FA0F24ABA33900723BCF /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		40DC780E24AE465900DC5AF2 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		40E0977E24AE530B0022E965 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
@@ -111,6 +119,7 @@
 			children = (
 				40EAA79624A8152300F41366 /* Main.storyboard */,
 				40DC780E24AE465900DC5AF2 /* Home.storyboard */,
+				407A645D24AF9698006CDFCE /* LogNewRoute.storyboard */,
 				40E0977E24AE530B0022E965 /* Map.storyboard */,
 				40E0978024AE53B40022E965 /* AR.storyboard */,
 				40E0978224AE54290022E965 /* MyAreas.storyboard */,
@@ -146,6 +155,8 @@
 				961F055D24AA6346006DE4C5 /* ViewControllers */,
 				40EAA79024A8152300F41366 /* AppDelegate.swift */,
 				40EAA79224A8152300F41366 /* SceneDelegate.swift */,
+				407A645924AF8C83006CDFCE /* TrackButton.swift */,
+				407A645F24AFA64F006CDFCE /* MapButton.swift */,
 				40DC781024AE466500DC5AF2 /* Storyboards */,
 				40EAA79924A8152400F41366 /* Assets.xcassets */,
 				40EAA79B24A8152400F41366 /* LaunchScreen.storyboard */,
@@ -178,6 +189,7 @@
 				40EAA79424A8152300F41366 /* ViewController.swift */,
 				961F055E24AA64E8006DE4C5 /* HomeVC.swift */,
 				4087FA0F24ABA33900723BCF /* ProfileVC.swift */,
+				407A645B24AF963C006CDFCE /* LogRouteVC.swift */,
 				961F056024AA64F8006DE4C5 /* MapVC.swift */,
 				404FDE1324AEA524006AA33E /* NearbyAreas.swift */,
 				961F056424AA658F006DE4C5 /* ARViewVC.swift */,
@@ -304,6 +316,7 @@
 				40EAA79D24A8152400F41366 /* LaunchScreen.storyboard in Resources */,
 				40EAA79A24A8152400F41366 /* Assets.xcassets in Resources */,
 				40E0977F24AE530B0022E965 /* Map.storyboard in Resources */,
+				407A645E24AF9698006CDFCE /* LogNewRoute.storyboard in Resources */,
 				40E0978524AE548A0022E965 /* Settings.storyboard in Resources */,
 				40E0978324AE54290022E965 /* MyAreas.storyboard in Resources */,
 				40EAA79824A8152300F41366 /* Main.storyboard in Resources */,
@@ -333,8 +346,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				407A645C24AF963C006CDFCE /* LogRouteVC.swift in Sources */,
 				961F056E24AC02A3006DE4C5 /* Area.swift in Sources */,
+				407A645A24AF8C83006CDFCE /* TrackButton.swift in Sources */,
 				961F056124AA64F8006DE4C5 /* MapVC.swift in Sources */,
+				407A646024AFA64F006CDFCE /* MapButton.swift in Sources */,
 				966D229824AC0B7200703906 /* Route.swift in Sources */,
 				40EAA79524A8152300F41366 /* ViewController.swift in Sources */,
 				961F055F24AA64E8006DE4C5 /* HomeVC.swift in Sources */,
