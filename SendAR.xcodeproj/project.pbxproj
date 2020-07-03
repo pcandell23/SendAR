@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4010BDA024AFB8F10082F7E2 /* RouteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4010BD9F24AFB8F10082F7E2 /* RouteCell.swift */; };
+		4010BDA324AFD7190082F7E2 /* RouteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4010BDA124AFD7190082F7E2 /* RouteCell.swift */; };
+		4010BDA424AFD7190082F7E2 /* RouteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4010BDA224AFD7190082F7E2 /* RouteCell.xib */; };
 		404FDE1424AEA524006AA33E /* NearbyAreas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404FDE1324AEA524006AA33E /* NearbyAreas.swift */; };
 		407A645A24AF8C83006CDFCE /* TrackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A645924AF8C83006CDFCE /* TrackButton.swift */; };
 		407A645C24AF963C006CDFCE /* LogRouteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A645B24AF963C006CDFCE /* LogRouteVC.swift */; };
@@ -55,7 +56,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4010BD9F24AFB8F10082F7E2 /* RouteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteCell.swift; sourceTree = "<group>"; };
+		4010BDA124AFD7190082F7E2 /* RouteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteCell.swift; sourceTree = "<group>"; };
+		4010BDA224AFD7190082F7E2 /* RouteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RouteCell.xib; sourceTree = "<group>"; };
 		404FDE1324AEA524006AA33E /* NearbyAreas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyAreas.swift; sourceTree = "<group>"; };
 		407A645924AF8C83006CDFCE /* TrackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackButton.swift; sourceTree = "<group>"; };
 		407A645B24AF963C006CDFCE /* LogRouteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogRouteVC.swift; sourceTree = "<group>"; };
@@ -121,7 +123,8 @@
 			children = (
 				407A645F24AFA64F006CDFCE /* MapButton.swift */,
 				407A645924AF8C83006CDFCE /* TrackButton.swift */,
-				4010BD9F24AFB8F10082F7E2 /* RouteCell.swift */,
+				4010BDA124AFD7190082F7E2 /* RouteCell.swift */,
+				4010BDA224AFD7190082F7E2 /* RouteCell.xib */,
 			);
 			path = CustomUIElements;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				40EAA79D24A8152400F41366 /* LaunchScreen.storyboard in Resources */,
+				4010BDA424AFD7190082F7E2 /* RouteCell.xib in Resources */,
 				40EAA79A24A8152400F41366 /* Assets.xcassets in Resources */,
 				40E0977F24AE530B0022E965 /* Map.storyboard in Resources */,
 				407A645E24AF9698006CDFCE /* LogNewRoute.storyboard in Resources */,
@@ -357,12 +361,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4010BDA024AFB8F10082F7E2 /* RouteCell.swift in Sources */,
 				407A645C24AF963C006CDFCE /* LogRouteVC.swift in Sources */,
 				961F056E24AC02A3006DE4C5 /* Area.swift in Sources */,
 				407A645A24AF8C83006CDFCE /* TrackButton.swift in Sources */,
 				961F056124AA64F8006DE4C5 /* MapVC.swift in Sources */,
 				407A646024AFA64F006CDFCE /* MapButton.swift in Sources */,
+				4010BDA324AFD7190082F7E2 /* RouteCell.swift in Sources */,
 				966D229824AC0B7200703906 /* Route.swift in Sources */,
 				40EAA79524A8152300F41366 /* ViewController.swift in Sources */,
 				961F055F24AA64E8006DE4C5 /* HomeVC.swift in Sources */,

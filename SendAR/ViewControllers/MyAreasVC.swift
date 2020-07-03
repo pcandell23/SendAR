@@ -8,34 +8,31 @@
 
 import UIKit
 
-class MyAreasViewController: UIViewController {
+class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var myAreasTableView: UITableView!
+    
+    //simple placeholder because I'm confused on accessing objects in arrays
+    let routes = ["Snake Dike", "Royal Arches", "The Nose", "The Dawn Wall", "Freerider", "Cannibal Gulley", "Jellyroll Arch", "One Hand Clapping"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let nib = UINib(nibName: "RouteCell", bundle: nil)
+        myAreasTableView.register(nib, forCellReuseIdentifier: "RouteCell")
         myAreasTableView.delegate = self
         myAreasTableView.dataSource = self
     
     }
-}
-
-extension MyAreasViewController: UITableViewDelegate {
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("You tapped me")
-    }
-    
-}
-
-extension MyAreasViewController: UITableViewDataSource {
+    //TableView Functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return routes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RouteCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RouteCell", for: indexPath) as! RouteCell
+        cell.routeName.text = routes[indexPath.row]
         
         return cell
     }
