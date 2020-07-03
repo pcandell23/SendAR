@@ -8,10 +8,36 @@
 
 import UIKit
 
-class MyAreasViewController: UITableViewController {
+class MyAreasViewController: UIViewController {
+    
+    @IBOutlet var myAreasTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        myAreasTableView.delegate = self
+        myAreasTableView.dataSource = self
+    
+    }
+}
+
+extension MyAreasViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("You tapped me")
+    }
+    
+}
+
+extension MyAreasViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RouteCell", for: indexPath)
+        
+        return cell
     }
     
 }

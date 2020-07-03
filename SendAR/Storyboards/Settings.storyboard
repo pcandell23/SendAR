@@ -3,38 +3,10 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Settings-->
-        <scene sceneID="V3g-Y1-cYB">
-            <objects>
-                <tableViewController id="vVH-jY-SmJ" customClass="SettingsViewController" customModule="SendAR" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZPX-GR-ZkQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="C3v-8Y-3ui">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="C3v-8Y-3ui" id="5cn-j7-ecN">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="vVH-jY-SmJ" id="CiB-6B-PU6"/>
-                            <outlet property="delegate" destination="vVH-jY-SmJ" id="ygd-CA-gE3"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Settings" id="47z-EV-GXl"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HYs-sx-fHC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4461" y="-287"/>
-        </scene>
         <!--Settings-->
         <scene sceneID="kBI-5O-tEz">
             <objects>
@@ -46,12 +18,69 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="vVH-jY-SmJ" kind="relationship" relationship="rootViewController" id="bAq-sm-xJ7"/>
+                        <segue destination="uFo-HN-N26" kind="relationship" relationship="rootViewController" id="u0M-G6-xmR"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="huB-jA-HRW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3577" y="-287"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="bFN-rX-gTN">
+            <objects>
+                <viewController id="uFo-HN-N26" customClass="SettingsViewController" customModule="SendAR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xfz-uV-eQt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QvZ-f7-9go">
+                                <rect key="frame" x="0.0" y="140" width="414" height="335"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="kvg-MC-dg2">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kvg-MC-dg2" id="O6p-Hi-Zc8">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sV7-f8-HAJ">
+                                <rect key="frame" x="0.0" y="472" width="414" height="341"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="5b5-aW-XTr">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5b5-aW-XTr" id="z0k-6p-15l">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="sV7-f8-HAJ" firstAttribute="top" secondItem="lPB-PC-sXM" secondAttribute="top" constant="384" id="1FB-Lq-RQe"/>
+                            <constraint firstItem="QvZ-f7-9go" firstAttribute="centerX" secondItem="Xfz-uV-eQt" secondAttribute="centerX" id="7ga-7p-MzD"/>
+                            <constraint firstItem="QvZ-f7-9go" firstAttribute="top" secondItem="lPB-PC-sXM" secondAttribute="top" constant="52" id="CBs-zj-sl4"/>
+                            <constraint firstItem="sV7-f8-HAJ" firstAttribute="trailing" secondItem="lPB-PC-sXM" secondAttribute="trailing" id="Gt6-6i-FWD"/>
+                            <constraint firstItem="sV7-f8-HAJ" firstAttribute="bottom" secondItem="lPB-PC-sXM" secondAttribute="bottom" id="GyN-Bz-s9r"/>
+                            <constraint firstItem="sV7-f8-HAJ" firstAttribute="leading" secondItem="lPB-PC-sXM" secondAttribute="leading" id="hfW-OQ-jC4"/>
+                            <constraint firstItem="QvZ-f7-9go" firstAttribute="bottom" secondItem="lPB-PC-sXM" secondAttribute="bottom" constant="-338" id="rcE-op-v7N"/>
+                            <constraint firstItem="QvZ-f7-9go" firstAttribute="leading" secondItem="lPB-PC-sXM" secondAttribute="leading" id="utm-LQ-V3g"/>
+                            <constraint firstItem="QvZ-f7-9go" firstAttribute="trailing" secondItem="lPB-PC-sXM" secondAttribute="trailing" id="yaL-j5-TKj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lPB-PC-sXM"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" largeTitleDisplayMode="always" id="gkM-kE-fQL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rjb-z4-qHb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4382.608695652174" y="-287.27678571428572"/>
         </scene>
     </scenes>
     <resources>
