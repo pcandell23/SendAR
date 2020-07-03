@@ -25,7 +25,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     
     let locationManager = CLLocationManager()
-    let regionInMeters: Double = 10000
+    let regionInMeters: Double = 5000
     let settingsAction = UIAlertAction(title: "Settings", style: .default) { (_) -> Void in
         
         guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {

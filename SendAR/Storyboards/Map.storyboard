@@ -25,9 +25,7 @@
                                 <rect key="frame" x="350" y="675" width="44" height="44"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="L1e-Xo-YV9"/>
                                     <constraint firstAttribute="width" constant="44" id="LpJ-Sl-6WV"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="WJG-o5-8s1"/>
                                     <constraint firstAttribute="height" constant="44" id="WfQ-My-yKe"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -60,10 +58,10 @@
                             <constraint firstItem="3Dk-Ar-zdl" firstAttribute="top" secondItem="n0l-yW-02u" secondAttribute="top" constant="-140" id="IH2-uD-GKd"/>
                             <constraint firstItem="iJt-lO-rIg" firstAttribute="top" secondItem="Mtb-xu-Zzv" secondAttribute="bottom" constant="10" id="Lyf-gf-QNg"/>
                             <constraint firstItem="3Dk-Ar-zdl" firstAttribute="leading" secondItem="n0l-yW-02u" secondAttribute="leading" id="aIe-sH-K6t"/>
-                            <constraint firstItem="n0l-yW-02u" firstAttribute="trailing" secondItem="Mtb-xu-Zzv" secondAttribute="trailing" constant="20" id="cpN-PI-2y9"/>
                             <constraint firstItem="n0l-yW-02u" firstAttribute="bottom" secondItem="iJt-lO-rIg" secondAttribute="bottom" constant="40" id="cyG-tH-Ttq"/>
                             <constraint firstItem="3Dk-Ar-zdl" firstAttribute="bottom" secondItem="n0l-yW-02u" secondAttribute="bottom" id="dwg-xG-4cv"/>
                             <constraint firstItem="iJt-lO-rIg" firstAttribute="trailing" secondItem="C8d-uN-c7o" secondAttribute="trailingMargin" id="mUA-WN-X1p"/>
+                            <constraint firstItem="Mtb-xu-Zzv" firstAttribute="leading" secondItem="iJt-lO-rIg" secondAttribute="leading" id="weW-wB-4TL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="n0l-yW-02u"/>
                     </view>
