@@ -95,14 +95,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfK-2P-jdg" customClass="TrackButton" customModule="SendAR" customModuleProvider="target">
-                                <rect key="frame" x="20" y="622" width="374" height="44"/>
+                                <rect key="frame" x="20" y="662" width="374" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="eN1-d7-0Wx"/>
                                 </constraints>
                                 <state key="normal" title="Mark Current Location"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please stand directly at the base of the route and press the button to mark the start" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jL8-AH-qpQ">
-                                <rect key="frame" x="20" y="546" width="374" height="56"/>
+                                <rect key="frame" x="20" y="586" width="374" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="ynq-tS-GQT"/>
                                 </constraints>
@@ -134,7 +134,7 @@
                             <constraint firstItem="AWn-Pz-GTS" firstAttribute="trailing" secondItem="cfK-2P-jdg" secondAttribute="trailing" constant="20" id="Xro-4J-jbn"/>
                             <constraint firstItem="63S-SF-r0B" firstAttribute="leading" secondItem="1Yd-3U-OIX" secondAttribute="leading" id="ZL4-FH-CrF"/>
                             <constraint firstItem="Pqo-s3-vSL" firstAttribute="leading" secondItem="FcS-XJ-4WX" secondAttribute="trailing" constant="20" id="bR3-UP-7MB"/>
-                            <constraint firstItem="de3-6A-nkK" firstAttribute="top" secondItem="cfK-2P-jdg" secondAttribute="bottom" constant="180" id="g5q-eg-fp0"/>
+                            <constraint firstItem="de3-6A-nkK" firstAttribute="top" secondItem="cfK-2P-jdg" secondAttribute="bottom" constant="140" id="g5q-eg-fp0"/>
                             <constraint firstItem="pkT-U4-WBv" firstAttribute="top" secondItem="1Yd-3U-OIX" secondAttribute="bottom" constant="33" id="iCc-ie-g84"/>
                             <constraint firstItem="Pqo-s3-vSL" firstAttribute="top" secondItem="AWn-Pz-GTS" secondAttribute="top" constant="20" id="lY9-9y-mfM"/>
                             <constraint firstItem="1Yd-3U-OIX" firstAttribute="centerY" secondItem="n1g-0Q-EC8" secondAttribute="centerY" id="mk6-gB-eYA"/>
