@@ -114,6 +114,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		407A646124AFAA2D006CDFCE /* CustomUIElements */ = {
+			isa = PBXGroup;
+			children = (
+				407A645F24AFA64F006CDFCE /* MapButton.swift */,
+				407A645924AF8C83006CDFCE /* TrackButton.swift */,
+			);
+			path = CustomUIElements;
+			sourceTree = "<group>";
+		};
 		40DC781024AE466500DC5AF2 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,8 +164,7 @@
 				961F055D24AA6346006DE4C5 /* ViewControllers */,
 				40EAA79024A8152300F41366 /* AppDelegate.swift */,
 				40EAA79224A8152300F41366 /* SceneDelegate.swift */,
-				407A645924AF8C83006CDFCE /* TrackButton.swift */,
-				407A645F24AFA64F006CDFCE /* MapButton.swift */,
+				407A646124AFAA2D006CDFCE /* CustomUIElements */,
 				40DC781024AE466500DC5AF2 /* Storyboards */,
 				40EAA79924A8152400F41366 /* Assets.xcassets */,
 				40EAA79B24A8152400F41366 /* LaunchScreen.storyboard */,
