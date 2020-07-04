@@ -25,9 +25,6 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var startTime: UILabel!
     @IBOutlet weak var elapsedTime: UILabel!
     
-    @IBOutlet weak var trackButtonLabel: TrackButton!
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.requestAlwaysAuthorization()
@@ -38,36 +35,43 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     
     //MARK: - Tracker
     
-    @IBAction func trackButton(_ sender: UIButton) {
-        if !trackButtonLabel.buttonState {
-            if !tracking {
-                if routeName.text != nil {
-                    tracking = true
-                    tracker = Tracker(routeName: routeName.text!, data: "", startTime: "\(Date())", stopTime: "", timer: timer, currentLocation: currentLocation, locationAccess: locationManager)
-                    
-                    tracker?.startTracking()
-                    startingAltitude.text = "\(currentLocation.altitude)"
-                    startTime.text = "\(Date())"
-                    
-                    //set track button to say Stop Tracking
-                    trackButtonLabel.buttonPressed()
-                    
-                }
+    
+    @IBAction func startTrackingButton(_ sender: Any) {
+        if !tracking {
+            if routeName.text != nil {
+                tracking = true
+                tracker = Tracker(routeName: routeName.text!, data: "", startTime: "\(Date())", stopTime: "", timer: timer, currentLocation: currentLocation, locationAccess: locationManager)
+                
+                tracker?.startTracking()
+                startingAltitude.text = "\(currentLocation.altitude)"
+                startTime.text = "\(Date())"
+            } else {
+                let alert = UIAlertController(title: "Route Name Invalid", message: "Please enter a route name before tracking", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                present(alert, animated: true)
             }
-        } else if trackButtonLabel.buttonState {
-            if tracker != nil && routeName.text != nil && tracking {
-                tracker!.stopTracking(stopTime: "\(Date())")
-                
-                let saveToFile = UIActivityViewController(activityItems:[tracker!.data], applicationActivities: nil)
-                self.present(saveToFile, animated: true, completion: nil)
-                tracking = false
-                currentAltitude.text = "\(currentLocation.altitude)"
-                elapsedTime.text = "stopTIme - startTime"
-                
-                //set track button to say Reset
-                trackButtonLabel.buttonPressed()
-                
-            }
+        } else {
+            let alert = UIAlertController(title: "Already Tracking", message: "Please end the current tracking session before attempting to start a new tracking session", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alert, animated: true)
+        }
+    }
+    
+    @IBAction func stopTrackingButton(_ sender: Any) {
+        if tracker != nil && routeName.text != nil && tracking {
+            tracker!.stopTracking(stopTime: "\(Date())")
+            
+            let saveToFile = UIActivityViewController(activityItems:[tracker!.data], applicationActivities: nil)
+            self.present(saveToFile, animated: true, completion: nil)
+            tracking = false
+            currentAltitude.text = "\(currentLocation.altitude)"
+            elapsedTime.text = "stopTime - startTime"
+        } else if !tracking {
+            startingAltitude.text = "Ready"
+            startTime.text = "Ready"
+            currentAltitude.text = "\(currentLocation.altitude)"
+            elapsedTime.text = "0.0"
+            routeName.text = nil
         }
     }
     

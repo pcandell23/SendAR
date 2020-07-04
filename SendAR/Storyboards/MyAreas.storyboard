@@ -29,7 +29,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LHo-cw-xLj"/>
                     </view>
-                    <navigationItem key="navigationItem" title="My Areas" id="wPT-AI-cRa"/>
+                    <navigationItem key="navigationItem" title="My Areas" id="wPT-AI-cRa">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="j4e-WX-oOn"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="myAreasTableView" destination="cgZ-cq-XbB" id="G6W-36-Ms7"/>
                     </connections>

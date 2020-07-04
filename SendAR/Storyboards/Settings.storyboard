@@ -34,7 +34,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QvZ-f7-9go">
-                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="kvg-MC-dg2">
@@ -50,9 +50,8 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="QvZ-f7-9go" firstAttribute="centerX" secondItem="Xfz-uV-eQt" secondAttribute="centerX" id="7ga-7p-MzD"/>
-                            <constraint firstItem="QvZ-f7-9go" firstAttribute="top" secondItem="lPB-PC-sXM" secondAttribute="top" constant="52" id="CBs-zj-sl4"/>
-                            <constraint firstItem="QvZ-f7-9go" firstAttribute="bottom" secondItem="lPB-PC-sXM" secondAttribute="bottom" id="rcE-op-v7N"/>
+                            <constraint firstItem="QvZ-f7-9go" firstAttribute="bottom" secondItem="lPB-PC-sXM" secondAttribute="bottom" id="QpA-dy-C4P"/>
+                            <constraint firstItem="QvZ-f7-9go" firstAttribute="top" secondItem="lPB-PC-sXM" secondAttribute="top" id="Rfi-LO-k8V"/>
                             <constraint firstItem="QvZ-f7-9go" firstAttribute="leading" secondItem="lPB-PC-sXM" secondAttribute="leading" id="utm-LQ-V3g"/>
                             <constraint firstItem="QvZ-f7-9go" firstAttribute="trailing" secondItem="lPB-PC-sXM" secondAttribute="trailing" id="yaL-j5-TKj"/>
                         </constraints>
