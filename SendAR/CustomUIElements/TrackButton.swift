@@ -9,6 +9,8 @@
 import UIKit
 
 class TrackButton: UIButton {
+    
+    var buttonState = false
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -20,14 +22,15 @@ class TrackButton: UIButton {
         setupButton()
     }
     
+    
     func setupButton() {
         setShadow()
         setTitleColor(.white, for: .normal)
         
         backgroundColor     = UIColor.systemIndigo
         layer.cornerRadius  = 5
-        //layer.borderWidth   = 0
-        //layer.borderColor   = UIColor.darkGray.cgColor
+        
+        addTarget(self, action: #selector(TrackButton.buttonPressed), for: .touchUpInside)
     }
     
     private func setShadow() {
@@ -37,6 +40,19 @@ class TrackButton: UIButton {
         layer.shadowOpacity = 0.25
         clipsToBounds       = true
         layer.masksToBounds = false
+    }
+    
+    @objc func buttonPressed() {
+        activateButton(bool: !buttonState)
+    }
+    
+    func activateButton(bool: Bool) {
+        
+        buttonState = bool
+        
+        let title = bool ? "Stop Tracking" : "Start Tracking"
+        
+        setTitle(title, for: .normal)
     }
     
     

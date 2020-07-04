@@ -48,7 +48,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="semibold"/>
                                 </state>
                                 <connections>
-                                    <segue destination="6zw-br-HQe" kind="show" id="6Lh-Vx-RqY"/>
+                                    <segue destination="BQg-Jb-gqY" kind="show" id="n1y-Mx-SUe"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -75,33 +75,35 @@
             <point key="canvasLocation" x="1650.7246376811595" y="-287.27678571428572"/>
         </scene>
         <!--Nearby Areas-->
-        <scene sceneID="liS-Ru-DbG">
+        <scene sceneID="dLN-2d-bEN">
             <objects>
-                <tableViewController id="6zw-br-HQe" customClass="NearbyAreasViewController" customModule="SendAR" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="d7b-2g-Kc6">
+                <viewController id="BQg-Jb-gqY" customClass="NearbyAreasViewController" customModule="SendAR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="guh-A3-eMP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Xcy-xk-l01">
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="5mL-db-Xfw">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5mL-db-Xfw" id="Nw9-ju-D0a">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="6zw-br-HQe" id="sq5-JC-yaT"/>
-                            <outlet property="delegate" destination="6zw-br-HQe" id="ijS-QQ-mG7"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Nearby Areas" id="Tf8-5t-iaE"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="atq-fH-cb9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <constraints>
+                            <constraint firstItem="FUm-tT-Bsw" firstAttribute="bottom" secondItem="Xcy-xk-l01" secondAttribute="bottom" id="DWA-TM-760"/>
+                            <constraint firstItem="Xcy-xk-l01" firstAttribute="top" secondItem="FUm-tT-Bsw" secondAttribute="top" id="YqT-yf-3Q4"/>
+                            <constraint firstItem="Xcy-xk-l01" firstAttribute="leading" secondItem="FUm-tT-Bsw" secondAttribute="leading" id="ZPh-Ce-FIX"/>
+                            <constraint firstItem="FUm-tT-Bsw" firstAttribute="trailing" secondItem="Xcy-xk-l01" secondAttribute="trailing" id="hZG-Zp-wxI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FUm-tT-Bsw"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Nearby Areas" id="eOY-bc-jzb"/>
+                    <connections>
+                        <outlet property="nearbyAreasTableView" destination="Xcy-xk-l01" id="KX4-wg-h9S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yru-v3-IW3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2458" y="-287"/>
+            <point key="canvasLocation" x="2433" y="-287"/>
         </scene>
         <!--Map-->
         <scene sceneID="Rz6-Ra-KAg">

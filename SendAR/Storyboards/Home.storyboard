@@ -53,6 +53,10 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                 <state key="normal" title="Start Tracking"/>
+                                <connections>
+                                    <action selector="startTracking:" destination="cLH-4d-9NL" eventType="touchUpInside" id="e1r-0i-df0"/>
+                                    <action selector="trackerButton:" destination="cLH-4d-9NL" eventType="touchUpInside" id="RHD-M5-Dfk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rx0-j5-q3Z" userLabel="Log New Route" customClass="TrackButton" customModule="SendAR" customModuleProvider="target">
                                 <rect key="frame" x="20" y="749" width="374" height="44"/>
@@ -66,10 +70,10 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3fT-nw-Km7">
-                                <rect key="frame" x="20" y="425" width="374" height="250"/>
+                                <rect key="frame" x="20" y="499" width="374" height="176"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uQ0-Q8-FtS">
-                                        <rect key="frame" x="0.0" y="54" width="177" height="142"/>
+                                        <rect key="frame" x="0.0" y="17" width="177" height="142"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Starting Altitude:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b16-UJ-aaF">
                                                 <rect key="frame" x="21.5" y="0.0" width="134" height="20.5"/>
@@ -98,7 +102,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="6zq-Cf-LfR">
-                                        <rect key="frame" x="197" y="54" width="177" height="142"/>
+                                        <rect key="frame" x="197" y="17" width="177" height="142"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n7z-Jq-CtP" userLabel="Start Time:">
                                                 <rect key="frame" x="45" y="0.0" width="87.5" height="20.5"/>
@@ -128,9 +132,15 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Route Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lCk-zw-1CM">
+                                <rect key="frame" x="20" y="445" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="lCk-zw-1CM" firstAttribute="leading" secondItem="vJf-rP-6sY" secondAttribute="leading" constant="20" id="763-Xc-w1t"/>
                             <constraint firstItem="DZN-9M-fvQ" firstAttribute="leading" secondItem="vJf-rP-6sY" secondAttribute="leading" constant="20" id="9vW-JE-dd0"/>
                             <constraint firstItem="p97-sc-kJV" firstAttribute="centerX" secondItem="d9G-6c-BEg" secondAttribute="centerX" id="DFF-17-Tvm"/>
                             <constraint firstItem="rx0-j5-q3Z" firstAttribute="top" secondItem="p97-sc-kJV" secondAttribute="bottom" constant="10" id="NQN-4s-Dfa"/>
@@ -140,11 +150,13 @@
                             <constraint firstItem="vJf-rP-6sY" firstAttribute="trailing" secondItem="3fT-nw-Km7" secondAttribute="trailing" constant="20" id="hgx-s6-MqG"/>
                             <constraint firstItem="p97-sc-kJV" firstAttribute="top" secondItem="3fT-nw-Km7" secondAttribute="bottom" constant="20" id="l8G-cO-Y1h"/>
                             <constraint firstItem="rx0-j5-q3Z" firstAttribute="leading" secondItem="vJf-rP-6sY" secondAttribute="leading" constant="20" id="mhL-yP-N8C"/>
+                            <constraint firstItem="vJf-rP-6sY" firstAttribute="trailing" secondItem="lCk-zw-1CM" secondAttribute="trailing" constant="20" id="nP5-Dq-2hx"/>
                             <constraint firstItem="p97-sc-kJV" firstAttribute="leading" secondItem="vJf-rP-6sY" secondAttribute="leading" constant="20" id="oDs-Fx-xsV"/>
+                            <constraint firstItem="3fT-nw-Km7" firstAttribute="top" secondItem="lCk-zw-1CM" secondAttribute="bottom" constant="20" id="pqc-dU-NIT"/>
                             <constraint firstItem="DZN-9M-fvQ" firstAttribute="centerX" secondItem="d9G-6c-BEg" secondAttribute="centerX" id="qHy-aJ-pxa"/>
                             <constraint firstItem="3fT-nw-Km7" firstAttribute="leading" secondItem="vJf-rP-6sY" secondAttribute="leading" constant="20" id="qjH-fy-dZL"/>
+                            <constraint firstItem="lCk-zw-1CM" firstAttribute="top" secondItem="DZN-9M-fvQ" secondAttribute="bottom" constant="40" id="r9N-CX-COf"/>
                             <constraint firstItem="DZN-9M-fvQ" firstAttribute="top" secondItem="vJf-rP-6sY" secondAttribute="top" constant="20" id="sNz-TT-7zH"/>
-                            <constraint firstItem="3fT-nw-Km7" firstAttribute="top" secondItem="DZN-9M-fvQ" secondAttribute="bottom" constant="20" id="vKt-5G-1tF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vJf-rP-6sY"/>
                     </view>
@@ -159,15 +171,39 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="semibold"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Tdd-KI-RNj" kind="show" id="da6-SE-Ofk"/>
+                                    <segue destination="eQr-wZ-zB5" kind="show" id="7Rs-x8-Pn3"/>
                                 </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="currentAltitude" destination="Mx3-2i-GDB" id="eJW-dL-6nG"/>
+                        <outlet property="elapsedTime" destination="LpH-yw-fsU" id="o4D-6f-4hD"/>
+                        <outlet property="routeName" destination="lCk-zw-1CM" id="NDl-d6-tTu"/>
+                        <outlet property="startTime" destination="6Km-r2-T2P" id="efY-au-86F"/>
+                        <outlet property="startingAltitude" destination="23k-Vg-3bn" id="NNd-nM-86f"/>
+                        <outlet property="trackButtonLabel" destination="p97-sc-kJV" id="dzr-ro-gNi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f1R-Xi-lQW" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="771.01449275362324" y="-287.27678571428572"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="MPh-hx-7ev">
+            <objects>
+                <viewController title="Profile" id="eQr-wZ-zB5" customClass="ProfileViewController" customModule="SendAR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MID-s0-YAu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="t4S-dZ-buc"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Profile" id="ELA-6S-NZe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6TY-oo-sy2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1575" y="-622"/>
         </scene>
         <!--LogNewRoute-->
         <scene sceneID="AAp-Kc-c2d">
@@ -178,35 +214,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6HJ-nV-W2Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1359" y="-70"/>
-        </scene>
-        <!--Profile-->
-        <scene sceneID="O6A-oz-7kR">
-            <objects>
-                <tableViewController id="Tdd-KI-RNj" userLabel="Profile" customClass="ProfileViewController" customModule="SendAR" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bQa-eb-pao">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="xmy-tu-U8C">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xmy-tu-U8C" id="vJg-Wx-4rj">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="Tdd-KI-RNj" id="zdR-jT-cYA"/>
-                            <outlet property="delegate" destination="Tdd-KI-RNj" id="zXO-we-s1j"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Profile" id="2ap-Ij-x3f"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5p7-gA-4k7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1541" y="-623"/>
         </scene>
     </scenes>
     <resources>
