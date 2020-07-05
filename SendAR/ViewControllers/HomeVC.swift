@@ -30,6 +30,16 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
         
+        if(CLLocationManager.authorizationStatus() == .authorizedWhenInUse || CLLocationManager.authorizationStatus() == .authorizedAlways) {
+            currentLocation = locationManager.location!
+            
+            startingAltitude.text = "Ready"
+            currentAltitude.text = "\(currentLocation.altitude)"
+            startTime.text = "Ready"
+            elapsedTime.text = "0.0"
+            
+        }
+        
         routeName.delegate = self
     }
     
@@ -38,7 +48,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func startTrackingButton(_ sender: Any) {
         if !tracking {
-            if routeName.text != nil {
+            if let route = routeName.text, !route.isEmpty {
                 tracking = true
                 tracker = Tracker(routeName: routeName.text!, data: "", startTime: "\(Date())", stopTime: "", timer: timer, currentLocation: currentLocation, locationAccess: locationManager)
                 

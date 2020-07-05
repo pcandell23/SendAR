@@ -16,7 +16,6 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var routePitches: UITextField!
     @IBOutlet weak var routeRating: UITextField!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,6 +25,25 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate {
         routePitches.delegate = self
         routeRating.delegate = self
     }
+    
+    @IBAction func markLocationButton(_ sender: Any) {
+        //records location as CSV when pressed
+    }
+
+    /*
+     commented out because XCode keeps getting mad at me for the Area parameter and idk how to fix it
+     
+    func collectRouteData() {
+        var newRoute = Route(name: "", grade: "", type: "", rating: 0.0, area: Area)
+        newRoute.name = routeName.text
+        newRoute.grade = routeGrade.text
+        newRoute.type = routeType.text
+        newRoute.rating = routeRating.text
+        //dont know how to handle area
+        
+    }
+ 
+ */
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         routeName.resignFirstResponder()
