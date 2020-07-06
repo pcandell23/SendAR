@@ -46,7 +46,7 @@ class ARViewController: UIViewController {
     }
  */
     
-     //MARK: - Location Usage
+     //MARK: - Location Usage - Refactor into a Class(On MapVC too)
     
     
     func setupLocationManager() {

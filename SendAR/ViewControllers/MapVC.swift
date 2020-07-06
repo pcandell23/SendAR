@@ -23,7 +23,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         }
     }
     
-    
+    //MARK: - Refactor Into Class (on ARView too)
     let locationManager = CLLocationManager()
     let regionInMeters: Double = 5000
     let settingsAction = UIAlertAction(title: "Settings", style: .default) { (_) -> Void in
