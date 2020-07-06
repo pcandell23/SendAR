@@ -1,16 +1,16 @@
 //
-//  MyAreasVC.swift
+//  NearbyAreas.swift
 //  SendAR
 //
-//  Created by Peter Candell on 6/29/20.
+//  Created by Bennett Baker on 7/2/20.
 //  Copyright © 2020 Bennett Baker. All rights reserved.
 //
 
 import UIKit
 
-class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class NearbyAreasViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet var myAreasTableView: UITableView!
+    @IBOutlet weak var nearbyAreasTableView: UITableView!
     
     //simple placeholder because I'm confused on accessing objects in arrays
     let routes = ["Snake Dike", "Royal Arches", "The Nose", "The Dawn Wall", "Freerider", "Cannibal Gulley", "Jellyroll Arch", "One Hand Clapping"]
@@ -20,9 +20,9 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
         
         let nib = UINib(nibName: "RouteCell", bundle: nil)
-        myAreasTableView.register(nib, forCellReuseIdentifier: "RouteCell")
-        myAreasTableView.delegate = self
-        myAreasTableView.dataSource = self
+        nearbyAreasTableView.register(nib, forCellReuseIdentifier: "RouteCell")
+        nearbyAreasTableView.delegate = self
+        nearbyAreasTableView.dataSource = self
     
     }
     

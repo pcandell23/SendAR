@@ -7,7 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4010BDA324AFD7190082F7E2 /* RouteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4010BDA124AFD7190082F7E2 /* RouteCell.swift */; };
+		4010BDA424AFD7190082F7E2 /* RouteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4010BDA224AFD7190082F7E2 /* RouteCell.xib */; };
+		404FDE1424AEA524006AA33E /* NearbyAreas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404FDE1324AEA524006AA33E /* NearbyAreas.swift */; };
+		407A645A24AF8C83006CDFCE /* TrackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A645924AF8C83006CDFCE /* TrackButton.swift */; };
+		407A645C24AF963C006CDFCE /* LogRouteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A645B24AF963C006CDFCE /* LogRouteVC.swift */; };
+		407A646024AFA64F006CDFCE /* MapButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A645F24AFA64F006CDFCE /* MapButton.swift */; };
 		4087FA1024ABA33900723BCF /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4087FA0F24ABA33900723BCF /* ProfileVC.swift */; };
+		40D845C924B030DD0028CDAE /* Tracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D845C824B030DD0028CDAE /* Tracker.swift */; };
+		40DC780F24AE465900DC5AF2 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40DC780E24AE465900DC5AF2 /* Home.storyboard */; };
+		40E0977F24AE530B0022E965 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40E0977E24AE530B0022E965 /* Map.storyboard */; };
+		40E0978124AE53B40022E965 /* AR.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40E0978024AE53B40022E965 /* AR.storyboard */; };
+		40E0978324AE54290022E965 /* MyAreas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40E0978224AE54290022E965 /* MyAreas.storyboard */; };
+		40E0978524AE548A0022E965 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40E0978424AE548A0022E965 /* Settings.storyboard */; };
 		40EAA79124A8152300F41366 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EAA79024A8152300F41366 /* AppDelegate.swift */; };
 		40EAA79324A8152300F41366 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EAA79224A8152300F41366 /* SceneDelegate.swift */; };
 		40EAA79524A8152300F41366 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EAA79424A8152300F41366 /* ViewController.swift */; };
@@ -44,7 +56,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4010BDA124AFD7190082F7E2 /* RouteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteCell.swift; sourceTree = "<group>"; };
+		4010BDA224AFD7190082F7E2 /* RouteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RouteCell.xib; sourceTree = "<group>"; };
+		404FDE1324AEA524006AA33E /* NearbyAreas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyAreas.swift; sourceTree = "<group>"; };
+		407A645924AF8C83006CDFCE /* TrackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackButton.swift; sourceTree = "<group>"; };
+		407A645B24AF963C006CDFCE /* LogRouteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogRouteVC.swift; sourceTree = "<group>"; };
+		407A645F24AFA64F006CDFCE /* MapButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapButton.swift; sourceTree = "<group>"; };
 		4087FA0F24ABA33900723BCF /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		40D845C824B030DD0028CDAE /* Tracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracker.swift; sourceTree = "<group>"; };
+		40DC780E24AE465900DC5AF2 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		40E0977E24AE530B0022E965 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
+		40E0978024AE53B40022E965 /* AR.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AR.storyboard; sourceTree = "<group>"; };
+		40E0978224AE54290022E965 /* MyAreas.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyAreas.storyboard; sourceTree = "<group>"; };
+		40E0978424AE548A0022E965 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		40EAA78D24A8152300F41366 /* SendAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SendAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40EAA79024A8152300F41366 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40EAA79224A8152300F41366 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +118,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		407A646124AFAA2D006CDFCE /* CustomUIElements */ = {
+			isa = PBXGroup;
+			children = (
+				407A645F24AFA64F006CDFCE /* MapButton.swift */,
+				407A645924AF8C83006CDFCE /* TrackButton.swift */,
+				4010BDA124AFD7190082F7E2 /* RouteCell.swift */,
+				4010BDA224AFD7190082F7E2 /* RouteCell.xib */,
+			);
+			path = CustomUIElements;
+			sourceTree = "<group>";
+		};
+		40DC781024AE466500DC5AF2 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				40EAA79624A8152300F41366 /* Main.storyboard */,
+				40DC780E24AE465900DC5AF2 /* Home.storyboard */,
+				40E0977E24AE530B0022E965 /* Map.storyboard */,
+				40E0978024AE53B40022E965 /* AR.storyboard */,
+				40E0978224AE54290022E965 /* MyAreas.storyboard */,
+				40E0978424AE548A0022E965 /* Settings.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		40EAA78424A8152200F41366 = {
 			isa = PBXGroup;
 			children = (
@@ -117,11 +165,13 @@
 		40EAA78F24A8152300F41366 /* SendAR */ = {
 			isa = PBXGroup;
 			children = (
-				961F056C24AC01CB006DE4C5 /* DataTypes */,
-				961F055D24AA6346006DE4C5 /* ViewControllers */,
 				40EAA79024A8152300F41366 /* AppDelegate.swift */,
 				40EAA79224A8152300F41366 /* SceneDelegate.swift */,
-				40EAA79624A8152300F41366 /* Main.storyboard */,
+				40D845C824B030DD0028CDAE /* Tracker.swift */,
+				961F056C24AC01CB006DE4C5 /* DataTypes */,
+				961F055D24AA6346006DE4C5 /* ViewControllers */,
+				40DC781024AE466500DC5AF2 /* Storyboards */,
+				407A646124AFAA2D006CDFCE /* CustomUIElements */,
 				40EAA79924A8152400F41366 /* Assets.xcassets */,
 				40EAA79B24A8152400F41366 /* LaunchScreen.storyboard */,
 				40EAA79E24A8152400F41366 /* Info.plist */,
@@ -152,11 +202,13 @@
 			children = (
 				40EAA79424A8152300F41366 /* ViewController.swift */,
 				961F055E24AA64E8006DE4C5 /* HomeVC.swift */,
-				961F056024AA64F8006DE4C5 /* MapVC.swift */,
-				961F056224AA6517006DE4C5 /* MyAreasVC.swift */,
-				961F056424AA658F006DE4C5 /* ARviewVC.swift */,
-				961F056624AA66FC006DE4C5 /* SettingsVC.swift */,
 				4087FA0F24ABA33900723BCF /* ProfileVC.swift */,
+				407A645B24AF963C006CDFCE /* LogRouteVC.swift */,
+				961F056024AA64F8006DE4C5 /* MapVC.swift */,
+				404FDE1324AEA524006AA33E /* NearbyAreas.swift */,
+				961F056424AA658F006DE4C5 /* ARviewVC.swift */,
+				961F056224AA6517006DE4C5 /* MyAreasVC.swift */,
+				961F056624AA66FC006DE4C5 /* SettingsVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -165,8 +217,8 @@
 			isa = PBXGroup;
 			children = (
 				961F056D24AC02A3006DE4C5 /* Area.swift */,
-				966D229724AC0B7200703906 /* Route.swift */,
 				966D229924AC106B00703906 /* Crag.swift */,
+				966D229724AC0B7200703906 /* Route.swift */,
 			);
 			path = DataTypes;
 			sourceTree = "<group>";
@@ -276,8 +328,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				40EAA79D24A8152400F41366 /* LaunchScreen.storyboard in Resources */,
+				4010BDA424AFD7190082F7E2 /* RouteCell.xib in Resources */,
 				40EAA79A24A8152400F41366 /* Assets.xcassets in Resources */,
+				40E0977F24AE530B0022E965 /* Map.storyboard in Resources */,
+				40E0978524AE548A0022E965 /* Settings.storyboard in Resources */,
+				40E0978324AE54290022E965 /* MyAreas.storyboard in Resources */,
 				40EAA79824A8152300F41366 /* Main.storyboard in Resources */,
+				40DC780F24AE465900DC5AF2 /* Home.storyboard in Resources */,
+				40E0978124AE53B40022E965 /* AR.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,16 +360,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				407A645C24AF963C006CDFCE /* LogRouteVC.swift in Sources */,
 				961F056E24AC02A3006DE4C5 /* Area.swift in Sources */,
+				407A645A24AF8C83006CDFCE /* TrackButton.swift in Sources */,
 				961F056124AA64F8006DE4C5 /* MapVC.swift in Sources */,
+				407A646024AFA64F006CDFCE /* MapButton.swift in Sources */,
+				4010BDA324AFD7190082F7E2 /* RouteCell.swift in Sources */,
 				966D229824AC0B7200703906 /* Route.swift in Sources */,
 				40EAA79524A8152300F41366 /* ViewController.swift in Sources */,
 				961F055F24AA64E8006DE4C5 /* HomeVC.swift in Sources */,
 				4087FA1024ABA33900723BCF /* ProfileVC.swift in Sources */,
 				966D229A24AC106B00703906 /* Crag.swift in Sources */,
 				40EAA79124A8152300F41366 /* AppDelegate.swift in Sources */,
+				40D845C924B030DD0028CDAE /* Tracker.swift in Sources */,
 				40EAA79324A8152300F41366 /* SceneDelegate.swift in Sources */,
 				961F056724AA66FC006DE4C5 /* SettingsVC.swift in Sources */,
+				404FDE1424AEA524006AA33E /* NearbyAreas.swift in Sources */,
 				961F056324AA6517006DE4C5 /* MyAreasVC.swift in Sources */,
 				961F056524AA658F006DE4C5 /* ARviewVC.swift in Sources */,
 			);
@@ -487,13 +551,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9B6C5XW645;
+				DEVELOPMENT_TEAM = A3UJWUP8W2;
 				INFOPLIST_FILE = SendAR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.SendAR.SendAR;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SendAR.SendARAlt1;
 				PRODUCT_NAME = SendAR;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -505,13 +569,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9B6C5XW645;
+				DEVELOPMENT_TEAM = A3UJWUP8W2;
 				INFOPLIST_FILE = SendAR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.SendAR.SendAR;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SendAR.SendARAlt1;
 				PRODUCT_NAME = SendAR;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

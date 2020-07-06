@@ -8,17 +8,17 @@
 
 import Foundation
 
-
-class Route{
+class Route {
     
     private var name: String
-    private var type: String?
     private var grade: String?
+    private var type: String?
+    
     private var rating: Double?
     private var area: Area
     
 
-    init(name: String, type:String, grade:String?, rating: Double?, area: Area){
+    init(name: String, grade: String?, type: String, rating: Double?, area: Area){
         self.name = name
         self.type = type
         self.grade = grade
@@ -41,14 +41,6 @@ class Route{
         }
     }
     
-    func getGrade() -> String{
-        if grade != nil{
-            return grade!
-        } else {
-            return ""
-        }
-    }
-    
     func getRating() -> Double{
         if rating != nil{
             return rating!
@@ -57,9 +49,19 @@ class Route{
         }
     }
     
+    func getGrade() -> String{
+        if grade != nil{
+            return grade!
+        } else {
+            return ""
+        }
+    }
+    
+    
     func getArea() -> Area{
         return area
     }
+ 
     
     // MARK: - Setters
     // TODO: Add error handling and showing to these. As well as check to make sure the name (not racist, idk how we could do that but we can try), grade, and type are actual grades and types and that they match(this will also apply to the init function)
@@ -67,15 +69,17 @@ class Route{
         self.name = newName
     }
     
-    func changeGrade(newGrade: String){
-        self.grade = newGrade
-    }
-    
     func changeRating(newRating: Double){
         self.rating = newRating
     }
     
+    func changeGrade(newGrade: String){
+        self.grade = newGrade
+    }
+    
+    
     func changeArea(newArea: Area){
         self.area = newArea
     }
+ 
 }
