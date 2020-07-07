@@ -13,7 +13,7 @@ class RouteDetailVC: UIViewController {
     @IBOutlet weak var routeName: UINavigationItem!
     @IBOutlet weak var routeGrade: UILabel!
     @IBOutlet weak var routeRating: UILabel!
-    @IBOutlet weak var routeDimensions: UILabel!
+    @IBOutlet weak var routeDimensions: UILabel! //interpolated string of type, pitches and height
     @IBOutlet weak var routeImage: UIImageView!
     @IBOutlet weak var routeShape: UIImageView!
     @IBOutlet weak var routeDescription: UILabel!
