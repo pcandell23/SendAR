@@ -10,6 +10,7 @@
 		4010BDA324AFD7190082F7E2 /* RouteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4010BDA124AFD7190082F7E2 /* RouteCell.swift */; };
 		4010BDA424AFD7190082F7E2 /* RouteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4010BDA224AFD7190082F7E2 /* RouteCell.xib */; };
 		401F9A5724B390900035428B /* LocationChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401F9A5624B390900035428B /* LocationChecker.swift */; };
+		4039FB7924B50F2C00D9F927 /* RouteDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4039FB7824B50F2C00D9F927 /* RouteDetailVC.swift */; };
 		404FDE1424AEA524006AA33E /* NearbyAreas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404FDE1324AEA524006AA33E /* NearbyAreas.swift */; };
 		407A645A24AF8C83006CDFCE /* TrackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A645924AF8C83006CDFCE /* TrackButton.swift */; };
 		407A645C24AF963C006CDFCE /* LogRouteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A645B24AF963C006CDFCE /* LogRouteVC.swift */; };
@@ -60,6 +61,7 @@
 		4010BDA124AFD7190082F7E2 /* RouteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteCell.swift; sourceTree = "<group>"; };
 		4010BDA224AFD7190082F7E2 /* RouteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RouteCell.xib; sourceTree = "<group>"; };
 		401F9A5624B390900035428B /* LocationChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationChecker.swift; sourceTree = "<group>"; };
+		4039FB7824B50F2C00D9F927 /* RouteDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteDetailVC.swift; sourceTree = "<group>"; };
 		404FDE1324AEA524006AA33E /* NearbyAreas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyAreas.swift; sourceTree = "<group>"; };
 		407A645924AF8C83006CDFCE /* TrackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackButton.swift; sourceTree = "<group>"; };
 		407A645B24AF963C006CDFCE /* LogRouteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogRouteVC.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 				961F056424AA658F006DE4C5 /* ARviewVC.swift */,
 				961F056224AA6517006DE4C5 /* MyAreasVC.swift */,
 				961F056624AA66FC006DE4C5 /* SettingsVC.swift */,
+				4039FB7824B50F2C00D9F927 /* RouteDetailVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 				40EAA79324A8152300F41366 /* SceneDelegate.swift in Sources */,
 				961F056724AA66FC006DE4C5 /* SettingsVC.swift in Sources */,
 				404FDE1424AEA524006AA33E /* NearbyAreas.swift in Sources */,
+				4039FB7924B50F2C00D9F927 /* RouteDetailVC.swift in Sources */,
 				961F056324AA6517006DE4C5 /* MyAreasVC.swift in Sources */,
 				961F056524AA658F006DE4C5 /* ARviewVC.swift in Sources */,
 			);
