@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Area" representedClassName="Area" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" defaultValueString=""/>
+        <relationship name="subAreas" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Area"/>
+        <relationship name="superArea" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Area"/>
+    </entity>
+    <entity name="Crag" representedClassName="Crag" parentEntity="Area" syncable="YES" codeGenerationType="class">
+        <relationship name="routes" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES"/>
+    </entity>
+    <entity name="Route" representedClassName="Route" syncable="YES" codeGenerationType="class">
+        <attribute name="grade" optional="YES" attributeType="String"/>
+        <attribute name="height" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="rating" optional="YES" attributeType="Integer 16" minValueString="0" maxValueString="5" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <relationship name="area" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Area"/>
+    </entity>
+    <elements>
+        <element name="Area" positionX="-2723.04296875" positionY="-2664.9296875" width="128" height="88"/>
+        <element name="Crag" positionX="-2682" positionY="-2610" width="128" height="58"/>
+        <element name="Route" positionX="-2664" positionY="-2592" width="128" height="133"/>
+    </elements>
+</model>
