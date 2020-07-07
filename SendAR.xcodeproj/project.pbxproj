@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		4010BDA324AFD7190082F7E2 /* RouteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4010BDA124AFD7190082F7E2 /* RouteCell.swift */; };
 		4010BDA424AFD7190082F7E2 /* RouteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4010BDA224AFD7190082F7E2 /* RouteCell.xib */; };
+		401F9A5724B390900035428B /* LocationChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401F9A5624B390900035428B /* LocationChecker.swift */; };
+		40343F0624B5261D00507926 /* LogNewRoute.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40343F0524B5261D00507926 /* LogNewRoute.storyboard */; };
+		4039FB7924B50F2C00D9F927 /* RouteDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4039FB7824B50F2C00D9F927 /* RouteDetailVC.swift */; };
 		404FDE1424AEA524006AA33E /* NearbyAreas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404FDE1324AEA524006AA33E /* NearbyAreas.swift */; };
 		407A645A24AF8C83006CDFCE /* TrackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A645924AF8C83006CDFCE /* TrackButton.swift */; };
 		407A645C24AF963C006CDFCE /* LogRouteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A645B24AF963C006CDFCE /* LogRouteVC.swift */; };
@@ -58,6 +61,9 @@
 /* Begin PBXFileReference section */
 		4010BDA124AFD7190082F7E2 /* RouteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteCell.swift; sourceTree = "<group>"; };
 		4010BDA224AFD7190082F7E2 /* RouteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RouteCell.xib; sourceTree = "<group>"; };
+		401F9A5624B390900035428B /* LocationChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationChecker.swift; sourceTree = "<group>"; };
+		40343F0524B5261D00507926 /* LogNewRoute.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogNewRoute.storyboard; sourceTree = "<group>"; };
+		4039FB7824B50F2C00D9F927 /* RouteDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteDetailVC.swift; sourceTree = "<group>"; };
 		404FDE1324AEA524006AA33E /* NearbyAreas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyAreas.swift; sourceTree = "<group>"; };
 		407A645924AF8C83006CDFCE /* TrackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackButton.swift; sourceTree = "<group>"; };
 		407A645B24AF963C006CDFCE /* LogRouteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogRouteVC.swift; sourceTree = "<group>"; };
@@ -118,6 +124,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		401F9A5824B3909C0035428B /* Helper Classes */ = {
+			isa = PBXGroup;
+			children = (
+				40D845C824B030DD0028CDAE /* Tracker.swift */,
+				401F9A5624B390900035428B /* LocationChecker.swift */,
+			);
+			path = "Helper Classes";
+			sourceTree = "<group>";
+		};
 		407A646124AFAA2D006CDFCE /* CustomUIElements */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +149,7 @@
 			children = (
 				40EAA79624A8152300F41366 /* Main.storyboard */,
 				40DC780E24AE465900DC5AF2 /* Home.storyboard */,
+				40343F0524B5261D00507926 /* LogNewRoute.storyboard */,
 				40E0977E24AE530B0022E965 /* Map.storyboard */,
 				40E0978024AE53B40022E965 /* AR.storyboard */,
 				40E0978224AE54290022E965 /* MyAreas.storyboard */,
@@ -167,10 +183,10 @@
 			children = (
 				40EAA79024A8152300F41366 /* AppDelegate.swift */,
 				40EAA79224A8152300F41366 /* SceneDelegate.swift */,
-				40D845C824B030DD0028CDAE /* Tracker.swift */,
 				961F056C24AC01CB006DE4C5 /* DataTypes */,
 				961F055D24AA6346006DE4C5 /* ViewControllers */,
 				40DC781024AE466500DC5AF2 /* Storyboards */,
+				401F9A5824B3909C0035428B /* Helper Classes */,
 				407A646124AFAA2D006CDFCE /* CustomUIElements */,
 				40EAA79924A8152400F41366 /* Assets.xcassets */,
 				40EAA79B24A8152400F41366 /* LaunchScreen.storyboard */,
@@ -209,6 +225,7 @@
 				961F056424AA658F006DE4C5 /* ARviewVC.swift */,
 				961F056224AA6517006DE4C5 /* MyAreasVC.swift */,
 				961F056624AA66FC006DE4C5 /* SettingsVC.swift */,
+				4039FB7824B50F2C00D9F927 /* RouteDetailVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -331,6 +348,7 @@
 				4010BDA424AFD7190082F7E2 /* RouteCell.xib in Resources */,
 				40EAA79A24A8152400F41366 /* Assets.xcassets in Resources */,
 				40E0977F24AE530B0022E965 /* Map.storyboard in Resources */,
+				40343F0624B5261D00507926 /* LogNewRoute.storyboard in Resources */,
 				40E0978524AE548A0022E965 /* Settings.storyboard in Resources */,
 				40E0978324AE54290022E965 /* MyAreas.storyboard in Resources */,
 				40EAA79824A8152300F41366 /* Main.storyboard in Resources */,
@@ -362,6 +380,7 @@
 			files = (
 				407A645C24AF963C006CDFCE /* LogRouteVC.swift in Sources */,
 				961F056E24AC02A3006DE4C5 /* Area.swift in Sources */,
+				401F9A5724B390900035428B /* LocationChecker.swift in Sources */,
 				407A645A24AF8C83006CDFCE /* TrackButton.swift in Sources */,
 				961F056124AA64F8006DE4C5 /* MapVC.swift in Sources */,
 				407A646024AFA64F006CDFCE /* MapButton.swift in Sources */,
@@ -376,6 +395,7 @@
 				40EAA79324A8152300F41366 /* SceneDelegate.swift in Sources */,
 				961F056724AA66FC006DE4C5 /* SettingsVC.swift in Sources */,
 				404FDE1424AEA524006AA33E /* NearbyAreas.swift in Sources */,
+				4039FB7924B50F2C00D9F927 /* RouteDetailVC.swift in Sources */,
 				961F056324AA6517006DE4C5 /* MyAreasVC.swift in Sources */,
 				961F056524AA658F006DE4C5 /* ARviewVC.swift in Sources */,
 			);
