@@ -74,10 +74,10 @@
             </objects>
             <point key="canvasLocation" x="1650.7246376811595" y="-287.27678571428572"/>
         </scene>
-        <!--MasterToDetail-->
+        <!--Nearby Areas-->
         <scene sceneID="dLN-2d-bEN">
             <objects>
-                <viewController title="MasterToDetail" id="BQg-Jb-gqY" customClass="NearbyAreasViewController" customModule="SendAR" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BQg-Jb-gqY" customClass="NearbyAreasViewController" customModule="SendAR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="guh-A3-eMP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -99,7 +99,7 @@
                     <navigationItem key="navigationItem" title="Nearby Areas" id="eOY-bc-jzb"/>
                     <connections>
                         <outlet property="nearbyAreasTableView" destination="Xcy-xk-l01" id="KX4-wg-h9S"/>
-                        <segue destination="2LX-s1-abN" kind="show" id="abA-dq-AVO"/>
+                        <segue destination="2LX-s1-abN" kind="show" identifier="MasterToDetail" id="abA-dq-AVO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yru-v3-IW3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
