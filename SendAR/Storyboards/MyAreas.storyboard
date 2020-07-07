@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="G0G-0R-v69">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My Areas-->
+        <scene sceneID="dVy-Ng-H5P">
+            <objects>
+                <viewController id="GvQ-rw-db8" customClass="MyAreasViewController" customModule="SendAR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ree-PH-AAj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cgZ-cq-XbB">
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="cgZ-cq-XbB" firstAttribute="top" secondItem="LHo-cw-xLj" secondAttribute="top" id="7gL-zd-hvy"/>
+                            <constraint firstItem="cgZ-cq-XbB" firstAttribute="bottom" secondItem="LHo-cw-xLj" secondAttribute="bottom" id="8uX-YG-DIW"/>
+                            <constraint firstItem="cgZ-cq-XbB" firstAttribute="leading" secondItem="LHo-cw-xLj" secondAttribute="leading" id="jiN-qM-Z9a"/>
+                            <constraint firstItem="cgZ-cq-XbB" firstAttribute="trailing" secondItem="LHo-cw-xLj" secondAttribute="trailing" id="yuq-7a-g9o"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LHo-cw-xLj"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="My Areas" id="wPT-AI-cRa">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="j4e-WX-oOn"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="myAreasTableView" destination="cgZ-cq-XbB" id="G6W-36-Ms7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="17h-SH-1xc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2352" y="25"/>
+        </scene>
+        <!--My Areas-->
+        <scene sceneID="sDv-b7-OTE">
+            <objects>
+                <navigationController id="G0G-0R-v69" userLabel="My Areas" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="My Areas" image="star" catalog="system" id="ALW-yf-FXh"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="qg3-E8-Soi">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="GvQ-rw-db8" kind="relationship" relationship="rootViewController" id="Lil-UV-PvE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Doe-LC-FPd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1526" y="25"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="star" catalog="system" width="128" height="116"/>
+    </resources>
+</document>
