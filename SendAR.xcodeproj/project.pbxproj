@@ -178,10 +178,10 @@
 			children = (
 				40EAA79024A8152300F41366 /* AppDelegate.swift */,
 				40EAA79224A8152300F41366 /* SceneDelegate.swift */,
-				401F9A5824B3909C0035428B /* Helper Classes */,
 				961F056C24AC01CB006DE4C5 /* DataTypes */,
 				961F055D24AA6346006DE4C5 /* ViewControllers */,
 				40DC781024AE466500DC5AF2 /* Storyboards */,
+				401F9A5824B3909C0035428B /* Helper Classes */,
 				407A646124AFAA2D006CDFCE /* CustomUIElements */,
 				40EAA79924A8152400F41366 /* Assets.xcassets */,
 				40EAA79B24A8152400F41366 /* LaunchScreen.storyboard */,
