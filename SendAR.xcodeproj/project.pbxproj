@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4010BDA324AFD7190082F7E2 /* RouteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4010BDA124AFD7190082F7E2 /* RouteCell.swift */; };
 		4010BDA424AFD7190082F7E2 /* RouteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4010BDA224AFD7190082F7E2 /* RouteCell.xib */; };
+		401F9A5724B390900035428B /* LocationChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401F9A5624B390900035428B /* LocationChecker.swift */; };
 		404FDE1424AEA524006AA33E /* NearbyAreas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404FDE1324AEA524006AA33E /* NearbyAreas.swift */; };
 		407A645A24AF8C83006CDFCE /* TrackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A645924AF8C83006CDFCE /* TrackButton.swift */; };
 		407A645C24AF963C006CDFCE /* LogRouteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A645B24AF963C006CDFCE /* LogRouteVC.swift */; };
@@ -58,6 +59,7 @@
 /* Begin PBXFileReference section */
 		4010BDA124AFD7190082F7E2 /* RouteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteCell.swift; sourceTree = "<group>"; };
 		4010BDA224AFD7190082F7E2 /* RouteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RouteCell.xib; sourceTree = "<group>"; };
+		401F9A5624B390900035428B /* LocationChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationChecker.swift; sourceTree = "<group>"; };
 		404FDE1324AEA524006AA33E /* NearbyAreas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyAreas.swift; sourceTree = "<group>"; };
 		407A645924AF8C83006CDFCE /* TrackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackButton.swift; sourceTree = "<group>"; };
 		407A645B24AF963C006CDFCE /* LogRouteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogRouteVC.swift; sourceTree = "<group>"; };
@@ -118,6 +120,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		401F9A5824B3909C0035428B /* Helper Classes */ = {
+			isa = PBXGroup;
+			children = (
+				40D845C824B030DD0028CDAE /* Tracker.swift */,
+				401F9A5624B390900035428B /* LocationChecker.swift */,
+			);
+			path = "Helper Classes";
+			sourceTree = "<group>";
+		};
 		407A646124AFAA2D006CDFCE /* CustomUIElements */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,7 +178,7 @@
 			children = (
 				40EAA79024A8152300F41366 /* AppDelegate.swift */,
 				40EAA79224A8152300F41366 /* SceneDelegate.swift */,
-				40D845C824B030DD0028CDAE /* Tracker.swift */,
+				401F9A5824B3909C0035428B /* Helper Classes */,
 				961F056C24AC01CB006DE4C5 /* DataTypes */,
 				961F055D24AA6346006DE4C5 /* ViewControllers */,
 				40DC781024AE466500DC5AF2 /* Storyboards */,
@@ -362,6 +373,7 @@
 			files = (
 				407A645C24AF963C006CDFCE /* LogRouteVC.swift in Sources */,
 				961F056E24AC02A3006DE4C5 /* Area.swift in Sources */,
+				401F9A5724B390900035428B /* LocationChecker.swift in Sources */,
 				407A645A24AF8C83006CDFCE /* TrackButton.swift in Sources */,
 				961F056124AA64F8006DE4C5 /* MapVC.swift in Sources */,
 				407A646024AFA64F006CDFCE /* MapButton.swift in Sources */,

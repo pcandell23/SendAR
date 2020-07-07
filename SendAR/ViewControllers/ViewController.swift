@@ -12,8 +12,6 @@ class ViewController: UITableViewController{
     override func viewDidLoad(){
         super.viewDidLoad()
     }
-    
-    //MARK: Add Location Check Here, don't need to refactor if its this high
 }
 
 
