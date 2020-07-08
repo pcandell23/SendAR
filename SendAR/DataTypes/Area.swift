@@ -80,8 +80,7 @@ extension Area {
     
     // MARK: - Setter Functions
     
-    
-    // TODO: Will probably make these all return Bools that return if it succedded or not but for now not gonna worry about it. Might be try catch loops idk the right way in swift that will show the user it failed. Probs both tbh
+    // TODO: Will probably make these all return Bools that return if it succedded or not but for now not gonna worry about it. Might be do catch loops idk the right way in swift that will show the user it failed. Probs both tbh
     
     func setName(newName: String){
         self.name = newName

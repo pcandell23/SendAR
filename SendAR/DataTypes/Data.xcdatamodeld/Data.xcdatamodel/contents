@@ -12,8 +12,11 @@
         <relationship name="routes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Route" inverseName="crag" inverseEntity="Route"/>
     </entity>
     <entity name="Route" representedClassName="Route" syncable="YES" codeGenerationType="class">
+        <attribute name="altitude" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="grade" optional="YES" attributeType="String"/>
         <attribute name="height" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="String"/>
+        <attribute name="longitude" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="rating" optional="YES" attributeType="Double" minValueString="0" maxValueString="5" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="type" optional="YES" attributeType="String"/>
@@ -22,6 +25,6 @@
     <elements>
         <element name="Area" positionX="-63" positionY="-18" width="128" height="133"/>
         <element name="Crag" positionX="-54" positionY="-9" width="128" height="58"/>
-        <element name="Route" positionX="-36" positionY="9" width="128" height="133"/>
+        <element name="Route" positionX="-36" positionY="9" width="128" height="178"/>
     </elements>
 </model>
