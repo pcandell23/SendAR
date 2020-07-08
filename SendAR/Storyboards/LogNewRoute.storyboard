@@ -25,7 +25,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AM3-y1-DwV">
-                                <rect key="frame" x="20" y="210" width="374" height="240"/>
+                                <rect key="frame" x="20" y="210" width="374" height="487"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YlK-77-lLq">
@@ -35,22 +35,32 @@
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="35"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                         <state key="normal" title="Confirm"/>
+                                        <connections>
+                                            <action selector="confirmButton:" destination="o5l-Op-Fdq" eventType="touchUpInside" id="UD6-I4-hhU"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="irN-QH-Z8W" customClass="TrackButton" customModule="SendAR" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="45" width="374" height="35"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                         <state key="normal" title="New Area"/>
+                                        <connections>
+                                            <action selector="newAreaButton:" destination="o5l-Op-Fdq" eventType="touchUpInside" id="cj9-8a-3Tg"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9J-rB-zxZ" customClass="TrackButton" customModule="SendAR" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="90" width="374" height="35"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                         <state key="normal" title="Not Sure"/>
+                                        <connections>
+                                            <action selector="notSureButton:" destination="o5l-Op-Fdq" eventType="touchUpInside" id="Mcv-Ew-Uyd"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="YlK-77-lLq" firstAttribute="top" secondItem="AM3-y1-DwV" secondAttribute="bottom" constant="20" id="9mO-KK-fOc"/>
                             <constraint firstItem="pEn-6k-SEp" firstAttribute="bottom" secondItem="YlK-77-lLq" secondAttribute="bottom" constant="20" id="EEb-rh-h9O"/>
                             <constraint firstItem="AM3-y1-DwV" firstAttribute="top" secondItem="9LX-rW-SGK" secondAttribute="bottom" constant="20" id="JH6-zM-bVU"/>
                             <constraint firstItem="9LX-rW-SGK" firstAttribute="leading" secondItem="pEn-6k-SEp" secondAttribute="leading" constant="20" id="M1S-ei-Mr8"/>
@@ -61,11 +71,13 @@
                             <constraint firstItem="pEn-6k-SEp" firstAttribute="trailing" secondItem="YlK-77-lLq" secondAttribute="trailing" constant="20" id="sm3-g1-DC6"/>
                             <constraint firstItem="YlK-77-lLq" firstAttribute="leading" secondItem="pEn-6k-SEp" secondAttribute="leading" constant="20" id="tfq-EV-pgO"/>
                             <constraint firstItem="pEn-6k-SEp" firstAttribute="trailing" secondItem="9LX-rW-SGK" secondAttribute="trailing" constant="20" id="wss-dJ-qdz"/>
-                            <constraint firstItem="pEn-6k-SEp" firstAttribute="bottom" secondItem="AM3-y1-DwV" secondAttribute="bottom" constant="412" id="yhx-QQ-jbx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pEn-6k-SEp"/>
                     </view>
                     <navigationItem key="navigationItem" title="Area" id="JBc-gs-Opj"/>
+                    <connections>
+                        <outlet property="nearbyAreasTable" destination="AM3-y1-DwV" id="kI2-Y5-HrW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2CO-9v-Vad" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -112,6 +124,7 @@
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                 <state key="normal" title="Confirm Location"/>
                                 <connections>
+                                    <action selector="confirmLocation:" destination="GHc-hm-50l" eventType="touchUpInside" id="9dA-7F-LBm"/>
                                     <action selector="markLocationButton:" destination="F6w-B0-Y7d" eventType="touchUpInside" id="z8m-Cp-o4Q"/>
                                     <segue destination="o5l-Op-Fdq" kind="show" id="xna-kb-Urk"/>
                                 </connections>
@@ -152,6 +165,9 @@
                         <viewLayoutGuide key="safeArea" id="iYD-PK-ZuP"/>
                     </view>
                     <navigationItem key="navigationItem" title="Route Location" id="yKT-3c-x0K"/>
+                    <connections>
+                        <outlet property="routeLocationMap" destination="lGJ-vg-buK" id="xgL-7a-JO7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0YZ-jT-Wks" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -257,7 +273,7 @@
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                 <state key="normal" title="Continue"/>
                                 <connections>
-                                    <action selector="markLocationButton:" destination="F6w-B0-Y7d" eventType="touchUpInside" id="Ait-LK-8uv"/>
+                                    <action selector="saveRouteDetails:" destination="F6w-B0-Y7d" eventType="touchUpInside" id="A1B-Fb-u9W"/>
                                     <segue destination="GHc-hm-50l" kind="show" id="b6O-J7-9og"/>
                                 </connections>
                             </button>

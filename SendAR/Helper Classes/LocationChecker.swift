@@ -37,7 +37,7 @@ class LocationChecker: CLLocationManager, CLLocationManagerDelegate {
             print("Checking location")
         } else {
             // show alert letting user know they have to turn this on
-            locationServiceDeniedAlert()
+            
             print("Locations disabled")
         }
     }
@@ -52,7 +52,7 @@ class LocationChecker: CLLocationManager, CLLocationManagerDelegate {
             
         case .denied:
             // show alert instructing them how to turn on permissions
-            locationServiceDeniedAlert()
+            
             print("Case: location service denied")
             break
             
@@ -64,7 +64,7 @@ class LocationChecker: CLLocationManager, CLLocationManagerDelegate {
             
         case .restricted:
             // show alert that user can't change this setting (parental controls)
-            locationServiceRestrictedAlert()
+
             print("Case: location restricted")
             break
             
@@ -80,22 +80,5 @@ class LocationChecker: CLLocationManager, CLLocationManagerDelegate {
             
         }
     }
-    
-//these dont work currently
-    func locationServiceDeniedAlert() {
-        let alert = UIAlertController(title: "Location Services Denied", message: "Please enable location services for SendAR in your device settings", preferredStyle: .alert)
-        // settings button
-        alert.addAction(settingsAction)
-        alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil))
-        //alert.present(alert, animated: true)
-        print("Location Services Denied")
-    }
-    
-    func locationServiceRestrictedAlert() {
-        let alert = UIAlertController(title: "Location Services Restricted", message: "Location services are restricted on this device", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
-        //alert.present(alert, animated: true)
-        print("Location Services Restricted")
-    }
-    
+
 }

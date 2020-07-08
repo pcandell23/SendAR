@@ -76,7 +76,7 @@
                 <outlet property="routeRating" destination="sai-z0-cj3" id="FKn-cF-lbK"/>
                 <outlet property="routeType" destination="z96-Ru-7Ry" id="4Ey-Nw-QjT"/>
             </connections>
-            <point key="canvasLocation" x="-19" y="228"/>
+            <point key="canvasLocation" x="-20.289855072463769" y="227.67857142857142"/>
         </tableViewCell>
     </objects>
 </document>
