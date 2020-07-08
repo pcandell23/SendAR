@@ -31,11 +31,14 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
         
         //Second Page Setup
         
-        //Third Page Setup - ERROR HERE: Fatal error: Unexpectedly found nil while implicitly unwrapping an Optional value
+        //Third Page Setup
         let nib = UINib(nibName: "SuggestedAreaCell", bundle: nil)
+        
+        if nearbyAreasTable != nil {
         nearbyAreasTable.register(nib, forCellReuseIdentifier: "SuggestedAreaCell")
         nearbyAreasTable.delegate = self
         nearbyAreasTable.dataSource = self
+        }
         
     }
 
