@@ -31,7 +31,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
         locationManager.startUpdatingLocation()
         
         if(CLLocationManager.authorizationStatus() == .authorizedWhenInUse || CLLocationManager.authorizationStatus() == .authorizedAlways) {
-            currentLocation = locationManager.location!
+            //currentLocation = locationManager.location!
             
             startingAltitude.text = "Ready"
             currentAltitude.text = "\(currentLocation.altitude)"
@@ -56,14 +56,10 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
                 startingAltitude.text = "\(currentLocation.altitude)"
                 startTime.text = "\(Date())"
             } else {
-                let alert = UIAlertController(title: "Route Name Invalid", message: "Please enter a route name before tracking", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                present(alert, animated: true)
+                Alert.showRouteNameInvalidAlert(on: self)
             }
         } else {
-            let alert = UIAlertController(title: "Already Tracking", message: "Please end the current tracking session before attempting to start a new tracking session", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            present(alert, animated: true)
+            Alert.showAlreadyTrackingAlert(on: self)
         }
     }
     

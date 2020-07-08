@@ -21,6 +21,13 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         super.viewDidLoad()
         locationCheck.checkLocationServices()
         centerViewOnUserLocation()
+        
+        //Alerts for location services issues
+        if CLLocationManager.authorizationStatus() == .denied {
+            Alert.showLocationServicesDeniedAlert(on: self)
+        } else if CLLocationManager.authorizationStatus() == .restricted {
+            Alert.showLocationServicesRestrictedAlert(on: self)
+        }
     }
     
     init(locationCheck: LocationChecker) {

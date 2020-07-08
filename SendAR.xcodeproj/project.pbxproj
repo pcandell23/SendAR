@@ -13,6 +13,8 @@
 		40343F0624B5261D00507926 /* LogNewRoute.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40343F0524B5261D00507926 /* LogNewRoute.storyboard */; };
 		4039FB7924B50F2C00D9F927 /* RouteDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4039FB7824B50F2C00D9F927 /* RouteDetailVC.swift */; };
 		404FDE1424AEA524006AA33E /* NearbyAreas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404FDE1324AEA524006AA33E /* NearbyAreas.swift */; };
+		405E556F24B57C9C00646237 /* SuggestedAreaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405E556D24B57C9C00646237 /* SuggestedAreaCell.swift */; };
+		405E557024B57C9C00646237 /* SuggestedAreaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 405E556E24B57C9C00646237 /* SuggestedAreaCell.xib */; };
 		407A645A24AF8C83006CDFCE /* TrackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A645924AF8C83006CDFCE /* TrackButton.swift */; };
 		407A645C24AF963C006CDFCE /* LogRouteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A645B24AF963C006CDFCE /* LogRouteVC.swift */; };
 		407A646024AFA64F006CDFCE /* MapButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A645F24AFA64F006CDFCE /* MapButton.swift */; };
@@ -31,6 +33,7 @@
 		40EAA79D24A8152400F41366 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40EAA79B24A8152400F41366 /* LaunchScreen.storyboard */; };
 		40EAA7A824A8152400F41366 /* FrontPageLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EAA7A724A8152400F41366 /* FrontPageLayoutTests.swift */; };
 		40EAA7B324A8152400F41366 /* SendARUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EAA7B224A8152400F41366 /* SendARUITests.swift */; };
+		40EAF91D24B627C600CB7C08 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EAF91C24B627C600CB7C08 /* Alert.swift */; };
 		961F055F24AA64E8006DE4C5 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961F055E24AA64E8006DE4C5 /* HomeVC.swift */; };
 		961F056124AA64F8006DE4C5 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961F056024AA64F8006DE4C5 /* MapVC.swift */; };
 		961F056324AA6517006DE4C5 /* MyAreasVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961F056224AA6517006DE4C5 /* MyAreasVC.swift */; };
@@ -65,6 +68,8 @@
 		40343F0524B5261D00507926 /* LogNewRoute.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogNewRoute.storyboard; sourceTree = "<group>"; };
 		4039FB7824B50F2C00D9F927 /* RouteDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteDetailVC.swift; sourceTree = "<group>"; };
 		404FDE1324AEA524006AA33E /* NearbyAreas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyAreas.swift; sourceTree = "<group>"; };
+		405E556D24B57C9C00646237 /* SuggestedAreaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestedAreaCell.swift; sourceTree = "<group>"; };
+		405E556E24B57C9C00646237 /* SuggestedAreaCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestedAreaCell.xib; sourceTree = "<group>"; };
 		407A645924AF8C83006CDFCE /* TrackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackButton.swift; sourceTree = "<group>"; };
 		407A645B24AF963C006CDFCE /* LogRouteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogRouteVC.swift; sourceTree = "<group>"; };
 		407A645F24AFA64F006CDFCE /* MapButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapButton.swift; sourceTree = "<group>"; };
@@ -89,6 +94,7 @@
 		40EAA7AE24A8152400F41366 /* SendARUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SendARUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		40EAA7B224A8152400F41366 /* SendARUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendARUITests.swift; sourceTree = "<group>"; };
 		40EAA7B424A8152400F41366 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40EAF91C24B627C600CB7C08 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		961F055E24AA64E8006DE4C5 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		961F056024AA64F8006DE4C5 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		961F056224AA6517006DE4C5 /* MyAreasVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAreasVC.swift; sourceTree = "<group>"; };
@@ -130,6 +136,7 @@
 			children = (
 				40D845C824B030DD0028CDAE /* Tracker.swift */,
 				401F9A5624B390900035428B /* LocationChecker.swift */,
+				40EAF91C24B627C600CB7C08 /* Alert.swift */,
 			);
 			path = "Helper Classes";
 			sourceTree = "<group>";
@@ -141,6 +148,8 @@
 				407A645924AF8C83006CDFCE /* TrackButton.swift */,
 				4010BDA124AFD7190082F7E2 /* RouteCell.swift */,
 				4010BDA224AFD7190082F7E2 /* RouteCell.xib */,
+				405E556D24B57C9C00646237 /* SuggestedAreaCell.swift */,
+				405E556E24B57C9C00646237 /* SuggestedAreaCell.xib */,
 			);
 			path = CustomUIElements;
 			sourceTree = "<group>";
@@ -354,6 +363,7 @@
 				40E0978524AE548A0022E965 /* Settings.storyboard in Resources */,
 				40E0978324AE54290022E965 /* MyAreas.storyboard in Resources */,
 				40EAA79824A8152300F41366 /* Main.storyboard in Resources */,
+				405E557024B57C9C00646237 /* SuggestedAreaCell.xib in Resources */,
 				40DC780F24AE465900DC5AF2 /* Home.storyboard in Resources */,
 				40E0978124AE53B40022E965 /* AR.storyboard in Resources */,
 			);
@@ -381,12 +391,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				407A645C24AF963C006CDFCE /* LogRouteVC.swift in Sources */,
+				405E556F24B57C9C00646237 /* SuggestedAreaCell.swift in Sources */,
 				401F9A5724B390900035428B /* LocationChecker.swift in Sources */,
 				407A645A24AF8C83006CDFCE /* TrackButton.swift in Sources */,
 				961F056124AA64F8006DE4C5 /* MapVC.swift in Sources */,
 				407A646024AFA64F006CDFCE /* MapButton.swift in Sources */,
 				9694582E24B571580093D943 /* Crag.swift in Sources */,
 				4010BDA324AFD7190082F7E2 /* RouteCell.swift in Sources */,
+				40EAF91D24B627C600CB7C08 /* Alert.swift in Sources */,
 				40EAA79524A8152300F41366 /* ViewController.swift in Sources */,
 				961F055F24AA64E8006DE4C5 /* HomeVC.swift in Sources */,
 				4087FA1024ABA33900723BCF /* ProfileVC.swift in Sources */,
@@ -573,13 +585,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9B6C5XW645;
+				DEVELOPMENT_TEAM = A3UJWUP8W2;
 				INFOPLIST_FILE = SendAR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.SendAR.SendAR;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SendAR.SendARAlt1;
 				PRODUCT_NAME = SendAR;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -591,13 +603,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9B6C5XW645;
+				DEVELOPMENT_TEAM = A3UJWUP8W2;
 				INFOPLIST_FILE = SendAR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.SendAR.SendAR;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SendAR.SendARAlt1;
 				PRODUCT_NAME = SendAR;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

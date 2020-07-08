@@ -26,6 +26,8 @@ extension Area {
     @NSManaged public var subAreas: [Area]?
     @NSManaged public var superArea: Area?
     
+    //Area needs a location variable or a lat/long variable
+    
     // MARK: - Getter Functions
     func getName() -> String{
         return name ?? ""

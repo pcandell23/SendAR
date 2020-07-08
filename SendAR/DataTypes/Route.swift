@@ -60,7 +60,7 @@ extension Route {
     }
     
     // MARK: - Setters
-       // TODO: Add error handling and showing to these. As well as check to make sure the name (not racist, idk how we could do that but we can try), grade, and type are actual grades and types and that they match(this will also apply to the init function)
+    // TODO: Add error handling and showing to these. As well as check to make sure the name (not racist, idk how we could do that but we can try), grade, and type are actual grades and types and that they match(this will also apply to the init function)
     func changeName(newName: String){
         self.name = newName
     }
