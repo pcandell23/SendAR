@@ -196,7 +196,7 @@
                         <barButtonItem key="backBarButtonItem" title="Home" id="aXt-NU-mN8"/>
                         <barButtonItem key="leftBarButtonItem" title="Log New Route" image="plus.circle" catalog="system" id="pdM-Ic-XnN">
                             <connections>
-                                <segue destination="yQC-gZ-4lL" kind="show" id="rAQ-4I-Kao"/>
+                                <segue destination="yQC-gZ-4lL" kind="show" id="kdo-UE-wmY"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Profile" image="person.circle" catalog="system" id="9vt-Rh-7kz">
@@ -225,7 +225,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bbZ-c4-Nys" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1640" y="-467"/>
+            <point key="canvasLocation" x="1670" y="-422"/>
         </scene>
         <!--Profile-->
         <scene sceneID="MPh-hx-7ev">
