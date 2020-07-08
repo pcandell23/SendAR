@@ -21,8 +21,14 @@ extension Area {
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Area> {
         return NSFetchRequest<Area>(entityName: "Area")
     }
- 
+    
+    //Attributes
     @NSManaged public var name: String?
+    @NSManaged public var fenceLatitude: String?
+    @NSManaged public var fenceLongitude: String?
+    @NSManaged public var fenceRadius: Int64
+    
+    //Relationships
     @NSManaged public var subAreas: [Area]?
     @NSManaged public var superArea: Area?
     
@@ -31,12 +37,29 @@ extension Area {
         return name ?? ""
     }
     
-    func getSuperArea() -> Area?{
+    func getSuperArea() -> Area? {
         return superArea
     }
     
     func getSubArea() -> [Area] {
         return subAreas ?? [Area]()
+    }
+    
+    func getFenceLatitude() -> String {
+        return fenceLatitude ?? ""
+    }
+    
+    func getFenceLongitude() -> String {
+        return fenceLongitude ?? ""
+    }
+    
+    func getFenceRadius() -> Int64 {
+        return fenceRadius
+    }
+    
+    // TODO: Fix this to return the correct format for needs.
+    func getFenceCorrdinates() -> String {
+        return ""
     }
     
     func subAreaIsEmpty() -> Bool {
@@ -57,15 +80,26 @@ extension Area {
     
     // MARK: - Setter Functions
     
+    // TODO: Will probably make these all return Bools that return if it succedded or not but for now not gonna worry about it. Might be do catch loops idk the right way in swift that will show the user it failed. Probs both tbh
     
-    // TODO: Will probably make these all return Bools that return if it succedded or not but for now not gonna worry about it. Might be try catch loops idk the right way in swift that will show the user it failed. Probs both tbh
-    
-    func changeName(newName: String){
+    func setName(newName: String){
         self.name = newName
     }
     
-    func changeSuperArea(newSuperArea: Area){
+    func setSuperArea(newSuperArea: Area){
         self.superArea = newSuperArea
+    }
+    
+    func setFenceLatitude(newFenceLatitude: String){
+        self.fenceLatitude = newFenceLatitude
+    }
+    
+    func setFenceLongitude(newFenceLongitude: String){
+        self.fenceLongitude = newFenceLongitude
+    }
+    
+    func setFenceRadius(newFenceRadius: Int64){
+        self.fenceRadius = newFenceRadius 
     }
  
  
