@@ -36,9 +36,9 @@
 		961F056324AA6517006DE4C5 /* MyAreasVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961F056224AA6517006DE4C5 /* MyAreasVC.swift */; };
 		961F056524AA658F006DE4C5 /* ARviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961F056424AA658F006DE4C5 /* ARviewVC.swift */; };
 		961F056724AA66FC006DE4C5 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961F056624AA66FC006DE4C5 /* SettingsVC.swift */; };
-		961F056E24AC02A3006DE4C5 /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961F056D24AC02A3006DE4C5 /* Area.swift */; };
-		966D229824AC0B7200703906 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966D229724AC0B7200703906 /* Route.swift */; };
-		966D229A24AC106B00703906 /* Crag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966D229924AC106B00703906 /* Crag.swift */; };
+		9694582C24B571430093D943 /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694582B24B571430093D943 /* Area.swift */; };
+		9694582E24B571580093D943 /* Crag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694582D24B571580093D943 /* Crag.swift */; };
+		9694583024B571610093D943 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694582F24B571610093D943 /* Route.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,9 +94,10 @@
 		961F056224AA6517006DE4C5 /* MyAreasVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAreasVC.swift; sourceTree = "<group>"; };
 		961F056424AA658F006DE4C5 /* ARviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARviewVC.swift; sourceTree = "<group>"; };
 		961F056624AA66FC006DE4C5 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
-		961F056D24AC02A3006DE4C5 /* Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
-		966D229724AC0B7200703906 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
-		966D229924AC106B00703906 /* Crag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crag.swift; sourceTree = "<group>"; };
+		9694581D24B56F7C0093D943 /* Data.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Data.xcdatamodel; sourceTree = "<group>"; };
+		9694582B24B571430093D943 /* Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
+		9694582D24B571580093D943 /* Crag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crag.swift; sourceTree = "<group>"; };
+		9694582F24B571610093D943 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,9 +234,10 @@
 		961F056C24AC01CB006DE4C5 /* DataTypes */ = {
 			isa = PBXGroup;
 			children = (
-				961F056D24AC02A3006DE4C5 /* Area.swift */,
-				966D229924AC106B00703906 /* Crag.swift */,
-				966D229724AC0B7200703906 /* Route.swift */,
+				9694581C24B56F7C0093D943 /* Data.xcdatamodeld */,
+				9694582B24B571430093D943 /* Area.swift */,
+				9694582D24B571580093D943 /* Crag.swift */,
+				9694582F24B571610093D943 /* Route.swift */,
 			);
 			path = DataTypes;
 			sourceTree = "<group>";
@@ -379,24 +381,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				407A645C24AF963C006CDFCE /* LogRouteVC.swift in Sources */,
-				961F056E24AC02A3006DE4C5 /* Area.swift in Sources */,
 				401F9A5724B390900035428B /* LocationChecker.swift in Sources */,
 				407A645A24AF8C83006CDFCE /* TrackButton.swift in Sources */,
 				961F056124AA64F8006DE4C5 /* MapVC.swift in Sources */,
 				407A646024AFA64F006CDFCE /* MapButton.swift in Sources */,
+				9694582E24B571580093D943 /* Crag.swift in Sources */,
 				4010BDA324AFD7190082F7E2 /* RouteCell.swift in Sources */,
-				966D229824AC0B7200703906 /* Route.swift in Sources */,
 				40EAA79524A8152300F41366 /* ViewController.swift in Sources */,
 				961F055F24AA64E8006DE4C5 /* HomeVC.swift in Sources */,
 				4087FA1024ABA33900723BCF /* ProfileVC.swift in Sources */,
-				966D229A24AC106B00703906 /* Crag.swift in Sources */,
 				40EAA79124A8152300F41366 /* AppDelegate.swift in Sources */,
 				40D845C924B030DD0028CDAE /* Tracker.swift in Sources */,
 				40EAA79324A8152300F41366 /* SceneDelegate.swift in Sources */,
+				9694583024B571610093D943 /* Route.swift in Sources */,
 				961F056724AA66FC006DE4C5 /* SettingsVC.swift in Sources */,
 				404FDE1424AEA524006AA33E /* NearbyAreas.swift in Sources */,
 				4039FB7924B50F2C00D9F927 /* RouteDetailVC.swift in Sources */,
 				961F056324AA6517006DE4C5 /* MyAreasVC.swift in Sources */,
+				9694582C24B571430093D943 /* Area.swift in Sources */,
 				961F056524AA658F006DE4C5 /* ARviewVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -571,13 +573,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A3UJWUP8W2;
+				DEVELOPMENT_TEAM = 9B6C5XW645;
 				INFOPLIST_FILE = SendAR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.SendAR.SendARAlt1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SendAR.SendAR;
 				PRODUCT_NAME = SendAR;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -589,13 +591,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A3UJWUP8W2;
+				DEVELOPMENT_TEAM = 9B6C5XW645;
 				INFOPLIST_FILE = SendAR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.SendAR.SendARAlt1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SendAR.SendAR;
 				PRODUCT_NAME = SendAR;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -726,6 +728,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9694581C24B56F7C0093D943 /* Data.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9694581D24B56F7C0093D943 /* Data.xcdatamodel */,
+			);
+			currentVersion = 9694581D24B56F7C0093D943 /* Data.xcdatamodel */;
+			path = Data.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 40EAA78524A8152200F41366 /* Project object */;
 }

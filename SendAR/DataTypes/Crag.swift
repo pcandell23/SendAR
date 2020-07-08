@@ -5,49 +5,39 @@
 //  Created by Peter Candell on 6/30/20.
 //  Copyright © 2020 Bennett Baker. All rights reserved.
 //
-
+ 
 import Foundation
-
+import CoreData
+ 
 class Crag: Area {
     
-    private var routes: [Route] = [Route]()
-    
-    init(name: String, superArea: Area, routes: [Route]){
-        super.init(name: name, superArea: superArea)
-        self.routes = routes
-    }
+    @NSManaged public var routes: [Route]?
     
     // MARK: - Getters
     
     func getRoutes() -> [Route]{
-        return routes
+        return routes ?? [Route]()
     }
+ 
+}
+ 
+    // MARK: Generated accessors for routes
+extension Crag {
     
-    override func getSubArea() -> [Area] {
-        //There are no sub areas in a crag so this returns an empty array
-        return []
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<Route> {
+        return NSFetchRequest<Route>(entityName: "Route")
     }
-    
-    // MARK: - Setters
-    
-    //TODO: Make these show an error to the user if failed.
-    
-    func addRoutes(newRoutesArray: [Route]){
-        routes += newRoutesArray
-    }
-    
-    func removeRoute(index: Int) -> Route{
-        return routes.remove(at: index)
-    }
-    
-    override func addSubAreas(newSubAreasArray: [Area]) {
-        // Does nothing.
-        // TODO: Will probs log an error once we have that set up
-    }
-    
-    override func removeSubArea(index: Int) -> Area? {
-        // Does nothing.
-        // TODO: Again will log an error and let the user know they cant do this with some helpful message
-        return nil
-    }
+ 
+    @objc(addRoutesObject:)
+    @NSManaged public func addToRoutes(_ value: NSManagedObject)
+ 
+    @objc(removeRoutesObject:)
+    @NSManaged public func removeFromRoutes(_ value: NSManagedObject)
+ 
+    @objc(addRoutes:)
+    @NSManaged public func addToRoutes(_ values: [Route]) 
+ 
+    @objc(removeRoutes:)
+    @NSManaged public func removeFromRoutes(_ values: [Route])
+ 
 }
