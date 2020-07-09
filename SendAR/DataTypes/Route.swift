@@ -12,14 +12,10 @@ import CoreData
  
 @objc(Route)
 public class Route: NSManagedObject {
- 
+    let delegate = AppDelegate.shared()
 }
  
 extension Route {
- 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Route> {
-        return NSFetchRequest<Route>(entityName: "Route")
-    }
  
     //Attributes
     @NSManaged public var grade: String?
@@ -108,5 +104,17 @@ extension Route {
     
     func setAltitude(newAltitude: Int16){
         self.altitude = newAltitude
+    }
+    
+    
+    // MARK: Save and fetch functions
+    func save(){
+        if delegate.dataController != nil{
+            delegate.dataController!.saveContext()
+        }
+    }
+    
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<Route> {
+        return NSFetchRequest<Route>(entityName: "Route")
     }
 }

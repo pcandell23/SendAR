@@ -13,14 +13,10 @@ import CoreData
  
 @objc(Area)
 public class Area: NSManagedObject {
- 
+    let delegate = AppDelegate.shared()
 }
  
 extension Area {
- 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Area> {
-        return NSFetchRequest<Area>(entityName: "Area")
-    }
     
     //Attributes
     @NSManaged public var name: String?
@@ -105,7 +101,7 @@ extension Area {
     }
  
  
-// MARK: Generated accessors for subAreas
+    // MARK: Generated accessors for subAreas
     @objc(addSubAreasObject:)
     @NSManaged public func addToSubAreas(_ value: Area)
  
@@ -117,6 +113,19 @@ extension Area {
  
     @objc(removeSubAreas:)
     @NSManaged public func removeFromSubAreas(_ values: [Area])
- 
+    
+    
+    
+    // MARK: Saving and fetching functions
+    
+    func save(){
+        if delegate.dataController != nil{
+            delegate.dataController!.saveContext()
+        }
+    }
+    
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<Area> {
+        return NSFetchRequest<Area>(entityName: "Area")
+    }
 }
 

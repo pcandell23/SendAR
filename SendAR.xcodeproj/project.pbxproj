@@ -42,6 +42,8 @@
 		9694582C24B571430093D943 /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694582B24B571430093D943 /* Area.swift */; };
 		9694582E24B571580093D943 /* Crag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694582D24B571580093D943 /* Crag.swift */; };
 		9694583024B571610093D943 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694582F24B571610093D943 /* Route.swift */; };
+		9694583124B69CF10093D943 /* Data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9694581C24B56F7C0093D943 /* Data.xcdatamodeld */; };
+		9694583524B6A38A0093D943 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694583424B6A38A0093D943 /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,7 @@
 		9694582B24B571430093D943 /* Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
 		9694582D24B571580093D943 /* Crag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crag.swift; sourceTree = "<group>"; };
 		9694582F24B571610093D943 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		9694583424B6A38A0093D943 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +250,7 @@
 				9694582B24B571430093D943 /* Area.swift */,
 				9694582D24B571580093D943 /* Crag.swift */,
 				9694582F24B571610093D943 /* Route.swift */,
+				9694583424B6A38A0093D943 /* DataController.swift */,
 			);
 			path = DataTypes;
 			sourceTree = "<group>";
@@ -390,6 +394,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9694583124B69CF10093D943 /* Data.xcdatamodeld in Sources */,
 				407A645C24AF963C006CDFCE /* LogRouteVC.swift in Sources */,
 				405E556F24B57C9C00646237 /* SuggestedAreaCell.swift in Sources */,
 				401F9A5724B390900035428B /* LocationChecker.swift in Sources */,
@@ -402,6 +407,7 @@
 				40EAA79524A8152300F41366 /* ViewController.swift in Sources */,
 				961F055F24AA64E8006DE4C5 /* HomeVC.swift in Sources */,
 				4087FA1024ABA33900723BCF /* ProfileVC.swift in Sources */,
+				9694583524B6A38A0093D943 /* DataController.swift in Sources */,
 				40EAA79124A8152300F41366 /* AppDelegate.swift in Sources */,
 				40D845C924B030DD0028CDAE /* Tracker.swift in Sources */,
 				40EAA79324A8152300F41366 /* SceneDelegate.swift in Sources */,
@@ -585,13 +591,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A3UJWUP8W2;
+				DEVELOPMENT_TEAM = 9B6C5XW645;
 				INFOPLIST_FILE = SendAR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.SendAR.SendARAlt1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SendAR.SendAR;
 				PRODUCT_NAME = SendAR;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -603,13 +609,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A3UJWUP8W2;
+				DEVELOPMENT_TEAM = 9B6C5XW645;
 				INFOPLIST_FILE = SendAR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.SendAR.SendARAlt1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SendAR.SendAR;
 				PRODUCT_NAME = SendAR;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

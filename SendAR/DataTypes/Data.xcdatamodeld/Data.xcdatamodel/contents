@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Area" representedClassName="Area" syncable="YES" codeGenerationType="class">
+    <entity name="Area" representedClassName="Area" syncable="YES">
         <attribute name="fenceLatitude" optional="YES" attributeType="String"/>
         <attribute name="fenceLongitude" optional="YES" attributeType="String"/>
         <attribute name="fenceRadius" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
@@ -8,10 +8,10 @@
         <relationship name="subAreas" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Area" inverseName="superArea" inverseEntity="Area"/>
         <relationship name="superArea" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Area" inverseName="subAreas" inverseEntity="Area"/>
     </entity>
-    <entity name="Crag" representedClassName="Crag" parentEntity="Area" syncable="YES" codeGenerationType="class">
+    <entity name="Crag" representedClassName="Crag" parentEntity="Area" syncable="YES">
         <relationship name="routes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Route" inverseName="crag" inverseEntity="Route"/>
     </entity>
-    <entity name="Route" representedClassName="Route" syncable="YES" codeGenerationType="class">
+    <entity name="Route" representedClassName="Route" syncable="YES">
         <attribute name="altitude" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="grade" optional="YES" attributeType="String"/>
         <attribute name="height" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
