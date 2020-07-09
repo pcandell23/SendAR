@@ -9,7 +9,8 @@
 import Foundation
 import CoreData
  
-class Crag: Area {
+@objc(Crag)
+public class Crag: Area {
     
     @NSManaged public var routes: [Route]?
     
@@ -18,7 +19,6 @@ class Crag: Area {
     func getRoutes() -> [Route]{
         return routes ?? [Route]()
     }
- 
 }
  
     // MARK: Generated accessors for routes

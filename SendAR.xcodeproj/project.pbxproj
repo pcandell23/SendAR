@@ -137,6 +137,7 @@
 		401F9A5824B3909C0035428B /* Helper Classes */ = {
 			isa = PBXGroup;
 			children = (
+				9694583424B6A38A0093D943 /* DataController.swift */,
 				40D845C824B030DD0028CDAE /* Tracker.swift */,
 				401F9A5624B390900035428B /* LocationChecker.swift */,
 				40EAF91C24B627C600CB7C08 /* Alert.swift */,
@@ -250,7 +251,6 @@
 				9694582B24B571430093D943 /* Area.swift */,
 				9694582D24B571580093D943 /* Crag.swift */,
 				9694582F24B571610093D943 /* Route.swift */,
-				9694583424B6A38A0093D943 /* DataController.swift */,
 			);
 			path = DataTypes;
 			sourceTree = "<group>";
