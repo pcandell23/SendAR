@@ -28,7 +28,7 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
     var newRouteType: String? = nil
     var newRoutePitches: Int16 = 0
     var newRouteRating: Double = 0.0
-    var newRouteHeight: Int64 = 0
+    var newRouteHeight: Int32 = 0
     var newRouteLatitude: String? = nil
     var newRouteLongitude: String? = nil
     var newRouteAltitude: Int16 = 0
@@ -56,7 +56,7 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
         newRouteGrade = routeGrade.text
         newRouteType = routeType.text
         newRoutePitches = Int16(routePitches.text ?? "0") ?? 0
-        newRouteHeight = Int64(routeHeight.text ?? "0") ?? 0
+        newRouteHeight = Int32(routeHeight.text ?? "0") ?? 0
         
         //newRouteLatitude = routeLatitude.text
         //newRouteLongitude = routeLongitude.text
@@ -113,7 +113,7 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
         
         let newRoute = NSEntityDescription.insertNewObject(forEntityName: "Route", into: delegate.dataController!.persistentContainer.viewContext) as! Route
         
-        newRoute.setInitialValues(name: newRouteName, grade: newRouteGrade, rating: newRouteRating, height: newRouteHeight, type: newRouteType, pitches: newRoutePitches, crag: crag, latitude: newRouteLatitude, longitude: newRouteLongitude, altitude: newRouteAltitude)
+        newRoute.setInitialValues(name: newRouteName, grade: newRouteGrade, rating: newRouteRating, height: newRouteHeight, type: newRouteType, pitches: newRoutePitches, crag: crag, latitude: newRouteLatitude, longitude: newRouteLongitude, altitude: newRouteAltitude) 
         
         delegate.dataController!.saveContext()
     }

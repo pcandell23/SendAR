@@ -19,7 +19,7 @@ extension Route {
  
     //Attributes
     @NSManaged public var grade: String?
-    @NSManaged public var height: Int64
+    @NSManaged public var height: Int32
     @NSManaged public var name: String?
     @NSManaged public var rating: Double
     @NSManaged public var type: String?
@@ -98,6 +98,10 @@ extension Route {
     func setPitches(_ newPitches: Int16){
         self.pitches = newPitches
     }
+    
+    func setHeight(_ newHeight: Int32){
+        self.height = newHeight
+    }
        
     func setCrag(_ newCrag: Crag){
         self.crag = newCrag
@@ -115,7 +119,7 @@ extension Route {
         self.altitude = newAltitude
     }
     
-    func setInitialValues(name: String? = nil, grade: String? = nil, rating: Double = 0.0, height: Int64 = 0, type: String? = nil, pitches: Int16 = 0, crag: Crag? = nil, latitude: String? = nil, longitude: String? = nil, altitude: Int16 = 0){
+    func setInitialValues(name: String? = nil, grade: String? = nil, rating: Double = 0.0, height: Int32 = 0, type: String? = nil, pitches: Int16 = 0, crag: Crag? = nil, latitude: String? = nil, longitude: String? = nil, altitude: Int16 = 0){
         self.name = name
         self.grade = grade
         self.rating = rating

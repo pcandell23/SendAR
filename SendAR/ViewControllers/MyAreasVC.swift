@@ -25,10 +25,12 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
         myAreasTableView.register(nib, forCellReuseIdentifier: "RouteCell")
         myAreasTableView.delegate = self
         myAreasTableView.dataSource = self
+        fetchRoutes()
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         fetchRoutes()
     }
     

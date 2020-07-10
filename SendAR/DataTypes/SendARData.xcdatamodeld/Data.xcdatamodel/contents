@@ -14,10 +14,11 @@
     <entity name="Route" representedClassName="Route" syncable="YES">
         <attribute name="altitude" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="grade" optional="YES" attributeType="String"/>
-        <attribute name="height" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="height" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="latitude" optional="YES" attributeType="String"/>
         <attribute name="longitude" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="pitches" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="rating" optional="YES" attributeType="Double" minValueString="0" maxValueString="5" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="type" optional="YES" attributeType="String"/>
         <relationship name="crag" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Crag" inverseName="routes" inverseEntity="Crag"/>
@@ -25,6 +26,6 @@
     <elements>
         <element name="Area" positionX="-63" positionY="-18" width="128" height="133"/>
         <element name="Crag" positionX="-54" positionY="-9" width="128" height="58"/>
-        <element name="Route" positionX="-36" positionY="9" width="128" height="178"/>
+        <element name="Route" positionX="-36" positionY="9" width="128" height="193"/>
     </elements>
 </model>

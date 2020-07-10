@@ -188,7 +188,7 @@
         <scene sceneID="yd4-rq-daW">
             <objects>
                 <viewController id="F6w-B0-Y7d" customClass="LogRouteViewController" customModule="SendAR" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ZnJ-ak-kT2" customClass="LogNewRoute">
+                    <view key="view" contentMode="scaleToFill" id="ZnJ-ak-kT2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
