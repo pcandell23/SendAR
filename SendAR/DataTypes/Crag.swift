@@ -9,7 +9,8 @@
 import Foundation
 import CoreData
  
-class Crag: Area {
+@objc(Crag)
+public class Crag: Area {
     
     @NSManaged public var routes: [Route]?
     
@@ -18,15 +19,10 @@ class Crag: Area {
     func getRoutes() -> [Route]{
         return routes ?? [Route]()
     }
- 
 }
  
     // MARK: Generated accessors for routes
 extension Crag {
-    
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Route> {
-        return NSFetchRequest<Route>(entityName: "Route")
-    }
  
     @objc(addRoutesObject:)
     @NSManaged public func addToRoutes(_ value: NSManagedObject)
@@ -39,5 +35,11 @@ extension Crag {
  
     @objc(removeRoutes:)
     @NSManaged public func removeFromRoutes(_ values: [Route])
+    
+    // MARK: Fetch function
+    // Save function is in parent Area
  
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<Crag> {
+        return NSFetchRequest<Crag>(entityName: "Crag")
+    }
 }

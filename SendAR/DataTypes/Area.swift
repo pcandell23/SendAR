@@ -13,14 +13,11 @@ import CoreData
  
 @objc(Area)
 public class Area: NSManagedObject {
- 
+    let delegate = AppDelegate.shared()
+    
 }
  
 extension Area {
- 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Area> {
-        return NSFetchRequest<Area>(entityName: "Area")
-    }
     
     //Attributes
     @NSManaged public var name: String?
@@ -103,9 +100,18 @@ extension Area {
     func setFenceRadius(newFenceRadius: Int64){
         self.fenceRadius = newFenceRadius 
     }
+    
+    func setInitialValues(name: String? = nil, fenceLatitude: String? = nil, fenceLongitude: String? = nil, fenceRadius: Int64 = 0, subAreas: [Area]? = nil, superArea: Area? = nil){
+        self.name = name
+        self.fenceLatitude = fenceLatitude
+        self.fenceLongitude = fenceLongitude
+        self.fenceRadius = fenceRadius
+        self.subAreas = subAreas
+        self.superArea = superArea
+    }
  
  
-// MARK: Generated accessors for subAreas
+    // MARK: Generated accessors for subAreas
     @objc(addSubAreasObject:)
     @NSManaged public func addToSubAreas(_ value: Area)
  
@@ -117,6 +123,19 @@ extension Area {
  
     @objc(removeSubAreas:)
     @NSManaged public func removeFromSubAreas(_ values: [Area])
- 
+    
+    
+    
+    // MARK: Saving and fetching functions
+    
+    func save(){
+        if delegate.dataController != nil{
+            delegate.dataController!.saveContext()
+        }
+    }
+    
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<Area> {
+        return NSFetchRequest<Area>(entityName: "Area")
+    }
 }
 

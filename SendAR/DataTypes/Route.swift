@@ -12,14 +12,10 @@ import CoreData
  
 @objc(Route)
 public class Route: NSManagedObject {
- 
+    let delegate = AppDelegate.shared()
 }
  
 extension Route {
- 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Route> {
-        return NSFetchRequest<Route>(entityName: "Route")
-    }
  
     //Attributes
     @NSManaged public var grade: String?
@@ -27,6 +23,7 @@ extension Route {
     @NSManaged public var name: String?
     @NSManaged public var rating: Double
     @NSManaged public var type: String?
+    @NSManaged public var pitches: Int16
     
     @NSManaged public var latitude: String?
     @NSManaged public var longitude: String?
@@ -34,7 +31,7 @@ extension Route {
     
     
     //Relationships
-    @NSManaged public var crag: Area?
+    @NSManaged public var crag: Crag?
     
     // MARK: - Getters
            
@@ -57,6 +54,10 @@ extension Route {
         } else {
             return ""
         }
+    }
+    
+    func getPitches() -> Int16{
+        return pitches
     }
        
     func getCrag() -> Area?{
@@ -82,31 +83,61 @@ extension Route {
     // MARK: - Setters
 
        // TODO: Add error handling and showing to these. As well as check to make sure the name (not racist, idk how we could do that but we can try), grade, and type are actual grades and types and that they match(this will also apply to the init function)
-    func setName(newName: String){
+    func setName(_ newName: String){
         self.name = newName
     }
     
-    func setRating(newRating: Double){
+    func setRating(_ newRating: Double){
         self.rating = newRating
     }
        
-    func setGrade(newGrade: String){
+    func setGrade(_ newGrade: String){
         self.grade = newGrade
     }
+    
+    func setPitches(_ newPitches: Int16){
+        self.pitches = newPitches
+    }
        
-    func setCrag(newCrag: Crag){
+    func setCrag(_ newCrag: Crag){
         self.crag = newCrag
     }
     
-    func setLatitude(newLatitude: String){
+    func setLatitude(_ newLatitude: String){
         self.latitude = newLatitude
     }
     
-    func setLongitude(newLongitude: String){
+    func setLongitude(_ newLongitude: String){
         self.longitude = newLongitude
     }
     
-    func setAltitude(newAltitude: Int16){
+    func setAltitude(_ newAltitude: Int16){
         self.altitude = newAltitude
+    }
+    
+    func setInitialValues(name: String? = nil, grade: String? = nil, rating: Double = 0.0, height: Int64 = 0, type: String? = nil, pitches: Int16 = 0, crag: Crag? = nil, latitude: String? = nil, longitude: String? = nil, altitude: Int16 = 0){
+        self.name = name
+        self.grade = grade
+        self.rating = rating
+        self.height = height
+        self.pitches = pitches
+        
+        self.crag = crag
+        
+        self.latitude = latitude
+        self.longitude = longitude
+        self.altitude = altitude
+    }
+    
+    
+    // MARK: Save and fetch functions
+    func save(){
+        if delegate.dataController != nil{
+            delegate.dataController!.saveContext()
+        }
+    }
+    
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<Route> {
+        return NSFetchRequest<Route>(entityName: "Route")
     }
 }
