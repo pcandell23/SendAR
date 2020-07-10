@@ -140,7 +140,7 @@
                                     <segue destination="o5l-Op-Fdq" kind="show" id="xna-kb-Urk"/>
                                 </connections>
                             </button>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lGJ-vg-buK">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lGJ-vg-buK">
                                 <rect key="frame" x="20" y="208" width="374" height="430"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="430" id="T8M-4n-Q6I"/>
