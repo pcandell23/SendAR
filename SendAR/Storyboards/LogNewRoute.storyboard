@@ -230,7 +230,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HOG-YH-S7m">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Meters" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HOG-YH-S7m" userLabel="Route Height">
                                 <rect key="frame" x="134" y="321.5" width="260" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="260" id="0xF-io-NRC"/>
@@ -238,7 +238,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pitches" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CDp-SQ-eZi">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CDp-SQ-eZi">
                                 <rect key="frame" x="20" y="328" width="94" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="94" id="WKc-a4-GaB"/>
@@ -247,7 +247,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Out of 5 stars" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Of-Q4-hzj">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Of-Q4-hzj" userLabel="Route Pitches">
                                 <rect key="frame" x="134" y="375.5" width="260" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="260" id="UtY-hj-JYM"/>
@@ -255,7 +255,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIg-gf-FSy">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Out of 5 stars" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WBR-qw-Vgg" userLabel="Route Rating">
+                                <rect key="frame" x="134" y="429.5" width="260" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="260" id="bJt-Dr-VPd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pitches" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIg-gf-FSy">
                                 <rect key="frame" x="20" y="382" width="94" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20.5" id="LpH-O3-TDB"/>
@@ -277,12 +285,24 @@
                                     <segue destination="GHc-hm-50l" kind="show" id="b6O-J7-9og"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5K-Rz-k00">
+                                <rect key="frame" x="20" y="436" width="94" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20.5" id="m1u-BE-8Rq"/>
+                                    <constraint firstAttribute="width" constant="94" id="uoG-3F-tZS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="iQb-d3-PXs" firstAttribute="trailing" secondItem="idg-HP-bbe" secondAttribute="trailing" constant="20" id="0Qs-kj-9si"/>
                             <constraint firstItem="iQb-d3-PXs" firstAttribute="trailing" secondItem="HOG-YH-S7m" secondAttribute="trailing" constant="20" id="1mH-bI-DtG"/>
+                            <constraint firstItem="WBR-qw-Vgg" firstAttribute="top" secondItem="5Of-Q4-hzj" secondAttribute="bottom" constant="20" id="2qk-rU-Sol"/>
                             <constraint firstItem="sIg-gf-FSy" firstAttribute="centerY" secondItem="5Of-Q4-hzj" secondAttribute="centerY" id="3bt-GD-zbb"/>
+                            <constraint firstItem="d5K-Rz-k00" firstAttribute="centerY" secondItem="WBR-qw-Vgg" secondAttribute="centerY" id="3q8-uF-Csy"/>
                             <constraint firstItem="xla-6W-DN2" firstAttribute="top" secondItem="yUo-yi-e74" secondAttribute="bottom" constant="20" id="3r1-HF-U3E"/>
                             <constraint firstItem="yUo-yi-e74" firstAttribute="leading" secondItem="B9U-uY-ajr" secondAttribute="trailing" constant="20" id="4dn-L8-5kg"/>
                             <constraint firstItem="HOG-YH-S7m" firstAttribute="leading" secondItem="CDp-SQ-eZi" secondAttribute="trailing" constant="20" id="5u6-uw-3a3"/>
@@ -303,13 +323,17 @@
                             <constraint firstItem="iQb-d3-PXs" firstAttribute="bottom" secondItem="idg-HP-bbe" secondAttribute="bottom" constant="100" id="ZZE-h7-Ol5"/>
                             <constraint firstItem="xla-6W-DN2" firstAttribute="leading" secondItem="xbW-aL-lYN" secondAttribute="trailing" constant="20" id="bfa-Sj-2iH"/>
                             <constraint firstItem="yUo-yi-e74" firstAttribute="top" secondItem="iQb-d3-PXs" secondAttribute="top" constant="20" id="c7q-0P-Qli"/>
+                            <constraint firstItem="WBR-qw-Vgg" firstAttribute="leading" secondItem="d5K-Rz-k00" secondAttribute="trailing" constant="20" id="exA-Em-sUu"/>
                             <constraint firstItem="AaL-yX-NwQ" firstAttribute="top" secondItem="xbW-aL-lYN" secondAttribute="bottom" constant="33" id="g7w-js-Bsf"/>
+                            <constraint firstItem="d5K-Rz-k00" firstAttribute="leading" secondItem="iQb-d3-PXs" secondAttribute="leading" constant="20" id="iMT-fZ-WWQ"/>
                             <constraint firstItem="sIg-gf-FSy" firstAttribute="leading" secondItem="AaL-yX-NwQ" secondAttribute="leading" id="kjg-yH-94R"/>
                             <constraint firstItem="xbW-aL-lYN" firstAttribute="top" secondItem="ZnJ-ak-kT2" secondAttribute="top" constant="220" id="lAf-ty-87A"/>
+                            <constraint firstItem="iQb-d3-PXs" firstAttribute="trailing" secondItem="WBR-qw-Vgg" secondAttribute="trailing" constant="20" id="lMh-yk-fp4"/>
                             <constraint firstItem="jO0-5z-Jzl" firstAttribute="top" secondItem="xla-6W-DN2" secondAttribute="bottom" constant="20" id="pKv-cc-NjH"/>
                             <constraint firstItem="iQb-d3-PXs" firstAttribute="trailing" secondItem="idg-HP-bbe" secondAttribute="trailing" constant="20" id="qIQ-O6-HuC"/>
                             <constraint firstItem="jO0-5z-Jzl" firstAttribute="top" secondItem="xla-6W-DN2" secondAttribute="bottom" constant="20" id="swo-l0-QWa"/>
                             <constraint firstItem="iQb-d3-PXs" firstAttribute="trailing" secondItem="xla-6W-DN2" secondAttribute="trailing" constant="20" id="uLM-H0-8ti"/>
+                            <constraint firstItem="WBR-qw-Vgg" firstAttribute="leading" secondItem="d5K-Rz-k00" secondAttribute="trailing" constant="20" id="uhh-w5-kh2"/>
                             <constraint firstItem="idg-HP-bbe" firstAttribute="leading" secondItem="iQb-d3-PXs" secondAttribute="leading" constant="20" id="uyG-uc-NSH"/>
                             <constraint firstItem="xbW-aL-lYN" firstAttribute="leading" secondItem="iQb-d3-PXs" secondAttribute="leading" constant="20" id="xXe-DO-7A2"/>
                             <constraint firstItem="sIg-gf-FSy" firstAttribute="leading" secondItem="CDp-SQ-eZi" secondAttribute="leading" id="y3R-Bg-qlm"/>
@@ -322,9 +346,10 @@
                     </navigationItem>
                     <connections>
                         <outlet property="routeGrade" destination="xla-6W-DN2" id="uMA-2o-abB"/>
+                        <outlet property="routeHeight" destination="HOG-YH-S7m" id="zMK-K0-FSP"/>
                         <outlet property="routeName" destination="yUo-yi-e74" id="Ra9-iM-Teh"/>
-                        <outlet property="routePitches" destination="HOG-YH-S7m" id="qvm-hw-Q4k"/>
-                        <outlet property="routeRating" destination="5Of-Q4-hzj" id="wVc-3z-5zs"/>
+                        <outlet property="routePitches" destination="5Of-Q4-hzj" id="aPo-jX-ifR"/>
+                        <outlet property="routeRating" destination="WBR-qw-Vgg" id="2qX-Hu-r4p"/>
                         <outlet property="routeType" destination="jO0-5z-Jzl" id="v6l-km-aBJ"/>
                     </connections>
                 </viewController>

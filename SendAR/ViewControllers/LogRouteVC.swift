@@ -19,10 +19,9 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
     @IBOutlet weak var routeName: UITextField!
     @IBOutlet weak var routeGrade: UITextField!
     @IBOutlet weak var routeType: UITextField!
+    @IBOutlet weak var routeHeight: UITextField!
     @IBOutlet weak var routePitches: UITextField!
     @IBOutlet weak var routeRating: UITextField!
-    // TODO Add routeHeight text box this is temporary
-    var routeHeight = 0
     
     var newRouteName: String? = nil
     var newRouteGrade: String? = nil
@@ -57,9 +56,7 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
         newRouteGrade = routeGrade.text
         newRouteType = routeType.text
         newRoutePitches = Int16(routePitches.text ?? "0") ?? 0
-        // TODO fix this when route Height box is added
-        newRouteHeight = 0
-        //newRouteHeight = Int64(routeHeight.text ?? "0") ?? 0
+        newRouteHeight = Int64(routeHeight.text ?? "0") ?? 0
         
         //newRouteLatitude = routeLatitude.text
         //newRouteLongitude = routeLongitude.text

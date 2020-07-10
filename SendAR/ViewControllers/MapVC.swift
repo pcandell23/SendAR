@@ -64,6 +64,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     @IBAction func recenterLocation(_ sender: Any) {
         if CLLocationManager.locationServicesEnabled() {
             locationCheck.checkLocationAuthorization()
+            centerViewOnUserLocation()
             print("Refreshing Location")
         } else {
             print("Unable to refresh")
