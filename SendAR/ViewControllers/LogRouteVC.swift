@@ -105,11 +105,12 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
     @IBAction func notSureButton(_ sender: Any) {
         //save route without explicit area
         //save closest crag(s) info
-        
+        storeNewRouteInfo()
     }
     
     //Stores the route in the data base. Takes an optional crag so that it can be used in any of the three above buttons.
-    func storeNewRouteInfo(crag: Crag?){
+    func storeNewRouteInfo(crag: Crag? = nil){
+        
         let newRoute = NSEntityDescription.insertNewObject(forEntityName: "Route", into: delegate.dataController!.persistentContainer.viewContext) as! Route
         
         newRoute.setInitialValues(name: newRouteName, grade: newRouteGrade, rating: newRouteRating, height: newRouteHeight, type: newRouteType, pitches: newRoutePitches, crag: crag, latitude: newRouteLatitude, longitude: newRouteLongitude, altitude: newRouteAltitude)

@@ -42,7 +42,7 @@
 		9694582C24B571430093D943 /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694582B24B571430093D943 /* Area.swift */; };
 		9694582E24B571580093D943 /* Crag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694582D24B571580093D943 /* Crag.swift */; };
 		9694583024B571610093D943 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694582F24B571610093D943 /* Route.swift */; };
-		9694583124B69CF10093D943 /* Data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9694581C24B56F7C0093D943 /* Data.xcdatamodeld */; };
+		9694583124B69CF10093D943 /* SendARData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9694581C24B56F7C0093D943 /* SendARData.xcdatamodeld */; };
 		9694583524B6A38A0093D943 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694583424B6A38A0093D943 /* DataController.swift */; };
 /* End PBXBuildFile section */
 
@@ -247,7 +247,7 @@
 		961F056C24AC01CB006DE4C5 /* DataTypes */ = {
 			isa = PBXGroup;
 			children = (
-				9694581C24B56F7C0093D943 /* Data.xcdatamodeld */,
+				9694581C24B56F7C0093D943 /* SendARData.xcdatamodeld */,
 				9694582B24B571430093D943 /* Area.swift */,
 				9694582D24B571580093D943 /* Crag.swift */,
 				9694582F24B571610093D943 /* Route.swift */,
@@ -394,7 +394,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9694583124B69CF10093D943 /* Data.xcdatamodeld in Sources */,
+				9694583124B69CF10093D943 /* SendARData.xcdatamodeld in Sources */,
 				407A645C24AF963C006CDFCE /* LogRouteVC.swift in Sources */,
 				405E556F24B57C9C00646237 /* SuggestedAreaCell.swift in Sources */,
 				401F9A5724B390900035428B /* LocationChecker.swift in Sources */,
@@ -748,13 +748,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		9694581C24B56F7C0093D943 /* Data.xcdatamodeld */ = {
+		9694581C24B56F7C0093D943 /* SendARData.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				9694581D24B56F7C0093D943 /* Data.xcdatamodel */,
 			);
 			currentVersion = 9694581D24B56F7C0093D943 /* Data.xcdatamodel */;
-			path = Data.xcdatamodeld;
+			path = SendARData.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

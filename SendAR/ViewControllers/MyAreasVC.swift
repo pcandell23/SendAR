@@ -7,14 +7,16 @@
 //
 
 import UIKit
+import CoreData
 
 class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var myAreasTableView: UITableView!
     
+    let delegate = AppDelegate.shared()
+    
     //simple placeholder because I'm confused on accessing objects in arrays
-    let routes = ["Snake Dike", "Royal Arches", "The Nose", "The Dawn Wall", "Freerider", "Cannibal Gulley", "Jellyroll Arch", "One Hand Clapping"]
-    let ratings = ["5.6R", "5.7", "5.9", "5.Hard", "5.Alex", "5.Easy", "5.7", "5.9"]
+    var routes: [Route] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +25,11 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
         myAreasTableView.register(nib, forCellReuseIdentifier: "RouteCell")
         myAreasTableView.delegate = self
         myAreasTableView.dataSource = self
+        
+    }
     
+    override func viewDidAppear(_ animated: Bool) {
+        fetchRoutes()
     }
     
     //TableView Functions
@@ -33,10 +39,29 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RouteCell", for: indexPath) as! RouteCell
-        cell.routeName.text = routes[indexPath.row]
-        cell.routeGrade.text = ratings[indexPath.row]
+        cell.routeName.text = routes[indexPath.row].getName()
+        cell.routeGrade.text = String(routes[indexPath.row].getGrade())
         
         return cell
+    }
+    
+    func fetchRoutes(){
+        let moc = delegate.dataController?.persistentContainer.viewContext
+        if moc == nil{
+            print("Failed to fetch routes.")
+            return
+        }
+        let requestRoutes = NSFetchRequest<Route>(entityName: "Route")
+        var fetched: [Route]?
+        do {
+            fetched = try moc?.fetch(requestRoutes)
+        } catch {
+            print("Could not fetch. \(error)")
+        }
+        
+        if fetched != nil {
+            routes = fetched!
+        }
     }
     
 }
