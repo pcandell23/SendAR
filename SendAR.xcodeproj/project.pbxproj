@@ -19,6 +19,8 @@
 		407A645C24AF963C006CDFCE /* LogRouteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A645B24AF963C006CDFCE /* LogRouteVC.swift */; };
 		407A646024AFA64F006CDFCE /* MapButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A645F24AFA64F006CDFCE /* MapButton.swift */; };
 		4087FA1024ABA33900723BCF /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4087FA0F24ABA33900723BCF /* ProfileVC.swift */; };
+		40CE769A24B8EA8D00CE3507 /* LogNewArea.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40CE769924B8EA8D00CE3507 /* LogNewArea.storyboard */; };
+		40CE769C24B8EB0400CE3507 /* LogAreaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CE769B24B8EB0400CE3507 /* LogAreaVC.swift */; };
 		40D845C924B030DD0028CDAE /* Tracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D845C824B030DD0028CDAE /* Tracker.swift */; };
 		40DC780F24AE465900DC5AF2 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40DC780E24AE465900DC5AF2 /* Home.storyboard */; };
 		40E0977F24AE530B0022E965 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40E0977E24AE530B0022E965 /* Map.storyboard */; };
@@ -76,6 +78,8 @@
 		407A645B24AF963C006CDFCE /* LogRouteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogRouteVC.swift; sourceTree = "<group>"; };
 		407A645F24AFA64F006CDFCE /* MapButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapButton.swift; sourceTree = "<group>"; };
 		4087FA0F24ABA33900723BCF /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		40CE769924B8EA8D00CE3507 /* LogNewArea.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogNewArea.storyboard; sourceTree = "<group>"; };
+		40CE769B24B8EB0400CE3507 /* LogAreaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogAreaVC.swift; sourceTree = "<group>"; };
 		40D845C824B030DD0028CDAE /* Tracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracker.swift; sourceTree = "<group>"; };
 		40DC780E24AE465900DC5AF2 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		40E0977E24AE530B0022E965 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
@@ -167,6 +171,7 @@
 				40E0977E24AE530B0022E965 /* Map.storyboard */,
 				40E0978024AE53B40022E965 /* AR.storyboard */,
 				40E0978224AE54290022E965 /* MyAreas.storyboard */,
+				40CE769924B8EA8D00CE3507 /* LogNewArea.storyboard */,
 				40E0978424AE548A0022E965 /* Settings.storyboard */,
 			);
 			path = Storyboards;
@@ -238,6 +243,7 @@
 				404FDE1324AEA524006AA33E /* NearbyAreas.swift */,
 				961F056424AA658F006DE4C5 /* ARviewVC.swift */,
 				961F056224AA6517006DE4C5 /* MyAreasVC.swift */,
+				40CE769B24B8EB0400CE3507 /* LogAreaVC.swift */,
 				961F056624AA66FC006DE4C5 /* SettingsVC.swift */,
 				4039FB7824B50F2C00D9F927 /* RouteDetailVC.swift */,
 			);
@@ -364,6 +370,7 @@
 				40EAA79A24A8152400F41366 /* Assets.xcassets in Resources */,
 				40E0977F24AE530B0022E965 /* Map.storyboard in Resources */,
 				40343F0624B5261D00507926 /* LogNewRoute.storyboard in Resources */,
+				40CE769A24B8EA8D00CE3507 /* LogNewArea.storyboard in Resources */,
 				40E0978524AE548A0022E965 /* Settings.storyboard in Resources */,
 				40E0978324AE54290022E965 /* MyAreas.storyboard in Resources */,
 				40EAA79824A8152300F41366 /* Main.storyboard in Resources */,
@@ -416,6 +423,7 @@
 				404FDE1424AEA524006AA33E /* NearbyAreas.swift in Sources */,
 				4039FB7924B50F2C00D9F927 /* RouteDetailVC.swift in Sources */,
 				961F056324AA6517006DE4C5 /* MyAreasVC.swift in Sources */,
+				40CE769C24B8EB0400CE3507 /* LogAreaVC.swift in Sources */,
 				9694582C24B571430093D943 /* Area.swift in Sources */,
 				961F056524AA658F006DE4C5 /* ARviewVC.swift in Sources */,
 			);

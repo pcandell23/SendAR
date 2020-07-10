@@ -45,6 +45,7 @@
                                         <state key="normal" title="New Area"/>
                                         <connections>
                                             <action selector="newAreaButton:" destination="o5l-Op-Fdq" eventType="touchUpInside" id="cj9-8a-3Tg"/>
+                                            <segue destination="wHx-Z6-W7x" kind="show" id="mCT-gX-44o"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9J-rB-zxZ" customClass="TrackButton" customModule="SendAR" customModuleProvider="target">
@@ -82,6 +83,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2CO-9v-Vad" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3292.753623188406" y="-607.36607142857144"/>
+        </scene>
+        <!--LogNewArea-->
+        <scene sceneID="k99-nH-Fvd">
+            <objects>
+                <viewControllerPlaceholder storyboardName="LogNewArea" id="wHx-Z6-W7x" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="aIF-gD-7VQ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qzH-5u-cku" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3925" y="-388"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5xr-8Z-7P2">
@@ -129,7 +140,7 @@
                                     <segue destination="o5l-Op-Fdq" kind="show" id="xna-kb-Urk"/>
                                 </connections>
                             </button>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lGJ-vg-buK">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lGJ-vg-buK">
                                 <rect key="frame" x="20" y="208" width="374" height="430"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="430" id="T8M-4n-Q6I"/>
