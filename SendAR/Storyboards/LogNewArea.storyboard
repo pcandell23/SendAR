@@ -32,6 +32,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="X2p-p0-TYz" id="vcK-F0-bm9"/>
+                                </connections>
                             </textField>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D0r-KT-gvM">
                                 <rect key="frame" x="20" y="254" width="374" height="445"/>
