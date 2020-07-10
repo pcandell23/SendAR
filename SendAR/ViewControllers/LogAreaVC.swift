@@ -11,11 +11,16 @@ import MapKit
 
 class LogAreaVC: UIViewController, MKMapViewDelegate {
 
+    @IBAction func cancelButton(_ sender: Any) {
+        //dismiss page
+    }
+    
     @IBOutlet weak var areaName: UITextField!
     
     @IBOutlet weak var areaMap: MKMapView!
     
     @IBAction func confirmNewArea(_ sender: Any) {
+        //save area region and dismiss
     }
     
     override func viewDidLoad() {
