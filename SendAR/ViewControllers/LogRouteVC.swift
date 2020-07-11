@@ -60,10 +60,6 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
         newRoutePitches = Int16(routePitches.text ?? "0") ?? 0
         newRouteHeight = Int32(routeHeight.text ?? "0") ?? 0
         
-        newRouteLatitude = routeLatitudeString
-        newRouteLongitude = routeLongitudeString
-        newRouteAltitude = Int16(routeAltitude)
-        
         if routeRating.text != nil{
             newRouteRating = (routeRating.text! as NSString).doubleValue
         } else {
@@ -85,6 +81,7 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
     @IBOutlet weak var routeLocationMap: MKMapView!
     
     var locationCheck: LocationChecker
+    var locationGetterForAltitude: CLLocation
     let regionInMeters: Double = 25
     
     var routeLatitude: Double = 0.0
@@ -94,13 +91,15 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
     var routeLatitudeString: String? = nil
     var routeLongitudeString: String? = nil
     
-    init(locationCheck: LocationChecker) {
+    init(locationCheck: LocationChecker, locationGetterForAltitude: CLLocation) {
         self.locationCheck = locationCheck
+        self.locationGetterForAltitude = locationGetterForAltitude
         super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
         self.locationCheck = LocationChecker()
+        self.locationGetterForAltitude = CLLocation()
         super.init(coder: aDecoder)
     }
     
@@ -118,9 +117,14 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
     @IBAction func confirmLocation(_ sender: Any) {
         routeLatitude = routeLocationMap.centerCoordinate.latitude
         routeLongitude = routeLocationMap.centerCoordinate.longitude
+        routeAltitude = locationGetterForAltitude.altitude
         
         routeLatitudeString = routeLatitude.description
         routeLongitudeString = routeLongitude.description
+        
+        newRouteLatitude = routeLatitudeString
+        newRouteLongitude = routeLongitudeString
+        newRouteAltitude = Int16(routeAltitude)
     }
     
     //MARK: - Third Page
