@@ -94,8 +94,9 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
         //show all crags in X (small) radius, allow user to tap to select
     
     @IBAction func confirmButton(_ sender: Any) {
-        //save new route with selected area
-        
+        storeNewRouteInfo()
+        //record selected area
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func newAreaButton(_ sender: Any) {
@@ -106,6 +107,7 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
         //save route without explicit area
         //save closest crag(s) info
         storeNewRouteInfo()
+        dismiss(animated: true, completion: nil)
     }
     
     //Stores the route in the data base. Takes an optional crag so that it can be used in any of the three above buttons.

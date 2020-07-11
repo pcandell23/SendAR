@@ -38,7 +38,9 @@ class LogAreaVC: UIViewController, MKMapViewDelegate {
     @IBAction func confirmNewArea(_ sender: Any) {
         //save area region and dismiss
         newAreaName = areaName.text
-        //IDK how to pass this info out but this is the final info needed
+        getCenterLocation(for: areaMap)
+        storeNewAreaInfo()
+        dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
@@ -79,7 +81,7 @@ class LogAreaVC: UIViewController, MKMapViewDelegate {
         longitudeString = longitude.description
     }
     
-    func storeNewAreaInfo(area: Area?){
+    func storeNewAreaInfo(){
         let newArea = NSEntityDescription.insertNewObject(forEntityName: "Area", into: delegate.dataController!.persistentContainer.viewContext) as! Area
         
         newArea.setInitialValues(name: newAreaName, fenceLatitude: latitudeString, fenceLongitude: longitudeString, fenceRadius: Int64(defaultFenceRadius), subAreas: nil, superArea: nil)
