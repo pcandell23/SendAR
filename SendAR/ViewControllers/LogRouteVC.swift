@@ -48,6 +48,8 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
             nearbyAreasTable.dataSource = self
         }
         
+        centerViewOnUserLocation()
+        
     }
 
     //first page "Continue" button
@@ -58,15 +60,16 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
         newRoutePitches = Int16(routePitches.text ?? "0") ?? 0
         newRouteHeight = Int32(routeHeight.text ?? "0") ?? 0
         
-        //newRouteLatitude = routeLatitude.text
-        //newRouteLongitude = routeLongitude.text
-        //newRouteAltitude = Int16(routeAltitude.text ?? "0") ?? 0
+        newRouteLatitude = routeLatitudeString
+        newRouteLongitude = routeLongitudeString
+        newRouteAltitude = Int16(routeAltitude)
         
         if routeRating.text != nil{
             newRouteRating = (routeRating.text! as NSString).doubleValue
         } else {
             newRouteRating = 0.0
         }
+        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -81,9 +84,43 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
     //MARK: - Second Page
     @IBOutlet weak var routeLocationMap: MKMapView!
     
+    var locationCheck: LocationChecker
+    let regionInMeters: Double = 25
+    
+    var routeLatitude: Double = 0.0
+    var routeLongitude: Double = 0.0
+    var routeAltitude: Double = 0.0
+    
+    var routeLatitudeString: String? = nil
+    var routeLongitudeString: String? = nil
+    
+    init(locationCheck: LocationChecker) {
+        self.locationCheck = locationCheck
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        self.locationCheck = LocationChecker()
+        super.init(coder: aDecoder)
+    }
+    
+    func centerViewOnUserLocation() {
+        if let location = locationCheck.location?.coordinate {
+            let region = MKCoordinateRegion.init(center: location, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
+            //Error below: Unexpectedly found nil while implicitly unwrapping an Optional Value
+            if routeLocationMap != nil {
+                routeLocationMap.setRegion(region, animated: true)
+            }
+        }
+    }
+    
     //second page "Confirm Location" button
     @IBAction func confirmLocation(_ sender: Any) {
-        //record user location
+        routeLatitude = routeLocationMap.centerCoordinate.latitude
+        routeLongitude = routeLocationMap.centerCoordinate.longitude
+        
+        routeLatitudeString = routeLatitude.description
+        routeLongitudeString = routeLongitude.description
     }
     
     //MARK: - Third Page
@@ -95,12 +132,12 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
     
     @IBAction func confirmButton(_ sender: Any) {
         storeNewRouteInfo()
-        //record selected area
+        //TODO: also record selected area
         dismiss(animated: true, completion: nil)
     }
     
     @IBAction func newAreaButton(_ sender: Any) {
-        //create a new area to save the route under
+        //To LogAreaVC
     }
     
     @IBAction func notSureButton(_ sender: Any) {

@@ -28,10 +28,6 @@ class LogAreaVC: UIViewController, MKMapViewDelegate {
     var latitudeString: String? = nil
     var longitudeString: String? = nil
     
-    @IBAction func cancelButton(_ sender: Any) {
-        //dismiss page
-    }
-    
     @IBOutlet weak var areaName: UITextField!
     @IBOutlet weak var areaMap: MKMapView!
     
