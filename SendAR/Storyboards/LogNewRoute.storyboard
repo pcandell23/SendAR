@@ -136,7 +136,6 @@
                                 <state key="normal" title="Confirm Location"/>
                                 <connections>
                                     <action selector="confirmLocation:" destination="GHc-hm-50l" eventType="touchUpInside" id="9dA-7F-LBm"/>
-                                    <action selector="markLocationButton:" destination="F6w-B0-Y7d" eventType="touchUpInside" id="z8m-Cp-o4Q"/>
                                     <segue destination="o5l-Op-Fdq" kind="show" id="xna-kb-Urk"/>
                                 </connections>
                             </button>
