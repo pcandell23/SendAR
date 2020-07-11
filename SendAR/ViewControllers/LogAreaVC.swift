@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreData
 
-class LogAreaVC: UIViewController, MKMapViewDelegate {
+class LogAreaVC: UIViewController, MKMapViewDelegate, UITextFieldDelegate {
 
     let delegate = AppDelegate.shared()
 
