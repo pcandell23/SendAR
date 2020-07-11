@@ -16,7 +16,7 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
     let delegate = AppDelegate.shared()
     
     //simple placeholder because I'm confused on accessing objects in arrays
-    var routes: [Route] = []
+    var areas: [Area] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,13 +36,15 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     //TableView Functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return routes.count
+        return areas.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RouteCell", for: indexPath) as! RouteCell
-        cell.routeName.text = routes[indexPath.row].getName()
-        cell.routeGrade.text = String(routes[indexPath.row].getGrade())
+        cell.routeName.text = areas[indexPath.row].getName()
+        
+        // TODO remove this line and add a better cell.
+        cell.routeGrade.text = String(areas[indexPath.row].getName())
         
         return cell
     }
@@ -53,16 +55,16 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
             print("Failed to fetch routes.")
             return
         }
-        let requestRoutes = NSFetchRequest<Route>(entityName: "Route")
-        var fetched: [Route]?
+        let requestAreas = NSFetchRequest<Area>(entityName: "Area")
+        var fetched: [Area]?
         do {
-            fetched = try moc?.fetch(requestRoutes)
+            fetched = try moc?.fetch(requestAreas)
         } catch {
             print("Could not fetch. \(error)")
         }
         
         if fetched != nil {
-            routes = fetched!
+            areas = fetched!
         }
     }
     

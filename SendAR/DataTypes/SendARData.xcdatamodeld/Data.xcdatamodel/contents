@@ -5,7 +5,7 @@
         <attribute name="fenceLongitude" optional="YES" attributeType="String"/>
         <attribute name="fenceRadius" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
-        <relationship name="subAreas" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Area" inverseName="superArea" inverseEntity="Area"/>
+        <relationship name="subAreas" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Area" inverseName="superArea" inverseEntity="Area"/>
         <relationship name="superArea" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Area" inverseName="subAreas" inverseEntity="Area"/>
     </entity>
     <entity name="Crag" representedClassName="Crag" parentEntity="Area" syncable="YES">
