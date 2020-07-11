@@ -13,14 +13,13 @@ import CoreData
 class LogAreaVC: UIViewController, MKMapViewDelegate {
 
     let delegate = AppDelegate.shared()
-    
-    var defaultFenceRadius = 100
-    
+
     var locationCheck: LocationChecker
     let regionInMeters: Double = 500
     
     var newAreaName: String? = nil
-    var newAreaCenter: CLLocation
+    
+    var defaultFenceRadius = 100
     
     var latitude: Double
     var longitude: Double
@@ -46,9 +45,8 @@ class LogAreaVC: UIViewController, MKMapViewDelegate {
         // Do any additional setup after loading the view.
     }
     
-    init(locationCheck: LocationChecker, newAreaCenter: CLLocation, latitude: Double, longitude: Double) {
+    init(locationCheck: LocationChecker, latitude: Double, longitude: Double) {
         self.locationCheck = locationCheck
-        self.newAreaCenter = newAreaCenter
         self.latitude = latitude
         self.longitude = longitude
         super.init(nibName: nil, bundle: nil)
@@ -56,7 +54,6 @@ class LogAreaVC: UIViewController, MKMapViewDelegate {
     
     required init?(coder aDecoder: NSCoder) {
         self.locationCheck = LocationChecker()
-        self.newAreaCenter = CLLocation()
         self.latitude = 0.0
         self.longitude = 0.0
         super.init(coder: aDecoder)
