@@ -227,7 +227,7 @@
         <scene sceneID="Rz6-Ra-KAg">
             <objects>
                 <navigationController id="ZfW-1i-Xrj" userLabel="Map" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" id="cMf-qf-NC5"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" selectedImage="map.fill" id="cMf-qf-NC5"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="PWF-3l-LDO">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -246,5 +246,6 @@
         <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
         <image name="location" catalog="system" width="128" height="115"/>
         <image name="map" catalog="system" width="128" height="113"/>
+        <image name="map.fill" catalog="system" width="128" height="113"/>
     </resources>
 </document>

@@ -44,7 +44,7 @@
         <scene sceneID="sDv-b7-OTE">
             <objects>
                 <navigationController id="G0G-0R-v69" userLabel="My Areas" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Areas" image="star" catalog="system" id="ALW-yf-FXh"/>
+                    <tabBarItem key="tabBarItem" title="My Areas" image="star" catalog="system" selectedImage="star.fill" id="ALW-yf-FXh"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="qg3-E8-Soi">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -61,5 +61,6 @@
     </scenes>
     <resources>
         <image name="star" catalog="system" width="128" height="116"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
     </resources>
 </document>

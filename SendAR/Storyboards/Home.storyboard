@@ -12,7 +12,7 @@
         <scene sceneID="2nR-C8-zj2">
             <objects>
                 <navigationController id="A0n-df-EAh" userLabel="FrontPage" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="JBu-NZ-6fs"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" selectedImage="house.fill" id="JBu-NZ-6fs"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Z4Q-Z6-jyx">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -257,6 +257,7 @@
     <resources>
         <image name="NoseCoverImage" width="769" height="505"/>
         <image name="house" catalog="system" width="128" height="110"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
         <image name="plus.circle" catalog="system" width="128" height="121"/>
     </resources>
