@@ -29,6 +29,8 @@ extension Route {
     @NSManaged public var longitude: String?
     @NSManaged public var altitude: Int16
     
+    @NSManaged public var uuid: UUID?
+    
     
     //Relationships
     @NSManaged public var crag: Crag?
@@ -80,6 +82,10 @@ extension Route {
         return altitude
     }
     
+    func getUuid() -> UUID?{
+        return uuid
+    }
+    
     // MARK: - Setters
 
        // TODO: Add error handling and showing to these. As well as check to make sure the name (not racist, idk how we could do that but we can try), grade, and type are actual grades and types and that they match(this will also apply to the init function)
@@ -104,6 +110,9 @@ extension Route {
     }
        
     func setCrag(_ newCrag: Crag){
+        if(!newCrag.getRoutes().contains(self)){
+            newCrag.addToRoutes(self)
+        }
         self.crag = newCrag
     }
     
@@ -131,6 +140,8 @@ extension Route {
         self.latitude = latitude
         self.longitude = longitude
         self.altitude = altitude
+        
+        self.uuid = UUID()
     }
     
     

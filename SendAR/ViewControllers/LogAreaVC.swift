@@ -77,7 +77,7 @@ class LogAreaVC: UIViewController, MKMapViewDelegate, UITextFieldDelegate {
     func storeNewAreaInfo(){
         let newArea = NSEntityDescription.insertNewObject(forEntityName: "Area", into: delegate.dataController!.persistentContainer.viewContext) as! Area
         
-        newArea.setInitialValues(name: newAreaName, fenceLatitude: latitudeString, fenceLongitude: longitudeString, fenceRadius: Int64(defaultFenceRadius), subAreas: nil, superArea: nil)
+        newArea.setInitialValues(name: newAreaName, fenceLatitude: latitudeString, fenceLongitude: longitudeString, fenceRadius: defaultFenceRadius, subAreas: nil, superArea: nil)
         
         delegate.dataController!.saveContext()
     }

@@ -24,6 +24,7 @@ extension Area {
     @NSManaged public var fenceLatitude: String?
     @NSManaged public var fenceLongitude: String?
     @NSManaged public var fenceRadius: Int64
+    @NSManaged public var uuid: UUID?
     
     //Relationships
     @NSManaged public var subAreas: [Area]?
@@ -36,11 +37,15 @@ extension Area {
         return name ?? ""
     }
     
+    func getUuid() -> UUID?{
+        return uuid
+    }
+    
     func getSuperArea() -> Area? {
         return superArea
     }
     
-    func getSubArea() -> [Area] {
+    func getSubAreas() -> [Area] {
         return subAreas ?? [Area]()
     }
     
@@ -86,6 +91,9 @@ extension Area {
     }
     
     func setSuperArea(newSuperArea: Area){
+        if(!newSuperArea.getSubAreas().contains(self)){
+            addToSubAreas(self)
+        }
         self.superArea = newSuperArea
     }
     
@@ -108,8 +116,25 @@ extension Area {
         self.fenceRadius = fenceRadius
         self.subAreas = subAreas
         self.superArea = superArea
+        
+        self.uuid = UUID()
     }
  
+    func addSubArea(newSubArea: Area){
+        if(newSubArea.getSuperArea() != self){
+            newSubArea.setSuperArea(newSuperArea: self)
+        }
+        addToSubAreas(newSubArea)
+    }
+    
+    func addSubAreas(newSubAreas: [Area]){
+        for a in newSubAreas{
+            if(a.getSuperArea() != self){
+                a.setSuperArea(newSuperArea: self)
+            }
+        }
+        addToSubAreas(newSubAreas)
+    }
  
     // MARK: Generated accessors for subAreas
     @objc(addSubAreasObject:)

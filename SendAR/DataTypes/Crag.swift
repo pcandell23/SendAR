@@ -19,6 +19,22 @@ public class Crag: Area {
     func getRoutes() -> [Route]{
         return routes ?? [Route]()
     }
+    
+    func addRoute(newRoute: Route){
+        if(newRoute.getCrag() != self){
+            newRoute.setCrag(self)
+        }
+        addToRoutes(newRoute)
+    }
+    
+    func addRoutes(newRoutes: [Route]){
+        for r in newRoutes{
+            if(r.getCrag() != self){
+                r.setCrag(self)
+            }
+        }
+        addToRoutes(newRoutes)
+    }
 }
  
     // MARK: Generated accessors for routes
