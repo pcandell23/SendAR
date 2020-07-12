@@ -6,6 +6,7 @@
 //  Copyright © 2020 Bennett Baker. All rights reserved.
 //
 import UIKit
+import MapKit
 
 class AreaCell: UITableViewCell {
     
@@ -25,9 +26,15 @@ class AreaCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         areaName.text = area.getName()
-        //TODO: areaProximity.text
+        areaProximity.text = getProximity()
         cragsAndRoutes.text = "\(area.getSubAreas().count) Crags, TODO Routes"
-        //TODO: areaLocation.text
+        
+        if area.getSuperArea() != nil {
+            areaLocation.text = area.getSuperArea()!.getName()
+        } else {
+            areaLocation.text = ""
+        }
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -35,5 +42,26 @@ class AreaCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func getProximity() -> String {
+        var proximityString: String = ""
+        var proximityDouble: Double
+        
+        if area.getFenceLatitude() != "" && area.getFenceLongitude() != "" {
+            let areaLatitude = Double(area.getFenceLatitude())!
+            let areaLongitude = Double(area.getFenceLongitude())!
+            let areaLocation = CLLocationCoordinate2DMake(areaLatitude, areaLongitude)
+            
+            let mapPoint1 = MKMapPoint.init(areaLocation)
+            let mapPoint2 = MKMapPoint.init()//make CLLocationCoordinate2D
+            
+            proximityDouble = mapPoint1.distance(to: mapPoint2)
+            proximityString = "\(String(proximityDouble)) m"
+        }
+        
+        return proximityString
+    }
+    
+    
     
 }

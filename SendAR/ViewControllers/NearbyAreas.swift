@@ -12,15 +12,13 @@ class NearbyAreasViewController: UIViewController, UITableViewDelegate, UITableV
     
     @IBOutlet weak var nearbyAreasTableView: UITableView!
     
-    //simple placeholder because I'm confused on accessing objects in arrays
-    let routes = ["Snake Dike", "Royal Arches", "The Nose", "The Dawn Wall", "Freerider", "Cannibal Gulley", "Jellyroll Arch", "One Hand Clapping"]
-    let ratings = ["5.6R", "5.7", "5.9", "5.Hard", "5.Alex", "5.Easy", "5.7", "5.9"]
+    let areas: [Area] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let nib = UINib(nibName: "RouteCell", bundle: nil)
-        nearbyAreasTableView.register(nib, forCellReuseIdentifier: "RouteCell")
+        let nib = UINib(nibName: "AreaCell", bundle: nil)
+        nearbyAreasTableView.register(nib, forCellReuseIdentifier: "AreaCell")
         nearbyAreasTableView.delegate = self
         nearbyAreasTableView.dataSource = self
     
@@ -28,13 +26,12 @@ class NearbyAreasViewController: UIViewController, UITableViewDelegate, UITableV
     
     //TableView Functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return routes.count
+        return areas.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RouteCell", for: indexPath) as! RouteCell
-        cell.routeName.text = routes[indexPath.row]
-        cell.routeGrade.text = ratings[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "AreaCell", for: indexPath) as! AreaCell
+        cell.areaName.text = areas[indexPath.row].getName()
         
         return cell
     }
