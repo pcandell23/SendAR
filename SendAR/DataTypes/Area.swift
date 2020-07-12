@@ -62,7 +62,7 @@ extension Area {
     }
     
     // TODO: Fix this to return the correct format for needs.
-    func getFenceCorrdinates() -> String {
+    func getFenceCoordinates() -> String {
         return ""
     }
     

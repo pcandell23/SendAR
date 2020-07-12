@@ -19,6 +19,10 @@
 		407A645C24AF963C006CDFCE /* LogRouteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A645B24AF963C006CDFCE /* LogRouteVC.swift */; };
 		407A646024AFA64F006CDFCE /* MapButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A645F24AFA64F006CDFCE /* MapButton.swift */; };
 		4087FA1024ABA33900723BCF /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4087FA0F24ABA33900723BCF /* ProfileVC.swift */; };
+		40C874D724BA90D200ED0214 /* CragDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40C874D624BA90D200ED0214 /* CragDetail.storyboard */; };
+		40C874D924BA90E900ED0214 /* RouteDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40C874D824BA90E900ED0214 /* RouteDetail.storyboard */; };
+		40C874DB24BA910E00ED0214 /* CragDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C874DA24BA910E00ED0214 /* CragDetailVC.swift */; };
+		40C874DD24BA91EA00ED0214 /* AreaDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C874DC24BA91EA00ED0214 /* AreaDetailVC.swift */; };
 		40CE769A24B8EA8D00CE3507 /* LogNewArea.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40CE769924B8EA8D00CE3507 /* LogNewArea.storyboard */; };
 		40CE769C24B8EB0400CE3507 /* LogAreaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CE769B24B8EB0400CE3507 /* LogAreaVC.swift */; };
 		40D845C924B030DD0028CDAE /* Tracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D845C824B030DD0028CDAE /* Tracker.swift */; };
@@ -49,7 +53,6 @@
 		9694583724BA6EAF0093D943 /* AreaDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9694583624BA6EAF0093D943 /* AreaDetail.storyboard */; };
 		9694583A24BA78390093D943 /* AreaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9694583924BA78390093D943 /* AreaCell.xib */; };
 		9694583C24BA784C0093D943 /* AreaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694583B24BA784C0093D943 /* AreaCell.swift */; };
-		9694583E24BA79D00093D943 /* AreaDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694583D24BA79D00093D943 /* AreaDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +85,10 @@
 		407A645B24AF963C006CDFCE /* LogRouteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogRouteVC.swift; sourceTree = "<group>"; };
 		407A645F24AFA64F006CDFCE /* MapButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapButton.swift; sourceTree = "<group>"; };
 		4087FA0F24ABA33900723BCF /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		40C874D624BA90D200ED0214 /* CragDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CragDetail.storyboard; sourceTree = "<group>"; };
+		40C874D824BA90E900ED0214 /* RouteDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RouteDetail.storyboard; sourceTree = "<group>"; };
+		40C874DA24BA910E00ED0214 /* CragDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CragDetailVC.swift; sourceTree = "<group>"; };
+		40C874DC24BA91EA00ED0214 /* AreaDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaDetailVC.swift; sourceTree = "<group>"; };
 		40CE769924B8EA8D00CE3507 /* LogNewArea.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogNewArea.storyboard; sourceTree = "<group>"; };
 		40CE769B24B8EB0400CE3507 /* LogAreaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogAreaVC.swift; sourceTree = "<group>"; };
 		40D845C824B030DD0028CDAE /* Tracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracker.swift; sourceTree = "<group>"; };
@@ -118,7 +125,6 @@
 		9694583624BA6EAF0093D943 /* AreaDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AreaDetail.storyboard; sourceTree = "<group>"; };
 		9694583924BA78390093D943 /* AreaCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AreaCell.xib; sourceTree = "<group>"; };
 		9694583B24BA784C0093D943 /* AreaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaCell.swift; sourceTree = "<group>"; };
-		9694583D24BA79D00093D943 /* AreaDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,12 +168,12 @@
 			children = (
 				407A645F24AFA64F006CDFCE /* MapButton.swift */,
 				407A645924AF8C83006CDFCE /* TrackButton.swift */,
-				4010BDA124AFD7190082F7E2 /* RouteCell.swift */,
-				4010BDA224AFD7190082F7E2 /* RouteCell.xib */,
 				405E556D24B57C9C00646237 /* SuggestedAreaCell.swift */,
 				405E556E24B57C9C00646237 /* SuggestedAreaCell.xib */,
 				9694583B24BA784C0093D943 /* AreaCell.swift */,
 				9694583924BA78390093D943 /* AreaCell.xib */,
+				4010BDA124AFD7190082F7E2 /* RouteCell.swift */,
+				4010BDA224AFD7190082F7E2 /* RouteCell.xib */,
 			);
 			path = CustomUIElements;
 			sourceTree = "<group>";
@@ -179,11 +185,13 @@
 				40DC780E24AE465900DC5AF2 /* Home.storyboard */,
 				40343F0524B5261D00507926 /* LogNewRoute.storyboard */,
 				40E0977E24AE530B0022E965 /* Map.storyboard */,
+				9694583624BA6EAF0093D943 /* AreaDetail.storyboard */,
+				40C874D624BA90D200ED0214 /* CragDetail.storyboard */,
+				40C874D824BA90E900ED0214 /* RouteDetail.storyboard */,
 				40E0978024AE53B40022E965 /* AR.storyboard */,
 				40E0978224AE54290022E965 /* MyAreas.storyboard */,
 				40CE769924B8EA8D00CE3507 /* LogNewArea.storyboard */,
 				40E0978424AE548A0022E965 /* Settings.storyboard */,
-				9694583624BA6EAF0093D943 /* AreaDetail.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -252,12 +260,13 @@
 				407A645B24AF963C006CDFCE /* LogRouteVC.swift */,
 				961F056024AA64F8006DE4C5 /* MapVC.swift */,
 				404FDE1324AEA524006AA33E /* NearbyAreas.swift */,
+				40C874DC24BA91EA00ED0214 /* AreaDetailVC.swift */,
+				40C874DA24BA910E00ED0214 /* CragDetailVC.swift */,
+				4039FB7824B50F2C00D9F927 /* RouteDetailVC.swift */,
 				961F056424AA658F006DE4C5 /* ARviewVC.swift */,
 				961F056224AA6517006DE4C5 /* MyAreasVC.swift */,
 				40CE769B24B8EB0400CE3507 /* LogAreaVC.swift */,
 				961F056624AA66FC006DE4C5 /* SettingsVC.swift */,
-				4039FB7824B50F2C00D9F927 /* RouteDetailVC.swift */,
-				9694583D24BA79D00093D943 /* AreaDetail.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -389,8 +398,10 @@
 				40E0978324AE54290022E965 /* MyAreas.storyboard in Resources */,
 				40EAA79824A8152300F41366 /* Main.storyboard in Resources */,
 				405E557024B57C9C00646237 /* SuggestedAreaCell.xib in Resources */,
+				40C874D724BA90D200ED0214 /* CragDetail.storyboard in Resources */,
 				40DC780F24AE465900DC5AF2 /* Home.storyboard in Resources */,
 				40E0978124AE53B40022E965 /* AR.storyboard in Resources */,
+				40C874D924BA90E900ED0214 /* RouteDetail.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,8 +428,8 @@
 			files = (
 				9694583124B69CF10093D943 /* SendARData.xcdatamodeld in Sources */,
 				407A645C24AF963C006CDFCE /* LogRouteVC.swift in Sources */,
+				40C874DD24BA91EA00ED0214 /* AreaDetailVC.swift in Sources */,
 				405E556F24B57C9C00646237 /* SuggestedAreaCell.swift in Sources */,
-				9694583E24BA79D00093D943 /* AreaDetail.swift in Sources */,
 				401F9A5724B390900035428B /* LocationChecker.swift in Sources */,
 				407A645A24AF8C83006CDFCE /* TrackButton.swift in Sources */,
 				961F056124AA64F8006DE4C5 /* MapVC.swift in Sources */,
@@ -433,6 +444,7 @@
 				9694583524B6A38A0093D943 /* DataController.swift in Sources */,
 				40EAA79124A8152300F41366 /* AppDelegate.swift in Sources */,
 				40D845C924B030DD0028CDAE /* Tracker.swift in Sources */,
+				40C874DB24BA910E00ED0214 /* CragDetailVC.swift in Sources */,
 				40EAA79324A8152300F41366 /* SceneDelegate.swift in Sources */,
 				9694583024B571610093D943 /* Route.swift in Sources */,
 				961F056724AA66FC006DE4C5 /* SettingsVC.swift in Sources */,

@@ -1,25 +1,26 @@
 //
-//  AreaView.swift
+//  AreaDetailVC.swift
 //  SendAR
 //
-//  Created by Peter Candell on 7/11/20.
+//  Created by Bennett Baker on 7/11/20.
 //  Copyright © 2020 Bennett Baker. All rights reserved.
 //
 
 import UIKit
 import CoreData
 
-class AreaDetail: UIViewController{
+class AreaDetailVC: UIViewController {
     
-    @IBOutlet weak var areaName: UILabel!
+    var areaName: String = "Area Name"
+    @IBOutlet weak var areaDescription: UILabel!
     @IBOutlet weak var subAreaTableView: UITableView!
     
     
     var subAreas: [Area] = [Area]()
     
     override func viewDidLoad() {
-           super.viewDidLoad()
-
+        super.viewDidLoad()
+        self.title = areaName
            // Do any additional setup after loading the view.
        }
     
