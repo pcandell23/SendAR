@@ -21,8 +21,8 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let nib = UINib(nibName: "RouteCell", bundle: nil)
-        myAreasTableView.register(nib, forCellReuseIdentifier: "RouteCell")
+        let nib = UINib(nibName: "AreaCell", bundle: nil)
+        myAreasTableView.register(nib, forCellReuseIdentifier: "AreaCell")
         myAreasTableView.delegate = self
         myAreasTableView.dataSource = self
         fetchRoutes()
@@ -40,11 +40,8 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RouteCell", for: indexPath) as! RouteCell
-        cell.routeName.text = areas[indexPath.row].getName()
-        
-        // TODO remove this line and add a better cell.
-        cell.routeGrade.text = String(areas[indexPath.row].getName())
+        let cell = tableView.dequeueReusableCell(withIdentifier: "AreaCell", for: indexPath) as! AreaCell
+        cell.areaName.text = areas[indexPath.row].getName()
         
         return cell
     }
