@@ -1,5 +1,5 @@
 //
-//  TrackButton.swift
+//  IndigoButton.swift
 //  SendAR
 //
 //  Created by Bennett Baker on 7/3/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TrackButton: UIButton {
+class IndigoButton: UIButton {
 
     override init(frame: CGRect) {
         super.init(frame: frame)

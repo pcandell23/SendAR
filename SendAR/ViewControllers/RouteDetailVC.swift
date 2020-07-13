@@ -10,7 +10,7 @@ import UIKit
 
 class RouteDetailVC: UIViewController {
 
-    @IBOutlet weak var routeName: UINavigationItem!
+    var routeName: String = "Route Name"
     @IBOutlet weak var routeGrade: UILabel!
     @IBOutlet weak var routeRating: UILabel!
     @IBOutlet weak var routeDimensions: UILabel! //interpolated string of type, pitches and height
@@ -23,7 +23,7 @@ class RouteDetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.title = routeName
         // Do any additional setup after loading the view.
     }
     

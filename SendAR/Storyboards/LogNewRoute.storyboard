@@ -31,7 +31,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YlK-77-lLq">
                                 <rect key="frame" x="20" y="717" width="374" height="125"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBV-uh-xMa" customClass="TrackButton" customModule="SendAR" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBV-uh-xMa" customClass="IndigoButton" customModule="SendAR" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="35"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                         <state key="normal" title="Confirm"/>
@@ -39,7 +39,7 @@
                                             <action selector="confirmButton:" destination="o5l-Op-Fdq" eventType="touchUpInside" id="UD6-I4-hhU"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="irN-QH-Z8W" customClass="TrackButton" customModule="SendAR" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="irN-QH-Z8W" customClass="IndigoButton" customModule="SendAR" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="45" width="374" height="35"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                         <state key="normal" title="New Area"/>
@@ -48,7 +48,7 @@
                                             <segue destination="wHx-Z6-W7x" kind="show" id="mCT-gX-44o"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9J-rB-zxZ" customClass="TrackButton" customModule="SendAR" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9J-rB-zxZ" customClass="IndigoButton" customModule="SendAR" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="90" width="374" height="35"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                         <state key="normal" title="Not Sure"/>
@@ -118,7 +118,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please stand at the base of the route and check that your location is correct. " textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERN-xb-ikQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please center the map on the location of the start of the route." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERN-xb-ikQ">
                                 <rect key="frame" x="20" y="150" width="374" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="p9M-Hh-AwG"/>
@@ -127,8 +127,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXf-Nx-jgj" customClass="TrackButton" customModule="SendAR" customModuleProvider="target">
-                                <rect key="frame" x="20" y="718" width="374" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXf-Nx-jgj" customClass="IndigoButton" customModule="SendAR" customModuleProvider="target">
+                                <rect key="frame" x="20" y="778" width="374" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="ags-UW-Xmt"/>
                                 </constraints>
@@ -136,18 +136,14 @@
                                 <state key="normal" title="Confirm Location"/>
                                 <connections>
                                     <action selector="confirmLocation:" destination="GHc-hm-50l" eventType="touchUpInside" id="9dA-7F-LBm"/>
-                                    <action selector="markLocationButton:" destination="F6w-B0-Y7d" eventType="touchUpInside" id="z8m-Cp-o4Q"/>
                                     <segue destination="o5l-Op-Fdq" kind="show" id="xna-kb-Urk"/>
                                 </connections>
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lGJ-vg-buK">
-                                <rect key="frame" x="20" y="208" width="374" height="430"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="430" id="T8M-4n-Q6I"/>
-                                </constraints>
+                                <rect key="frame" x="20" y="208" width="374" height="507"/>
                             </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drag and drop the map pin to refine location." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQV-Ur-AG7">
-                                <rect key="frame" x="20" y="643" width="374" height="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drag the map to refine location. Your position is shown for reference." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQV-Ur-AG7">
+                                <rect key="frame" x="20" y="720" width="374" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="tTB-L7-ZeM"/>
                                 </constraints>
@@ -155,6 +151,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scope" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="kav-TQ-bJN">
+                                <rect key="frame" x="177" y="428" width="60" height="62.5"/>
+                                <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="uBI-qd-KTN"/>
+                                    <constraint firstAttribute="width" constant="60" id="xIJ-cc-Gyt"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -166,10 +170,14 @@
                             <constraint firstAttribute="trailing" secondItem="ERN-xb-ikQ" secondAttribute="trailing" constant="20" id="Dzl-W4-Jde"/>
                             <constraint firstItem="ERN-xb-ikQ" firstAttribute="leading" secondItem="iYD-PK-ZuP" secondAttribute="leading" constant="20" id="Wia-Ff-SdV"/>
                             <constraint firstItem="ERN-xb-ikQ" firstAttribute="top" secondItem="iYD-PK-ZuP" secondAttribute="top" constant="10" id="Y9k-Tk-RSC"/>
-                            <constraint firstItem="iYD-PK-ZuP" firstAttribute="bottom" secondItem="pXf-Nx-jgj" secondAttribute="bottom" constant="100" id="YdZ-u5-H87"/>
+                            <constraint firstItem="iYD-PK-ZuP" firstAttribute="bottom" secondItem="pXf-Nx-jgj" secondAttribute="bottom" constant="40" id="YdZ-u5-H87"/>
                             <constraint firstItem="lGJ-vg-buK" firstAttribute="leading" secondItem="iYD-PK-ZuP" secondAttribute="leading" constant="20" id="ZKD-e8-Vai"/>
+                            <constraint firstItem="kav-TQ-bJN" firstAttribute="centerX" secondItem="lGJ-vg-buK" secondAttribute="centerX" id="cCR-fE-R6j"/>
+                            <constraint firstItem="kav-TQ-bJN" firstAttribute="centerX" secondItem="pXf-Nx-jgj" secondAttribute="centerX" id="dAd-Pn-DFX"/>
+                            <constraint firstItem="pXf-Nx-jgj" firstAttribute="top" secondItem="dQV-Ur-AG7" secondAttribute="bottom" constant="8" id="dOa-nv-Rv5"/>
                             <constraint firstItem="iYD-PK-ZuP" firstAttribute="trailing" secondItem="lGJ-vg-buK" secondAttribute="trailing" constant="20" id="g7b-fE-IUp"/>
                             <constraint firstItem="ERN-xb-ikQ" firstAttribute="centerX" secondItem="pz7-sw-sAL" secondAttribute="centerX" id="iaI-8Y-tdd"/>
+                            <constraint firstItem="kav-TQ-bJN" firstAttribute="centerY" secondItem="lGJ-vg-buK" secondAttribute="centerY" constant="-2" id="oHv-A1-Z2R"/>
                             <constraint firstItem="iYD-PK-ZuP" firstAttribute="trailing" secondItem="pXf-Nx-jgj" secondAttribute="trailing" constant="20" id="oyg-3u-0uf"/>
                             <constraint firstItem="dQV-Ur-AG7" firstAttribute="leading" secondItem="iYD-PK-ZuP" secondAttribute="leading" constant="20" id="zkq-bA-ihX"/>
                         </constraints>
@@ -182,7 +190,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0YZ-jT-Wks" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2479.7101449275365" y="-607.36607142857144"/>
+            <point key="canvasLocation" x="2479.1999999999998" y="-607.64617691154433"/>
         </scene>
         <!--Log New Route-->
         <scene sceneID="yd4-rq-daW">
@@ -195,7 +203,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yUo-yi-e74">
                                 <rect key="frame" x="134" y="160" width="260" height="33.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                 <connections>
                                     <outlet property="delegate" destination="F6w-B0-Y7d" id="ASQ-NP-hY3"/>
                                 </connections>
@@ -206,7 +214,7 @@
                                     <constraint firstAttribute="width" constant="260" id="y4D-G8-fJ8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                 <connections>
                                     <outlet property="delegate" destination="F6w-B0-Y7d" id="mtb-x8-AgY"/>
                                 </connections>
@@ -236,7 +244,7 @@
                                     <constraint firstAttribute="width" constant="260" id="AbB-Dp-iF1"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                 <connections>
                                     <outlet property="delegate" destination="F6w-B0-Y7d" id="7Hs-Eo-Fcc"/>
                                 </connections>
@@ -256,7 +264,7 @@
                                     <constraint firstAttribute="width" constant="260" id="0xF-io-NRC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                 <connections>
                                     <outlet property="delegate" destination="F6w-B0-Y7d" id="D8b-9K-RlM"/>
                                 </connections>
@@ -276,7 +284,7 @@
                                     <constraint firstAttribute="width" constant="260" id="UtY-hj-JYM"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                 <connections>
                                     <outlet property="delegate" destination="F6w-B0-Y7d" id="woT-nE-vMy"/>
                                 </connections>
@@ -287,7 +295,7 @@
                                     <constraint firstAttribute="width" constant="260" id="bJt-Dr-VPd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                 <connections>
                                     <outlet property="delegate" destination="F6w-B0-Y7d" id="yI8-dx-YfV"/>
                                 </connections>
@@ -302,7 +310,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idg-HP-bbe" customClass="TrackButton" customModule="SendAR" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idg-HP-bbe" customClass="IndigoButton" customModule="SendAR" customModuleProvider="target">
                                 <rect key="frame" x="20" y="718" width="374" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="cZ5-q7-p2A"/>
@@ -387,4 +395,7 @@
             <point key="canvasLocation" x="1690" y="-607"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="scope" catalog="system" width="128" height="122"/>
+    </resources>
 </document>

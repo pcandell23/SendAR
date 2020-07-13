@@ -15,8 +15,8 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     let delegate = AppDelegate.shared()
     
-    //simple placeholder because I'm confused on accessing objects in arrays
     var areas: [Area] = []
+    var myIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +46,11 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        myIndex = indexPath.row
+        self.performSegue(withIdentifier: "MyAreasToArea", sender: self)
+    }
+
     func fetchAreas(){
         let moc = delegate.dataController?.persistentContainer.viewContext
         if moc == nil{

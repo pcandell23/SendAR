@@ -30,8 +30,6 @@ extension Area {
     @NSManaged public var subAreas: NSSet?
     @NSManaged public var superArea: Area?
     
-    //Area needs a location variable or a lat/long variable
-    
     // MARK: - Getter Functions
     func getName() -> String{
         return name ?? ""
@@ -62,8 +60,22 @@ extension Area {
     }
     
     // TODO: Fix this to return the correct format for needs.
-    func getFenceCorrdinates() -> String {
+    func getFenceCoordinates() -> String {
         return ""
+    }
+    
+
+    //currently not used
+    func getCragsAndRoutes() -> String {
+        var cragsAndRoutes: String = ""
+        
+        if let subAreaArray = subAreas {
+            for subArea in subAreaArray {
+                cragsAndRoutes += "\(subArea.getName()), "
+            }
+        }
+        
+        return cragsAndRoutes
     }
     
     func subAreaCount() -> Int {
