@@ -13,6 +13,7 @@ class CragDetailVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, UI
 
     var cragName: String = "Crag Name"
     var crag: Crag
+    var routesSet: NSSet
     var routes: [Route]
     var myIndex = 0
     
@@ -31,16 +32,17 @@ class CragDetailVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, UI
         
     }
     
-    //fix this error
-    init(crag: Crag, routes: [Route]) {
+    init(crag: Crag, routesSet: NSSet) {
         self.crag = crag
-        self.routes = crag.getRoutes()
+        self.routesSet = crag.getRoutes()!
+        self.routes = Array(_immutableCocoaArray: routesSet)
         super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
         self.crag = Crag()
-        self.routes = crag.getRoutes()
+        self.routesSet = crag.getRoutes()!
+        self.routes = Array(_immutableCocoaArray: routesSet)
         super.init(coder: aDecoder)
     }
     

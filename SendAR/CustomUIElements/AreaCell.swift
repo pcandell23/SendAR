@@ -31,8 +31,7 @@ class AreaCell: UITableViewCell {
         if area != nil {
             areaName.text = area!.getName()
             areaProximity.text = getProximity()
-            cragsAndRoutes.text = "\(area!.getSubAreas().count) Crags, TODO Routes"
-        
+            cragsAndRoutes.text = area!.getCragsAndRoutes()
         
             if area!.getSuperArea() != nil {
                 areaLocation.text = area!.getSuperArea()!.getName()
