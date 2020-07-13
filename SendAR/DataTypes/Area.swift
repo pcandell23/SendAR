@@ -113,7 +113,7 @@ extension Area {
         addToSubAreas(newSubArea)
     }
     
-    func addSubAreas(newSubAreas: [Area]){
+    func addSubAreas(newSubAreas: NSSet){
         addToSubAreas(newSubAreas)
     }
  
@@ -125,10 +125,10 @@ extension Area {
     @NSManaged public func removeFromSubAreas(_ value: Area)
  
     @objc(addSubAreas:)
-    @NSManaged public func addToSubAreas(_ values: [Area])
+    @NSManaged public func addToSubAreas(_ values: NSSet)
  
     @objc(removeSubAreas:)
-    @NSManaged public func removeFromSubAreas(_ values: [Area])
+    @NSManaged public func removeFromSubAreas(_ values: NSSet)
     
     
     
