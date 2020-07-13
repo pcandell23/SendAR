@@ -16,26 +16,29 @@ class AreaCell: UITableViewCell {
     @IBOutlet weak var cragsAndRoutes: UILabel!
     @IBOutlet weak var areaLocation: UILabel!
     
-    var area: Area
+    var area: Area?
     var userLocation: CLLocation
     
     required init?(coder aDecoder: NSCoder) {
-        self.area = Area()
+        self.area = nil
         self.userLocation = CLLocation()
         super.init(coder: aDecoder)
     }
-    
+      
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        areaName.text = area.getName()
-        areaProximity.text = getProximity()
-        cragsAndRoutes.text = "\(area.getSubAreas().count) Crags, TODO Routes"
+        if area != nil {
+            areaName.text = area!.getName()
+            areaProximity.text = getProximity()
+            cragsAndRoutes.text = "\(area!.getSubAreas().count) Crags, TODO Routes"
         
-        if area.getSuperArea() != nil {
-            areaLocation.text = area.getSuperArea()!.getName()
-        } else {
-            areaLocation.text = ""
+        
+            if area!.getSuperArea() != nil {
+                areaLocation.text = area!.getSuperArea()!.getName()
+            } else {
+                areaLocation.text = ""
+            }
         }
         
     }
@@ -50,9 +53,9 @@ class AreaCell: UITableViewCell {
         var proximityString: String = ""
         var proximityDouble: Double
         
-        if area.getFenceLatitude() != "" && area.getFenceLongitude() != "" {
-            let areaLatitude = Double(area.getFenceLatitude())!
-            let areaLongitude = Double(area.getFenceLongitude())!
+        if area!.getFenceLatitude() != "" && area!.getFenceLongitude() != "" {
+            let areaLatitude = Double(area!.getFenceLatitude())!
+            let areaLongitude = Double(area!.getFenceLongitude())!
             let areaLocation = CLLocationCoordinate2DMake(areaLatitude, areaLongitude)
             
             let mapPoint1 = MKMapPoint.init(areaLocation)
