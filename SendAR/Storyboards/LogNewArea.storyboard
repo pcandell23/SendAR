@@ -38,9 +38,6 @@
                             </textField>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D0r-KT-gvM">
                                 <rect key="frame" x="20" y="254" width="374" height="478"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="445" id="1fg-Zt-92P"/>
-                                </constraints>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please select a location near the center of the Area." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Bz-BX-77s">
                                 <rect key="frame" x="20" y="740" width="374" height="18"/>
@@ -82,6 +79,7 @@
                             <constraint firstItem="D0r-KT-gvM" firstAttribute="top" secondItem="rk7-HT-kGa" secondAttribute="bottom" constant="8" id="0hm-Xg-eVR"/>
                             <constraint firstItem="mUu-Bf-jMy" firstAttribute="leading" secondItem="Yjd-Qv-iLw" secondAttribute="leading" constant="20" id="1Bx-Fy-FFj"/>
                             <constraint firstItem="8Bz-BX-77s" firstAttribute="top" secondItem="D0r-KT-gvM" secondAttribute="bottom" constant="8" id="7Br-ss-rX0"/>
+                            <constraint firstItem="0vh-F1-10m" firstAttribute="centerX" secondItem="D0r-KT-gvM" secondAttribute="centerX" id="883-kR-KRA"/>
                             <constraint firstItem="mUu-Bf-jMy" firstAttribute="top" secondItem="Yjd-Qv-iLw" secondAttribute="top" constant="27" id="BEi-NH-cNu"/>
                             <constraint firstItem="D0r-KT-gvM" firstAttribute="trailing" secondItem="ji3-m1-kc8" secondAttribute="trailing" id="FNi-d1-TeP"/>
                             <constraint firstItem="ji3-m1-kc8" firstAttribute="top" secondItem="Yjd-Qv-iLw" secondAttribute="top" constant="20" id="JL7-Fo-P6G"/>

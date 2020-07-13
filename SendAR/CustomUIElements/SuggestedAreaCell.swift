@@ -13,6 +13,7 @@ import CoreLocation
 class SuggestedAreaCell: UITableViewCell, MKMapViewDelegate {
     
     var locationCheck: LocationChecker
+    var userLocation: CLLocation
     var area: Area
     let regionInMeters: Double = 100
     
@@ -36,6 +37,7 @@ class SuggestedAreaCell: UITableViewCell, MKMapViewDelegate {
     
     required init?(coder aDecoder: NSCoder) {
         self.locationCheck = LocationChecker()
+        self.userLocation = CLLocation()
         self.area = Area()
         super.init(coder: aDecoder)
     }
@@ -50,7 +52,7 @@ class SuggestedAreaCell: UITableViewCell, MKMapViewDelegate {
             let areaLocation = CLLocationCoordinate2DMake(areaLatitude, areaLongitude)
             
             let mapPoint1 = MKMapPoint.init(areaLocation)
-            let mapPoint2 = MKMapPoint.init()//make CLLocationCoordinate2D
+            let mapPoint2 = MKMapPoint.init(userLocation.coordinate)
             
             proximityDouble = mapPoint1.distance(to: mapPoint2)
             proximityString = "\(String(proximityDouble)) m"

@@ -7,6 +7,7 @@
 //
 import UIKit
 import MapKit
+import CoreLocation
 
 class AreaCell: UITableViewCell {
     
@@ -16,9 +17,11 @@ class AreaCell: UITableViewCell {
     @IBOutlet weak var areaLocation: UILabel!
     
     var area: Area
+    var userLocation: CLLocation
     
     required init?(coder aDecoder: NSCoder) {
         self.area = Area()
+        self.userLocation = CLLocation()
         super.init(coder: aDecoder)
     }
     
@@ -53,7 +56,7 @@ class AreaCell: UITableViewCell {
             let areaLocation = CLLocationCoordinate2DMake(areaLatitude, areaLongitude)
             
             let mapPoint1 = MKMapPoint.init(areaLocation)
-            let mapPoint2 = MKMapPoint.init()//make CLLocationCoordinate2D
+            let mapPoint2 = MKMapPoint.init(userLocation.coordinate)
             
             proximityDouble = mapPoint1.distance(to: mapPoint2)
             proximityString = "\(String(proximityDouble)) m"
