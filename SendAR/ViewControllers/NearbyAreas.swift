@@ -13,6 +13,7 @@ class NearbyAreasViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var nearbyAreasTableView: UITableView!
     
     let areas: [Area] = []
+    var myIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,11 @@ class NearbyAreasViewController: UIViewController, UITableViewDelegate, UITableV
         cell.areaName.text = areas[indexPath.row].getName()
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        myIndex = indexPath.row
+        self.performSegue(withIdentifier: "NearbyAreasToArea", sender: self)
     }
     
 }

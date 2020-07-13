@@ -107,7 +107,7 @@
                         <outlet property="cragDescription" destination="Vef-uq-alY" id="aA1-zs-Sgb"/>
                         <outlet property="cragMap" destination="wQj-3t-yrD" id="sOe-aX-sra"/>
                         <outlet property="routeTable" destination="Nri-a8-nXS" id="oPZ-lm-6Mn"/>
-                        <segue destination="8De-BF-aTM" kind="show" id="cAt-Zk-esA"/>
+                        <segue destination="8De-BF-aTM" kind="show" identifier="CragToRoute" id="cAt-Zk-esA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="51Q-05-YMt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

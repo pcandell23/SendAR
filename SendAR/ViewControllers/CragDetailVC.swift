@@ -14,6 +14,7 @@ class CragDetailVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, UI
     var cragName: String = "Crag Name"
     var crag: Crag
     var routes: [Route]
+    var myIndex = 0
     
     @IBOutlet weak var cragDescription: UILabel!
     @IBOutlet weak var cragMap: MKMapView!
@@ -71,4 +72,10 @@ class CragDetailVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, UI
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        myIndex = indexPath.row
+        self.performSegue(withIdentifier: "CragToRoute", sender: self)
+    }
+    
 }

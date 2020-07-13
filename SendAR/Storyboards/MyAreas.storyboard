@@ -44,11 +44,22 @@
                     </navigationItem>
                     <connections>
                         <outlet property="myAreasTableView" destination="cgZ-cq-XbB" id="G6W-36-Ms7"/>
+                        <segue destination="IKo-1G-Vf1" kind="show" identifier="MyAreasToArea" id="KNF-J1-GP8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17h-SH-1xc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2352" y="25"/>
+        </scene>
+        <!--AreaDetail-->
+        <scene sceneID="TRy-wZ-OeX">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AreaDetail" id="IKo-1G-Vf1" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="rfh-Je-P7m"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="coc-Q6-Bwm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3004" y="25"/>
         </scene>
         <!--My Areas-->
         <scene sceneID="sDv-b7-OTE">

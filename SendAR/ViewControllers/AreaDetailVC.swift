@@ -11,11 +11,11 @@ import CoreData
 
 class AreaDetailVC: UIViewController {
     
-    var areaName: String = "Area Name"
     @IBOutlet weak var areaDescription: UILabel!
     @IBOutlet weak var subAreaTableView: UITableView!
     
-    
+    var areaName: String = "Area Name"
+    var myIndex = 0
     var subAreas: [Area] = [Area]()
     
     override func viewDidLoad() {
@@ -34,6 +34,11 @@ class AreaDetailVC: UIViewController {
         cell.areaName.text = subAreas[indexPath.row].getName()
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        myIndex = indexPath.row
+        self.performSegue(withIdentifier: "AreaToCrag", sender: self)
     }
     
     
