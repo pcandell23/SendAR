@@ -16,8 +16,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cgZ-cq-XbB">
-                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="0PG-Fb-2bC" customClass="AreaCell" customModule="SendAR" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0PG-Fb-2bC" id="Wzo-x0-2w4">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -34,17 +44,28 @@
                     </navigationItem>
                     <connections>
                         <outlet property="myAreasTableView" destination="cgZ-cq-XbB" id="G6W-36-Ms7"/>
+                        <segue destination="IKo-1G-Vf1" kind="show" identifier="MyAreasToArea" id="KNF-J1-GP8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17h-SH-1xc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2352" y="25"/>
         </scene>
+        <!--AreaDetail-->
+        <scene sceneID="TRy-wZ-OeX">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AreaDetail" id="IKo-1G-Vf1" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="rfh-Je-P7m"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="coc-Q6-Bwm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3004" y="25"/>
+        </scene>
         <!--My Areas-->
         <scene sceneID="sDv-b7-OTE">
             <objects>
                 <navigationController id="G0G-0R-v69" userLabel="My Areas" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Areas" image="star" catalog="system" id="ALW-yf-FXh"/>
+                    <tabBarItem key="tabBarItem" title="My Areas" image="star" catalog="system" selectedImage="star.fill" id="ALW-yf-FXh"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="qg3-E8-Soi">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -61,5 +82,6 @@
     </scenes>
     <resources>
         <image name="star" catalog="system" width="128" height="116"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
     </resources>
 </document>

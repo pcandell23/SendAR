@@ -15,14 +15,14 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     let delegate = AppDelegate.shared()
     
-    //simple placeholder because I'm confused on accessing objects in arrays
-    var routes: [Route] = []
+    var areas: [Area] = []
+    var myIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let nib = UINib(nibName: "RouteCell", bundle: nil)
-        myAreasTableView.register(nib, forCellReuseIdentifier: "RouteCell")
+        let nib = UINib(nibName: "AreaCell", bundle: nil)
+        myAreasTableView.register(nib, forCellReuseIdentifier: "AreaCell")
         myAreasTableView.delegate = self
         myAreasTableView.dataSource = self
         fetchRoutes()
@@ -36,15 +36,19 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     //TableView Functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return routes.count
+        return areas.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RouteCell", for: indexPath) as! RouteCell
-        cell.routeName.text = routes[indexPath.row].getName()
-        cell.routeGrade.text = String(routes[indexPath.row].getGrade())
+        let cell = tableView.dequeueReusableCell(withIdentifier: "AreaCell", for: indexPath) as! AreaCell
+        cell.areaName.text = areas[indexPath.row].getName()
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        myIndex = indexPath.row
+        self.performSegue(withIdentifier: "MyAreasToArea", sender: self)
     }
     
     func fetchRoutes(){
@@ -53,16 +57,16 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
             print("Failed to fetch routes.")
             return
         }
-        let requestRoutes = NSFetchRequest<Route>(entityName: "Route")
-        var fetched: [Route]?
+        let requestAreas = NSFetchRequest<Area>(entityName: "Area")
+        var fetched: [Area]?
         do {
-            fetched = try moc?.fetch(requestRoutes)
+            fetched = try moc?.fetch(requestAreas)
         } catch {
             print("Could not fetch. \(error)")
         }
         
         if fetched != nil {
-            routes = fetched!
+            areas = fetched!
         }
     }
     

@@ -1,45 +1,46 @@
 //
-//  NearbyAreas.swift
+//  AreaDetailVC.swift
 //  SendAR
 //
-//  Created by Bennett Baker on 7/2/20.
+//  Created by Bennett Baker on 7/11/20.
 //  Copyright © 2020 Bennett Baker. All rights reserved.
 //
 
 import UIKit
+import CoreData
 
-class NearbyAreasViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class AreaDetailVC: UIViewController {
     
-    @IBOutlet weak var nearbyAreasTableView: UITableView!
+    @IBOutlet weak var areaDescription: UILabel!
+    @IBOutlet weak var subAreaTableView: UITableView!
     
-    let areas: [Area] = []
+    var areaName: String = "Area Name"
     var myIndex = 0
+    var subAreas: [Area] = [Area]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let nib = UINib(nibName: "AreaCell", bundle: nil)
-        nearbyAreasTableView.register(nib, forCellReuseIdentifier: "AreaCell")
-        nearbyAreasTableView.delegate = self
-        nearbyAreasTableView.dataSource = self
-    
-    }
+        self.title = areaName
+           // Do any additional setup after loading the view.
+       }
     
     //TableView Functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return areas.count
+        return subAreas.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AreaCell", for: indexPath) as! AreaCell
-        cell.areaName.text = areas[indexPath.row].getName()
+        cell.areaName.text = subAreas[indexPath.row].getName()
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         myIndex = indexPath.row
-        self.performSegue(withIdentifier: "NearbyAreasToArea", sender: self)
+        self.performSegue(withIdentifier: "AreaToCrag", sender: self)
     }
     
+    
 }
+

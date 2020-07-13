@@ -5,7 +5,8 @@
         <attribute name="fenceLongitude" optional="YES" attributeType="String"/>
         <attribute name="fenceRadius" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
-        <relationship name="subAreas" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Area" inverseName="superArea" inverseEntity="Area"/>
+        <attribute name="uuid" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <relationship name="subAreas" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Area" inverseName="superArea" inverseEntity="Area"/>
         <relationship name="superArea" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Area" inverseName="subAreas" inverseEntity="Area"/>
     </entity>
     <entity name="Crag" representedClassName="Crag" parentEntity="Area" syncable="YES">
@@ -21,11 +22,12 @@
         <attribute name="pitches" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="rating" optional="YES" attributeType="Double" minValueString="0" maxValueString="5" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="type" optional="YES" attributeType="String"/>
+        <attribute name="uuid" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <relationship name="crag" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Crag" inverseName="routes" inverseEntity="Crag"/>
     </entity>
     <elements>
-        <element name="Area" positionX="-63" positionY="-18" width="128" height="133"/>
+        <element name="Area" positionX="-63" positionY="-18" width="128" height="148"/>
         <element name="Crag" positionX="-54" positionY="-9" width="128" height="58"/>
-        <element name="Route" positionX="-36" positionY="9" width="128" height="193"/>
+        <element name="Route" positionX="-36" positionY="9" width="128" height="208"/>
     </elements>
 </model>

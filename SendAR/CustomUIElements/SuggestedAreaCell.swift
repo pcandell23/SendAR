@@ -13,8 +13,8 @@ import CoreLocation
 class SuggestedAreaCell: UITableViewCell, MKMapViewDelegate {
     
     var locationCheck: LocationChecker
-    //wont work until area gets location variable
-    //var area: Area
+    var userLocation: CLLocation
+    var area: Area
     let regionInMeters: Double = 100
     
     @IBOutlet var areaName: UILabel!
@@ -25,11 +25,8 @@ class SuggestedAreaCell: UITableViewCell, MKMapViewDelegate {
         super.awakeFromNib()
         // Initialization code
         locationCheck.checkLocationServices()
-       
-        /*
-         Wont work until area gets location variable
+        proximityToUser.text = getProximity()
         centerViewOnArea()
- */
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -40,18 +37,38 @@ class SuggestedAreaCell: UITableViewCell, MKMapViewDelegate {
     
     required init?(coder aDecoder: NSCoder) {
         self.locationCheck = LocationChecker()
+        self.userLocation = CLLocation()
+        self.area = Area()
         super.init(coder: aDecoder)
     }
     
-    /*
-     Wont work until area gets location variable
-     
+    func getProximity() -> String {
+        var proximityString: String = ""
+        var proximityDouble: Double
+        
+        if area.getFenceLatitude() != "" && area.getFenceLongitude() != "" {
+            let areaLatitude = Double(area.getFenceLatitude())!
+            let areaLongitude = Double(area.getFenceLongitude())!
+            let areaLocation = CLLocationCoordinate2DMake(areaLatitude, areaLongitude)
+            
+            let mapPoint1 = MKMapPoint.init(areaLocation)
+            let mapPoint2 = MKMapPoint.init(userLocation.coordinate)
+            
+            proximityDouble = mapPoint1.distance(to: mapPoint2)
+            proximityString = "\(String(proximityDouble)) m"
+        }
+        
+        return proximityString
+    }
+    
     func centerViewOnArea() {
-           if let areaLocation = area.location {
+        if area.getFenceLatitude() != "" && area.getFenceLongitude() != "" {
+            let areaLatitude = Double(area.getFenceLatitude())!
+            let areaLongitude = Double(area.getFenceLongitude())!
+            let areaLocation = CLLocationCoordinate2DMake(areaLatitude, areaLongitude)
             let region = MKCoordinateRegion.init(center: areaLocation, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
-               areaMap.setRegion(region, animated: true)
-           }
-       }
- */
+            areaMap.setRegion(region, animated: true)
+        }
+    }
     
 }
