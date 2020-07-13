@@ -12,28 +12,28 @@ import CoreData
 @objc(Crag)
 public class Crag: Area {
     
-    @NSManaged public var routes: [Route]?
+    @NSManaged public var routes: NSSet?
     
     // MARK: - Getters
     
-    func getRoutes() -> [Route]{
-        return routes ?? [Route]()
+    func getRoutes() -> NSSet?{
+        return routes
     }
     
     func addRoute(newRoute: Route){
-        if(newRoute.getCrag() != self){
-            newRoute.setCrag(self)
+        if routes != nil{
+            routes!.adding(newRoute)
+        } else {
+            routes = NSSet(array: [newRoute])
         }
-        addToRoutes(newRoute)
     }
     
     func addRoutes(newRoutes: [Route]){
-        for r in newRoutes{
-            if(r.getCrag() != self){
-                r.setCrag(self)
-            }
+        if routes != nil{
+            routes!.addingObjects(from: newRoutes)
+        } else {
+            routes = NSSet(array: newRoutes)
         }
-        addToRoutes(newRoutes)
     }
 }
  

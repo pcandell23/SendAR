@@ -27,7 +27,7 @@ extension Area {
     @NSManaged public var uuid: UUID?
     
     //Relationships
-    @NSManaged public var subAreas: [Area]?
+    @NSManaged public var subAreas: NSSet?
     @NSManaged public var superArea: Area?
     
     // MARK: - Getter Functions
@@ -43,8 +43,8 @@ extension Area {
         return superArea
     }
     
-    func getSubAreas() -> [Area] {
-        return subAreas ?? [Area]()
+    func getSubAreas() -> NSSet? {
+        return subAreas
     }
     
     func getFenceLatitude() -> String {
@@ -64,6 +64,7 @@ extension Area {
         return ""
     }
     
+
     //currently not used
     func getCragsAndRoutes() -> String {
         var cragsAndRoutes: String = ""
@@ -75,14 +76,6 @@ extension Area {
         }
         
         return cragsAndRoutes
-    }
-    
-    func subAreaIsEmpty() -> Bool {
-        if subAreas != nil {
-            return subAreas!.isEmpty
-        } else {
-            return true
-        }
     }
     
     func subAreaCount() -> Int {
@@ -102,9 +95,6 @@ extension Area {
     }
     
     func setSuperArea(newSuperArea: Area){
-        if(!newSuperArea.getSubAreas().contains(self)){
-            addToSubAreas(self)
-        }
         self.superArea = newSuperArea
     }
     
@@ -120,7 +110,7 @@ extension Area {
         self.fenceRadius = newFenceRadius 
     }
     
-    func setInitialValues(name: String? = nil, fenceLatitude: String? = nil, fenceLongitude: String? = nil, fenceRadius: Int64 = 0, subAreas: [Area]? = nil, superArea: Area? = nil){
+    func setInitialValues(name: String? = nil, fenceLatitude: String? = nil, fenceLongitude: String? = nil, fenceRadius: Int64 = 0, subAreas: NSSet? = nil, superArea: Area? = nil){
         self.name = name
         self.fenceLatitude = fenceLatitude
         self.fenceLongitude = fenceLongitude
@@ -132,18 +122,10 @@ extension Area {
     }
  
     func addSubArea(newSubArea: Area){
-        if(newSubArea.getSuperArea() != self){
-            newSubArea.setSuperArea(newSuperArea: self)
-        }
         addToSubAreas(newSubArea)
     }
     
-    func addSubAreas(newSubAreas: [Area]){
-        for a in newSubAreas{
-            if(a.getSuperArea() != self){
-                a.setSuperArea(newSuperArea: self)
-            }
-        }
+    func addSubAreas(newSubAreas: NSSet){
         addToSubAreas(newSubAreas)
     }
  
@@ -155,10 +137,10 @@ extension Area {
     @NSManaged public func removeFromSubAreas(_ value: Area)
  
     @objc(addSubAreas:)
-    @NSManaged public func addToSubAreas(_ values: [Area])
+    @NSManaged public func addToSubAreas(_ values: NSSet)
  
     @objc(removeSubAreas:)
-    @NSManaged public func removeFromSubAreas(_ values: [Area])
+    @NSManaged public func removeFromSubAreas(_ values: NSSet)
     
     
     
