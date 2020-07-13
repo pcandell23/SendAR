@@ -27,7 +27,7 @@ extension Area {
     @NSManaged public var uuid: UUID?
     
     //Relationships
-    @NSManaged public var subAreas: [Area]?
+    @NSManaged public var subAreas: NSSet?
     @NSManaged public var superArea: Area?
     
     //Area needs a location variable or a lat/long variable
@@ -45,8 +45,8 @@ extension Area {
         return superArea
     }
     
-    func getSubAreas() -> [Area] {
-        return subAreas ?? [Area]()
+    func getSubAreas() -> NSSet? {
+        return subAreas
     }
     
     func getFenceLatitude() -> String {
@@ -66,14 +66,6 @@ extension Area {
         return ""
     }
     
-    func subAreaIsEmpty() -> Bool {
-        if subAreas != nil {
-            return subAreas!.isEmpty
-        } else {
-            return true
-        }
-    }
-    
     func subAreaCount() -> Int {
         if subAreas != nil {
             return subAreas!.count
@@ -91,9 +83,6 @@ extension Area {
     }
     
     func setSuperArea(newSuperArea: Area){
-        if(!newSuperArea.getSubAreas().contains(self)){
-            addToSubAreas(self)
-        }
         self.superArea = newSuperArea
     }
     
@@ -109,7 +98,7 @@ extension Area {
         self.fenceRadius = newFenceRadius 
     }
     
-    func setInitialValues(name: String? = nil, fenceLatitude: String? = nil, fenceLongitude: String? = nil, fenceRadius: Int64 = 0, subAreas: [Area]? = nil, superArea: Area? = nil){
+    func setInitialValues(name: String? = nil, fenceLatitude: String? = nil, fenceLongitude: String? = nil, fenceRadius: Int64 = 0, subAreas: NSSet? = nil, superArea: Area? = nil){
         self.name = name
         self.fenceLatitude = fenceLatitude
         self.fenceLongitude = fenceLongitude
@@ -121,18 +110,10 @@ extension Area {
     }
  
     func addSubArea(newSubArea: Area){
-        if(newSubArea.getSuperArea() != self){
-            newSubArea.setSuperArea(newSuperArea: self)
-        }
         addToSubAreas(newSubArea)
     }
     
     func addSubAreas(newSubAreas: [Area]){
-        for a in newSubAreas{
-            if(a.getSuperArea() != self){
-                a.setSuperArea(newSuperArea: self)
-            }
-        }
         addToSubAreas(newSubAreas)
     }
  

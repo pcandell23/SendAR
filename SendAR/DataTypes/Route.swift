@@ -110,9 +110,6 @@ extension Route {
     }
        
     func setCrag(_ newCrag: Crag){
-        if(!newCrag.getRoutes().contains(self)){
-            newCrag.addToRoutes(self)
-        }
         self.crag = newCrag
     }
     
@@ -134,6 +131,7 @@ extension Route {
         self.rating = rating
         self.height = height
         self.pitches = pitches
+        self.type = type
         
         self.crag = crag
         

@@ -25,13 +25,13 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
         myAreasTableView.register(nib, forCellReuseIdentifier: "AreaCell")
         myAreasTableView.delegate = self
         myAreasTableView.dataSource = self
-        fetchRoutes()
+        fetchAreas()
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        fetchRoutes()
+        
     }
     
     //TableView Functions
@@ -46,7 +46,7 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
         return cell
     }
     
-    func fetchRoutes(){
+    func fetchAreas(){
         let moc = delegate.dataController?.persistentContainer.viewContext
         if moc == nil{
             print("Failed to fetch routes.")
