@@ -46,7 +46,7 @@
                                     <constraint firstAttribute="width" secondItem="DZN-9M-fvQ" secondAttribute="height" multiplier="374:245" id="sGE-1w-k9a"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p97-sc-kJV" customClass="TrackButton" customModule="SendAR" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p97-sc-kJV" customClass="IndigoButton" customModule="SendAR" customModuleProvider="target">
                                 <rect key="frame" x="20" y="695" width="374" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="cHo-uh-XLy"/>
@@ -57,7 +57,7 @@
                                     <action selector="startTrackingButton:" destination="cLH-4d-9NL" eventType="touchUpInside" id="zVz-ES-Awg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rx0-j5-q3Z" userLabel="Log New Route" customClass="TrackButton" customModule="SendAR" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rx0-j5-q3Z" userLabel="Log New Route" customClass="IndigoButton" customModule="SendAR" customModuleProvider="target">
                                 <rect key="frame" x="20" y="749" width="374" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="hhW-8T-CoH"/>

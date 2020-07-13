@@ -15,7 +15,7 @@
 		404FDE1424AEA524006AA33E /* NearbyAreas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404FDE1324AEA524006AA33E /* NearbyAreas.swift */; };
 		405E556F24B57C9C00646237 /* SuggestedAreaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405E556D24B57C9C00646237 /* SuggestedAreaCell.swift */; };
 		405E557024B57C9C00646237 /* SuggestedAreaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 405E556E24B57C9C00646237 /* SuggestedAreaCell.xib */; };
-		407A645A24AF8C83006CDFCE /* TrackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A645924AF8C83006CDFCE /* TrackButton.swift */; };
+		407A645A24AF8C83006CDFCE /* IndigoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A645924AF8C83006CDFCE /* IndigoButton.swift */; };
 		407A645C24AF963C006CDFCE /* LogRouteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A645B24AF963C006CDFCE /* LogRouteVC.swift */; };
 		407A646024AFA64F006CDFCE /* MapButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A645F24AFA64F006CDFCE /* MapButton.swift */; };
 		4087FA1024ABA33900723BCF /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4087FA0F24ABA33900723BCF /* ProfileVC.swift */; };
@@ -81,7 +81,7 @@
 		404FDE1324AEA524006AA33E /* NearbyAreas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyAreas.swift; sourceTree = "<group>"; };
 		405E556D24B57C9C00646237 /* SuggestedAreaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestedAreaCell.swift; sourceTree = "<group>"; };
 		405E556E24B57C9C00646237 /* SuggestedAreaCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestedAreaCell.xib; sourceTree = "<group>"; };
-		407A645924AF8C83006CDFCE /* TrackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackButton.swift; sourceTree = "<group>"; };
+		407A645924AF8C83006CDFCE /* IndigoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndigoButton.swift; sourceTree = "<group>"; };
 		407A645B24AF963C006CDFCE /* LogRouteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogRouteVC.swift; sourceTree = "<group>"; };
 		407A645F24AFA64F006CDFCE /* MapButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapButton.swift; sourceTree = "<group>"; };
 		4087FA0F24ABA33900723BCF /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
@@ -167,7 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				407A645F24AFA64F006CDFCE /* MapButton.swift */,
-				407A645924AF8C83006CDFCE /* TrackButton.swift */,
+				407A645924AF8C83006CDFCE /* IndigoButton.swift */,
 				405E556D24B57C9C00646237 /* SuggestedAreaCell.swift */,
 				405E556E24B57C9C00646237 /* SuggestedAreaCell.xib */,
 				9694583B24BA784C0093D943 /* AreaCell.swift */,
@@ -431,7 +431,7 @@
 				40C874DD24BA91EA00ED0214 /* AreaDetailVC.swift in Sources */,
 				405E556F24B57C9C00646237 /* SuggestedAreaCell.swift in Sources */,
 				401F9A5724B390900035428B /* LocationChecker.swift in Sources */,
-				407A645A24AF8C83006CDFCE /* TrackButton.swift in Sources */,
+				407A645A24AF8C83006CDFCE /* IndigoButton.swift in Sources */,
 				961F056124AA64F8006DE4C5 /* MapVC.swift in Sources */,
 				407A646024AFA64F006CDFCE /* MapButton.swift in Sources */,
 				9694582E24B571580093D943 /* Crag.swift in Sources */,
