@@ -9,38 +9,50 @@
 import UIKit
 import CoreData
 
-class AreaDetailVC: UIViewController {
+class AreaDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var areaDescription: UILabel!
     @IBOutlet weak var subAreaTableView: UITableView!
     
-    var areaName: String = "Area Name"
+    var area: Area?
+    //var areaName: String = "Area Name"
     var myIndex = 0
-    var subAreas: [Area] = [Area]()
+    var subAreas: [Area]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = areaName
-           // Do any additional setup after loading the view.
-       }
+        if area != nil {
+            //self.areaName = area!.getName()
+            self.title = area!.getName()
+            if area?.getSubAreas() != nil{
+                subAreas = Array(_immutableCocoaArray: area!.getSubAreas()!)
+            }
+        }
+    }
     
     //TableView Functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return subAreas.count
+        if subAreas != nil {
+            return subAreas!.count
+        }
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AreaCell", for: indexPath) as! AreaCell
-        cell.areaName.text = subAreas[indexPath.row].getName()
+        if subAreas != nil{
+            cell.areaName.text = subAreas![indexPath.row].getName()
+        } else {
+            cell.areaName.text = "Sub Area Name"
+        }
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         myIndex = indexPath.row
-        self.performSegue(withIdentifier: "AreaToCrag", sender: self)
+        //self.performSegue(withIdentifier: "AreaToCrag", sender: self)
     }
     
     
 }
-

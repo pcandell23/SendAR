@@ -62,23 +62,9 @@ class DataController: NSObject{
     
     func addInExampleRoutes(){
         fetchAreas()
-        if(areas.count != 0){
-            let moc = persistentContainer.viewContext
-            let requestAreas = NSFetchRequest<Area>(entityName: "Area")
-            var fetched: [Area]?
-            do {
-                fetched = try moc.fetch(requestAreas)
-            } catch {
-                print("Could not fetch. \(error)")
-            }
-            
-            for a in fetched!{
-                moc.delete(a)
-            }
-           
-            saveContext()
+        if areas.count != 0{
+            return
         }
-        
         let moc = persistentContainer.viewContext
         
         routes.append(storeNewRouteInfo(moc: moc, newRouteName: "Snake Dike EX", grade: "5.7 R", rating: 4, height: 400, type: "Trad", pitches: 8, crag: nil, latitude:  "37.7395582", longitude: "-119.5404614", altitude: 2000))
