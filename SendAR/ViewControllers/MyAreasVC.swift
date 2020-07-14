@@ -16,7 +16,6 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
     let delegate = AppDelegate.shared()
     
     var areas: [Area] = []
-    var myIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,8 +46,10 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        myIndex = indexPath.row
-        self.performSegue(withIdentifier: "MyAreasToArea", sender: self)
+        let cell = tableView.cellForRow(at: indexPath)
+        tableView.deselectRow(at: indexPath, animated: true)
+
+        performSegue(withIdentifier: "MyAreasToArea", sender: cell)
     }
 
     func fetchAreas(){
@@ -69,5 +70,15 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
             areas = fetched!
         }
     }
+    
+    /*
+       // MARK: - Navigation
+
+       // In a storyboard-based application, you will often want to do a little preparation before navigation
+       override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+           // Get the new view controller using segue.destination.
+           // Pass the selected object to the new view controller.
+       }
+       */
     
 }

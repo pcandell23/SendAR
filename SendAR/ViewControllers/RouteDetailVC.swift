@@ -10,7 +10,6 @@ import UIKit
 
 class RouteDetailVC: UIViewController {
 
-    var routeName: String = "Route Name"
     @IBOutlet weak var routeGrade: UILabel!
     @IBOutlet weak var routeRating: UILabel!
     @IBOutlet weak var routeDimensions: UILabel! //interpolated string of type, pitches and height
@@ -19,23 +18,28 @@ class RouteDetailVC: UIViewController {
     @IBOutlet weak var routeDescription: UILabel!
     @IBOutlet weak var routeLocation: UILabel!
     
+    var route: Route
     
+    required init?(coder aDecoder: NSCoder) {
+        self.route = Route()
+        super.init(coder: aDecoder)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = routeName
+        self.title = route.getName()
         // Do any additional setup after loading the view.
     }
     
 
-    /*
-    // MARK: - Navigation
+   /*
+      // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+      // In a storyboard-based application, you will often want to do a little preparation before navigation
+      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+          // Get the new view controller using segue.destination.
+          // Pass the selected object to the new view controller.
+      }
+      */
 
 }
