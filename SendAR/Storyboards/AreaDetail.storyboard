@@ -28,7 +28,7 @@
         <!--Area Name-->
         <scene sceneID="IvQ-ct-lmG">
             <objects>
-                <viewController id="RSv-Ef-L6S" customClass="AreaDetailVC" customModule="SendAR" sceneMemberID="viewController">
+                <viewController id="RSv-Ef-L6S" customClass="AreaDetailVC" customModule="SendAR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Loz-UQ-N9P">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -101,7 +101,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eLj-m7-Kef"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Area Name" id="qjD-ir-vua"/>
+                    <navigationItem key="navigationItem" title="Area Name" id="qjD-ir-vua" customClass="AreaDetailVC"/>
                     <connections>
                         <outlet property="areaDescription" destination="SXp-bN-gbO" id="mqk-EE-tUh"/>
                         <outlet property="areaName" destination="qjD-ir-vua" id="UuA-Jy-YDK"/>

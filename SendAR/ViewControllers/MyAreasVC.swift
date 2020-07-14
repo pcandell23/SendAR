@@ -70,14 +70,4 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
     
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
-        if segue.destination is AreaDetailVC
-        {
-            let vc = segue.destination as? AreaDetailVC
-            vc?.area = areas[myIndex]
-        }
-    }
-    
 }
