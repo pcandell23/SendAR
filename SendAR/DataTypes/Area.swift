@@ -47,6 +47,14 @@ extension Area {
         return subAreas
     }
     
+    func getSubAreasAsArray() -> [Area]?{
+        if subAreas != nil {
+            return subAreas!.allObjects as? [Area]
+        } else {
+            return nil
+        }
+    } 
+    
     func getFenceLatitude() -> String {
         return fenceLatitude ?? ""
     }

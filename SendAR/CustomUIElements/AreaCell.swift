@@ -38,6 +38,11 @@ class AreaCell: UITableViewCell {
             } else {
                 areaLocation.text = ""
             }
+        }else {
+            areaName.text = ""
+            areaProximity.text = ""
+            cragsAndRoutes.text = ""
+            areaLocation.text = ""
         }
         
     }

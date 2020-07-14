@@ -99,22 +99,11 @@
                     <navigationItem key="navigationItem" title="Nearby Areas" id="eOY-bc-jzb"/>
                     <connections>
                         <outlet property="nearbyAreasTableView" destination="Xcy-xk-l01" id="KX4-wg-h9S"/>
-                        <segue destination="8i8-cS-r9j" kind="show" identifier="NearbyAreasToArea" id="CYw-d8-mxI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yru-v3-IW3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2433" y="-287"/>
-        </scene>
-        <!--AreaDetail-->
-        <scene sceneID="EEF-zs-JRO">
-            <objects>
-                <viewControllerPlaceholder storyboardName="AreaDetail" id="8i8-cS-r9j" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="BCb-x7-rWL"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Vu5-7B-M4U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2984" y="-287"/>
         </scene>
         <!--Map-->
         <scene sceneID="Rz6-Ra-KAg">

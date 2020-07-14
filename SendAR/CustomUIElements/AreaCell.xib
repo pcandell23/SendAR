@@ -59,7 +59,6 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="AreaName" destination="9eu-4O-Dx8" id="WcK-YF-wM1"/>
                 <outlet property="areaLocation" destination="7m0-5G-6R2" id="5K3-qu-Oyl"/>
                 <outlet property="areaName" destination="9eu-4O-Dx8" id="O3i-rb-BRU"/>
                 <outlet property="areaProximity" destination="nVu-Gr-ztl" id="Kp8-J9-d4N"/>
