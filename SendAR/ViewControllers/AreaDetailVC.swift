@@ -15,7 +15,6 @@ class AreaDetailVC: UIViewController {
     @IBOutlet weak var subAreaTableView: UITableView!
     
     var areaName: String = "Area Name"
-    var myIndex = 0
     var subAreas: [Area] = [Area]()
     
     override func viewDidLoad() {
@@ -37,8 +36,10 @@ class AreaDetailVC: UIViewController {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        myIndex = indexPath.row
-        self.performSegue(withIdentifier: "AreaToCrag", sender: self)
+        let cell = tableView.cellForRow(at: indexPath)
+        tableView.deselectRow(at: indexPath, animated: true)
+
+        performSegue(withIdentifier: "AreaToCrag", sender: cell)
     }
     
     
