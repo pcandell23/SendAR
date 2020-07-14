@@ -104,6 +104,8 @@
                     <navigationItem key="navigationItem" title="Area Name" id="qjD-ir-vua"/>
                     <connections>
                         <outlet property="areaDescription" destination="SXp-bN-gbO" id="mqk-EE-tUh"/>
+                        <outlet property="areaName" destination="qjD-ir-vua" id="UuA-Jy-YDK"/>
+                        <outlet property="areaView" destination="qjD-ir-vua" id="oTM-FK-Lpd"/>
                         <outlet property="subAreaTableView" destination="QpX-uB-f04" id="jM3-al-9ft"/>
                         <segue destination="4LG-Ye-de0" kind="show" identifier="AreaToCrag" id="Aos-0I-hue"/>
                     </connections>

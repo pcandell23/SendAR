@@ -60,12 +60,10 @@
                     <constraint firstItem="NbU-dz-KgI" firstAttribute="bottom" secondItem="Ewx-kB-9Kl" secondAttribute="bottomMargin" id="Sgq-V8-ojZ"/>
                     <constraint firstItem="NbU-dz-KgI" firstAttribute="leading" secondItem="Ewx-kB-9Kl" secondAttribute="leadingMargin" id="UsU-04-e85"/>
                     <constraint firstAttribute="trailingMargin" secondItem="NbU-dz-KgI" secondAttribute="trailing" id="Wr1-DR-RCA"/>
-                    <constraint firstItem="BxX-qO-3Xl" firstAttribute="top" secondItem="Ewx-kB-9Kl" secondAttribute="top" constant="11" id="a4k-Pl-iw7"/>
                     <constraint firstItem="NbU-dz-KgI" firstAttribute="trailing" secondItem="sai-z0-cj3" secondAttribute="trailing" id="aeg-tR-aKQ"/>
                     <constraint firstItem="z96-Ru-7Ry" firstAttribute="top" secondItem="BxX-qO-3Xl" secondAttribute="bottom" constant="3" id="fMA-66-UGz"/>
                     <constraint firstItem="sai-z0-cj3" firstAttribute="centerY" secondItem="z96-Ru-7Ry" secondAttribute="centerY" id="nIP-o6-ZqK"/>
                     <constraint firstItem="lyL-UT-meM" firstAttribute="trailing" secondItem="Ewx-kB-9Kl" secondAttribute="trailingMargin" id="q8p-nx-r7y"/>
-                    <constraint firstItem="NbU-dz-KgI" firstAttribute="top" secondItem="z96-Ru-7Ry" secondAttribute="bottom" constant="3" id="q9N-tL-Nzo"/>
                     <constraint firstItem="lyL-UT-meM" firstAttribute="top" secondItem="Ewx-kB-9Kl" secondAttribute="topMargin" id="tWJ-7y-7Ab"/>
                     <constraint firstItem="NbU-dz-KgI" firstAttribute="top" secondItem="sai-z0-cj3" secondAttribute="bottom" constant="6" id="wJq-5O-1XS"/>
                     <constraint firstItem="BxX-qO-3Xl" firstAttribute="firstBaseline" secondItem="lyL-UT-meM" secondAttribute="baseline" id="zZZ-yH-Pa0"/>

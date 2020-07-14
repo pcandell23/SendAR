@@ -13,6 +13,7 @@ class NearbyAreasViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var nearbyAreasTableView: UITableView!
     
     let areas: [Area] = []
+    var myIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,20 +38,8 @@ class NearbyAreasViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath)
-        tableView.deselectRow(at: indexPath, animated: true)
-
-        performSegue(withIdentifier: "NearbyAreasToArea", sender: cell)
+        myIndex = indexPath.row
+        self.performSegue(withIdentifier: "NearbyAreasToArea", sender: self)
     }
-    
-    /*
-       // MARK: - Navigation
-
-       // In a storyboard-based application, you will often want to do a little preparation before navigation
-       override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-           // Get the new view controller using segue.destination.
-           // Pass the selected object to the new view controller.
-       }
-       */
     
 }

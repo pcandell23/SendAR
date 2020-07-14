@@ -11,9 +11,11 @@ import MapKit
 
 class CragDetailVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, UITableViewDataSource {
 
+    var cragName: String = "Crag Name"
     var crag: Crag
     var routesSet: NSSet
     var routes: [Route]
+    var myIndex = 0
     
     @IBOutlet weak var cragDescription: UILabel!
     @IBOutlet weak var cragMap: MKMapView!
@@ -21,7 +23,7 @@ class CragDetailVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = crag.getName()
+        self.title = cragName
         
         let nib = UINib(nibName: "RouteCell", bundle: nil)
         routeTable.register(nib, forCellReuseIdentifier: "Route Cell")
@@ -74,20 +76,8 @@ class CragDetailVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, UI
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath)
-        tableView.deselectRow(at: indexPath, animated: true)
-
-        performSegue(withIdentifier: "CragToRoute", sender: cell)
+        myIndex = indexPath.row
+        self.performSegue(withIdentifier: "CragToRoute", sender: self)
     }
-    
-    /*
-       // MARK: - Navigation
-
-       // In a storyboard-based application, you will often want to do a little preparation before navigation
-       override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-           // Get the new view controller using segue.destination.
-           // Pass the selected object to the new view controller.
-       }
-       */
     
 }
