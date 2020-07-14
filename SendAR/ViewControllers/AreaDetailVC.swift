@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class AreaDetailVC: UIViewController {
+class AreaDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var areaDescription: UILabel!
     @IBOutlet weak var subAreaTableView: UITableView!
@@ -21,6 +21,11 @@ class AreaDetailVC: UIViewController {
         super.viewDidLoad()
         self.title = areaName
            // Do any additional setup after loading the view.
+        
+        let nib = UINib(nibName: "AreaCell", bundle: nil)
+        subAreaTableView.register(nib, forCellReuseIdentifier: "Area Cell")
+        subAreaTableView.delegate = self
+        subAreaTableView.dataSource = self
        }
     
     //TableView Functions
@@ -33,6 +38,10 @@ class AreaDetailVC: UIViewController {
         cell.areaName.text = subAreas[indexPath.row].getName()
         
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //TODO
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

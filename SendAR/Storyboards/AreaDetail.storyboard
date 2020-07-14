@@ -101,7 +101,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eLj-m7-Kef"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Area Name" id="qjD-ir-vua" customClass="AreaDetailVC"/>
+                    <navigationItem key="navigationItem" title="Area Name" id="qjD-ir-vua"/>
                     <connections>
                         <outlet property="areaDescription" destination="SXp-bN-gbO" id="mqk-EE-tUh"/>
                         <outlet property="areaName" destination="qjD-ir-vua" id="UuA-Jy-YDK"/>
