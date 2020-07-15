@@ -13,8 +13,8 @@ class CragDetailVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, UI
 
     var cragName: String = "Crag Name"
     var crag: Crag
+    var routesSet: NSSet
     var routes: [Route]
-    var myIndex = 0
     
     @IBOutlet weak var cragDescription: UILabel!
     @IBOutlet weak var cragMap: MKMapView!
@@ -31,16 +31,17 @@ class CragDetailVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, UI
         
     }
     
-    //fix this error
-    init(crag: Crag, routes: [Route]) {
+    init(crag: Crag, routesSet: NSSet) {
         self.crag = crag
-        self.routes = crag.getRoutes()
+        self.routesSet = crag.getRoutes()!
+        self.routes = Array(_immutableCocoaArray: routesSet)
         super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
         self.crag = Crag()
-        self.routes = crag.getRoutes()
+        self.routesSet = crag.getRoutes()!
+        self.routes = Array(_immutableCocoaArray: routesSet)
         super.init(coder: aDecoder)
     }
     
@@ -73,9 +74,15 @@ class CragDetailVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, UI
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //TODO
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        myIndex = indexPath.row
-        self.performSegue(withIdentifier: "CragToRoute", sender: self)
+        let cell = tableView.cellForRow(at: indexPath)
+        tableView.deselectRow(at: indexPath, animated: true)
+
+        performSegue(withIdentifier: "CragToRoute", sender: cell)
     }
     
 }

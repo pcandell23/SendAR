@@ -9,19 +9,39 @@
 import UIKit
 import CoreData
 
-class AreaDetailVC: UIViewController {
-    
-    @IBOutlet weak var areaDescription: UILabel!
-    @IBOutlet weak var subAreaTableView: UITableView!
-    
-    var areaName: String = "Area Name"
-    var myIndex = 0
-    var subAreas: [Area] = [Area]()
+class AreaNavC: UINavigationController{
+    var area: Area? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = areaName
+    }
+    
+}
+
+class AreaDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var areaName: UINavigationItem!
+    @IBOutlet weak var areaDescription: UILabel!
+    @IBOutlet weak var subAreaTableView: UITableView!
+    
+    var subAreas: [Area] = []
+    var area: Area? = nil
+    var subIndex: Int = 0
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        if area != nil {
+            areaName.title = area!.getName()
+            if area!.getSubAreasAsArray() != nil {
+                self.subAreas = area!.getSubAreasAsArray()!
+            }
+        }
            // Do any additional setup after loading the view.
+        
+        let nib = UINib(nibName: "AreaCell", bundle: nil)
+        subAreaTableView.register(nib, forCellReuseIdentifier: "AreaCell")
+        subAreaTableView.delegate = self
+        subAreaTableView.dataSource = self
        }
     
     //TableView Functions
@@ -36,11 +56,25 @@ class AreaDetailVC: UIViewController {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        myIndex = indexPath.row
-        self.performSegue(withIdentifier: "AreaToCrag", sender: self)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //TODO
+        if segue.destination is AreaDetailVC
+        {
+            let vc = segue.destination as? AreaDetailVC
+            vc?.area = subAreas[subIndex]
+        }
+        if segue.identifier == "AreaToCrag"{
+            let b = segue.destination as! CragDetailVC
+            //b.element = self.randomElement
+        }
     }
     
-    
-}
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        tableView.deselectRow(at: indexPath, animated: true)
+        subIndex = indexPath.row
 
+        performSegue(withIdentifier: "AreaToCrag", sender: cell)
+    }
+}
+ 

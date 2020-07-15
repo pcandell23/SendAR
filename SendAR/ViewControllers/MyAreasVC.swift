@@ -16,7 +16,8 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
     let delegate = AppDelegate.shared()
     
     var areas: [Area] = []
-    var myIndex = 0
+    
+    var areaIndex: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,9 +47,22 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //TODO
+        if segue.identifier == "MyAreasToArea"{
+            let navVC = segue.destination as! UINavigationController
+            let vc = navVC.viewControllers.first as! AreaDetailVC
+            vc.area = areas[areaIndex]
+        }
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        myIndex = indexPath.row
-        self.performSegue(withIdentifier: "MyAreasToArea", sender: self)
+        let cell = tableView.cellForRow(at: indexPath)
+        tableView.deselectRow(at: indexPath, animated: true)
+        areaIndex = indexPath.row
+        
+
+        performSegue(withIdentifier: "MyAreasToArea", sender: cell)
     }
 
     func fetchAreas(){

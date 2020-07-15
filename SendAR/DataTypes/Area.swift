@@ -47,6 +47,14 @@ extension Area {
         return subAreas
     }
     
+    func getSubAreasAsArray() -> [Area]?{
+        if subAreas != nil {
+            return subAreas!.allObjects as? [Area]
+        } else {
+            return nil
+        }
+    } 
+    
     func getFenceLatitude() -> String {
         return fenceLatitude ?? ""
     }
@@ -68,11 +76,21 @@ extension Area {
     //currently not used
     func getCragsAndRoutes() -> String {
         var cragsAndRoutes: String = ""
+        var numCrags = 0
+        var numRoutes = 0
+        
+        if let subAreaArray = subAreas {
+            for _ in subAreaArray {
+                numCrags += 1
+            }
+            cragsAndRoutes += "\(numCrags) Crags, "
+        }
         
         if let subAreaArray = subAreas {
             for subArea in subAreaArray {
-                cragsAndRoutes += "\(subArea.getName()), "
+                numRoutes += (subArea as AnyObject).count
             }
+            cragsAndRoutes += "\(numRoutes) Routes"
         }
         
         return cragsAndRoutes

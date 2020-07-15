@@ -7,21 +7,20 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--My Areas-->
+        <!--Navigation Controller-->
         <scene sceneID="HwH-aX-1tq">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iVT-Qg-qTV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="F88-Tk-N0a" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Areas" image="star" catalog="system" id="9fv-VM-SaD"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="umN-1Z-Qh8">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="RSv-Ef-L6S" kind="relationship" relationship="rootViewController" id="HKn-Wj-cnh"/>
+                        <segue destination="RSv-Ef-L6S" kind="relationship" relationship="rootViewController" id="fHm-9z-Cav"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iVT-Qg-qTV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-867" y="-31"/>
         </scene>
@@ -43,7 +42,7 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="te5-79-W1V" customClass="AreaCell" customModule="SendAR" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="te5-79-W1V" id="zzl-gs-TE1" customClass="AreaCell" customModule="SendAR" customModuleProvider="target">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="te5-79-W1V" id="zzl-gs-TE1">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
@@ -101,11 +100,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eLj-m7-Kef"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Area Name" id="qjD-ir-vua" customClass="AreaDetailVC"/>
+                    <navigationItem key="navigationItem" title="Area Name" id="qjD-ir-vua"/>
                     <connections>
                         <outlet property="areaDescription" destination="SXp-bN-gbO" id="mqk-EE-tUh"/>
-                        <outlet property="areaName" destination="qjD-ir-vua" id="UuA-Jy-YDK"/>
-                        <outlet property="areaView" destination="qjD-ir-vua" id="oTM-FK-Lpd"/>
+                        <outlet property="areaName" destination="qjD-ir-vua" id="6ay-uj-yx8"/>
                         <outlet property="subAreaTableView" destination="QpX-uB-f04" id="jM3-al-9ft"/>
                         <segue destination="4LG-Ye-de0" kind="show" identifier="AreaToCrag" id="Aos-0I-hue"/>
                     </connections>
@@ -125,7 +123,4 @@
             <point key="canvasLocation" x="742" y="-30"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="star" catalog="system" width="128" height="116"/>
-    </resources>
 </document>

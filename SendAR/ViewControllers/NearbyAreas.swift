@@ -13,7 +13,6 @@ class NearbyAreasViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var nearbyAreasTableView: UITableView!
     
     let areas: [Area] = []
-    var myIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,9 +36,15 @@ class NearbyAreasViewController: UIViewController, UITableViewDelegate, UITableV
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //TODO
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        myIndex = indexPath.row
-        self.performSegue(withIdentifier: "NearbyAreasToArea", sender: self)
+        let cell = tableView.cellForRow(at: indexPath)
+        tableView.deselectRow(at: indexPath, animated: true)
+
+        performSegue(withIdentifier: "NearbyAreasToArea", sender: cell)
     }
     
 }
