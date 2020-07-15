@@ -54,12 +54,20 @@
         <!--AreaDetail-->
         <scene sceneID="TRy-wZ-OeX">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="coc-Q6-Bwm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="AreaDetail" id="IKo-1G-Vf1" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="rfh-Je-P7m"/>
                 </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="coc-Q6-Bwm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3004" y="25"/>
+        </scene>
+        <!--CragDetail-->
+        <scene sceneID="1k9-Eh-aj8">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CragDetail" id="8g6-jl-dMD" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EWl-pq-J69" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3004" y="60"/>
         </scene>
         <!--My Areas-->
         <scene sceneID="sDv-b7-OTE">

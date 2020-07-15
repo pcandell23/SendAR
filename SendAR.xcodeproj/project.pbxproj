@@ -12,6 +12,8 @@
 		401F9A5724B390900035428B /* LocationChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401F9A5624B390900035428B /* LocationChecker.swift */; };
 		40343F0624B5261D00507926 /* LogNewRoute.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40343F0524B5261D00507926 /* LogNewRoute.storyboard */; };
 		4039FB7924B50F2C00D9F927 /* RouteDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4039FB7824B50F2C00D9F927 /* RouteDetailVC.swift */; };
+		4044391324BE8B8400CDB237 /* CragCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4044391124BE8B8400CDB237 /* CragCell.swift */; };
+		4044391424BE8B8400CDB237 /* CragCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4044391224BE8B8400CDB237 /* CragCell.xib */; };
 		404FDE1424AEA524006AA33E /* NearbyAreas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404FDE1324AEA524006AA33E /* NearbyAreas.swift */; };
 		405E556F24B57C9C00646237 /* SuggestedAreaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405E556D24B57C9C00646237 /* SuggestedAreaCell.swift */; };
 		405E557024B57C9C00646237 /* SuggestedAreaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 405E556E24B57C9C00646237 /* SuggestedAreaCell.xib */; };
@@ -78,6 +80,8 @@
 		401F9A5624B390900035428B /* LocationChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationChecker.swift; sourceTree = "<group>"; };
 		40343F0524B5261D00507926 /* LogNewRoute.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogNewRoute.storyboard; sourceTree = "<group>"; };
 		4039FB7824B50F2C00D9F927 /* RouteDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteDetailVC.swift; sourceTree = "<group>"; };
+		4044391124BE8B8400CDB237 /* CragCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CragCell.swift; sourceTree = "<group>"; };
+		4044391224BE8B8400CDB237 /* CragCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CragCell.xib; sourceTree = "<group>"; };
 		404FDE1324AEA524006AA33E /* NearbyAreas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyAreas.swift; sourceTree = "<group>"; };
 		405E556D24B57C9C00646237 /* SuggestedAreaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestedAreaCell.swift; sourceTree = "<group>"; };
 		405E556E24B57C9C00646237 /* SuggestedAreaCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestedAreaCell.xib; sourceTree = "<group>"; };
@@ -172,6 +176,8 @@
 				405E556E24B57C9C00646237 /* SuggestedAreaCell.xib */,
 				9694583B24BA784C0093D943 /* AreaCell.swift */,
 				9694583924BA78390093D943 /* AreaCell.xib */,
+				4044391124BE8B8400CDB237 /* CragCell.swift */,
+				4044391224BE8B8400CDB237 /* CragCell.xib */,
 				4010BDA124AFD7190082F7E2 /* RouteCell.swift */,
 				4010BDA224AFD7190082F7E2 /* RouteCell.xib */,
 			);
@@ -398,6 +404,7 @@
 				40E0978324AE54290022E965 /* MyAreas.storyboard in Resources */,
 				40EAA79824A8152300F41366 /* Main.storyboard in Resources */,
 				405E557024B57C9C00646237 /* SuggestedAreaCell.xib in Resources */,
+				4044391424BE8B8400CDB237 /* CragCell.xib in Resources */,
 				40C874D724BA90D200ED0214 /* CragDetail.storyboard in Resources */,
 				40DC780F24AE465900DC5AF2 /* Home.storyboard in Resources */,
 				40E0978124AE53B40022E965 /* AR.storyboard in Resources */,
@@ -427,6 +434,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9694583124B69CF10093D943 /* SendARData.xcdatamodeld in Sources */,
+				4044391324BE8B8400CDB237 /* CragCell.swift in Sources */,
 				407A645C24AF963C006CDFCE /* LogRouteVC.swift in Sources */,
 				40C874DD24BA91EA00ED0214 /* AreaDetailVC.swift in Sources */,
 				405E556F24B57C9C00646237 /* SuggestedAreaCell.swift in Sources */,
@@ -627,13 +635,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9B6C5XW645;
+				DEVELOPMENT_TEAM = A3UJWUP8W2;
 				INFOPLIST_FILE = SendAR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.SendAR.SendAR;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SendAR.SendARAlt1;
 				PRODUCT_NAME = SendAR;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -645,13 +653,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9B6C5XW645;
+				DEVELOPMENT_TEAM = A3UJWUP8W2;
 				INFOPLIST_FILE = SendAR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.SendAR.SendAR;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SendAR.SendARAlt1;
 				PRODUCT_NAME = SendAR;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -16,14 +16,17 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
     let delegate = AppDelegate.shared()
     
     var areas: [Area] = []
+    var crags: [Crag] = []
     
     var areaIndex: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let nib = UINib(nibName: "AreaCell", bundle: nil)
-        myAreasTableView.register(nib, forCellReuseIdentifier: "AreaCell")
+        let areaNib = UINib(nibName: "AreaCell", bundle: nil)
+        myAreasTableView.register(areaNib, forCellReuseIdentifier: "AreaCell")
+        let cragNib = UINib(nibName: "CragCell", bundle: nil)
+        myAreasTableView.register(cragNib, forCellReuseIdentifier: "CragCell")
         myAreasTableView.delegate = self
         myAreasTableView.dataSource = self
         fetchAreas()
@@ -37,12 +40,14 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     //TableView Functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return areas.count
+        return areas.count + crags.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AreaCell", for: indexPath) as! AreaCell
         cell.areaName.text = areas[indexPath.row].getName()
+        
+        //add CragCell
         
         return cell
     }
@@ -53,6 +58,8 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
             let navVC = segue.destination as! UINavigationController
             let vc = navVC.viewControllers.first as! AreaDetailVC
             vc.area = areas[areaIndex]
+            
+            //add CragCell preparation
         }
     }
     
@@ -63,6 +70,8 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
         
 
         performSegue(withIdentifier: "MyAreasToArea", sender: cell)
+        
+        //add CragCell
     }
 
     func fetchAreas(){
@@ -82,6 +91,10 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
         if fetched != nil {
             areas = fetched!
         }
+    }
+    
+    func fetchCrags() {
+        //TODO
     }
     
 }
