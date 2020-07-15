@@ -32,9 +32,8 @@ class AreaDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         super.viewDidLoad()
         if area != nil {
             areaName.title = area!.getName()
-            if area!.getSubAreasAsArray() != nil {
-                self.subAreas = area!.getSubAreasAsArray()!
-            }
+            self.subAreas = area!.getSubAreasAsArray()
+            self.areaDescription.text = area!.getDescription()
         }
            // Do any additional setup after loading the view.
         
@@ -58,23 +57,28 @@ class AreaDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //TODO
-        if segue.destination is AreaDetailVC
-        {
-            let vc = segue.destination as? AreaDetailVC
-            vc?.area = subAreas[subIndex]
-        }
         if segue.identifier == "AreaToCrag"{
-            let b = segue.destination as! CragDetailVC
-            //b.element = self.randomElement
+            let navVC = segue.destination as! UINavigationController
+            let vc = navVC.viewControllers.first as! CragDetailVC
+            vc.crag = subAreas[subIndex] as? Crag
+        } else if segue.identifier == "AreaToArea"{
+            let navVC = segue.destination as! UINavigationController
+            let vc = navVC.viewControllers.first as! AreaDetailVC
+            vc.area = subAreas[subIndex]
         }
+        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
         tableView.deselectRow(at: indexPath, animated: true)
         subIndex = indexPath.row
-
-        performSegue(withIdentifier: "AreaToCrag", sender: cell)
+        
+        if type(of: subAreas[subIndex]) == Crag.self{
+            performSegue(withIdentifier: "AreaToCrag", sender: cell)
+        } else {
+            performSegue(withIdentifier: "AreaToArea", sender: cell)
+        }
     }
 }
  

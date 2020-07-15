@@ -10,7 +10,6 @@
         <!--Navigation Controller-->
         <scene sceneID="HwH-aX-1tq">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iVT-Qg-qTV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="F88-Tk-N0a" sceneMemberID="viewController">
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="umN-1Z-Qh8">
@@ -21,6 +20,7 @@
                         <segue destination="RSv-Ef-L6S" kind="relationship" relationship="rootViewController" id="fHm-9z-Cav"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iVT-Qg-qTV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-867" y="-31"/>
         </scene>
@@ -106,11 +106,12 @@
                         <outlet property="areaName" destination="qjD-ir-vua" id="6ay-uj-yx8"/>
                         <outlet property="subAreaTableView" destination="QpX-uB-f04" id="jM3-al-9ft"/>
                         <segue destination="4LG-Ye-de0" kind="show" identifier="AreaToCrag" id="Aos-0I-hue"/>
+                        <segue destination="8kn-O8-icL" kind="show" identifier="AreaToArea" id="dGR-OH-Vvu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ErD-QB-bpz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="102.89855072463769" y="-31.473214285714285"/>
+            <point key="canvasLocation" x="129" y="-31"/>
         </scene>
         <!--CragDetail-->
         <scene sceneID="vO0-bw-ZRZ">
@@ -120,7 +121,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6uY-AX-0aM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="742" y="-30"/>
+            <point key="canvasLocation" x="859" y="-66"/>
+        </scene>
+        <!--AreaDetail-->
+        <scene sceneID="L9t-2w-hYo">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AreaDetail" id="8kn-O8-icL" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="uEj-Ap-ge4"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bce-8r-Hgp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="859" y="3"/>
         </scene>
     </scenes>
 </document>

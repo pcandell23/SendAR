@@ -14,7 +14,7 @@ class SuggestedAreaCell: UITableViewCell, MKMapViewDelegate {
     
     var locationCheck: LocationChecker
     var userLocation: CLLocation
-    var area: Area
+    var crag: Crag? = nil
     let regionInMeters: Double = 100
     
     @IBOutlet var areaName: UILabel!
@@ -38,7 +38,6 @@ class SuggestedAreaCell: UITableViewCell, MKMapViewDelegate {
     required init?(coder aDecoder: NSCoder) {
         self.locationCheck = LocationChecker()
         self.userLocation = CLLocation()
-        self.area = Area()
         super.init(coder: aDecoder)
     }
     
@@ -46,9 +45,13 @@ class SuggestedAreaCell: UITableViewCell, MKMapViewDelegate {
         var proximityString: String = ""
         var proximityDouble: Double
         
-        if area.getFenceLatitude() != "" && area.getFenceLongitude() != "" {
-            let areaLatitude = Double(area.getFenceLatitude())!
-            let areaLongitude = Double(area.getFenceLongitude())!
+        if crag == nil {
+            return ""
+        }
+        
+        if crag!.getFenceLatitude() != "" && crag!.getFenceLongitude() != "" {
+            let areaLatitude = Double(crag!.getFenceLatitude())!
+            let areaLongitude = Double(crag!.getFenceLongitude())!
             let areaLocation = CLLocationCoordinate2DMake(areaLatitude, areaLongitude)
             
             let mapPoint1 = MKMapPoint.init(areaLocation)
@@ -62,9 +65,12 @@ class SuggestedAreaCell: UITableViewCell, MKMapViewDelegate {
     }
     
     func centerViewOnArea() {
-        if area.getFenceLatitude() != "" && area.getFenceLongitude() != "" {
-            let areaLatitude = Double(area.getFenceLatitude())!
-            let areaLongitude = Double(area.getFenceLongitude())!
+        if crag == nil {
+            return
+        }
+        if crag!.getFenceLatitude() != "" && crag!.getFenceLongitude() != "" {
+            let areaLatitude = Double(crag!.getFenceLatitude())!
+            let areaLongitude = Double(crag!.getFenceLongitude())!
             let areaLocation = CLLocationCoordinate2DMake(areaLatitude, areaLongitude)
             let region = MKCoordinateRegion.init(center: areaLocation, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
             areaMap.setRegion(region, animated: true)

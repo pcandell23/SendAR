@@ -20,20 +20,20 @@ public class Crag: Area {
         return routes
     }
     
-    func addRoute(newRoute: Route){
-        if routes != nil{
-            routes!.adding(newRoute)
+    func getRoutesAsArray() -> [Route]{
+        if routes != nil {
+            return routes!.allObjects as? [Route] ?? []
         } else {
-            routes = NSSet(array: [newRoute])
+            return []
         }
     }
     
-    func addRoutes(newRoutes: [Route]){
-        if routes != nil{
-            routes!.addingObjects(from: newRoutes)
-        } else {
-            routes = NSSet(array: newRoutes)
-        }
+    func addRoute(newRoute: Route){
+        addToRoutes(newRoute)
+    }
+    
+    func addRoutes(newRoutes: NSSet){
+        addToRoutes(newRoutes) 
     }
 }
  
@@ -47,10 +47,10 @@ extension Crag {
     @NSManaged public func removeFromRoutes(_ value: NSManagedObject)
  
     @objc(addRoutes:)
-    @NSManaged public func addToRoutes(_ values: [Route]) 
+    @NSManaged public func addToRoutes(_ values: NSSet)
  
     @objc(removeRoutes:)
-    @NSManaged public func removeFromRoutes(_ values: [Route])
+    @NSManaged public func removeFromRoutes(_ values: NSSet)
     
     // MARK: Fetch function
     // Save function is in parent Area

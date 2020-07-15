@@ -24,6 +24,7 @@ extension Route {
     @NSManaged public var rating: Double
     @NSManaged public var type: String?
     @NSManaged public var pitches: Int16
+    @NSManaged public var routeDescription: String?
     
     @NSManaged public var latitude: String?
     @NSManaged public var longitude: String?
@@ -82,6 +83,10 @@ extension Route {
         return altitude
     }
     
+    func getDescription() -> String{
+        return routeDescription ?? ""
+    }
+    
     func getUuid() -> UUID?{
         return uuid
     }
@@ -125,13 +130,18 @@ extension Route {
         self.altitude = newAltitude
     }
     
-    func setInitialValues(name: String? = nil, grade: String? = nil, rating: Double = 0.0, height: Int32 = 0, type: String? = nil, pitches: Int16 = 0, crag: Crag? = nil, latitude: String? = nil, longitude: String? = nil, altitude: Int16 = 0){
+    func setDescription(_ newDescription: String){
+        self.routeDescription = newDescription
+    }
+    
+    func setInitialValues(name: String? = nil, grade: String? = nil, rating: Double = 0.0, height: Int32 = 0, type: String? = nil, pitches: Int16 = 0, crag: Crag? = nil, latitude: String? = nil, longitude: String? = nil, altitude: Int16 = 0, description: String? = nil){
         self.name = name
         self.grade = grade
         self.rating = rating
         self.height = height
         self.pitches = pitches
         self.type = type
+        self.routeDescription = description
         
         self.crag = crag
         
