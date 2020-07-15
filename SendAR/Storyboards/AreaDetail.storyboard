@@ -102,6 +102,14 @@
             </objects>
             <point key="canvasLocation" x="102.89855072463769" y="-31.473214285714285"/>
         </scene>
+        <!--AreaDetail-->
+        <scene sceneID="mkG-SQ-SuH">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AreaDetail" id="bK1-jN-QZA" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y2W-io-4Kl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="742" y="-68"/>
+        </scene>
         <!--CragDetail-->
         <scene sceneID="vO0-bw-ZRZ">
             <objects>
