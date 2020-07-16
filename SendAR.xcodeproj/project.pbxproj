@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -55,6 +55,26 @@
 		9694583724BA6EAF0093D943 /* AreaDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9694583624BA6EAF0093D943 /* AreaDetail.storyboard */; };
 		9694583A24BA78390093D943 /* AreaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9694583924BA78390093D943 /* AreaCell.xib */; };
 		9694583C24BA784C0093D943 /* AreaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694583B24BA784C0093D943 /* AreaCell.swift */; };
+		96A642DB24C0E06300226EEC /* ARCL in Frameworks */ = {isa = PBXBuildFile; productRef = 96A642DA24C0E06300226EEC /* ARCL */; };
+		96A642E724C0E0ED00226EEC /* ARKit_CoreLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A642DF24C0E0EC00226EEC /* ARKit_CoreLocation.swift */; };
+		96A642E824C0E0ED00226EEC /* SceneLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A642E024C0E0EC00226EEC /* SceneLocationView.swift */; };
+		96A642EA24C0E0ED00226EEC /* SceneLocationViewEstimateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A642E224C0E0EC00226EEC /* SceneLocationViewEstimateDelegate.swift */; };
+		96A642EE24C0E0ED00226EEC /* SceneLocationView+ARSCNViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A642E624C0E0ED00226EEC /* SceneLocationView+ARSCNViewDelegate.swift */; };
+		96A642F424C0E2F700226EEC /* ScalingScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A642F024C0E2F600226EEC /* ScalingScheme.swift */; };
+		96A642F524C0E2F700226EEC /* LocationAnnotationNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A642F124C0E2F600226EEC /* LocationAnnotationNode.swift */; };
+		96A642F624C0E2F700226EEC /* LocationNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A642F224C0E2F700226EEC /* LocationNode.swift */; };
+		96A642F724C0E2F700226EEC /* PolylineNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A642F324C0E2F700226EEC /* PolylineNode.swift */; };
+		96A6430024C0E31800226EEC /* SCNVector3+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A642FA24C0E31700226EEC /* SCNVector3+Extensions.swift */; };
+		96A6430124C0E31800226EEC /* BaseTypes+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A642FB24C0E31700226EEC /* BaseTypes+Extensions.swift */; };
+		96A6430224C0E31800226EEC /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A642FC24C0E31700226EEC /* CGPoint+Extensions.swift */; };
+		96A6430324C0E31800226EEC /* CLLocation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A642FD24C0E31700226EEC /* CLLocation+Extensions.swift */; };
+		96A6430424C0E31800226EEC /* FloatingPoint+Radians.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A642FE24C0E31700226EEC /* FloatingPoint+Radians.swift */; };
+		96A6430524C0E31800226EEC /* SCNNode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A642FF24C0E31700226EEC /* SCNNode+Extensions.swift */; };
+		96A6430A24C0E32400226EEC /* SceneLocationEstimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6430624C0E32300226EEC /* SceneLocationEstimate.swift */; };
+		96A6430B24C0E32400226EEC /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6430724C0E32300226EEC /* LocationManager.swift */; };
+		96A6430C24C0E32400226EEC /* SceneLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6430824C0E32300226EEC /* SceneLocationManager.swift */; };
+		96A6430D24C0E32400226EEC /* SceneLocationEstimate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6430924C0E32400226EEC /* SceneLocationEstimate+Extensions.swift */; };
+		96A6431024C0E33B00226EEC /* AttributedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6430F24C0E33B00226EEC /* AttributedType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +149,25 @@
 		9694583624BA6EAF0093D943 /* AreaDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AreaDetail.storyboard; sourceTree = "<group>"; };
 		9694583924BA78390093D943 /* AreaCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AreaCell.xib; sourceTree = "<group>"; };
 		9694583B24BA784C0093D943 /* AreaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaCell.swift; sourceTree = "<group>"; };
+		96A642DF24C0E0EC00226EEC /* ARKit_CoreLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARKit_CoreLocation.swift; sourceTree = "<group>"; };
+		96A642E024C0E0EC00226EEC /* SceneLocationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneLocationView.swift; sourceTree = "<group>"; };
+		96A642E224C0E0EC00226EEC /* SceneLocationViewEstimateDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneLocationViewEstimateDelegate.swift; sourceTree = "<group>"; };
+		96A642E624C0E0ED00226EEC /* SceneLocationView+ARSCNViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SceneLocationView+ARSCNViewDelegate.swift"; sourceTree = "<group>"; };
+		96A642F024C0E2F600226EEC /* ScalingScheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScalingScheme.swift; sourceTree = "<group>"; };
+		96A642F124C0E2F600226EEC /* LocationAnnotationNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationAnnotationNode.swift; sourceTree = "<group>"; };
+		96A642F224C0E2F700226EEC /* LocationNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationNode.swift; sourceTree = "<group>"; };
+		96A642F324C0E2F700226EEC /* PolylineNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PolylineNode.swift; sourceTree = "<group>"; };
+		96A642FA24C0E31700226EEC /* SCNVector3+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNVector3+Extensions.swift"; sourceTree = "<group>"; };
+		96A642FB24C0E31700226EEC /* BaseTypes+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BaseTypes+Extensions.swift"; sourceTree = "<group>"; };
+		96A642FC24C0E31700226EEC /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extensions.swift"; sourceTree = "<group>"; };
+		96A642FD24C0E31700226EEC /* CLLocation+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocation+Extensions.swift"; sourceTree = "<group>"; };
+		96A642FE24C0E31700226EEC /* FloatingPoint+Radians.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FloatingPoint+Radians.swift"; sourceTree = "<group>"; };
+		96A642FF24C0E31700226EEC /* SCNNode+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNNode+Extensions.swift"; sourceTree = "<group>"; };
+		96A6430624C0E32300226EEC /* SceneLocationEstimate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneLocationEstimate.swift; sourceTree = "<group>"; };
+		96A6430724C0E32300226EEC /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		96A6430824C0E32300226EEC /* SceneLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneLocationManager.swift; sourceTree = "<group>"; };
+		96A6430924C0E32400226EEC /* SceneLocationEstimate+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SceneLocationEstimate+Extensions.swift"; sourceTree = "<group>"; };
+		96A6430F24C0E33B00226EEC /* AttributedType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +175,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96A642DB24C0E06300226EEC /* ARCL in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +275,7 @@
 				40EAA79924A8152400F41366 /* Assets.xcassets */,
 				40EAA79B24A8152400F41366 /* LaunchScreen.storyboard */,
 				40EAA79E24A8152400F41366 /* Info.plist */,
+				96A642DE24C0E0D500226EEC /* ARCL */,
 			);
 			path = SendAR;
 			sourceTree = "<group>";
@@ -288,6 +329,64 @@
 			path = DataTypes;
 			sourceTree = "<group>";
 		};
+		96A642DE24C0E0D500226EEC /* ARCL */ = {
+			isa = PBXGroup;
+			children = (
+				96A6430E24C0E33000226EEC /* ARCLUtil */,
+				96A642F924C0E30700226EEC /* ARCLLocationManager */,
+				96A642F824C0E2FA00226EEC /* ARCLExtensions */,
+				96A642EF24C0E2DC00226EEC /* ARCLnodes */,
+				96A642DF24C0E0EC00226EEC /* ARKit_CoreLocation.swift */,
+				96A642E024C0E0EC00226EEC /* SceneLocationView.swift */,
+				96A642E624C0E0ED00226EEC /* SceneLocationView+ARSCNViewDelegate.swift */,
+				96A642E224C0E0EC00226EEC /* SceneLocationViewEstimateDelegate.swift */,
+			);
+			path = ARCL;
+			sourceTree = "<group>";
+		};
+		96A642EF24C0E2DC00226EEC /* ARCLnodes */ = {
+			isa = PBXGroup;
+			children = (
+				96A642F124C0E2F600226EEC /* LocationAnnotationNode.swift */,
+				96A642F224C0E2F700226EEC /* LocationNode.swift */,
+				96A642F324C0E2F700226EEC /* PolylineNode.swift */,
+				96A642F024C0E2F600226EEC /* ScalingScheme.swift */,
+			);
+			path = ARCLnodes;
+			sourceTree = "<group>";
+		};
+		96A642F824C0E2FA00226EEC /* ARCLExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				96A642FB24C0E31700226EEC /* BaseTypes+Extensions.swift */,
+				96A642FC24C0E31700226EEC /* CGPoint+Extensions.swift */,
+				96A642FD24C0E31700226EEC /* CLLocation+Extensions.swift */,
+				96A642FE24C0E31700226EEC /* FloatingPoint+Radians.swift */,
+				96A642FF24C0E31700226EEC /* SCNNode+Extensions.swift */,
+				96A642FA24C0E31700226EEC /* SCNVector3+Extensions.swift */,
+			);
+			path = ARCLExtensions;
+			sourceTree = "<group>";
+		};
+		96A642F924C0E30700226EEC /* ARCLLocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				96A6430724C0E32300226EEC /* LocationManager.swift */,
+				96A6430624C0E32300226EEC /* SceneLocationEstimate.swift */,
+				96A6430924C0E32400226EEC /* SceneLocationEstimate+Extensions.swift */,
+				96A6430824C0E32300226EEC /* SceneLocationManager.swift */,
+			);
+			path = ARCLLocationManager;
+			sourceTree = "<group>";
+		};
+		96A6430E24C0E33000226EEC /* ARCLUtil */ = {
+			isa = PBXGroup;
+			children = (
+				96A6430F24C0E33B00226EEC /* AttributedType.swift */,
+			);
+			path = ARCLUtil;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -304,6 +403,9 @@
 			dependencies = (
 			);
 			name = SendAR;
+			packageProductDependencies = (
+				96A642DA24C0E06300226EEC /* ARCL */,
+			);
 			productName = FrontPageLayout;
 			productReference = 40EAA78D24A8152300F41366 /* SendAR.app */;
 			productType = "com.apple.product-type.application";
@@ -376,6 +478,9 @@
 				Base,
 			);
 			mainGroup = 40EAA78424A8152200F41366;
+			packageReferences = (
+				96A642D924C0E06300226EEC /* XCRemoteSwiftPackageReference "ARKit-CoreLocation" */,
+			);
 			productRefGroup = 40EAA78E24A8152300F41366 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -434,34 +539,53 @@
 			buildActionMask = 2147483647;
 			files = (
 				9694583124B69CF10093D943 /* SendARData.xcdatamodeld in Sources */,
+				96A6430324C0E31800226EEC /* CLLocation+Extensions.swift in Sources */,
 				4044391324BE8B8400CDB237 /* CragCell.swift in Sources */,
 				407A645C24AF963C006CDFCE /* LogRouteVC.swift in Sources */,
 				40C874DD24BA91EA00ED0214 /* AreaDetailVC.swift in Sources */,
 				405E556F24B57C9C00646237 /* SuggestedAreaCell.swift in Sources */,
+				96A6430224C0E31800226EEC /* CGPoint+Extensions.swift in Sources */,
 				401F9A5724B390900035428B /* LocationChecker.swift in Sources */,
+				96A6430024C0E31800226EEC /* SCNVector3+Extensions.swift in Sources */,
 				407A645A24AF8C83006CDFCE /* GreenButton.swift in Sources */,
 				961F056124AA64F8006DE4C5 /* MapVC.swift in Sources */,
+				96A642F424C0E2F700226EEC /* ScalingScheme.swift in Sources */,
 				407A646024AFA64F006CDFCE /* MapButton.swift in Sources */,
+				96A6430524C0E31800226EEC /* SCNNode+Extensions.swift in Sources */,
+				96A642F524C0E2F700226EEC /* LocationAnnotationNode.swift in Sources */,
 				9694582E24B571580093D943 /* Crag.swift in Sources */,
 				4010BDA324AFD7190082F7E2 /* RouteCell.swift in Sources */,
 				40EAF91D24B627C600CB7C08 /* Alert.swift in Sources */,
 				9694583C24BA784C0093D943 /* AreaCell.swift in Sources */,
+				96A642E724C0E0ED00226EEC /* ARKit_CoreLocation.swift in Sources */,
+				96A6430124C0E31800226EEC /* BaseTypes+Extensions.swift in Sources */,
 				40EAA79524A8152300F41366 /* ViewController.swift in Sources */,
 				961F055F24AA64E8006DE4C5 /* HomeVC.swift in Sources */,
+				96A642F624C0E2F700226EEC /* LocationNode.swift in Sources */,
+				96A6430424C0E31800226EEC /* FloatingPoint+Radians.swift in Sources */,
+				96A6431024C0E33B00226EEC /* AttributedType.swift in Sources */,
 				4087FA1024ABA33900723BCF /* ProfileVC.swift in Sources */,
 				9694583524B6A38A0093D943 /* DataController.swift in Sources */,
+				96A642EA24C0E0ED00226EEC /* SceneLocationViewEstimateDelegate.swift in Sources */,
 				40EAA79124A8152300F41366 /* AppDelegate.swift in Sources */,
 				40D845C924B030DD0028CDAE /* Tracker.swift in Sources */,
+				96A6430A24C0E32400226EEC /* SceneLocationEstimate.swift in Sources */,
 				40C874DB24BA910E00ED0214 /* CragDetailVC.swift in Sources */,
+				96A642E824C0E0ED00226EEC /* SceneLocationView.swift in Sources */,
 				40EAA79324A8152300F41366 /* SceneDelegate.swift in Sources */,
+				96A6430D24C0E32400226EEC /* SceneLocationEstimate+Extensions.swift in Sources */,
 				9694583024B571610093D943 /* Route.swift in Sources */,
 				961F056724AA66FC006DE4C5 /* SettingsVC.swift in Sources */,
 				404FDE1424AEA524006AA33E /* NearbyAreas.swift in Sources */,
+				96A6430B24C0E32400226EEC /* LocationManager.swift in Sources */,
 				4039FB7924B50F2C00D9F927 /* RouteDetailVC.swift in Sources */,
 				961F056324AA6517006DE4C5 /* MyAreasVC.swift in Sources */,
+				96A6430C24C0E32400226EEC /* SceneLocationManager.swift in Sources */,
 				40CE769C24B8EB0400CE3507 /* LogAreaVC.swift in Sources */,
 				9694582C24B571430093D943 /* Area.swift in Sources */,
+				96A642EE24C0E0ED00226EEC /* SceneLocationView+ARSCNViewDelegate.swift in Sources */,
 				961F056524AA658F006DE4C5 /* ARviewVC.swift in Sources */,
+				96A642F724C0E2F700226EEC /* PolylineNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -790,6 +914,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		96A642D924C0E06300226EEC /* XCRemoteSwiftPackageReference "ARKit-CoreLocation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ProjectDent/ARKit-CoreLocation.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		96A642DA24C0E06300226EEC /* ARCL */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 96A642D924C0E06300226EEC /* XCRemoteSwiftPackageReference "ARKit-CoreLocation" */;
+			productName = ARCL;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		9694581C24B56F7C0093D943 /* SendARData.xcdatamodeld */ = {
