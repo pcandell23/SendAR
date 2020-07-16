@@ -1,5 +1,5 @@
 //
-//  IndigoButton.swift
+//  GreenButton.swift
 //  SendAR
 //
 //  Created by Bennett Baker on 7/3/20.
@@ -8,7 +8,9 @@
 
 import UIKit
 
-class IndigoButton: UIButton {
+class GreenButton: UIButton {
+    
+    var sendARGreen = UIColor(red: 0.20, green: 0.66, blue: 0.32, alpha: 1.00) /* #32a852 */
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -25,7 +27,7 @@ class IndigoButton: UIButton {
         setShadow()
         setTitleColor(.white, for: .normal)
         
-        backgroundColor     = UIColor.systemIndigo
+        backgroundColor     = sendARGreen
         layer.cornerRadius  = 5
     }
     

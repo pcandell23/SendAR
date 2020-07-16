@@ -108,7 +108,6 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
     func centerViewOnUserLocation() {
         if let location = locationCheck.location?.coordinate {
             let region = MKCoordinateRegion.init(center: location, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
-            //Error below: Unexpectedly found nil while implicitly unwrapping an Optional Value
             if routeLocationMap != nil {
                 routeLocationMap.setRegion(region, animated: true)
             }

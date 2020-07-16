@@ -19,14 +19,14 @@ class SuggestedAreaCell: UITableViewCell, MKMapViewDelegate {
     
     @IBOutlet var areaName: UILabel!
     @IBOutlet var proximityToUser: UILabel!
-    @IBOutlet var areaMap: MKMapView!
+    //@IBOutlet var areaMap: MKMapView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         locationCheck.checkLocationServices()
         proximityToUser.text = getProximity()
-        centerViewOnArea()
+        //centerViewOnArea()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -58,12 +58,14 @@ class SuggestedAreaCell: UITableViewCell, MKMapViewDelegate {
             let mapPoint2 = MKMapPoint.init(userLocation.coordinate)
             
             proximityDouble = mapPoint1.distance(to: mapPoint2)
+            round(proximityDouble)
             proximityString = "\(String(proximityDouble)) m"
         }
         
         return proximityString
     }
     
+    /*
     func centerViewOnArea() {
         if crag == nil {
             return
@@ -76,5 +78,6 @@ class SuggestedAreaCell: UITableViewCell, MKMapViewDelegate {
             areaMap.setRegion(region, animated: true)
         }
     }
+ */
     
 }
