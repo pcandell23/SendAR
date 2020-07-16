@@ -25,6 +25,7 @@ class AreaDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     @IBOutlet weak var subAreaTableView: UITableView!
     
     var subAreas: [Area] = []
+    var crags: [Crag] = []
     var area: Area? = nil
     var subIndex: Int = 0
     
@@ -39,18 +40,22 @@ class AreaDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         
         let nib = UINib(nibName: "AreaCell", bundle: nil)
         subAreaTableView.register(nib, forCellReuseIdentifier: "AreaCell")
+        let cragNib = UINib(nibName: "CragCell", bundle: nil)
+        subAreaTableView.register(cragNib, forCellReuseIdentifier: "CragCell")
         subAreaTableView.delegate = self
         subAreaTableView.dataSource = self
        }
     
     //TableView Functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return subAreas.count
+        return subAreas.count + crags.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AreaCell", for: indexPath) as! AreaCell
         cell.areaName.text = subAreas[indexPath.row].getName()
+        
+        //add CragCell
         
         return cell
     }
@@ -67,12 +72,15 @@ class AreaDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
             vc.area = subAreas[subIndex]
         }
         
+        //add CragCell preparation
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
         tableView.deselectRow(at: indexPath, animated: true)
         subIndex = indexPath.row
+
+        performSegue(withIdentifier: "AreaToCrag", sender: cell)
         
         if type(of: subAreas[subIndex]) == Crag.self{
             performSegue(withIdentifier: "AreaToCrag", sender: cell)
