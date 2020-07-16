@@ -31,27 +31,33 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YlK-77-lLq">
                                 <rect key="frame" x="20" y="717" width="374" height="125"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBV-uh-xMa" customClass="IndigoButton" customModule="SendAR" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBV-uh-xMa" customClass="GreenButton" customModule="SendAR" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="35"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
-                                        <state key="normal" title="Confirm"/>
+                                        <state key="normal" title="Confirm">
+                                            <color key="titleColor" red="0.1960784314" green="0.6588235294" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="confirmButton:" destination="o5l-Op-Fdq" eventType="touchUpInside" id="UD6-I4-hhU"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="irN-QH-Z8W" customClass="IndigoButton" customModule="SendAR" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="irN-QH-Z8W" customClass="GreenButton" customModule="SendAR" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="45" width="374" height="35"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
-                                        <state key="normal" title="New Area"/>
+                                        <state key="normal" title="New Area">
+                                            <color key="titleColor" red="0.1960784314" green="0.6588235294" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="newAreaButton:" destination="o5l-Op-Fdq" eventType="touchUpInside" id="cj9-8a-3Tg"/>
                                             <segue destination="wHx-Z6-W7x" kind="show" id="mCT-gX-44o"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9J-rB-zxZ" customClass="IndigoButton" customModule="SendAR" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9J-rB-zxZ" customClass="GreenButton" customModule="SendAR" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="90" width="374" height="35"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
-                                        <state key="normal" title="Not Sure"/>
+                                        <state key="normal" title="Not Sure">
+                                            <color key="titleColor" red="0.1960784314" green="0.6588235294" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="notSureButton:" destination="o5l-Op-Fdq" eventType="touchUpInside" id="Mcv-Ew-Uyd"/>
                                         </connections>
@@ -101,6 +107,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="2rt-Q3-5ja">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.1960784314" green="0.6588235294" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="F6w-B0-Y7d" kind="relationship" relationship="rootViewController" id="9YT-zw-nnV"/>
@@ -127,13 +134,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXf-Nx-jgj" customClass="IndigoButton" customModule="SendAR" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXf-Nx-jgj" customClass="GreenButton" customModule="SendAR" customModuleProvider="target">
                                 <rect key="frame" x="20" y="778" width="374" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="ags-UW-Xmt"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
-                                <state key="normal" title="Confirm Location"/>
+                                <state key="normal" title="Confirm Location">
+                                    <color key="titleColor" red="0.1960784314" green="0.6588235294" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="confirmLocation:" destination="GHc-hm-50l" eventType="touchUpInside" id="9dA-7F-LBm"/>
                                     <segue destination="o5l-Op-Fdq" kind="show" id="xna-kb-Urk"/>
@@ -153,7 +162,7 @@
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scope" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="kav-TQ-bJN">
                                 <rect key="frame" x="177" y="428" width="60" height="62.5"/>
-                                <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.1960784314" green="0.6588235294" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="uBI-qd-KTN"/>
                                     <constraint firstAttribute="width" constant="60" id="xIJ-cc-Gyt"/>
@@ -310,13 +319,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idg-HP-bbe" customClass="IndigoButton" customModule="SendAR" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idg-HP-bbe" customClass="GreenButton" customModule="SendAR" customModuleProvider="target">
                                 <rect key="frame" x="20" y="718" width="374" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="cZ5-q7-p2A"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
-                                <state key="normal" title="Continue"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" red="0.1960784314" green="0.6588235294" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="saveRouteDetails:" destination="F6w-B0-Y7d" eventType="touchUpInside" id="A1B-Fb-u9W"/>
                                     <segue destination="GHc-hm-50l" kind="show" id="b6O-J7-9og"/>
