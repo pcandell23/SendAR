@@ -58,8 +58,10 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
             let navVC = segue.destination as! UINavigationController
             let vc = navVC.viewControllers.first as! AreaDetailVC
             vc.area = areas[areaIndex]
-            
-            //add CragCell preparation
+        } else if segue.identifier == "MyAreasToCrag"{
+            let navVC = segue.destination as! UINavigationController
+            let vc = navVC.viewControllers.first as! CragDetailVC
+            vc.crag = areas[areaIndex] as? Crag
         }
     }
     
@@ -68,6 +70,11 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.deselectRow(at: indexPath, animated: true)
         areaIndex = indexPath.row
         
+        if type(of: areas[areaIndex]) == Crag.self{
+            performSegue(withIdentifier: "MyAreasToCrag", sender: cell)
+        } else {
+            performSegue(withIdentifier: "MyAreasToArea", sender: cell)
+        }
 
         performSegue(withIdentifier: "MyAreasToArea", sender: cell)
         

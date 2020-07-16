@@ -115,7 +115,6 @@
                         <outlet property="routeGrade" destination="aZP-mv-kJ3" id="SzU-Nh-sDU"/>
                         <outlet property="routeImage" destination="BgH-41-rXA" id="EJR-Ee-fpC"/>
                         <outlet property="routeLocation" destination="YlT-kL-2HA" id="d53-1X-Npb"/>
-                        <outlet property="routeName" destination="YMk-Fv-iMK" id="lY4-8V-LGe"/>
                         <outlet property="routeRating" destination="xIn-aa-0wG" id="cEU-bJ-xIK"/>
                         <outlet property="routeShape" destination="qWK-wz-a2W" id="DUL-qw-x64"/>
                     </connections>

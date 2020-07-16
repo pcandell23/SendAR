@@ -33,6 +33,7 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
     var newRouteLongitude: String? = nil
     var newRouteAltitude: Int16 = 0
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //First Page Setup
@@ -40,9 +41,10 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
         //Second Page Setup
         
         //Third Page Setup
-        let nib = UINib(nibName: "SuggestedAreaCell", bundle: nil)
         
         if nearbyAreasTable != nil {
+            fetchNearbyCrags()
+            let nib = UINib(nibName: "SuggestedAreaCell", bundle: nil)
             nearbyAreasTable.register(nib, forCellReuseIdentifier: "SuggestedAreaCell")
             nearbyAreasTable.delegate = self
             nearbyAreasTable.dataSource = self
@@ -125,11 +127,12 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
         newRouteLatitude = routeLatitudeString
         newRouteLongitude = routeLongitudeString
         newRouteAltitude = Int16(routeAltitude)
+        
     }
     
     //MARK: - Third Page
-    let areas = ["Half Dome", "Road Cut", "Blackwall"]
-    let proximity = ["50 m", "150 mi", "200 mi"]
+    
+    var crags: [Crag] = []
     
     @IBOutlet weak var nearbyAreasTable: UITableView!
         //show all crags in X (small) radius, allow user to tap to select
@@ -172,16 +175,36 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return areas.count
+        return crags.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SuggestedAreaCell", for: indexPath) as! SuggestedAreaCell
-        cell.areaName.text = areas[indexPath.row]
-        cell.proximityToUser.text = proximity[indexPath.row]
+        cell.crag = crags[indexPath.row]
+        cell.areaName.text = crags[indexPath.row].getName()
+        cell.proximityToUser.text = cell.getProximity()
         
         return cell
     }
+    
+    func fetchNearbyCrags(){
+           let moc = delegate.dataController?.persistentContainer.viewContext
+           if moc == nil{
+               print("Failed to fetch crags.")
+               return
+           }
+           let requestCrags = NSFetchRequest<Crag>(entityName: "Crag")
+           var fetched: [Crag]?
+           do {
+               fetched = try moc?.fetch(requestCrags)
+           } catch {
+               print("Could not fetch. \(error)")
+           }
+           
+           if fetched != nil {
+               crags = fetched!
+           }
+       }
     
     
 }

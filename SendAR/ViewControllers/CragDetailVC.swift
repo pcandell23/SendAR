@@ -12,37 +12,29 @@ import MapKit
 class CragDetailVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, UITableViewDataSource {
 
     var cragName: String = "Crag Name"
-    var crag: Crag
-    var routesSet: NSSet
-    var routes: [Route]
+    var crag: Crag? = nil
+    var routes: [Route] = []
     
     @IBOutlet weak var cragDescription: UILabel!
     @IBOutlet weak var cragMap: MKMapView!
     @IBOutlet weak var routeTable: UITableView!
     
+    var routeIndex: Int  = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = cragName
+        
+        if crag != nil{
+            self.title = crag!.getName()
+            self.routes = crag!.getRoutesAsArray()
+            self.cragDescription.text = crag!.getDescription()
+        }
         
         let nib = UINib(nibName: "RouteCell", bundle: nil)
-        routeTable.register(nib, forCellReuseIdentifier: "Route Cell")
+        routeTable.register(nib, forCellReuseIdentifier: "RouteCell")
         routeTable.delegate = self
         routeTable.dataSource = self
         
-    }
-    
-    init(crag: Crag, routesSet: NSSet) {
-        self.crag = crag
-        self.routesSet = crag.getRoutes()!
-        self.routes = Array(_immutableCocoaArray: routesSet)
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        self.crag = Crag()
-        self.routesSet = crag.getRoutes()!
-        self.routes = Array(_immutableCocoaArray: routesSet)
-        super.init(coder: aDecoder)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -51,9 +43,11 @@ class CragDetailVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, UI
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RouteCell", for: indexPath) as! RouteCell
+        
         cell.routeName.text = routes[indexPath.row].getName()
         cell.routeGrade.text = routes[indexPath.row].getGrade()
         cell.routeType.text = routes[indexPath.row].getType() + " - " + String(routes[indexPath.row].getPitches()) + " Pitches"
+        
         let rating = routes[indexPath.row].getRating()
         if rating > 4 && rating <= 5 {
             cell.routeRating.text = "⭐️⭐️⭐️⭐️⭐️"
@@ -75,12 +69,17 @@ class CragDetailVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, UI
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //TODO
+        if segue.identifier == "CragToRoute"{
+            let navVC = segue.destination as! UINavigationController
+            let vc = navVC.viewControllers.first as! RouteDetailVC
+            vc.route = routes[routeIndex]
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
         tableView.deselectRow(at: indexPath, animated: true)
+        routeIndex = indexPath.row
 
         performSegue(withIdentifier: "CragToRoute", sender: cell)
     }

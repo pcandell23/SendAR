@@ -25,6 +25,7 @@ extension Area {
     @NSManaged public var fenceLongitude: String?
     @NSManaged public var fenceRadius: Int64
     @NSManaged public var uuid: UUID?
+    @NSManaged public var areaDescription: String?
     
     //Relationships
     @NSManaged public var subAreas: NSSet?
@@ -39,6 +40,10 @@ extension Area {
         return uuid
     }
     
+    func getDescription() -> String{
+        return areaDescription ?? ""
+    }
+    
     func getSuperArea() -> Area? {
         return superArea
     }
@@ -47,11 +52,11 @@ extension Area {
         return subAreas
     }
     
-    func getSubAreasAsArray() -> [Area]?{
+    func getSubAreasAsArray() -> [Area]{
         if subAreas != nil {
-            return subAreas!.allObjects as? [Area]
+            return subAreas!.allObjects as? [Area] ?? []
         } else {
-            return nil
+            return []
         }
     } 
     
@@ -112,6 +117,10 @@ extension Area {
         self.name = newName
     }
     
+    func setDescription(newDescription: String){
+        self.areaDescription = newDescription
+    }
+    
     func setSuperArea(newSuperArea: Area){
         self.superArea = newSuperArea
     }
@@ -128,8 +137,9 @@ extension Area {
         self.fenceRadius = newFenceRadius 
     }
     
-    func setInitialValues(name: String? = nil, fenceLatitude: String? = nil, fenceLongitude: String? = nil, fenceRadius: Int64 = 0, subAreas: NSSet? = nil, superArea: Area? = nil){
+    func setInitialValues(name: String? = nil, description: String? = nil, fenceLatitude: String? = nil, fenceLongitude: String? = nil, fenceRadius: Int64 = 0, subAreas: NSSet? = nil, superArea: Area? = nil){
         self.name = name
+        self.areaDescription = description
         self.fenceLatitude = fenceLatitude
         self.fenceLongitude = fenceLongitude
         self.fenceRadius = fenceRadius

@@ -10,7 +10,6 @@ import UIKit
 
 class RouteDetailVC: UIViewController {
 
-    var routeName: String = "Route Name"
     @IBOutlet weak var routeGrade: UILabel!
     @IBOutlet weak var routeRating: UILabel!
     @IBOutlet weak var routeDimensions: UILabel! //interpolated string of type, pitches and height
@@ -19,12 +18,20 @@ class RouteDetailVC: UIViewController {
     @IBOutlet weak var routeDescription: UILabel!
     @IBOutlet weak var routeLocation: UILabel!
     
-    
+    var route: Route? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = routeName
-        // Do any additional setup after loading the view.
+        
+        if route != nil {
+            self.title = route!.getName()
+            self.routeGrade.text = route!.getGrade()
+            self.routeRating.text = String(route!.getRating())
+            // TODO bennett idk how you want this to look
+            self.routeDimensions.text = route!.getType()
+            
+            self.routeDescription.text = route!.getDescription()
+        }
     }
     
 
