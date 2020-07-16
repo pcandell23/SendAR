@@ -45,6 +45,7 @@
                     <connections>
                         <outlet property="myAreasTableView" destination="cgZ-cq-XbB" id="G6W-36-Ms7"/>
                         <segue destination="IKo-1G-Vf1" kind="show" identifier="MyAreasToArea" id="KNF-J1-GP8"/>
+                        <segue destination="n4h-hr-N5B" kind="show" identifier="MyAreasToCrag" id="Pvu-JE-J0X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17h-SH-1xc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -54,12 +55,22 @@
         <!--AreaDetail-->
         <scene sceneID="TRy-wZ-OeX">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="coc-Q6-Bwm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="AreaDetail" id="IKo-1G-Vf1" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="rfh-Je-P7m"/>
                 </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="coc-Q6-Bwm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3004" y="25"/>
+            <point key="canvasLocation" x="2970" y="-15"/>
+        </scene>
+        <!--CragDetail-->
+        <scene sceneID="zgK-u2-BIN">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CragDetail" id="n4h-hr-N5B" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="fHY-h6-Ybo"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MfN-7o-P5Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2969" y="61"/>
         </scene>
         <!--My Areas-->
         <scene sceneID="sDv-b7-OTE">

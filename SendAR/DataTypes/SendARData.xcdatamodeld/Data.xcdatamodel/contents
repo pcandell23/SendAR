@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Area" representedClassName="Area" syncable="YES">
+        <attribute name="areaDescription" optional="YES" attributeType="String"/>
         <attribute name="fenceLatitude" optional="YES" attributeType="String"/>
         <attribute name="fenceLongitude" optional="YES" attributeType="String"/>
         <attribute name="fenceRadius" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
@@ -21,13 +22,14 @@
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="pitches" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="rating" optional="YES" attributeType="Double" minValueString="0" maxValueString="5" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="routeDescription" optional="YES" attributeType="String"/>
         <attribute name="type" optional="YES" attributeType="String"/>
         <attribute name="uuid" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <relationship name="crag" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Crag" inverseName="routes" inverseEntity="Crag"/>
     </entity>
     <elements>
-        <element name="Area" positionX="-63" positionY="-18" width="128" height="148"/>
+        <element name="Area" positionX="-63" positionY="-18" width="128" height="163"/>
         <element name="Crag" positionX="-54" positionY="-9" width="128" height="58"/>
-        <element name="Route" positionX="-36" positionY="9" width="128" height="208"/>
+        <element name="Route" positionX="-36" positionY="9" width="128" height="223"/>
     </elements>
 </model>
