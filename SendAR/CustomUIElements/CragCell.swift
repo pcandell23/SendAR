@@ -29,6 +29,8 @@ class CragCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        // Values must be set in the VC that contains the TableView to which this cell belongs.
+        /*
         if crag != nil {
             cragName.text = crag!.getName()
             cragProximity.text = getProximity()
@@ -45,6 +47,7 @@ class CragCell: UITableViewCell {
             numberOfRoutes.text = ""
             cragLocation.text = ""
         }
+ */
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

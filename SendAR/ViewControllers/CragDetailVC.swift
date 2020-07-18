@@ -46,7 +46,7 @@ class CragDetailVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, UI
         
         cell.routeName.text = routes[indexPath.row].getName()
         cell.routeGrade.text = routes[indexPath.row].getGrade()
-        cell.routeType.text = routes[indexPath.row].getType() + " - " + String(routes[indexPath.row].getPitches()) + " Pitches"
+        cell.routeType.text = routes[indexPath.row].getType() + " - " + String(routes[indexPath.row].getPitches()) + " Pitches, " + String(routes[indexPath.row].getAltitude()) + "ft"
         
         let rating = routes[indexPath.row].getRating()
         if rating > 4 && rating <= 5 {
@@ -59,10 +59,6 @@ class CragDetailVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, UI
             cell.routeRating.text = "⭐️⭐️"
         } else if rating > 0 {
             cell.routeRating.text = "⭐️"
-        }
-        
-        if routes[indexPath.row].getCrag() != nil {
-            cell.routeArea.text = routes[indexPath.row].getCrag()!.getName()
         }
         
         return cell

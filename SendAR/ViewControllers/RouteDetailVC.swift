@@ -26,10 +26,21 @@ class RouteDetailVC: UIViewController {
         if route != nil {
             self.title = route!.getName()
             self.routeGrade.text = route!.getGrade()
-            self.routeRating.text = String(route!.getRating())
-            // TODO bennett idk how you want this to look
-            self.routeDimensions.text = route!.getType()
             
+            let rating = route!.getRating()
+            if rating > 4 && rating <= 5 {
+                self.routeRating.text = "⭐️⭐️⭐️⭐️⭐️"
+            } else if rating > 3 {
+                self.routeRating.text = "⭐️⭐️⭐️⭐️"
+            } else if rating > 2 {
+                self.routeRating.text = "⭐️⭐️⭐️"
+            } else if rating > 1 {
+                self.routeRating.text = "⭐️⭐️"
+            } else if rating > 0 {
+                self.routeRating.text = "⭐️"
+            }
+            
+            self.routeDimensions.text = "\(route!.getType()), \(route!.getPitches()) pitches, \(route!.getAltitude()) feet"
             self.routeDescription.text = route!.getDescription()
         }
     }

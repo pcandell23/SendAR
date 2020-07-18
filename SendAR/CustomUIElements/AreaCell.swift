@@ -14,7 +14,6 @@ class AreaCell: UITableViewCell {
     @IBOutlet weak var areaName: UILabel!
     @IBOutlet weak var areaProximity: UILabel!
     @IBOutlet weak var cragsAndRoutes: UILabel!
-    @IBOutlet weak var areaLocation: UILabel!
     
     var area: Area?
     var userLocation: CLLocation
@@ -28,22 +27,26 @@ class AreaCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        // Values must be set in the VC that contains the TableView to which this cell belongs.
+        /*
         if area != nil {
             areaName.text = area!.getName()
             areaProximity.text = getProximity()
-            cragsAndRoutes.text = area!.getCragsAndRoutes()
-        
-            if area!.getSuperArea() != nil {
-                areaLocation.text = area!.getSuperArea()!.getName()
-            } else {
-                areaLocation.text = ""
+            
+            var numRoutes = 0
+            let subAreasArray = area!.getSubAreasAsArray()
+            for subArea in subAreasArray {
+                numRoutes += (subArea as AnyObject).count
             }
+            
+            cragsAndRoutes.text = "\(area!.subAreaCount()) Crags, \(numRoutes) Routes"
+        
         }else {
             areaName.text = ""
             areaProximity.text = ""
             cragsAndRoutes.text = ""
-            areaLocation.text = ""
         }
+ */
         
     }
 
@@ -71,7 +74,5 @@ class AreaCell: UITableViewCell {
         
         return proximityString
     }
-    
-    
     
 }
