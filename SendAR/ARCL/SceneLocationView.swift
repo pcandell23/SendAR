@@ -34,8 +34,9 @@ open class SceneLocationView: ARSCNView {
 	///  Useful when you have nodes that attach themselves to real world planes
     ///  See [Apple's documentation](https://developer.apple.com/documentation/arkit/arworldtrackingconfiguration#overview)
     public enum ARTrackingType {
-        case orientationTracking
         case worldTracking
+        case orientationTracking
+        
     }
 
     public weak var locationViewDelegate: SceneLocationViewDelegate?
@@ -192,7 +193,7 @@ public extension SceneLocationView {
         switch arTrackingType {
         case .worldTracking:
             let configuration = ARWorldTrackingConfiguration()
-            configuration.planeDetection = .horizontal
+            configuration.planeDetection = .vertical
             configuration.worldAlignment = orientToTrueNorth ? .gravityAndHeading : .gravity
             session.run(configuration)
 

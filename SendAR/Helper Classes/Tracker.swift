@@ -33,7 +33,7 @@ class Tracker {
     func startTracking() {
         data = "\(routeName)\nlat, long, alt, time, \(startTime)\n"
         
-        timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(self.recordPosition), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.recordPosition), userInfo: nil, repeats: true)
         
     }
     
@@ -51,7 +51,7 @@ class Tracker {
             data += "\(currentLocation.coordinate.latitude), \(currentLocation.coordinate.longitude), \(currentLocation.altitude), \(timeCount)\n"
         }
         
-        timeCount += 5
+        timeCount += 1
     }
     
     

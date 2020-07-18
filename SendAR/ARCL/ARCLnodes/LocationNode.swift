@@ -68,7 +68,7 @@ open class LocationNode: SCNNode {
     /// Whether a node's position and scale should be updated automatically on a continual basis.
     /// This should only be set to false if you plan to manually update position and scale
     /// at regular intervals. You can do this with `SceneLocationView`'s `updatePositionOfLocationNode`.
-    public var continuallyUpdatePositionAndScale = true
+    public var continuallyUpdatePositionAndScale = false
 
     /// Whether the node should be scaled relative to its distance from the camera
     /// Default value (false) scales it to visually appear at the same size no matter the distance
