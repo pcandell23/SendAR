@@ -21,7 +21,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S2F-db-LEm" userLabel="ContentView">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="860"/>
                                         <subviews>
-                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wQj-3t-yrD">
+                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="hybrid" translatesAutoresizingMaskIntoConstraints="NO" id="wQj-3t-yrD">
                                                 <rect key="frame" x="20" y="8" width="374" height="212"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="212" id="YVz-oC-X97"/>

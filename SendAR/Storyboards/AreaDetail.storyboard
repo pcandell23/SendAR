@@ -40,7 +40,7 @@
                                     <constraint firstAttribute="height" constant="243" id="2M9-Xl-XMC"/>
                                 </constraints>
                             </tableView>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Awg-dz-Umr">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="hybrid" translatesAutoresizingMaskIntoConstraints="NO" id="Awg-dz-Umr">
                                 <rect key="frame" x="20" y="192" width="374" height="236"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="236" id="1dg-33-lMv"/>

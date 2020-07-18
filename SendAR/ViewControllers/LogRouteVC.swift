@@ -84,7 +84,7 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
     
     var locationCheck: LocationChecker
     var locationGetterForAltitude: CLLocation
-    let regionInMeters: Double = 25
+    let regionInMeters: Double = 50
     
     var routeLatitude: Double = 0.0
     var routeLongitude: Double = 0.0
