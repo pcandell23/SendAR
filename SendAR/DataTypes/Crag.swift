@@ -28,6 +28,14 @@ public class Crag: Area {
         }
     }
     
+    func routeCount() -> Int {
+        var numRoutes = 0
+        if routes != nil {
+            numRoutes = getRoutesAsArray().count
+        }
+        return numRoutes
+    }
+    
     func addRoute(newRoute: Route){
         addToRoutes(newRoute)
     }

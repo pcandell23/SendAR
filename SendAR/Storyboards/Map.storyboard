@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZfW-1i-Xrj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZfW-1i-Xrj">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -99,11 +99,33 @@
                     <navigationItem key="navigationItem" title="Nearby Areas" id="eOY-bc-jzb"/>
                     <connections>
                         <outlet property="nearbyAreasTableView" destination="Xcy-xk-l01" id="KX4-wg-h9S"/>
+                        <segue destination="NE2-vx-NK1" kind="show" identifier="NearbyAreasToArea" id="NW9-Nv-rOh"/>
+                        <segue destination="mtr-o1-keK" kind="show" identifier="NearbyAreasToCrag" id="P6I-9U-f06"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yru-v3-IW3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2433" y="-287"/>
+        </scene>
+        <!--AreaDetail-->
+        <scene sceneID="O1Y-e9-hLL">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AreaDetail" id="NE2-vx-NK1" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="aun-hn-Ofz"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iZR-2d-Y1Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3119" y="-321"/>
+        </scene>
+        <!--CragDetail-->
+        <scene sceneID="kvG-Id-f2a">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CragDetail" id="mtr-o1-keK" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="EhL-QU-DZq"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yas-z8-ZNL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3121" y="-253"/>
         </scene>
         <!--Map-->
         <scene sceneID="Rz6-Ra-KAg">

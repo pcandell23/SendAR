@@ -36,8 +36,8 @@
                                     <outlet property="delegate" destination="X2p-p0-TYz" id="2Wj-n0-TJm"/>
                                 </connections>
                             </textField>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="hybrid" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D0r-KT-gvM">
-                                <rect key="frame" x="20" y="254" width="374" height="478"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="hybrid" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D0r-KT-gvM">
+                                <rect key="frame" x="0.0" y="254" width="414" height="478"/>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please select a location near the center of the Area." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Bz-BX-77s">
                                 <rect key="frame" x="20" y="740" width="374" height="18"/>

@@ -30,7 +30,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Proximity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nVu-Gr-ztl">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Proximity" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nVu-Gr-ztl">
                         <rect key="frame" x="229" y="14" width="71" height="21"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="71" id="TGn-hf-vxP"/>
@@ -55,6 +55,7 @@
             <connections>
                 <outlet property="areaName" destination="9eu-4O-Dx8" id="O3i-rb-BRU"/>
                 <outlet property="areaProximity" destination="nVu-Gr-ztl" id="Kp8-J9-d4N"/>
+                <outlet property="subAreasLabel" destination="1Bs-ch-PGp" id="Bpq-EB-JMJ"/>
             </connections>
             <point key="canvasLocation" x="89.855072463768124" y="124.55357142857142"/>
         </tableViewCell>

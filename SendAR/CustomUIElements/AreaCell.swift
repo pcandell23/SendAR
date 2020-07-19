@@ -13,7 +13,7 @@ class AreaCell: UITableViewCell {
     
     @IBOutlet weak var areaName: UILabel!
     @IBOutlet weak var areaProximity: UILabel!
-    @IBOutlet weak var cragsAndRoutes: UILabel!
+    @IBOutlet weak var subAreasLabel: UILabel!
     
     var area: Area?
     var userLocation: CLLocation

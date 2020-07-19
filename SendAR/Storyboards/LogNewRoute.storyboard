@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If this route belongs to a nearby area, select it and tap confirm." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9LX-rW-SGK">
-                                <rect key="frame" x="20" y="148" width="374" height="41"/>
+                                <rect key="frame" x="20" y="150" width="374" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="ynp-EX-sn5"/>
                                 </constraints>
@@ -25,7 +25,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AM3-y1-DwV">
-                                <rect key="frame" x="0.0" y="198" width="414" height="418"/>
+                                <rect key="frame" x="0.0" y="200" width="414" height="416"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YlK-77-lLq">
@@ -81,7 +81,7 @@
                             <constraint firstItem="YlK-77-lLq" firstAttribute="top" secondItem="pEi-5U-EeW" secondAttribute="bottom" constant="20" id="cAd-IK-SkT"/>
                             <constraint firstItem="YlK-77-lLq" firstAttribute="centerX" secondItem="hMn-Cw-x7p" secondAttribute="centerX" id="gE6-oF-HFL"/>
                             <constraint firstItem="pEi-5U-EeW" firstAttribute="top" secondItem="AM3-y1-DwV" secondAttribute="bottom" constant="20" id="gdk-BD-F1k"/>
-                            <constraint firstItem="9LX-rW-SGK" firstAttribute="top" secondItem="pEn-6k-SEp" secondAttribute="top" constant="8" id="hwu-ne-Lri"/>
+                            <constraint firstItem="9LX-rW-SGK" firstAttribute="top" secondItem="pEn-6k-SEp" secondAttribute="top" constant="10" id="hwu-ne-Lri"/>
                             <constraint firstItem="AM3-y1-DwV" firstAttribute="top" secondItem="9LX-rW-SGK" secondAttribute="bottom" constant="9" id="jCy-l1-3ua"/>
                             <constraint firstItem="pEi-5U-EeW" firstAttribute="leading" secondItem="pEn-6k-SEp" secondAttribute="leading" constant="20" id="jas-ck-XtG"/>
                             <constraint firstItem="pEn-6k-SEp" firstAttribute="trailing" secondItem="AM3-y1-DwV" secondAttribute="trailing" id="jz2-I7-77K"/>
@@ -169,7 +169,7 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="hybrid" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lGJ-vg-buK">
                                 <rect key="frame" x="0.0" y="208" width="414" height="507"/>
                             </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drag the map to refine location. Your position is shown for reference." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQV-Ur-AG7">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Move the map to refine location. Your position is shown for reference." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQV-Ur-AG7">
                                 <rect key="frame" x="20" y="720" width="374" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="tTB-L7-ZeM"/>
@@ -241,8 +241,8 @@
                                     <segue destination="GHc-hm-50l" kind="show" id="b6O-J7-9og"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To submit a new route to be added to the SendAR database, please begin by filling in some basic information below." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gro-cK-UvD">
-                                <rect key="frame" x="20" y="150" width="374" height="61"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="To submit a new route to be added to the SendAR database, please begin by filling in some basic information below." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gro-cK-UvD">
+                                <rect key="frame" x="20" y="150" width="374" height="66"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

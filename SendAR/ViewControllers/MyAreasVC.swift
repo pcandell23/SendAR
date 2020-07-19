@@ -17,6 +17,7 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     var areas: [Area] = []
     var crags: [Crag] = []
+    var areasAndCrags = [AnyObject]()
     
     var areaIndex: Int = 0
     
@@ -31,6 +32,13 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
         myAreasTableView.dataSource = self
         fetchAreas()
         
+        for each in areas {
+            areasAndCrags.append(each)
+        }
+        for each in crags {
+            areasAndCrags.append(each)
+        }
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -40,16 +48,34 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     //TableView Functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return areas.count + crags.count
+        return areasAndCrags.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "AreaCell", for: indexPath) as! AreaCell
-        cell.areaName.text = areas[indexPath.row].getName()
+        if self.areasAndCrags[indexPath.row] is Area  {
+            let areaCell = tableView.dequeueReusableCell(withIdentifier: "AreaCell", for: indexPath) as! AreaCell
+            
+            areaCell.areaName.text = (areasAndCrags[indexPath.row] as! Area).getName()
+            areaCell.areaProximity.text = "TODO"
+            if (areasAndCrags[indexPath.row] as! Area).subAreaCount() > 0 {
+                areaCell.subAreasLabel.text = String((areasAndCrags[indexPath.row] as! Area).subAreaCount()) + " sub-areas"
+            } else {
+                areaCell.subAreasLabel.text = "No sub-areas"
+            }
+            
+            return areaCell
+            
+        } else if self.areasAndCrags[indexPath.row] is Crag {
+            let cragCell = tableView.dequeueReusableCell(withIdentifier: "CragCell", for: indexPath) as! CragCell
+            
+            cragCell.cragName.text = (areasAndCrags[indexPath.row] as! Crag).getName()
+            cragCell.cragProximity.text = "TODO"
+            cragCell.numberOfRoutes.text = String((areasAndCrags[indexPath.row] as! Crag).routeCount())
+            
+            return cragCell
+        }
         
-        //add CragCell
-        
-        return cell
+        return UITableViewCell()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -77,8 +103,6 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
 
         performSegue(withIdentifier: "MyAreasToArea", sender: cell)
-        
-        //add CragCell
     }
 
     func fetchAreas(){
