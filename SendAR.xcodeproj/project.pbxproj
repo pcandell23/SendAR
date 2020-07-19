@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -55,7 +55,6 @@
 		9694583724BA6EAF0093D943 /* AreaDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9694583624BA6EAF0093D943 /* AreaDetail.storyboard */; };
 		9694583A24BA78390093D943 /* AreaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9694583924BA78390093D943 /* AreaCell.xib */; };
 		9694583C24BA784C0093D943 /* AreaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694583B24BA784C0093D943 /* AreaCell.swift */; };
-		96A642DB24C0E06300226EEC /* ARCL in Frameworks */ = {isa = PBXBuildFile; productRef = 96A642DA24C0E06300226EEC /* ARCL */; };
 		96A642E724C0E0ED00226EEC /* ARKit_CoreLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A642DF24C0E0EC00226EEC /* ARKit_CoreLocation.swift */; };
 		96A642E824C0E0ED00226EEC /* SceneLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A642E024C0E0EC00226EEC /* SceneLocationView.swift */; };
 		96A642EA24C0E0ED00226EEC /* SceneLocationViewEstimateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A642E224C0E0EC00226EEC /* SceneLocationViewEstimateDelegate.swift */; };
@@ -75,6 +74,7 @@
 		96A6430C24C0E32400226EEC /* SceneLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6430824C0E32300226EEC /* SceneLocationManager.swift */; };
 		96A6430D24C0E32400226EEC /* SceneLocationEstimate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6430924C0E32400226EEC /* SceneLocationEstimate+Extensions.swift */; };
 		96A6431024C0E33B00226EEC /* AttributedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6430F24C0E33B00226EEC /* AttributedType.swift */; };
+		96A6431324C4FBCB00226EEC /* SceneLocationViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6431224C4FBCB00226EEC /* SceneLocationViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,6 +168,7 @@
 		96A6430824C0E32300226EEC /* SceneLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneLocationManager.swift; sourceTree = "<group>"; };
 		96A6430924C0E32400226EEC /* SceneLocationEstimate+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SceneLocationEstimate+Extensions.swift"; sourceTree = "<group>"; };
 		96A6430F24C0E33B00226EEC /* AttributedType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedType.swift; sourceTree = "<group>"; };
+		96A6431224C4FBCB00226EEC /* SceneLocationViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneLocationViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,7 +176,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96A642DB24C0E06300226EEC /* ARCL in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +203,7 @@
 				40D845C824B030DD0028CDAE /* Tracker.swift */,
 				401F9A5624B390900035428B /* LocationChecker.swift */,
 				40EAF91C24B627C600CB7C08 /* Alert.swift */,
+				96A6431224C4FBCB00226EEC /* SceneLocationViewExtension.swift */,
 			);
 			path = "Helper Classes";
 			sourceTree = "<group>";
@@ -404,7 +405,6 @@
 			);
 			name = SendAR;
 			packageProductDependencies = (
-				96A642DA24C0E06300226EEC /* ARCL */,
 			);
 			productName = FrontPageLayout;
 			productReference = 40EAA78D24A8152300F41366 /* SendAR.app */;
@@ -479,7 +479,6 @@
 			);
 			mainGroup = 40EAA78424A8152200F41366;
 			packageReferences = (
-				96A642D924C0E06300226EEC /* XCRemoteSwiftPackageReference "ARKit-CoreLocation" */,
 			);
 			productRefGroup = 40EAA78E24A8152300F41366 /* Products */;
 			projectDirPath = "";
@@ -545,6 +544,7 @@
 				40C874DD24BA91EA00ED0214 /* AreaDetailVC.swift in Sources */,
 				405E556F24B57C9C00646237 /* SuggestedAreaCell.swift in Sources */,
 				96A6430224C0E31800226EEC /* CGPoint+Extensions.swift in Sources */,
+				96A6431324C4FBCB00226EEC /* SceneLocationViewExtension.swift in Sources */,
 				401F9A5724B390900035428B /* LocationChecker.swift in Sources */,
 				96A6430024C0E31800226EEC /* SCNVector3+Extensions.swift in Sources */,
 				407A645A24AF8C83006CDFCE /* GreenButton.swift in Sources */,
@@ -759,13 +759,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A3UJWUP8W2;
+				DEVELOPMENT_TEAM = 9B6C5XW645;
 				INFOPLIST_FILE = SendAR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.SendAR.SendARAlt2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SendAR.SendAR;
 				PRODUCT_NAME = SendAR;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -777,13 +777,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A3UJWUP8W2;
+				DEVELOPMENT_TEAM = 9B6C5XW645;
 				INFOPLIST_FILE = SendAR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.SendAR.SendARAlt2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SendAR.SendAR;
 				PRODUCT_NAME = SendAR;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -914,25 +914,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		96A642D924C0E06300226EEC /* XCRemoteSwiftPackageReference "ARKit-CoreLocation" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ProjectDent/ARKit-CoreLocation.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.3.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		96A642DA24C0E06300226EEC /* ARCL */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 96A642D924C0E06300226EEC /* XCRemoteSwiftPackageReference "ARKit-CoreLocation" */;
-			productName = ARCL;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		9694581C24B56F7C0093D943 /* SendARData.xcdatamodeld */ = {

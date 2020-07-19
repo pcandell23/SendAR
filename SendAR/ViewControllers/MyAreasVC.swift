@@ -33,13 +33,6 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
         myAreasTableView.dataSource = self
         fetchAreas()
         
-        for each in areas {
-            areasAndCrags.append(each)
-        }
-        for each in crags {
-            areasAndCrags.append(each)
-        }
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -53,7 +46,15 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if self.areasAndCrags[indexPath.row] is Area  {
+        if self.areasAndCrags[indexPath.row] is Crag {
+            let cragCell = tableView.dequeueReusableCell(withIdentifier: "CragCell", for: indexPath) as! CragCell
+            
+            cragCell.cragName.text = (areasAndCrags[indexPath.row] as! Crag).getName()
+            cragCell.cragProximity.text = cragCell.getProximity()
+            cragCell.numberOfRoutes.text = String((areasAndCrags[indexPath.row] as! Crag).routeCount()) + " routes"
+            
+            return cragCell
+        } else if self.areasAndCrags[indexPath.row] is Area  {
             let areaCell = tableView.dequeueReusableCell(withIdentifier: "AreaCell", for: indexPath) as! AreaCell
             
             areaCell.areaName.text = (areasAndCrags[indexPath.row] as! Area).getName()
@@ -66,14 +67,6 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
             
             return areaCell
             
-        } else if self.areasAndCrags[indexPath.row] is Crag {
-            let cragCell = tableView.dequeueReusableCell(withIdentifier: "CragCell", for: indexPath) as! CragCell
-            
-            cragCell.cragName.text = (areasAndCrags[indexPath.row] as! Crag).getName()
-            cragCell.cragProximity.text = cragCell.getProximity()
-            cragCell.numberOfRoutes.text = String((areasAndCrags[indexPath.row] as! Crag).routeCount())
-            
-            return cragCell
         }
         
         return UITableViewCell()
@@ -121,12 +114,8 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         
         if fetched != nil {
-            areas = fetched!
+            areasAndCrags = fetched!
         }
-    }
-    
-    func fetchCrags() {
-        //TODO
     }
     
 }
