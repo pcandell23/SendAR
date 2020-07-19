@@ -42,7 +42,13 @@ class RouteDetailVC: UIViewController {
             
             self.routeDimensions.text = "\(route!.getType()), \(route!.getPitches()) pitches, \(route!.getAltitude()) feet"
             self.routeDescription.text = route!.getDescription()
+            
         }
+    }
+    
+    override func viewWillLayoutSubviews() {
+        routeDescription.sizeToFit()
+        routeLocation.sizeToFit()
     }
     
 

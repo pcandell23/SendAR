@@ -71,7 +71,11 @@ class AreaDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         for each in crags {
             subAreasAndCrags.append(each)
         }
-       }
+    }
+    
+    override func viewWillLayoutSubviews() {
+        areaDescription.sizeToFit()
+    }
     
     //TableView Functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

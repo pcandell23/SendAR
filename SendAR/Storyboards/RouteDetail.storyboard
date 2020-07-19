@@ -58,7 +58,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Route Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h54-T9-lIT">
-                                <rect key="frame" x="0.0" y="645" width="414" height="31.5"/>
+                                <rect key="frame" x="0.0" y="473.5" width="414" height="31.5"/>
                                 <color key="backgroundColor" red="0.1960784314" green="0.6588235294" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31.5" id="4dG-Ir-9sd"/>
@@ -68,18 +68,18 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="placeholderplaceholderplaceholder" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kmk-je-wgy">
-                                <rect key="frame" x="20" y="437" width="374" height="200"/>
+                                <rect key="frame" x="20" y="437" width="374" height="20.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="bbL-nI-KHK"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="bbL-nI-KHK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="placeholderplaceholderplaceholder" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YlT-kL-2HA">
-                                <rect key="frame" x="20" y="684.5" width="374" height="50"/>
+                                <rect key="frame" x="20" y="513" width="374" height="20.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="dyP-DN-NaK"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="dyP-DN-NaK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -90,7 +90,7 @@
                         <constraints>
                             <constraint firstItem="BgH-41-rXA" firstAttribute="top" secondItem="Fu1-SO-i9v" secondAttribute="bottom" constant="8" id="3s5-Zd-UCH"/>
                             <constraint firstItem="xIn-aa-0wG" firstAttribute="baseline" secondItem="aZP-mv-kJ3" secondAttribute="baseline" id="4xU-hv-EZc"/>
-                            <constraint firstItem="h54-T9-lIT" firstAttribute="top" secondItem="Kmk-je-wgy" secondAttribute="bottom" constant="8" id="Cqk-x8-ZnJ"/>
+                            <constraint firstItem="h54-T9-lIT" firstAttribute="top" secondItem="Kmk-je-wgy" secondAttribute="bottom" constant="16" id="Cqk-x8-ZnJ"/>
                             <constraint firstItem="aZP-mv-kJ3" firstAttribute="leading" secondItem="14g-U0-rlm" secondAttribute="leading" constant="20" id="Eha-FO-NWx"/>
                             <constraint firstItem="Fu1-SO-i9v" firstAttribute="top" secondItem="aZP-mv-kJ3" secondAttribute="bottom" constant="8" id="HEI-wC-H5N"/>
                             <constraint firstItem="YlT-kL-2HA" firstAttribute="top" secondItem="h54-T9-lIT" secondAttribute="bottom" constant="8" id="J1q-Ng-oW5"/>
@@ -117,7 +117,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="14g-U0-rlm"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Route Name" id="YMk-Fv-iMK"/>
+                    <navigationItem key="navigationItem" title="Route Name" largeTitleDisplayMode="always" id="YMk-Fv-iMK"/>
                     <connections>
                         <outlet property="routeDescription" destination="Kmk-je-wgy" id="ui8-0L-nmR"/>
                         <outlet property="routeDimensions" destination="Fu1-SO-i9v" id="3nQ-BI-mmG"/>

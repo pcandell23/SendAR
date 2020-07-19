@@ -53,6 +53,10 @@ class CragDetailVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, UI
         
     }
     
+    override func viewWillLayoutSubviews() {
+        cragDescription.sizeToFit()
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return routes.count
     }
