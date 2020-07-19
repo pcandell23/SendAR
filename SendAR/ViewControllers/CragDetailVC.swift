@@ -18,8 +18,24 @@ class CragDetailVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, UI
     @IBOutlet weak var cragDescription: UILabel!
     @IBOutlet weak var cragMap: MKMapView!
     @IBOutlet weak var routeTable: UITableView!
+    @IBOutlet weak var noLocationLabel: UILabel!
     
     var routeIndex: Int  = 0
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        centerViewOnCragLocation()
+    }
+    
+    func centerViewOnCragLocation() {
+        if crag?.getFenceCoordinates() != nil {
+            let cragLocation = CLLocationCoordinate2D(latitude: crag!.getFenceLatitudeDouble(), longitude: crag!.getFenceLongitudeDouble())
+            let cragRegion = MKCoordinateRegion.init(center: cragLocation, latitudinalMeters: 2500, longitudinalMeters: 2500)
+            cragMap.setRegion(cragRegion, animated: true)
+            noLocationLabel.text = ""
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +53,10 @@ class CragDetailVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, UI
         
     }
     
+    override func viewWillLayoutSubviews() {
+        cragDescription.sizeToFit()
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return routes.count
     }
@@ -46,7 +66,7 @@ class CragDetailVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, UI
         
         cell.routeName.text = routes[indexPath.row].getName()
         cell.routeGrade.text = routes[indexPath.row].getGrade()
-        cell.routeType.text = routes[indexPath.row].getType() + " - " + String(routes[indexPath.row].getPitches()) + " Pitches"
+        cell.routeType.text = routes[indexPath.row].getType() + " - " + String(routes[indexPath.row].getPitches()) + " Pitches, " + String(routes[indexPath.row].getAltitude()) + "ft"
         
         let rating = routes[indexPath.row].getRating()
         if rating > 4 && rating <= 5 {
@@ -59,10 +79,6 @@ class CragDetailVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, UI
             cell.routeRating.text = "⭐️⭐️"
         } else if rating > 0 {
             cell.routeRating.text = "⭐️"
-        }
-        
-        if routes[indexPath.row].getCrag() != nil {
-            cell.routeArea.text = routes[indexPath.row].getCrag()!.getName()
         }
         
         return cell

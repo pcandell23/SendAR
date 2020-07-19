@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class CragCell: UITableViewCell {
+class CragCell: UITableViewCell, MKMapViewDelegate {
     
     @IBOutlet weak var cragName: UILabel!
     @IBOutlet weak var cragProximity: UILabel!
@@ -29,22 +29,7 @@ class CragCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        if crag != nil {
-            cragName.text = crag!.getName()
-            cragProximity.text = getProximity()
-            numberOfRoutes.text = String(crag!.getRoutes()!.count)
-        
-            if crag!.getSuperArea() != nil {
-                cragLocation.text = crag!.getSuperArea()!.getName()
-            } else {
-                cragLocation.text = ""
-            }
-        }else {
-            cragName.text = ""
-            cragProximity.text = ""
-            numberOfRoutes.text = ""
-            cragLocation.text = ""
-        }
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -56,6 +41,10 @@ class CragCell: UITableViewCell {
     func getProximity() -> String {
         var proximityString: String = ""
         var proximityDouble: Double
+        
+        if crag == nil {
+            return "N/A"
+        }
         
         if crag!.getFenceLatitude() != "" && crag!.getFenceLongitude() != "" {
             let cragLatitude = Double(crag!.getFenceLatitude())!

@@ -26,7 +26,6 @@ class SuggestedAreaCell: UITableViewCell, MKMapViewDelegate {
         // Initialization code
         locationCheck.checkLocationServices()
         proximityToUser.text = getProximity()
-        //centerViewOnArea()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -46,7 +45,7 @@ class SuggestedAreaCell: UITableViewCell, MKMapViewDelegate {
         var proximityDouble: Double
         
         if crag == nil {
-            return ""
+            return "N/A"
         }
         
         if crag!.getFenceLatitude() != "" && crag!.getFenceLongitude() != "" {
@@ -64,20 +63,5 @@ class SuggestedAreaCell: UITableViewCell, MKMapViewDelegate {
         
         return proximityString
     }
-    
-    /*
-    func centerViewOnArea() {
-        if crag == nil {
-            return
-        }
-        if crag!.getFenceLatitude() != "" && crag!.getFenceLongitude() != "" {
-            let areaLatitude = Double(crag!.getFenceLatitude())!
-            let areaLongitude = Double(crag!.getFenceLongitude())!
-            let areaLocation = CLLocationCoordinate2DMake(areaLatitude, areaLongitude)
-            let region = MKCoordinateRegion.init(center: areaLocation, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
-            areaMap.setRegion(region, animated: true)
-        }
-    }
- */
     
 }

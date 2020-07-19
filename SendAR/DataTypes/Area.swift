@@ -68,6 +68,14 @@ extension Area {
         return fenceLongitude ?? ""
     }
     
+    func getFenceLatitudeDouble() -> Double {
+        return Double(getFenceLatitude()) ?? 0
+    }
+    
+    func getFenceLongitudeDouble() -> Double {
+        return Double(getFenceLongitude()) ?? 0
+    }
+    
     func getFenceRadius() -> Int64 {
         return fenceRadius
     }
@@ -75,30 +83,6 @@ extension Area {
     // TODO: Fix this to return the correct format for needs.
     func getFenceCoordinates() -> String {
         return ""
-    }
-    
-
-    //currently not used
-    func getCragsAndRoutes() -> String {
-        var cragsAndRoutes: String = ""
-        var numCrags = 0
-        var numRoutes = 0
-        
-        if let subAreaArray = subAreas {
-            for _ in subAreaArray {
-                numCrags += 1
-            }
-            cragsAndRoutes += "\(numCrags) Crags, "
-        }
-        
-        if let subAreaArray = subAreas {
-            for subArea in subAreaArray {
-                numRoutes += (subArea as AnyObject).count
-            }
-            cragsAndRoutes += "\(numRoutes) Routes"
-        }
-        
-        return cragsAndRoutes
     }
     
     func subAreaCount() -> Int {
