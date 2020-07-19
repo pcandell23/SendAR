@@ -51,7 +51,7 @@ class NearbyAreasViewController: UIViewController, UITableViewDelegate, UITableV
             let areaCell = tableView.dequeueReusableCell(withIdentifier: "AreaCell", for: indexPath) as! AreaCell
             
             areaCell.areaName.text = (nearbyAreasAndCrags[indexPath.row] as! Area).getName()
-            areaCell.areaProximity.text = "TODO"
+            areaCell.areaProximity.text = areaCell.getProximity()
             if (nearbyAreasAndCrags[indexPath.row] as! Area).subAreaCount() > 0 {
                 areaCell.subAreasLabel.text = String((nearbyAreasAndCrags[indexPath.row] as! Area).subAreaCount()) + " sub-areas"
             } else {
@@ -64,7 +64,7 @@ class NearbyAreasViewController: UIViewController, UITableViewDelegate, UITableV
             let cragCell = tableView.dequeueReusableCell(withIdentifier: "CragCell", for: indexPath) as! CragCell
             
             cragCell.cragName.text = (nearbyAreasAndCrags[indexPath.row] as! Crag).getName()
-            cragCell.cragProximity.text = "TODO"
+            cragCell.cragProximity.text = cragCell.getProximity()
             cragCell.numberOfRoutes.text = String((nearbyAreasAndCrags[indexPath.row] as! Crag).routeCount())
             
             return cragCell
