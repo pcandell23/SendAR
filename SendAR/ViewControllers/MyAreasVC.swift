@@ -8,8 +8,9 @@
 
 import UIKit
 import CoreData
+import MapKit
 
-class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MKMapViewDelegate {
     
     @IBOutlet var myAreasTableView: UITableView!
     
@@ -56,7 +57,7 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
             let areaCell = tableView.dequeueReusableCell(withIdentifier: "AreaCell", for: indexPath) as! AreaCell
             
             areaCell.areaName.text = (areasAndCrags[indexPath.row] as! Area).getName()
-            areaCell.areaProximity.text = "TODO"
+            areaCell.areaProximity.text = areaCell.getProximity()
             if (areasAndCrags[indexPath.row] as! Area).subAreaCount() > 0 {
                 areaCell.subAreasLabel.text = String((areasAndCrags[indexPath.row] as! Area).subAreaCount()) + " sub-areas"
             } else {
@@ -69,7 +70,7 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
             let cragCell = tableView.dequeueReusableCell(withIdentifier: "CragCell", for: indexPath) as! CragCell
             
             cragCell.cragName.text = (areasAndCrags[indexPath.row] as! Crag).getName()
-            cragCell.cragProximity.text = "TODO"
+            cragCell.cragProximity.text = cragCell.getProximity()
             cragCell.numberOfRoutes.text = String((areasAndCrags[indexPath.row] as! Crag).routeCount())
             
             return cragCell

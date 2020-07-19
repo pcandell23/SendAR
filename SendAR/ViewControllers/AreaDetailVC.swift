@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import MapKit
 
 class AreaNavC: UINavigationController{
     var area: Area? = nil
@@ -18,11 +19,13 @@ class AreaNavC: UINavigationController{
     
 }
 
-class AreaDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class AreaDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource, MKMapViewDelegate {
     
     @IBOutlet weak var areaName: UINavigationItem!
     @IBOutlet weak var areaDescription: UILabel!
     @IBOutlet weak var subAreaTableView: UITableView!
+    @IBOutlet weak var areaMap: MKMapView!
+    @IBOutlet weak var noLocationLabel: UILabel!
     
     var subAreas: [Area] = []
     var crags: [Crag] = []
@@ -30,6 +33,22 @@ class AreaDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     var subIndex: Int = 0
     var subAreasAndCrags = [AnyObject]()
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        centerViewOnAreaLocation()
+    }
+    
+    //Check if the area has a location; centers map on area
+    func centerViewOnAreaLocation() {
+        if area?.getFenceCoordinates() != nil {
+            let areaLocation = CLLocationCoordinate2D(latitude: (area?.getFenceLatitudeDouble())!, longitude: (area?.getFenceLongitudeDouble())!)
+            let areaRegion = MKCoordinateRegion.init(center: areaLocation, latitudinalMeters: 7500, longitudinalMeters: 7500)
+            areaMap.setRegion(areaRegion, animated: true)
+            noLocationLabel.text = ""
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         if area != nil {
@@ -64,7 +83,7 @@ class AreaDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
             let areaCell = tableView.dequeueReusableCell(withIdentifier: "AreaCell", for: indexPath) as! AreaCell
             
             areaCell.areaName.text = (subAreasAndCrags[indexPath.row] as! Area).getName()
-            areaCell.areaProximity.text = "TODO"
+            areaCell.areaProximity.text = areaCell.getProximity()
             if (subAreasAndCrags[indexPath.row] as! Area).subAreaCount() > 0 {
                 areaCell.subAreasLabel.text = String((subAreasAndCrags[indexPath.row] as! Area).subAreaCount()) + " sub-areas"
             } else {
@@ -77,7 +96,7 @@ class AreaDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
             let cragCell = tableView.dequeueReusableCell(withIdentifier: "CragCell", for: indexPath) as! CragCell
             
             cragCell.cragName.text = (subAreasAndCrags[indexPath.row] as! Crag).getName()
-            cragCell.cragProximity.text = "TODO"
+            cragCell.cragProximity.text = cragCell.getProximity()
             cragCell.numberOfRoutes.text = String((subAreasAndCrags[indexPath.row] as! Crag).routeCount())
             
             return cragCell
@@ -112,4 +131,3 @@ class AreaDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         }
     }
 }
- 

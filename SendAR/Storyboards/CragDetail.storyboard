@@ -60,16 +60,26 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="No Location Data Available" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEL-9F-hr9">
+                                                <rect key="frame" x="132" y="103" width="151" height="15"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <size key="shadowOffset" width="1" height="1"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="Vef-uq-alY" firstAttribute="top" secondItem="oMy-HU-s4b" secondAttribute="bottom" constant="8" id="09M-QK-pmn"/>
+                                            <constraint firstItem="YEL-9F-hr9" firstAttribute="centerX" secondItem="wQj-3t-yrD" secondAttribute="centerX" id="1B1-xA-eVa"/>
                                             <constraint firstItem="9Wv-Tg-TgY" firstAttribute="top" secondItem="Vef-uq-alY" secondAttribute="bottom" constant="8" id="2Uw-MG-dWD"/>
                                             <constraint firstItem="Nri-a8-nXS" firstAttribute="top" secondItem="9Wv-Tg-TgY" secondAttribute="bottom" id="Ca7-iZ-wOx"/>
                                             <constraint firstItem="wQj-3t-yrD" firstAttribute="trailing" secondItem="oMy-HU-s4b" secondAttribute="trailing" id="D64-fQ-DP7"/>
                                             <constraint firstItem="oMy-HU-s4b" firstAttribute="top" secondItem="wQj-3t-yrD" secondAttribute="bottom" id="LT0-ee-drh"/>
                                             <constraint firstAttribute="trailing" secondItem="Nri-a8-nXS" secondAttribute="trailing" id="R28-Hm-1DX"/>
                                             <constraint firstItem="wQj-3t-yrD" firstAttribute="leading" secondItem="oMy-HU-s4b" secondAttribute="leading" id="RWU-wX-INU"/>
+                                            <constraint firstItem="YEL-9F-hr9" firstAttribute="centerY" secondItem="wQj-3t-yrD" secondAttribute="centerY" id="WOX-fx-K3g"/>
                                             <constraint firstAttribute="trailing" secondItem="oMy-HU-s4b" secondAttribute="trailing" id="Z1r-6h-mbq"/>
                                             <constraint firstItem="oMy-HU-s4b" firstAttribute="leading" secondItem="S2F-db-LEm" secondAttribute="leading" id="aaM-XK-hsX"/>
                                             <constraint firstItem="Vef-uq-alY" firstAttribute="leading" secondItem="S2F-db-LEm" secondAttribute="leading" constant="20" id="anG-d8-Sot"/>
@@ -109,6 +119,7 @@
                     <connections>
                         <outlet property="cragDescription" destination="Vef-uq-alY" id="aA1-zs-Sgb"/>
                         <outlet property="cragMap" destination="wQj-3t-yrD" id="sOe-aX-sra"/>
+                        <outlet property="noLocationLabel" destination="YEL-9F-hr9" id="hmr-OF-r0P"/>
                         <outlet property="routeTable" destination="Nri-a8-nXS" id="oPZ-lm-6Mn"/>
                         <segue destination="8De-BF-aTM" kind="show" identifier="CragToRoute" id="cAt-Zk-esA"/>
                     </connections>

@@ -68,6 +68,14 @@ extension Area {
         return fenceLongitude ?? ""
     }
     
+    func getFenceLatitudeDouble() -> Double {
+        return Double(getFenceLatitude()) ?? 0
+    }
+    
+    func getFenceLongitudeDouble() -> Double {
+        return Double(getFenceLongitude()) ?? 0
+    }
+    
     func getFenceRadius() -> Int64 {
         return fenceRadius
     }

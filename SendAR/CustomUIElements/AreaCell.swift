@@ -17,16 +17,21 @@ class AreaCell: UITableViewCell {
     
     var area: Area?
     var userLocation: CLLocation
+    var locationCheck: LocationChecker
     
     required init?(coder aDecoder: NSCoder) {
         self.area = nil
         self.userLocation = CLLocation()
+        self.locationCheck = LocationChecker()
         super.init(coder: aDecoder)
     }
       
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        locationCheck.checkLocationServices()
+        areaProximity.text = getProximity()
+        
         // Values must be set in the VC that contains the TableView to which this cell belongs.
         /*
         if area != nil {
@@ -59,6 +64,10 @@ class AreaCell: UITableViewCell {
     func getProximity() -> String {
         var proximityString: String = ""
         var proximityDouble: Double
+        
+        if area == nil {
+            return "N/A"
+        }
         
         if area!.getFenceLatitude() != "" && area!.getFenceLongitude() != "" {
             let areaLatitude = Double(area!.getFenceLatitude())!

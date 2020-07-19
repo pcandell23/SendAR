@@ -75,17 +75,27 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Location Data Available" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIo-j0-ZTS">
+                                <rect key="frame" x="131" y="250.5" width="152" height="15"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="3Ym-QU-dH4" firstAttribute="trailing" secondItem="eLj-m7-Kef" secondAttribute="trailing" id="4vP-Tf-JhX"/>
                             <constraint firstItem="uVq-g3-mu4" firstAttribute="top" secondItem="Awg-dz-Umr" secondAttribute="bottom" id="571-aB-KUL"/>
+                            <constraint firstItem="gIo-j0-ZTS" firstAttribute="centerY" secondItem="Awg-dz-Umr" secondAttribute="centerY" id="9Rs-GP-JCy"/>
                             <constraint firstItem="SXp-bN-gbO" firstAttribute="leading" secondItem="eLj-m7-Kef" secondAttribute="leading" constant="20" id="DwS-e9-VzE"/>
                             <constraint firstItem="QpX-uB-f04" firstAttribute="trailing" secondItem="3Ym-QU-dH4" secondAttribute="trailing" id="GX5-A1-cze"/>
                             <constraint firstItem="QpX-uB-f04" firstAttribute="bottom" secondItem="eLj-m7-Kef" secondAttribute="bottom" id="HeU-Nn-VKK"/>
                             <constraint firstItem="uVq-g3-mu4" firstAttribute="leading" secondItem="eLj-m7-Kef" secondAttribute="leading" id="J5W-FQ-bxu"/>
                             <constraint firstItem="uVq-g3-mu4" firstAttribute="top" secondItem="Loz-UQ-N9P" secondAttribute="top" constant="376" id="LlD-QF-jlj"/>
                             <constraint firstAttribute="trailing" secondItem="SXp-bN-gbO" secondAttribute="trailing" constant="20" id="NjX-Fi-7oW"/>
+                            <constraint firstItem="gIo-j0-ZTS" firstAttribute="centerX" secondItem="Awg-dz-Umr" secondAttribute="centerX" id="OLW-iX-9rt"/>
                             <constraint firstItem="eLj-m7-Kef" firstAttribute="trailing" secondItem="uVq-g3-mu4" secondAttribute="trailing" id="PIy-6n-OWj"/>
                             <constraint firstItem="QpX-uB-f04" firstAttribute="leading" secondItem="SXp-bN-gbO" secondAttribute="leading" constant="-20" id="XxQ-WV-JIo"/>
                             <constraint firstItem="QpX-uB-f04" firstAttribute="leading" secondItem="Awg-dz-Umr" secondAttribute="leading" id="iN2-xj-awp"/>
@@ -102,7 +112,9 @@
                     <navigationItem key="navigationItem" title="Area Name" id="qjD-ir-vua"/>
                     <connections>
                         <outlet property="areaDescription" destination="SXp-bN-gbO" id="mqk-EE-tUh"/>
+                        <outlet property="areaMap" destination="Awg-dz-Umr" id="BUs-LI-ZKT"/>
                         <outlet property="areaName" destination="qjD-ir-vua" id="6ay-uj-yx8"/>
+                        <outlet property="noLocationLabel" destination="gIo-j0-ZTS" id="Wha-RR-PZi"/>
                         <outlet property="subAreaTableView" destination="QpX-uB-f04" id="jM3-al-9ft"/>
                         <segue destination="4LG-Ye-de0" kind="show" identifier="AreaToCrag" id="Aos-0I-hue"/>
                         <segue destination="8kn-O8-icL" kind="show" identifier="AreaToArea" id="dGR-OH-Vvu"/>

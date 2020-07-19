@@ -18,8 +18,24 @@ class CragDetailVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, UI
     @IBOutlet weak var cragDescription: UILabel!
     @IBOutlet weak var cragMap: MKMapView!
     @IBOutlet weak var routeTable: UITableView!
+    @IBOutlet weak var noLocationLabel: UILabel!
     
     var routeIndex: Int  = 0
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        centerViewOnCragLocation()
+    }
+    
+    func centerViewOnCragLocation() {
+        if crag?.getFenceCoordinates() != nil {
+            let cragLocation = CLLocationCoordinate2D(latitude: crag!.getFenceLatitudeDouble(), longitude: crag!.getFenceLongitudeDouble())
+            let cragRegion = MKCoordinateRegion.init(center: cragLocation, latitudinalMeters: 2500, longitudinalMeters: 2500)
+            cragMap.setRegion(cragRegion, animated: true)
+            noLocationLabel.text = ""
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
