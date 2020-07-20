@@ -22,6 +22,7 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
     @IBOutlet weak var routeHeight: UITextField!
     @IBOutlet weak var routePitches: UITextField!
     @IBOutlet weak var routeRating: UITextField!
+    @IBOutlet weak var routeDescription: UITextField!
     
     var newRouteName: String? = nil
     var newRouteGrade: String? = nil
@@ -32,6 +33,7 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
     var newRouteLatitude: String? = nil
     var newRouteLongitude: String? = nil
     var newRouteAltitude: Int16 = 0
+    var newRouteDescription: String? = nil
     
     
     override func viewDidLoad() {
@@ -68,6 +70,8 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
             newRouteRating = 0.0
         }
         
+        newRouteDescription = routeDescription.text
+        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -76,6 +80,7 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
         routeType.resignFirstResponder()
         routePitches.resignFirstResponder()
         routeRating.resignFirstResponder()
+        routeDescription.resignFirstResponder()
         return true
     }
     
@@ -144,11 +149,11 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
     
     @IBAction func newAreaButton(_ sender: Any) {
         //To LogAreaVC
+        storeNewRouteInfo()
+        //confirming a new area should add it to the list of areas
     }
     
     @IBAction func notSureButton(_ sender: Any) {
-        //save route without explicit area
-        //save closest crag(s) info
         storeNewRouteInfo()
         dismiss(animated: true, completion: nil)
     }
@@ -158,7 +163,7 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
         
         let newRoute = NSEntityDescription.insertNewObject(forEntityName: "Route", into: delegate.dataController!.persistentContainer.viewContext) as! Route
         
-        newRoute.setInitialValues(name: newRouteName, grade: newRouteGrade, rating: newRouteRating, height: newRouteHeight, type: newRouteType, pitches: newRoutePitches, crag: crag, latitude: newRouteLatitude, longitude: newRouteLongitude, altitude: newRouteAltitude) 
+        newRoute.setInitialValues(name: newRouteName, grade: newRouteGrade, rating: newRouteRating, height: newRouteHeight, type: newRouteType, pitches: newRoutePitches, crag: crag, latitude: newRouteLatitude, longitude: newRouteLongitude, altitude: newRouteAltitude, description: newRouteDescription)
         
         delegate.dataController!.saveContext()
     }
@@ -166,9 +171,9 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
     // TODO finish this method once board in created
     func storeNewCragInfo(route: Route){
         let newCrag = NSEntityDescription.insertNewObject(forEntityName: "Crag", into: delegate.dataController!.persistentContainer.viewContext) as! Crag
-        
-        //Blank for now but once it is set up values can be added
+    
         newCrag.setInitialValues()
+        //change this to the method with parameters so that it saves the data
         
         delegate.dataController!.saveContext()
     }

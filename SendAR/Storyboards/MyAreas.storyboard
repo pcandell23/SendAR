@@ -34,8 +34,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="myAreasTableView" destination="cgZ-cq-XbB" id="G6W-36-Ms7"/>
-                        <segue destination="IKo-1G-Vf1" kind="show" identifier="MyAreasToArea" id="KNF-J1-GP8"/>
-                        <segue destination="n4h-hr-N5B" kind="show" identifier="MyAreasToCrag" id="Pvu-JE-J0X"/>
+                        <segue destination="IKo-1G-Vf1" kind="presentation" identifier="MyAreasToArea" modalPresentationStyle="fullScreen" id="KNF-J1-GP8"/>
+                        <segue destination="n4h-hr-N5B" kind="presentation" identifier="MyAreasToCrag" modalPresentationStyle="fullScreen" id="Pvu-JE-J0X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17h-SH-1xc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

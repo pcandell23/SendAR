@@ -10,26 +10,19 @@
         <!--Navigation Controller-->
         <scene sceneID="HwH-aX-1tq">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iVT-Qg-qTV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="F88-Tk-N0a" sceneMemberID="viewController">
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="umN-1Z-Qh8">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.1960784314" green="0.6588235294" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.1960784314" green="0.6588235294" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" red="0.1960784314" green="0.6588235294" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
-                        <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="RSv-Ef-L6S" kind="relationship" relationship="rootViewController" id="fHm-9z-Cav"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iVT-Qg-qTV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-867" y="-31"/>
         </scene>
@@ -112,15 +105,21 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eLj-m7-Kef"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Area Name" id="qjD-ir-vua"/>
+                    <navigationItem key="navigationItem" title="Area Name" id="qjD-ir-vua">
+                        <barButtonItem key="leftBarButtonItem" title="Back" image="chevron.left" catalog="system" id="TKP-pk-RFw">
+                            <connections>
+                                <action selector="dismissVCButton:" destination="RSv-Ef-L6S" id="Cn9-qm-yyG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="areaDescription" destination="SXp-bN-gbO" id="mqk-EE-tUh"/>
                         <outlet property="areaMap" destination="Awg-dz-Umr" id="BUs-LI-ZKT"/>
                         <outlet property="areaName" destination="qjD-ir-vua" id="6ay-uj-yx8"/>
                         <outlet property="noLocationLabel" destination="gIo-j0-ZTS" id="Wha-RR-PZi"/>
                         <outlet property="subAreaTableView" destination="QpX-uB-f04" id="jM3-al-9ft"/>
-                        <segue destination="4LG-Ye-de0" kind="show" identifier="AreaToCrag" id="Aos-0I-hue"/>
-                        <segue destination="8kn-O8-icL" kind="show" identifier="AreaToArea" id="dGR-OH-Vvu"/>
+                        <segue destination="4LG-Ye-de0" kind="presentation" identifier="AreaToCrag" modalPresentationStyle="fullScreen" id="Aos-0I-hue"/>
+                        <segue destination="8kn-O8-icL" kind="presentation" identifier="AreaToArea" modalPresentationStyle="fullScreen" id="dGR-OH-Vvu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ErD-QB-bpz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -148,4 +147,7 @@
             <point key="canvasLocation" x="859" y="3"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
+    </resources>
 </document>

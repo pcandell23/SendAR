@@ -109,7 +109,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qzH-5u-cku" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3925" y="-388"/>
+            <point key="canvasLocation" x="3881" y="-608"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5xr-8Z-7P2">
@@ -228,7 +228,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idg-HP-bbe" customClass="GreenButton" customModule="SendAR" customModuleProvider="target">
-                                <rect key="frame" x="20" y="718" width="374" height="44"/>
+                                <rect key="frame" x="20" y="778" width="374" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="cZ5-q7-p2A"/>
                                 </constraints>
@@ -241,8 +241,8 @@
                                     <segue destination="GHc-hm-50l" kind="show" id="b6O-J7-9og"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="To submit a new route to be added to the SendAR database, please begin by filling in some basic information below." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gro-cK-UvD">
-                                <rect key="frame" x="20" y="150" width="374" height="66"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To submit a new route to be added to the SendAR database, please begin by filling in some basic information below." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gro-cK-UvD">
+                                <rect key="frame" x="20" y="150" width="374" height="61"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -280,7 +280,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbW-aL-lYN">
-                                <rect key="frame" x="20" y="315.5" width="94" height="21"/>
+                                <rect key="frame" x="20" y="316" width="94" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="94" id="kru-hJ-GLI"/>
                                 </constraints>
@@ -302,7 +302,7 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AaL-yX-NwQ">
-                                <rect key="frame" x="20" y="369.5" width="94" height="21"/>
+                                <rect key="frame" x="20" y="370" width="94" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="94" id="dEY-A3-e3V"/>
                                 </constraints>
@@ -324,7 +324,7 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CDp-SQ-eZi">
-                                <rect key="frame" x="20" y="423.5" width="94" height="20.5"/>
+                                <rect key="frame" x="20" y="423.5" width="94" height="21.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="94" id="WKc-a4-GaB"/>
                                 </constraints>
@@ -333,7 +333,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Of-Q4-hzj" userLabel="Route Pitches">
-                                <rect key="frame" x="134" y="470.5" width="260" height="34"/>
+                                <rect key="frame" x="134" y="471" width="260" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="260" id="UtY-hj-JYM"/>
                                     <constraint firstAttribute="height" constant="34" id="sSE-YZ-i86"/>
@@ -346,7 +346,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Out of 5 stars" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WBR-qw-Vgg" userLabel="Route Rating">
-                                <rect key="frame" x="134" y="524.5" width="260" height="34"/>
+                                <rect key="frame" x="134" y="525" width="260" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="BZO-uX-DnR"/>
                                     <constraint firstAttribute="height" constant="34" id="PKr-zH-iRK"/>
@@ -359,7 +359,7 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pitches" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIg-gf-FSy">
-                                <rect key="frame" x="20" y="477" width="94" height="20.5"/>
+                                <rect key="frame" x="20" y="478" width="94" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20.5" id="LpH-O3-TDB"/>
                                     <constraint firstAttribute="width" constant="94" id="NW6-gy-Ahg"/>
@@ -369,10 +369,34 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5K-Rz-k00">
-                                <rect key="frame" x="20" y="531" width="94" height="20.5"/>
+                                <rect key="frame" x="20" y="532" width="94" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20.5" id="m1u-BE-8Rq"/>
                                     <constraint firstAttribute="width" constant="94" id="uoG-3F-tZS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z38-ds-Uja" userLabel="Route Rating">
+                                <rect key="frame" x="134" y="579" width="260" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="Dky-F3-CXc"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="34" id="VNa-Uj-osp"/>
+                                    <constraint firstAttribute="height" constant="34" id="c6Q-7F-r3c"/>
+                                    <constraint firstAttribute="width" constant="260" id="qUV-t6-0Ar"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="F6w-B0-Y7d" id="nX0-ML-dk6"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Up-yh-Zup">
+                                <rect key="frame" x="20" y="586" width="94" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20.5" id="eFo-nV-l8g"/>
+                                    <constraint firstAttribute="width" constant="94" id="kTT-df-eOD"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -387,32 +411,38 @@
                             <constraint firstItem="sIg-gf-FSy" firstAttribute="centerY" secondItem="5Of-Q4-hzj" secondAttribute="centerY" id="3bt-GD-zbb"/>
                             <constraint firstItem="d5K-Rz-k00" firstAttribute="centerY" secondItem="WBR-qw-Vgg" secondAttribute="centerY" id="3q8-uF-Csy"/>
                             <constraint firstItem="xla-6W-DN2" firstAttribute="top" secondItem="yUo-yi-e74" secondAttribute="bottom" constant="20" id="3r1-HF-U3E"/>
+                            <constraint firstItem="7Up-yh-Zup" firstAttribute="leading" secondItem="iQb-d3-PXs" secondAttribute="leading" constant="20" id="4FC-4h-T6R"/>
                             <constraint firstItem="yUo-yi-e74" firstAttribute="leading" secondItem="B9U-uY-ajr" secondAttribute="trailing" constant="20" id="4dn-L8-5kg"/>
                             <constraint firstItem="HOG-YH-S7m" firstAttribute="leading" secondItem="CDp-SQ-eZi" secondAttribute="trailing" constant="20" id="5u6-uw-3a3"/>
+                            <constraint firstItem="7Up-yh-Zup" firstAttribute="centerY" secondItem="z38-ds-Uja" secondAttribute="centerY" id="6xf-dc-f4U"/>
                             <constraint firstItem="5Of-Q4-hzj" firstAttribute="leading" secondItem="sIg-gf-FSy" secondAttribute="trailing" constant="20" id="8aB-8M-fMK"/>
+                            <constraint firstItem="iQb-d3-PXs" firstAttribute="trailing" secondItem="z38-ds-Uja" secondAttribute="trailing" constant="20" id="AuO-WT-RsQ"/>
                             <constraint firstItem="iQb-d3-PXs" firstAttribute="trailing" secondItem="5Of-Q4-hzj" secondAttribute="trailing" constant="20" id="G7i-1G-KVG"/>
                             <constraint firstItem="jO0-5z-Jzl" firstAttribute="leading" secondItem="AaL-yX-NwQ" secondAttribute="trailing" constant="20" id="GRF-5B-iPz"/>
                             <constraint firstItem="iQb-d3-PXs" firstAttribute="trailing" secondItem="jO0-5z-Jzl" secondAttribute="trailing" constant="20" id="IBA-cr-zOM"/>
                             <constraint firstItem="CDp-SQ-eZi" firstAttribute="centerY" secondItem="HOG-YH-S7m" secondAttribute="centerY" id="J4X-fN-gAU"/>
                             <constraint firstItem="sIg-gf-FSy" firstAttribute="top" secondItem="CDp-SQ-eZi" secondAttribute="bottom" constant="33" id="Lrc-Mb-HU8"/>
                             <constraint firstItem="CDp-SQ-eZi" firstAttribute="top" secondItem="AaL-yX-NwQ" secondAttribute="bottom" constant="33" id="NNG-uQ-opV"/>
+                            <constraint firstItem="z38-ds-Uja" firstAttribute="leading" secondItem="7Up-yh-Zup" secondAttribute="trailing" constant="20" id="ON5-hr-Qyy"/>
                             <constraint firstItem="iQb-d3-PXs" firstAttribute="trailing" secondItem="yUo-yi-e74" secondAttribute="trailing" constant="20" id="Qm7-Qi-AOL"/>
                             <constraint firstItem="Gro-cK-UvD" firstAttribute="leading" secondItem="iQb-d3-PXs" secondAttribute="leading" constant="20" id="RwR-ea-QkD"/>
                             <constraint firstItem="B9U-uY-ajr" firstAttribute="top" secondItem="iQb-d3-PXs" secondAttribute="top" constant="122" id="Tlv-Wu-aEt"/>
                             <constraint firstItem="idg-HP-bbe" firstAttribute="leading" secondItem="iQb-d3-PXs" secondAttribute="leading" constant="20" id="Uaj-rj-fnb"/>
-                            <constraint firstItem="sIg-gf-FSy" firstAttribute="top" secondItem="ZnJ-ak-kT2" secondAttribute="top" constant="477" id="VOo-Lo-eDj"/>
                             <constraint firstItem="B9U-uY-ajr" firstAttribute="leading" secondItem="iQb-d3-PXs" secondAttribute="leading" constant="20" id="WYv-au-QdF"/>
                             <constraint firstItem="sIg-gf-FSy" firstAttribute="leading" secondItem="iQb-d3-PXs" secondAttribute="leading" constant="20" id="Y3v-wm-i1g"/>
-                            <constraint firstItem="iQb-d3-PXs" firstAttribute="bottom" secondItem="idg-HP-bbe" secondAttribute="bottom" constant="100" id="ZZE-h7-Ol5"/>
+                            <constraint firstItem="iQb-d3-PXs" firstAttribute="bottom" secondItem="idg-HP-bbe" secondAttribute="bottom" constant="40" id="ZZE-h7-Ol5"/>
                             <constraint firstItem="xla-6W-DN2" firstAttribute="leading" secondItem="xbW-aL-lYN" secondAttribute="trailing" constant="20" id="bfa-Sj-2iH"/>
                             <constraint firstItem="yUo-yi-e74" firstAttribute="top" secondItem="iQb-d3-PXs" secondAttribute="top" constant="115" id="c7q-0P-Qli"/>
                             <constraint firstItem="WBR-qw-Vgg" firstAttribute="leading" secondItem="d5K-Rz-k00" secondAttribute="trailing" constant="20" id="exA-Em-sUu"/>
                             <constraint firstItem="AaL-yX-NwQ" firstAttribute="top" secondItem="xbW-aL-lYN" secondAttribute="bottom" constant="33" id="g7w-js-Bsf"/>
+                            <constraint firstItem="z38-ds-Uja" firstAttribute="top" secondItem="WBR-qw-Vgg" secondAttribute="bottom" constant="20" id="hhI-Dv-Fwu"/>
                             <constraint firstItem="d5K-Rz-k00" firstAttribute="leading" secondItem="iQb-d3-PXs" secondAttribute="leading" constant="20" id="iMT-fZ-WWQ"/>
                             <constraint firstItem="iQb-d3-PXs" firstAttribute="trailing" secondItem="Gro-cK-UvD" secondAttribute="trailing" constant="20" id="iuv-29-1jF"/>
                             <constraint firstItem="sIg-gf-FSy" firstAttribute="leading" secondItem="AaL-yX-NwQ" secondAttribute="leading" id="kjg-yH-94R"/>
+                            <constraint firstItem="5Of-Q4-hzj" firstAttribute="top" secondItem="HOG-YH-S7m" secondAttribute="bottom" constant="20" id="kte-4n-530"/>
                             <constraint firstItem="iQb-d3-PXs" firstAttribute="trailing" secondItem="WBR-qw-Vgg" secondAttribute="trailing" constant="20" id="lMh-yk-fp4"/>
                             <constraint firstItem="jO0-5z-Jzl" firstAttribute="top" secondItem="xla-6W-DN2" secondAttribute="bottom" constant="20" id="pKv-cc-NjH"/>
+                            <constraint firstItem="HOG-YH-S7m" firstAttribute="top" secondItem="jO0-5z-Jzl" secondAttribute="bottom" constant="20" id="qIE-aK-IGS"/>
                             <constraint firstItem="iQb-d3-PXs" firstAttribute="trailing" secondItem="idg-HP-bbe" secondAttribute="trailing" constant="20" id="qIQ-O6-HuC"/>
                             <constraint firstItem="Gro-cK-UvD" firstAttribute="top" secondItem="iQb-d3-PXs" secondAttribute="top" constant="10" id="qQo-wY-nCb"/>
                             <constraint firstItem="jO0-5z-Jzl" firstAttribute="top" secondItem="xla-6W-DN2" secondAttribute="bottom" constant="20" id="swo-l0-QWa"/>
@@ -429,6 +459,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="SnF-xz-g0D"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="routeDescription" destination="z38-ds-Uja" id="1wc-1C-EvS"/>
                         <outlet property="routeGrade" destination="xla-6W-DN2" id="uMA-2o-abB"/>
                         <outlet property="routeHeight" destination="HOG-YH-S7m" id="zMK-K0-FSP"/>
                         <outlet property="routeName" destination="yUo-yi-e74" id="Ra9-iM-Teh"/>

@@ -19,7 +19,6 @@ class SuggestedAreaCell: UITableViewCell, MKMapViewDelegate {
     
     @IBOutlet var areaName: UILabel!
     @IBOutlet var proximityToUser: UILabel!
-    //@IBOutlet var areaMap: MKMapView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
