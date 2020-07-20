@@ -26,6 +26,9 @@ class AreaDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     @IBOutlet weak var subAreaTableView: UITableView!
     @IBOutlet weak var areaMap: MKMapView!
     @IBOutlet weak var noLocationLabel: UILabel!
+    @IBAction func dismissVCButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     var subAreas: [Area] = []
     var crags: [Crag] = []

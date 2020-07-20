@@ -19,6 +19,9 @@ class CragDetailVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, UI
     @IBOutlet weak var cragMap: MKMapView!
     @IBOutlet weak var routeTable: UITableView!
     @IBOutlet weak var noLocationLabel: UILabel!
+    @IBAction func dismissVCButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     var routeIndex: Int  = 0
     
