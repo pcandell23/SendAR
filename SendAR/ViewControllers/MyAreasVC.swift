@@ -18,7 +18,7 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     var areas: [Area] = []
     var crags: [Crag] = []
-    var areasAndCrags = [AnyObject]()
+    var areasAndCrags = [Area]()
     
     var areaIndex: Int = 0
     
@@ -54,13 +54,13 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
             cragCell.numberOfRoutes.text = String((areasAndCrags[indexPath.row] as! Crag).routeCount()) + " routes"
             
             return cragCell
-        } else if self.areasAndCrags[indexPath.row] is Area  {
+        } else {
             let areaCell = tableView.dequeueReusableCell(withIdentifier: "AreaCell", for: indexPath) as! AreaCell
             
-            areaCell.areaName.text = (areasAndCrags[indexPath.row] as! Area).getName()
+            areaCell.areaName.text = (areasAndCrags[indexPath.row] ).getName()
             areaCell.areaProximity.text = areaCell.getProximity()
-            if (areasAndCrags[indexPath.row] as! Area).subAreaCount() > 0 {
-                areaCell.subAreasLabel.text = String((areasAndCrags[indexPath.row] as! Area).subAreaCount()) + " sub-areas"
+            if (areasAndCrags[indexPath.row] ).subAreaCount() > 0 {
+                areaCell.subAreasLabel.text = String((areasAndCrags[indexPath.row] ).subAreaCount()) + " sub-areas"
             } else {
                 areaCell.subAreasLabel.text = "No sub-areas"
             }
@@ -68,8 +68,6 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
             return areaCell
             
         }
-        
-        return UITableViewCell()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -77,11 +75,11 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
         if segue.identifier == "MyAreasToArea"{
             let navVC = segue.destination as! UINavigationController
             let vc = navVC.viewControllers.first as! AreaDetailVC
-            vc.area = areas[areaIndex]
+            vc.area = areasAndCrags[areaIndex]
         } else if segue.identifier == "MyAreasToCrag"{
             let navVC = segue.destination as! UINavigationController
             let vc = navVC.viewControllers.first as! CragDetailVC
-            vc.crag = areas[areaIndex] as? Crag
+            vc.crag = areasAndCrags[areaIndex] as? Crag
         }
     }
     
@@ -90,7 +88,7 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.deselectRow(at: indexPath, animated: true)
         areaIndex = indexPath.row
         
-        if type(of: areas[areaIndex]) == Crag.self{
+        if type(of: areasAndCrags[areaIndex]) == Crag.self{
             performSegue(withIdentifier: "MyAreasToCrag", sender: cell)
         } else {
             performSegue(withIdentifier: "MyAreasToArea", sender: cell)

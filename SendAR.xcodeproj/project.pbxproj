@@ -47,6 +47,7 @@
 		961F056324AA6517006DE4C5 /* MyAreasVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961F056224AA6517006DE4C5 /* MyAreasVC.swift */; };
 		961F056524AA658F006DE4C5 /* ARviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961F056424AA658F006DE4C5 /* ARviewVC.swift */; };
 		961F056724AA66FC006DE4C5 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961F056624AA66FC006DE4C5 /* SettingsVC.swift */; };
+		967A62F524C614DF00890267 /* areaCragRouteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967A62F424C614DF00890267 /* areaCragRouteTests.swift */; };
 		9694582C24B571430093D943 /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694582B24B571430093D943 /* Area.swift */; };
 		9694582E24B571580093D943 /* Crag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694582D24B571580093D943 /* Crag.swift */; };
 		9694583024B571610093D943 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694582F24B571610093D943 /* Route.swift */; };
@@ -141,6 +142,7 @@
 		961F056224AA6517006DE4C5 /* MyAreasVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAreasVC.swift; sourceTree = "<group>"; };
 		961F056424AA658F006DE4C5 /* ARviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARviewVC.swift; sourceTree = "<group>"; };
 		961F056624AA66FC006DE4C5 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		967A62F424C614DF00890267 /* areaCragRouteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = areaCragRouteTests.swift; sourceTree = "<group>"; };
 		9694581D24B56F7C0093D943 /* Data.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Data.xcdatamodel; sourceTree = "<group>"; };
 		9694582B24B571430093D943 /* Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
 		9694582D24B571580093D943 /* Crag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crag.swift; sourceTree = "<group>"; };
@@ -286,6 +288,7 @@
 			children = (
 				40EAA7A724A8152400F41366 /* FrontPageLayoutTests.swift */,
 				40EAA7A924A8152400F41366 /* Info.plist */,
+				967A62F424C614DF00890267 /* areaCragRouteTests.swift */,
 			);
 			path = SendARTests;
 			sourceTree = "<group>";
@@ -594,6 +597,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				40EAA7A824A8152400F41366 /* FrontPageLayoutTests.swift in Sources */,
+				967A62F524C614DF00890267 /* areaCragRouteTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -796,15 +800,15 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A3UJWUP8W2;
-				INFOPLIST_FILE = FrontPageLayoutTests/Info.plist;
+				DEVELOPMENT_TEAM = 9B6C5XW645;
+				INFOPLIST_FILE = SendARTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bennettbaker.FrontPageLayoutTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SendAR.SendARTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -818,15 +822,15 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A3UJWUP8W2;
-				INFOPLIST_FILE = FrontPageLayoutTests/Info.plist;
+				DEVELOPMENT_TEAM = 9B6C5XW645;
+				INFOPLIST_FILE = SendARTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bennettbaker.FrontPageLayoutTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SendAR.SendARTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -838,16 +842,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A3UJWUP8W2;
-				INFOPLIST_FILE = FrontPageLayoutUITests/Info.plist;
+				DEVELOPMENT_TEAM = 9B6C5XW645;
+				INFOPLIST_FILE = SendARUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bennettbaker.FrontPageLayoutUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SendAR.SendAR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = FrontPageLayout;
@@ -858,16 +866,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A3UJWUP8W2;
-				INFOPLIST_FILE = FrontPageLayoutUITests/Info.plist;
+				DEVELOPMENT_TEAM = 9B6C5XW645;
+				INFOPLIST_FILE = SendARUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bennettbaker.FrontPageLayoutUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SendAR.SendAR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = FrontPageLayout;

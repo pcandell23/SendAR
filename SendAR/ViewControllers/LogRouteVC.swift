@@ -187,7 +187,7 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
     }
     
     func fetchNearbyCrags(){
-           let moc = delegate.dataController?.persistentContainer.viewContext
+        let moc = delegate.dataController?.persistentContainer.viewContext
            if moc == nil{
                print("Failed to fetch crags.")
                return
