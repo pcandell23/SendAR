@@ -35,8 +35,7 @@ class areaCragRouteTests: XCTestCase {
     
     func testAreaCreation() throws {
         let dataController: DataController = DataController()
-        _ = dataController.createPersistantContainer()
-        let moc = dataController.persistentContainer!.viewContext
+        let moc = dataController.persistentContainer.viewContext
         let a = NSEntityDescription.insertNewObject(forEntityName: "Area", into: moc) as! Area
         let sub = NSEntityDescription.insertNewObject(forEntityName: "Crag", into: moc) as! Crag
         let superA = NSEntityDescription.insertNewObject(forEntityName: "Area", into: moc) as! Area
@@ -60,6 +59,9 @@ class areaCragRouteTests: XCTestCase {
         XCTAssert(aTest.getName() == "test Area654321", "failed to create area")
         XCTAssert(aTest.getSubAreas() == NSSet(object: sub), "Failed to set sub area")
         XCTAssert(aTest.getSuperArea() == superA, "Failed to set super area")
+        
+        
+        
         
         print("Tested create areas")
     }
