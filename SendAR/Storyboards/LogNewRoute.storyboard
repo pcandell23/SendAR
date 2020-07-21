@@ -49,7 +49,7 @@
                                         </state>
                                         <connections>
                                             <action selector="newAreaButton:" destination="o5l-Op-Fdq" eventType="touchUpInside" id="cj9-8a-3Tg"/>
-                                            <segue destination="wHx-Z6-W7x" kind="show" id="mCT-gX-44o"/>
+                                            <segue destination="wHx-Z6-W7x" kind="show" identifier="LogNewRouteToLogNewArea" id="mCT-gX-44o"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9J-rB-zxZ" customClass="GreenButton" customModule="SendAR" customModuleProvider="target">

@@ -17,6 +17,8 @@ class LogAreaVC: UIViewController, MKMapViewDelegate, UITextFieldDelegate {
     var locationCheck: LocationChecker
     let regionInMeters: Double = 500
     
+    var newRoute: Route?
+    
     var newAreaName: String? = nil
     
     var defaultFenceRadius = 100
@@ -75,9 +77,13 @@ class LogAreaVC: UIViewController, MKMapViewDelegate, UITextFieldDelegate {
     }
     
     func storeNewAreaInfo(){
-        let newArea = NSEntityDescription.insertNewObject(forEntityName: "Area", into: delegate.dataController!.persistentContainer.viewContext) as! Area
+        let newArea = NSEntityDescription.insertNewObject(forEntityName: "Crag", into: delegate.dataController!.persistentContainer.viewContext) as! Crag
         
         newArea.setInitialValues(name: newAreaName, fenceLatitude: latitudeString, fenceLongitude: longitudeString, fenceRadius: Int64(defaultFenceRadius), subAreas: nil, superArea: nil)
+        
+        if newRoute != nil {
+            newArea.addToRoutes(newRoute!)
+        }
         
         delegate.dataController!.saveContext()
     }
@@ -86,16 +92,4 @@ class LogAreaVC: UIViewController, MKMapViewDelegate, UITextFieldDelegate {
         areaName.resignFirstResponder()
         return true
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
