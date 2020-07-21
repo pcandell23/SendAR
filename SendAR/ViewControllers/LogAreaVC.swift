@@ -37,7 +37,8 @@ class LogAreaVC: UIViewController, MKMapViewDelegate, UITextFieldDelegate {
         newAreaName = areaName.text
         getCenterLocation(for: areaMap)
         storeNewAreaInfo()
-        dismiss(animated: true, completion: nil)
+        print("Saved new area!")
+        //unwinds to home
     }
     
     override func viewDidLoad() {

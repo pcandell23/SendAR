@@ -65,6 +65,7 @@
                                 </state>
                                 <connections>
                                     <action selector="confirmNewArea:" destination="X2p-p0-TYz" eventType="touchUpInside" id="r1w-ZJ-6cD"/>
+                                    <segue destination="BJv-cZ-ARj" kind="unwind" unwindAction="unwindToHome:" id="fh3-Ow-vlx"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scope" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="0vh-F1-10m">
@@ -109,6 +110,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rVg-yC-7Oz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="BJv-cZ-ARj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="602.89855072463774" y="-110.49107142857143"/>
         </scene>

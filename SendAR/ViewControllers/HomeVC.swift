@@ -25,6 +25,8 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var startTime: UILabel!
     @IBOutlet weak var elapsedTime: UILabel!
     
+    @IBAction func unwindToHome(_ sender: UIStoryboardSegue) {}
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.requestAlwaysAuthorization()
