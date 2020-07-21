@@ -70,6 +70,21 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){
+            if editingStyle == .delete {
+                let moc = delegate.dataController?.persistentContainer.viewContext
+                if moc == nil {
+                    return
+                }
+                let commit = areasAndCrags[indexPath.row]
+                moc!.delete(commit)
+                areasAndCrags.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+
+                delegate.dataController?.saveContext()
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //TODO
         if segue.identifier == "MyAreasToArea"{

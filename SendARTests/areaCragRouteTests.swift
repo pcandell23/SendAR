@@ -45,14 +45,14 @@ class areaCragRouteTests: XCTestCase {
         a.addSubArea(newSubArea: sub)
         a.setSuperArea(newSuperArea: superA)
         
+        sub.setUUID()
+        superA.setUUID()
+        
         dataController.saveContext()
         
         let requestAreas = NSFetchRequest<Area>(entityName: "Area")
-        
         requestAreas.predicate = NSPredicate(format: "uuid == %@", a.uuid! as CVarArg)
-        
         var fetched: [Area]?
-        
         fetched = try moc.fetch(requestAreas)
         let aTest = fetched![0]
         
@@ -60,8 +60,33 @@ class areaCragRouteTests: XCTestCase {
         XCTAssert(aTest.getSubAreas() == NSSet(object: sub), "Failed to set sub area")
         XCTAssert(aTest.getSuperArea() == superA, "Failed to set super area")
         
+        let moc2 = dataController.persistentContainer.viewContext
         
+        moc2.delete(aTest)
         
+        let requestArea4 = NSFetchRequest<Area>(entityName: "Area")
+        requestArea4.predicate = NSPredicate(format: "uuid == %@", a.uuid! as CVarArg)
+        var fetched4: [Area]?
+        fetched4 = try moc.fetch(requestAreas)
+        
+        XCTAssert(fetched4!.count == 0, "Failed to delete Area")
+        
+        let requestArea2 = NSFetchRequest<Crag>(entityName: "Crag")
+        requestArea2.predicate = NSPredicate(format: "uuid == %@", sub.uuid! as CVarArg)
+        var fetched2: [Area]?
+        fetched2 = try moc.fetch(requestArea2)
+        let subTest = fetched2![0]
+        
+        let requestArea3 = NSFetchRequest<Area>(entityName: "Area")
+        requestArea2.predicate = NSPredicate(format: "uuid == %@", superA.uuid! as CVarArg)
+        var fetched3: [Area]?
+        fetched3 = try moc.fetch(requestArea3)
+        let superTest = fetched3![0]
+        
+        moc2.delete(subTest)
+        moc2.delete(superTest)
+        
+        dataController.saveContext()
         
         print("Tested create areas")
     }
