@@ -35,6 +35,8 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
     var newRouteAltitude: Int16 = 0
     var newRouteDescription: String? = nil
     
+    var loggedRoute: Route?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -150,7 +152,7 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
     @IBAction func newAreaButton(_ sender: Any) {
         //To LogAreaVC
         storeNewRouteInfo()
-        //confirming a new area should add it to the list of areas
+        performSegue(withIdentifier: "LogNewRouteToLogNewArea", sender: self)
     }
     
     @IBAction func notSureButton(_ sender: Any) {
@@ -164,6 +166,8 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
         let newRoute = NSEntityDescription.insertNewObject(forEntityName: "Route", into: delegate.dataController!.persistentContainer.viewContext) as! Route
         
         newRoute.setInitialValues(name: newRouteName, grade: newRouteGrade, rating: newRouteRating, height: newRouteHeight, type: newRouteType, pitches: newRoutePitches, crag: crag, latitude: newRouteLatitude, longitude: newRouteLongitude, altitude: newRouteAltitude, description: newRouteDescription)
+        
+        loggedRoute = newRoute
         
         delegate.dataController!.saveContext()
     }
@@ -208,7 +212,15 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
            if fetched != nil {
                crags = fetched!
            }
-       }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "LogNewRouteToLogNewArea"{
+            let destVC = segue.destination as! UINavigationController
+            let vc = destVC.viewControllers.first as! LogAreaVC
+            vc.newRoute = loggedRoute
+        }
+    }
     
     
 }
