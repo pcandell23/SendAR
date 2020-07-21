@@ -24,6 +24,13 @@ open class SceneLocationView: ARSCNView {
     /// The limit to the scene, in terms of what data is considered reasonably accurate.
     /// Measured in meters.
     static let sceneLimit = 100.0
+    
+    //MARK: Added for SendAR
+    //Only put stored variables here add any functions in helper extension
+    
+    public var routes: [String: [LocationAnnotationNode]] = [:]
+    
+    //MARK: End SendAR
 
     /// The type of tracking to use.
     ///

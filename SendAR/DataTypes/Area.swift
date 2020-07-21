@@ -121,7 +121,16 @@ extension Area {
         self.fenceRadius = newFenceRadius 
     }
     
-    func setInitialValues(name: String? = nil, description: String? = nil, fenceLatitude: String? = nil, fenceLongitude: String? = nil, fenceRadius: Int64 = 0, subAreas: NSSet? = nil, superArea: Area? = nil){
+    func setUUID(){
+        if uuid == nil{
+            uuid = UUID()
+        }
+    }
+    
+    public func setInitialValues(name: String? = nil, description: String? = nil, fenceLatitude: String? = nil, fenceLongitude: String? = nil, fenceRadius: Int64 = 0, subAreas: NSSet? = nil, superArea: Area? = nil){
+        if uuid != nil {
+            return
+        }
         self.name = name
         self.areaDescription = description
         self.fenceLatitude = fenceLatitude
