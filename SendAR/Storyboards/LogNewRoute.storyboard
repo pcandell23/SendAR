@@ -238,7 +238,6 @@
                                 </state>
                                 <connections>
                                     <action selector="saveRouteDetails:" destination="F6w-B0-Y7d" eventType="touchUpInside" id="A1B-Fb-u9W"/>
-                                    <segue destination="GHc-hm-50l" kind="show" id="b6O-J7-9og"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To submit a new route to be added to the SendAR database, please begin by filling in some basic information below." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gro-cK-UvD">
@@ -466,6 +465,7 @@
                         <outlet property="routePitches" destination="5Of-Q4-hzj" id="aPo-jX-ifR"/>
                         <outlet property="routeRating" destination="WBR-qw-Vgg" id="2qX-Hu-r4p"/>
                         <outlet property="routeType" destination="jO0-5z-Jzl" id="v6l-km-aBJ"/>
+                        <segue destination="GHc-hm-50l" kind="show" identifier="RouteDetailsToRouteLocation" id="Atu-Ea-4zc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jzs-ct-cWR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

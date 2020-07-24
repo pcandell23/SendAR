@@ -61,7 +61,10 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
     //first page "Continue" button
     @IBAction func saveRouteDetails(_ sender: Any) {
         
-        if routeName.text != nil && routeGrade.text != nil && routeType.text != nil && routePitches.text != nil && routeHeight.text != nil && routeRating.text != nil && routeDescription != nil {
+        if routeName.text!.isEmpty || routeGrade.text!.isEmpty || routeType.text!.isEmpty || routePitches.text!.isEmpty || routeHeight.text!.isEmpty || routeRating.text!.isEmpty || routeDescription.text!.isEmpty {
+            Alert.showIncompleteRouteDataAlert(on: self)
+            print("Alert: Incomplete Route Data")
+        } else {
             newRouteName = routeName.text
             newRouteGrade = routeGrade.text
             newRouteType = routeType.text
@@ -69,8 +72,8 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
             newRouteHeight = Int32(routeHeight.text ?? "0") ?? 0
             newRouteRating = (routeRating.text! as NSString).doubleValue
             newRouteDescription = routeDescription.text
-        } else {
-            Alert.showIncompleteRouteDataAlert(on: self)
+            
+            performSegue(withIdentifier: "RouteDetailsToRouteLocation", sender: self)
         }
         
     }

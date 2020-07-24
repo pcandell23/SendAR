@@ -36,7 +36,7 @@ struct Alert {
     }
     
     static func showIncompleteRouteDataAlert(on vc: UIViewController) {
-        showBasicAlert(on: vc, with: "Route Information Incomplete", message: "Please enter route information for each of the fields before proceeding to the next step.")
+        showBasicAlert(on: vc, with: "Route Information Incomplete", message: "Please enter route information for each field before proceeding to the next step.")
     }
     
     static func showIncompleteAreaDataAlert(on vc: UIViewController) {
