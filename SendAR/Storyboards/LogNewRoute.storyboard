@@ -39,6 +39,7 @@
                                         </state>
                                         <connections>
                                             <action selector="confirmButton:" destination="o5l-Op-Fdq" eventType="touchUpInside" id="UD6-I4-hhU"/>
+                                            <segue destination="BnO-5Z-4jS" kind="show" id="ZeP-yh-YD6"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="irN-QH-Z8W" customClass="GreenButton" customModule="SendAR" customModuleProvider="target">
@@ -60,6 +61,7 @@
                                         </state>
                                         <connections>
                                             <action selector="notSureButton:" destination="o5l-Op-Fdq" eventType="touchUpInside" id="Mcv-Ew-Uyd"/>
+                                            <segue destination="BnO-5Z-4jS" kind="show" id="U0S-Lj-SB8"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -101,6 +103,59 @@
             </objects>
             <point key="canvasLocation" x="3292.753623188406" y="-607.36607142857144"/>
         </scene>
+        <!--Success!-->
+        <scene sceneID="9Kk-Qc-MO9">
+            <objects>
+                <viewController id="BnO-5Z-4jS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bVl-xr-Hag">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="emi-aE-vZK">
+                                <rect key="frame" x="20" y="394" width="374" height="108"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank you for helping to improve SendAR." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPE-8f-w0C">
+                                        <rect key="frame" x="26.5" y="0.0" width="321.5" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4q-Tj-qF5" customClass="GreenButton" customModule="SendAR" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="64" width="374" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="JMl-Yi-YaH"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                        <state key="normal" title="Dismiss">
+                                            <color key="titleColor" red="0.1960784314" green="0.6588235294" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="c9K-Jz-u2q" kind="unwind" unwindAction="unwindToHome:" id="Q2m-xw-5eR"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="P4q-Tj-qF5" secondAttribute="trailing" id="MLW-hD-7dv"/>
+                                    <constraint firstItem="P4q-Tj-qF5" firstAttribute="leading" secondItem="emi-aE-vZK" secondAttribute="leading" id="SnM-sN-SKV"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="emi-aE-vZK" firstAttribute="centerX" secondItem="bVl-xr-Hag" secondAttribute="centerX" id="CcN-mG-b3y"/>
+                            <constraint firstItem="emi-aE-vZK" firstAttribute="centerY" secondItem="bVl-xr-Hag" secondAttribute="centerY" id="JyW-ba-TNs"/>
+                            <constraint firstItem="Ced-ri-caK" firstAttribute="trailing" secondItem="emi-aE-vZK" secondAttribute="trailing" constant="20" id="tGe-6U-H9w"/>
+                            <constraint firstItem="emi-aE-vZK" firstAttribute="leading" secondItem="Ced-ri-caK" secondAttribute="leading" constant="20" id="yTu-dq-UON"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ced-ri-caK"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Success!" id="Qjy-7Z-Wgw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9ZF-QB-gfu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="c9K-Jz-u2q" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="4081" y="-608"/>
+        </scene>
         <!--LogNewArea-->
         <scene sceneID="k99-nH-Fvd">
             <objects>
@@ -109,7 +164,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qzH-5u-cku" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3881" y="-608"/>
+            <point key="canvasLocation" x="3293" y="-157"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5xr-8Z-7P2">
@@ -473,6 +528,9 @@
             <point key="canvasLocation" x="1689.8550724637682" y="-607.36607142857144"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ZeP-yh-YD6"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="scope" catalog="system" width="128" height="122"/>
     </resources>
