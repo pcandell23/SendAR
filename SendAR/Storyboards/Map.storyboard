@@ -99,8 +99,8 @@
                     <navigationItem key="navigationItem" title="Nearby Areas" id="eOY-bc-jzb"/>
                     <connections>
                         <outlet property="nearbyAreasTableView" destination="Xcy-xk-l01" id="KX4-wg-h9S"/>
-                        <segue destination="NE2-vx-NK1" kind="show" identifier="NearbyAreasToArea" id="NW9-Nv-rOh"/>
-                        <segue destination="mtr-o1-keK" kind="show" identifier="NearbyAreasToCrag" id="P6I-9U-f06"/>
+                        <segue destination="NE2-vx-NK1" kind="presentation" identifier="NearbyAreasToArea" modalPresentationStyle="fullScreen" id="NW9-Nv-rOh"/>
+                        <segue destination="mtr-o1-keK" kind="presentation" identifier="NearbyAreasToCrag" modalPresentationStyle="fullScreen" id="P6I-9U-f06"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yru-v3-IW3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

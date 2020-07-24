@@ -35,6 +35,14 @@ struct Alert {
         showBasicAlert(on: vc, with: "Tracking In Progress", message: "Please end the current tracking session before attempting to start a new tracking session.")
     }
     
+    static func showIncompleteRouteDataAlert(on vc: UIViewController) {
+        showBasicAlert(on: vc, with: "Route Information Incomplete", message: "Please enter route information for each of the fields before proceeding to the next step.")
+    }
+    
+    static func showIncompleteAreaDataAlert(on vc: UIViewController) {
+        showBasicAlert(on: vc, with: "Area Information Incomplete", message: "Please enter a name to submit a new area.")
+    }
+    
 }
 
 /*

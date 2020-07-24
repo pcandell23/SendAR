@@ -60,19 +60,18 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
 
     //first page "Continue" button
     @IBAction func saveRouteDetails(_ sender: Any) {
-        newRouteName = routeName.text
-        newRouteGrade = routeGrade.text
-        newRouteType = routeType.text
-        newRoutePitches = Int16(routePitches.text ?? "0") ?? 0
-        newRouteHeight = Int32(routeHeight.text ?? "0") ?? 0
         
-        if routeRating.text != nil{
+        if routeName.text != nil && routeGrade.text != nil && routeType.text != nil && routePitches.text != nil && routeHeight.text != nil && routeRating.text != nil && routeDescription != nil {
+            newRouteName = routeName.text
+            newRouteGrade = routeGrade.text
+            newRouteType = routeType.text
+            newRoutePitches = Int16(routePitches.text ?? "0") ?? 0
+            newRouteHeight = Int32(routeHeight.text ?? "0") ?? 0
             newRouteRating = (routeRating.text! as NSString).doubleValue
+            newRouteDescription = routeDescription.text
         } else {
-            newRouteRating = 0.0
+            Alert.showIncompleteRouteDataAlert(on: self)
         }
-        
-        newRouteDescription = routeDescription.text
         
     }
     

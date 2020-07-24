@@ -34,11 +34,16 @@ class LogAreaVC: UIViewController, MKMapViewDelegate, UITextFieldDelegate {
     
     @IBAction func confirmNewArea(_ sender: Any) {
         //save area region and dismiss
-        newAreaName = areaName.text
-        getCenterLocation(for: areaMap)
-        storeNewAreaInfo()
-        print("Saved new area!")
-        //unwinds to home
+        if areaName.text != nil {
+            newAreaName = areaName.text
+            getCenterLocation(for: areaMap)
+            storeNewAreaInfo()
+            print("Saved new area!")
+            //unwinds to home
+        } else {
+            Alert.showIncompleteAreaDataAlert(on: self)
+        }
+        
     }
     
     override func viewDidLoad() {
