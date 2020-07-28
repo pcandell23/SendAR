@@ -9,8 +9,9 @@
 import UIKit
 import CoreData
 
-class NearbyAreasViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class NearbyAreasViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var nearbyAreasTableView: UITableView!
     
     let delegate = AppDelegate.shared()
@@ -18,11 +19,14 @@ class NearbyAreasViewController: UIViewController, UITableViewDelegate, UITableV
     var areas: [Area] = []
     var crags: [Crag] = []
     var nearbyAreasAndCrags = [AnyObject]()
+    var filteredList: [AnyObject]!
     
     var areaIndex: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        searchBar.delegate = self
         
         let nib = UINib(nibName: "AreaCell", bundle: nil)
         nearbyAreasTableView.register(nib, forCellReuseIdentifier: "AreaCell")
@@ -38,34 +42,60 @@ class NearbyAreasViewController: UIViewController, UITableViewDelegate, UITableV
         for each in crags {
             nearbyAreasAndCrags.append(each)
         }
+        
+        filteredList = nearbyAreasAndCrags
     
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filteredList = []
+        
+        
+        if searchText == "" {
+            filteredList = nearbyAreasAndCrags
+        } else {
+            for areaOrCrag in nearbyAreasAndCrags {
+                //this part doesnt yet work
+                if let indexIsCrag = areaOrCrag as? Crag {
+                    if indexIsCrag.getName().lowercased().contains(searchText.lowercased()) {
+                        filteredList.append(areaOrCrag)
+                    }
+                } else if let indexIsArea = areaOrCrag as? Area {
+                    if indexIsArea.getName().lowercased().contains(searchText.lowercased()) {
+                        filteredList.append(areaOrCrag)
+                    }
+                }
+            }
+        }
+        
+        self.nearbyAreasTableView.reloadData()
     }
     
     //TableView Functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return nearbyAreasAndCrags.count
+        return filteredList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if self.nearbyAreasAndCrags[indexPath.row] is Area  {
+        if self.filteredList[indexPath.row] is Area  {
             let areaCell = tableView.dequeueReusableCell(withIdentifier: "AreaCell", for: indexPath) as! AreaCell
             
-            areaCell.areaName.text = (nearbyAreasAndCrags[indexPath.row] as! Area).getName()
+            areaCell.areaName.text = (filteredList[indexPath.row] as! Area).getName()
             areaCell.areaProximity.text = areaCell.getProximity()
-            if (nearbyAreasAndCrags[indexPath.row] as! Area).subAreaCount() > 0 {
-                areaCell.subAreasLabel.text = String((nearbyAreasAndCrags[indexPath.row] as! Area).subAreaCount()) + " sub-areas"
+            if (filteredList[indexPath.row] as! Area).subAreaCount() > 0 {
+                areaCell.subAreasLabel.text = String((filteredList[indexPath.row] as! Area).subAreaCount()) + " sub-areas"
             } else {
                 areaCell.subAreasLabel.text = "No sub-areas"
             }
             
             return areaCell
             
-        } else if self.nearbyAreasAndCrags[indexPath.row] is Crag {
+        } else if self.filteredList[indexPath.row] is Crag {
             let cragCell = tableView.dequeueReusableCell(withIdentifier: "CragCell", for: indexPath) as! CragCell
             
-            cragCell.cragName.text = (nearbyAreasAndCrags[indexPath.row] as! Crag).getName()
+            cragCell.cragName.text = (filteredList[indexPath.row] as! Crag).getName()
             cragCell.cragProximity.text = cragCell.getProximity()
-            cragCell.numberOfRoutes.text = String((nearbyAreasAndCrags[indexPath.row] as! Crag).routeCount())
+            cragCell.numberOfRoutes.text = String((filteredList[indexPath.row] as! Crag).routeCount())
             
             return cragCell
         }
@@ -87,7 +117,7 @@ class NearbyAreasViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       let cell = tableView.cellForRow(at: indexPath)
+        let cell = tableView.cellForRow(at: indexPath)
         tableView.deselectRow(at: indexPath, animated: true)
         areaIndex = indexPath.row
         

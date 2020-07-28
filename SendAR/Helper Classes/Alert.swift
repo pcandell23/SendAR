@@ -43,6 +43,10 @@ struct Alert {
         showBasicAlert(on: vc, with: "Area Information Incomplete", message: "Please enter a name to submit a new area.")
     }
     
+    static func showNoAreaSelectedAlert(on vc: UIViewController) {
+        showBasicAlert(on: vc, with: "No Area Selected", message: "Please select an area before tapping confirm. To add the route without an area, tap \"Not Sure\"")
+    }
+    
 }
 
 /*

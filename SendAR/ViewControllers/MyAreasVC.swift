@@ -10,8 +10,9 @@ import UIKit
 import CoreData
 import MapKit
 
-class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MKMapViewDelegate {
+class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MKMapViewDelegate, UISearchBarDelegate {
     
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet var myAreasTableView: UITableView!
     
     let delegate = AppDelegate.shared()
@@ -19,11 +20,14 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
     var areas: [Area] = []
     var crags: [Crag] = []
     var areasAndCrags = [Area]()
+    var filteredAreasAndCrags: [Area]!
     
     var areaIndex: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        searchBar.delegate = self
         
         let areaNib = UINib(nibName: "AreaCell", bundle: nil)
         myAreasTableView.register(areaNib, forCellReuseIdentifier: "AreaCell")
@@ -32,6 +36,7 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
         myAreasTableView.delegate = self
         myAreasTableView.dataSource = self
         fetchAreas()
+        filteredAreasAndCrags = areasAndCrags
         
     }
     
@@ -40,27 +45,43 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
         
     }
     
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filteredAreasAndCrags = []
+        
+        if searchText == "" {
+            filteredAreasAndCrags = areasAndCrags
+        } else {
+            for areaOrCrag in areasAndCrags {
+                if areaOrCrag.getName().lowercased().contains(searchText.lowercased()) {
+                    filteredAreasAndCrags.append(areaOrCrag)
+                }
+            }
+        }
+        
+        self.myAreasTableView.reloadData()
+    }
+    
     //TableView Functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return areasAndCrags.count
+        return filteredAreasAndCrags.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if self.areasAndCrags[indexPath.row] is Crag {
+        if self.filteredAreasAndCrags[indexPath.row] is Crag {
             let cragCell = tableView.dequeueReusableCell(withIdentifier: "CragCell", for: indexPath) as! CragCell
             
-            cragCell.cragName.text = (areasAndCrags[indexPath.row] as! Crag).getName()
+            cragCell.cragName.text = (filteredAreasAndCrags[indexPath.row] as! Crag).getName()
             cragCell.cragProximity.text = cragCell.getProximity()
-            cragCell.numberOfRoutes.text = String((areasAndCrags[indexPath.row] as! Crag).routeCount()) + " routes"
+            cragCell.numberOfRoutes.text = String((filteredAreasAndCrags[indexPath.row] as! Crag).routeCount()) + " routes"
             
             return cragCell
         } else {
             let areaCell = tableView.dequeueReusableCell(withIdentifier: "AreaCell", for: indexPath) as! AreaCell
             
-            areaCell.areaName.text = (areasAndCrags[indexPath.row] ).getName()
+            areaCell.areaName.text = (filteredAreasAndCrags[indexPath.row] ).getName()
             areaCell.areaProximity.text = areaCell.getProximity()
-            if (areasAndCrags[indexPath.row] ).subAreaCount() > 0 {
-                areaCell.subAreasLabel.text = String((areasAndCrags[indexPath.row] ).subAreaCount()) + " sub-areas"
+            if (filteredAreasAndCrags[indexPath.row] ).subAreaCount() > 0 {
+                areaCell.subAreasLabel.text = String((filteredAreasAndCrags[indexPath.row] ).subAreaCount()) + " sub-areas"
             } else {
                 areaCell.subAreasLabel.text = "No sub-areas"
             }
@@ -76,9 +97,9 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
                 if moc == nil {
                     return
                 }
-                let commit = areasAndCrags[indexPath.row]
+                let commit = filteredAreasAndCrags[indexPath.row]
                 moc!.delete(commit)
-                areasAndCrags.remove(at: indexPath.row)
+                filteredAreasAndCrags.remove(at: indexPath.row)
                 tableView.deleteRows(at: [indexPath], with: .fade)
 
                 delegate.dataController?.saveContext()
@@ -90,11 +111,11 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
         if segue.identifier == "MyAreasToArea"{
             let navVC = segue.destination as! UINavigationController
             let vc = navVC.viewControllers.first as! AreaDetailVC
-            vc.area = areasAndCrags[areaIndex]
+            vc.area = filteredAreasAndCrags[areaIndex]
         } else if segue.identifier == "MyAreasToCrag"{
             let navVC = segue.destination as! UINavigationController
             let vc = navVC.viewControllers.first as! CragDetailVC
-            vc.crag = areasAndCrags[areaIndex] as? Crag
+            vc.crag = filteredAreasAndCrags[areaIndex] as? Crag
         }
     }
     
@@ -103,7 +124,7 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.deselectRow(at: indexPath, animated: true)
         areaIndex = indexPath.row
         
-        if type(of: areasAndCrags[areaIndex]) == Crag.self{
+        if type(of: filteredAreasAndCrags[areaIndex]) == Crag.self{
             performSegue(withIdentifier: "MyAreasToCrag", sender: cell)
         } else {
             performSegue(withIdentifier: "MyAreasToArea", sender: cell)

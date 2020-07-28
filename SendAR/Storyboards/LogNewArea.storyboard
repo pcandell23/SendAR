@@ -121,45 +121,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Csa-A0-nnP">
-                                <rect key="frame" x="20" y="394" width="374" height="108"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank you for helping to improve SendAR." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8l-so-FNh">
-                                        <rect key="frame" x="26.5" y="0.0" width="321.5" height="44"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iEc-z4-4bX" customClass="GreenButton" customModule="SendAR" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="64" width="374" height="44"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="h6o-Ho-wfH"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
-                                        <state key="normal" title="Dismiss">
-                                            <color key="titleColor" red="0.1960784314" green="0.6588235294" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="65C-ls-TgG" kind="unwind" unwindAction="unwindToHome:" id="BTm-dL-NqL"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank you for helping to improve SendAR." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8l-so-FNh">
+                                <rect key="frame" x="46.5" y="438" width="321.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iEc-z4-4bX" customClass="GreenButton" customModule="SendAR" customModuleProvider="target">
+                                <rect key="frame" x="20" y="778" width="374" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="iEc-z4-4bX" secondAttribute="trailing" id="Zdr-xw-b65"/>
-                                    <constraint firstItem="iEc-z4-4bX" firstAttribute="leading" secondItem="Csa-A0-nnP" secondAttribute="leading" id="ueh-Vi-hi1"/>
+                                    <constraint firstAttribute="height" constant="44" id="h6o-Ho-wfH"/>
                                 </constraints>
-                            </stackView>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                <state key="normal" title="Dismiss">
+                                    <color key="titleColor" red="0.1960784314" green="0.6588235294" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="65C-ls-TgG" kind="unwind" unwindAction="unwindToHome:" id="BTm-dL-NqL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Csa-A0-nnP" firstAttribute="leading" secondItem="ik2-2d-9G4" secondAttribute="leading" constant="20" id="8hb-b7-eGE"/>
-                            <constraint firstItem="ik2-2d-9G4" firstAttribute="trailing" secondItem="Csa-A0-nnP" secondAttribute="trailing" constant="20" id="A5A-WA-AfX"/>
-                            <constraint firstItem="Csa-A0-nnP" firstAttribute="centerX" secondItem="j0L-j5-mbM" secondAttribute="centerX" id="sz6-sM-H8p"/>
-                            <constraint firstItem="Csa-A0-nnP" firstAttribute="centerY" secondItem="j0L-j5-mbM" secondAttribute="centerY" id="xaE-du-Rov"/>
+                            <constraint firstItem="ik2-2d-9G4" firstAttribute="trailing" secondItem="iEc-z4-4bX" secondAttribute="trailing" constant="20" id="1oT-JL-nME"/>
+                            <constraint firstItem="iEc-z4-4bX" firstAttribute="leading" secondItem="ik2-2d-9G4" secondAttribute="leading" constant="20" id="3gh-kj-uyc"/>
+                            <constraint firstItem="ik2-2d-9G4" firstAttribute="bottom" secondItem="iEc-z4-4bX" secondAttribute="bottom" constant="40" id="dpD-nG-fEv"/>
+                            <constraint firstItem="w8l-so-FNh" firstAttribute="centerY" secondItem="j0L-j5-mbM" secondAttribute="centerY" id="ua9-TL-HJb"/>
+                            <constraint firstItem="w8l-so-FNh" firstAttribute="centerX" secondItem="j0L-j5-mbM" secondAttribute="centerX" id="wvZ-Ri-lmW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ik2-2d-9G4"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Success!" id="H9N-6D-LQ5"/>
+                    <navigationItem key="navigationItem" title="Success!" id="H9N-6D-LQ5">
+                        <barButtonItem key="rightBarButtonItem" title="Exit" image="xmark" catalog="system" id="4uA-F8-XSV">
+                            <connections>
+                                <segue destination="65C-ls-TgG" kind="unwind" unwindAction="unwindToHome:" id="QqE-C4-MTe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jio-m6-my0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="65C-ls-TgG" userLabel="Exit" sceneMemberID="exit"/>
@@ -192,5 +190,6 @@
     </scenes>
     <resources>
         <image name="scope" catalog="system" width="128" height="122"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
     </resources>
 </document>

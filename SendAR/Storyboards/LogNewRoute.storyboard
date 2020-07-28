@@ -27,6 +27,11 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AM3-y1-DwV">
                                 <rect key="frame" x="0.0" y="200" width="414" height="416"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" id="zY7-9k-JB0">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YlK-77-lLq">
                                 <rect key="frame" x="20" y="717" width="374" height="125"/>
@@ -39,7 +44,6 @@
                                         </state>
                                         <connections>
                                             <action selector="confirmButton:" destination="o5l-Op-Fdq" eventType="touchUpInside" id="UD6-I4-hhU"/>
-                                            <segue destination="BnO-5Z-4jS" kind="show" id="ZeP-yh-YD6"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="irN-QH-Z8W" customClass="GreenButton" customModule="SendAR" customModuleProvider="target">
@@ -61,12 +65,11 @@
                                         </state>
                                         <connections>
                                             <action selector="notSureButton:" destination="o5l-Op-Fdq" eventType="touchUpInside" id="Mcv-Ew-Uyd"/>
-                                            <segue destination="BnO-5Z-4jS" kind="show" id="U0S-Lj-SB8"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If this route does not belong to any of the areas above, you can submit a new area or save the route without an area." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pEi-5U-EeW">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If this route does not belong to any known area, you can submit a new area or save the route without an area." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pEi-5U-EeW">
                                 <rect key="frame" x="20" y="636" width="374" height="61"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -97,6 +100,8 @@
                     <navigationItem key="navigationItem" title="Area" id="JBc-gs-Opj"/>
                     <connections>
                         <outlet property="nearbyAreasTable" destination="AM3-y1-DwV" id="kI2-Y5-HrW"/>
+                        <outlet property="searchBar" destination="zY7-9k-JB0" id="94f-nv-0Wx"/>
+                        <segue destination="BnO-5Z-4jS" kind="show" identifier="ConfirmToSuccess" id="Syt-3g-9ol"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2CO-9v-Vad" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -111,45 +116,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="emi-aE-vZK">
-                                <rect key="frame" x="20" y="394" width="374" height="108"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank you for helping to improve SendAR." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPE-8f-w0C">
-                                        <rect key="frame" x="26.5" y="0.0" width="321.5" height="44"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4q-Tj-qF5" customClass="GreenButton" customModule="SendAR" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="64" width="374" height="44"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="JMl-Yi-YaH"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
-                                        <state key="normal" title="Dismiss">
-                                            <color key="titleColor" red="0.1960784314" green="0.6588235294" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="c9K-Jz-u2q" kind="unwind" unwindAction="unwindToHome:" id="Q2m-xw-5eR"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank you for helping to improve SendAR." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPE-8f-w0C">
+                                <rect key="frame" x="46.5" y="438" width="321.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4q-Tj-qF5" customClass="GreenButton" customModule="SendAR" customModuleProvider="target">
+                                <rect key="frame" x="20" y="778" width="374" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="P4q-Tj-qF5" secondAttribute="trailing" id="MLW-hD-7dv"/>
-                                    <constraint firstItem="P4q-Tj-qF5" firstAttribute="leading" secondItem="emi-aE-vZK" secondAttribute="leading" id="SnM-sN-SKV"/>
+                                    <constraint firstAttribute="height" constant="44" id="JMl-Yi-YaH"/>
                                 </constraints>
-                            </stackView>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                <state key="normal" title="Dismiss">
+                                    <color key="titleColor" red="0.1960784314" green="0.6588235294" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="c9K-Jz-u2q" kind="unwind" unwindAction="unwindToHome:" id="Q2m-xw-5eR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="emi-aE-vZK" firstAttribute="centerX" secondItem="bVl-xr-Hag" secondAttribute="centerX" id="CcN-mG-b3y"/>
-                            <constraint firstItem="emi-aE-vZK" firstAttribute="centerY" secondItem="bVl-xr-Hag" secondAttribute="centerY" id="JyW-ba-TNs"/>
-                            <constraint firstItem="Ced-ri-caK" firstAttribute="trailing" secondItem="emi-aE-vZK" secondAttribute="trailing" constant="20" id="tGe-6U-H9w"/>
-                            <constraint firstItem="emi-aE-vZK" firstAttribute="leading" secondItem="Ced-ri-caK" secondAttribute="leading" constant="20" id="yTu-dq-UON"/>
+                            <constraint firstItem="P4q-Tj-qF5" firstAttribute="leading" secondItem="Ced-ri-caK" secondAttribute="leading" constant="20" id="Lrq-sm-gUl"/>
+                            <constraint firstItem="pPE-8f-w0C" firstAttribute="centerY" secondItem="bVl-xr-Hag" secondAttribute="centerY" id="lGU-Oe-qpd"/>
+                            <constraint firstItem="pPE-8f-w0C" firstAttribute="centerX" secondItem="bVl-xr-Hag" secondAttribute="centerX" id="oAS-oj-2CF"/>
+                            <constraint firstItem="Ced-ri-caK" firstAttribute="bottom" secondItem="P4q-Tj-qF5" secondAttribute="bottom" constant="40" id="vXl-tM-Bgn"/>
+                            <constraint firstItem="Ced-ri-caK" firstAttribute="trailing" secondItem="P4q-Tj-qF5" secondAttribute="trailing" constant="20" id="xjq-yL-dIJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ced-ri-caK"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Success!" id="Qjy-7Z-Wgw"/>
+                    <navigationItem key="navigationItem" title="Success!" id="Qjy-7Z-Wgw">
+                        <barButtonItem key="rightBarButtonItem" title="Exit" image="xmark" catalog="system" id="0cf-dX-snW">
+                            <connections>
+                                <segue destination="c9K-Jz-u2q" kind="unwind" unwindAction="unwindToHome:" id="X1k-6e-baM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ZF-QB-gfu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="c9K-Jz-u2q" userLabel="Exit" sceneMemberID="exit"/>
@@ -528,10 +531,8 @@
             <point key="canvasLocation" x="1689.8550724637682" y="-607.36607142857144"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="ZeP-yh-YD6"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="scope" catalog="system" width="128" height="122"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
     </resources>
 </document>
