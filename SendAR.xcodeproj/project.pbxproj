@@ -20,7 +20,6 @@
 		407A645A24AF8C83006CDFCE /* GreenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A645924AF8C83006CDFCE /* GreenButton.swift */; };
 		407A645C24AF963C006CDFCE /* LogRouteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A645B24AF963C006CDFCE /* LogRouteVC.swift */; };
 		407A646024AFA64F006CDFCE /* MapButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A645F24AFA64F006CDFCE /* MapButton.swift */; };
-		4087FA1024ABA33900723BCF /* LogbookVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4087FA0F24ABA33900723BCF /* LogbookVC.swift */; };
 		40C874D724BA90D200ED0214 /* CragDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40C874D624BA90D200ED0214 /* CragDetail.storyboard */; };
 		40C874D924BA90E900ED0214 /* RouteDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40C874D824BA90E900ED0214 /* RouteDetail.storyboard */; };
 		40C874DB24BA910E00ED0214 /* CragDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C874DA24BA910E00ED0214 /* CragDetailVC.swift */; };
@@ -112,7 +111,6 @@
 		407A645924AF8C83006CDFCE /* GreenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenButton.swift; sourceTree = "<group>"; };
 		407A645B24AF963C006CDFCE /* LogRouteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogRouteVC.swift; sourceTree = "<group>"; };
 		407A645F24AFA64F006CDFCE /* MapButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapButton.swift; sourceTree = "<group>"; };
-		4087FA0F24ABA33900723BCF /* LogbookVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogbookVC.swift; sourceTree = "<group>"; };
 		40C874D624BA90D200ED0214 /* CragDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CragDetail.storyboard; sourceTree = "<group>"; };
 		40C874D824BA90E900ED0214 /* RouteDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RouteDetail.storyboard; sourceTree = "<group>"; };
 		40C874DA24BA910E00ED0214 /* CragDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CragDetailVC.swift; sourceTree = "<group>"; };
@@ -315,7 +313,6 @@
 			children = (
 				40EAA79424A8152300F41366 /* ViewController.swift */,
 				961F055E24AA64E8006DE4C5 /* HomeVC.swift */,
-				4087FA0F24ABA33900723BCF /* LogbookVC.swift */,
 				407A645B24AF963C006CDFCE /* LogRouteVC.swift */,
 				961F056024AA64F8006DE4C5 /* MapVC.swift */,
 				404FDE1324AEA524006AA33E /* NearbyAreas.swift */,
@@ -578,7 +575,6 @@
 				40E21AAA24CFB104005F8A0C /* LogbookCell.swift in Sources */,
 				96A6430424C0E31800226EEC /* FloatingPoint+Radians.swift in Sources */,
 				96A6431024C0E33B00226EEC /* AttributedType.swift in Sources */,
-				4087FA1024ABA33900723BCF /* LogbookVC.swift in Sources */,
 				9694583524B6A38A0093D943 /* DataController.swift in Sources */,
 				96A642EA24C0E0ED00226EEC /* SceneLocationViewEstimateDelegate.swift in Sources */,
 				40E21AAD24CFB40B005F8A0C /* TrackedRoute.swift in Sources */,

@@ -9,23 +9,29 @@
 import UIKit
 import CoreLocation
 
-class HomeViewController: UIViewController, UITextFieldDelegate {
+class HomeViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
     
     var locationManager = CLLocationManager()
     var currentLocation = CLLocation()
     var timer = Timer()
     var tracker: Tracker?
     var tracking: Bool = false
+    var trackedRoutes: [TrackedRoute] = []
     
     @IBOutlet weak var routeName: UITextField!
     
     @IBOutlet weak var startingAltitude: UILabel!
     @IBOutlet weak var currentAltitude: UILabel!
+    @IBOutlet weak var deltaAltitude: UILabel!
     
     @IBOutlet weak var startTime: UILabel!
     @IBOutlet weak var elapsedTime: UILabel!
     
+    @IBOutlet weak var logbookTable: UITableView!
+    
     @IBAction func unwindToHome(_ sender: UIStoryboardSegue) {}
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,13 +42,20 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
             //currentLocation = locationManager.location!
             
             startingAltitude.text = "Ready"
-            currentAltitude.text = "\(currentLocation.altitude)"
+            currentAltitude.text = "\(currentLocation.altitude) meters"
+            deltaAltitude.text = "0.0 meters"
             startTime.text = "Ready"
-            elapsedTime.text = "0.0"
+            elapsedTime.text = "0.0 minutes"
             
         }
         
         routeName.delegate = self
+        
+        let nib = UINib(nibName: "LogbookCell", bundle: nil)
+        logbookTable.register(nib, forCellReuseIdentifier: "LogbookCell")
+        logbookTable.delegate = self
+        logbookTable.dataSource = self
+        
     }
     
     //MARK: - Tracker
@@ -77,8 +90,9 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
         } else if !tracking {
             startingAltitude.text = "Ready"
             startTime.text = "Ready"
-            currentAltitude.text = "\(currentLocation.altitude)"
-            elapsedTime.text = "0.0"
+            currentAltitude.text = "\(currentLocation.altitude) meters"
+            elapsedTime.text = "0.0 minutes"
+            deltaAltitude.text = "0.0 meters"
             routeName.text = nil
         }
     }
@@ -87,6 +101,20 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         routeName.resignFirstResponder()
         return true
+    }
+    
+    
+    //MARK: - Logbook Table
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return trackedRoutes.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LogbookCell", for: indexPath)
+        //initialize cell data fields here
+        
+        return cell
     }
     
 }

@@ -37,6 +37,8 @@ class CragDetailVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, UI
             let cragRegion = MKCoordinateRegion.init(center: cragLocation, latitudinalMeters: 2500, longitudinalMeters: 2500)
             cragMap.setRegion(cragRegion, animated: true)
             noLocationLabel.text = ""
+        } else {
+            noLocationLabel.text = "Location Unavailable"
         }
     }
     

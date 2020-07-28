@@ -27,7 +27,7 @@
         <attribute name="uuid" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <relationship name="crag" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Crag" inverseName="routes" inverseEntity="Crag"/>
     </entity>
-    <entity name="TrackedRoute" representedClassName="TrackedRoute" syncable="YES" codeGenerationType="class">
+    <entity name="TrackedRoute" representedClassName="TrackedRoute" syncable="YES">
         <attribute name="dataCSV" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="startAltitude" optional="YES" attributeType="String"/>
@@ -40,6 +40,6 @@
         <element name="Area" positionX="-63" positionY="-18" width="128" height="163"/>
         <element name="Crag" positionX="-54" positionY="-9" width="128" height="58"/>
         <element name="Route" positionX="-36" positionY="9" width="128" height="223"/>
-        <element name="TrackedRoute" positionX="-45" positionY="90" width="128" height="148"/>
+        <element name="TrackedRoute" positionX="-45" positionY="45" width="128" height="148"/>
     </elements>
 </model>

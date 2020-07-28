@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 
-/*
 @objc(TrackedRoute)
 public class TrackedRoute: NSManagedObject {
     let delegate = AppDelegate.shared()
@@ -18,8 +17,10 @@ public class TrackedRoute: NSManagedObject {
 extension TrackedRoute {
     //MARK: - Attributes
     @NSManaged public var name: String?
+    //Probably have to change startTime and stopTime to type Date
     @NSManaged public var startTime: String?
     @NSManaged public var stopTime: String?
+    //Probably have to change startAltitude and stopAltitude to type Double
     @NSManaged public var startAltitude: String?
     @NSManaged public var stopAltitude: String?
     @NSManaged public var dataCSV: String?
@@ -50,6 +51,16 @@ extension TrackedRoute {
     
     func getDataCSV() -> String {
         return dataCSV ?? ""
+    }
+    
+    func getElapsedTime() -> String {
+        //TODO
+        return ""
+    }
+    
+    func getElapsedAltitude() -> String {
+        //TODO
+        return ""
     }
     
     //MARK: - Setters
@@ -102,4 +113,4 @@ extension TrackedRoute {
     }
     
 }
-*/
+
