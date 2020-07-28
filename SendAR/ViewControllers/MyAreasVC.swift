@@ -61,6 +61,11 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.myAreasTableView.reloadData()
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        searchBar.resignFirstResponder()
+        return true
+    }
+    
     //TableView Functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredAreasAndCrags.count

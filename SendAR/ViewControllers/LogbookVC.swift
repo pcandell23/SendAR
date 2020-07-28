@@ -1,5 +1,5 @@
 //
-//  ProfileVC.swift
+//  LogbookVC.swift
 //  SendAR
 //
 //  Created by Bennett Baker on 6/30/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class LogbookViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

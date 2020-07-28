@@ -212,7 +212,7 @@
                                 <segue destination="yQC-gZ-4lL" kind="show" id="kdo-UE-wmY"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Profile" image="person.circle" catalog="system" id="9vt-Rh-7kz">
+                        <barButtonItem key="rightBarButtonItem" title="MyLogbook" image="person.crop.circle" catalog="system" id="9vt-Rh-7kz">
                             <color key="tintColor" red="0.1960784314" green="0.6588235294" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="eQr-wZ-zB5" kind="show" id="aOM-cb-IFc"/>
@@ -241,10 +241,10 @@
             </objects>
             <point key="canvasLocation" x="1670" y="-422"/>
         </scene>
-        <!--Profile-->
+        <!--Logbook-->
         <scene sceneID="MPh-hx-7ev">
             <objects>
-                <viewController title="Profile" id="eQr-wZ-zB5" customClass="ProfileViewController" customModule="SendAR" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Profile" id="eQr-wZ-zB5" userLabel="Logbook" customClass="LogbookViewController" customModule="SendAR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MID-s0-YAu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -259,7 +259,7 @@
                         <color key="tintColor" red="0.1960784314" green="0.6588235294" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="t4S-dZ-buc"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Profile" id="ELA-6S-NZe"/>
+                    <navigationItem key="navigationItem" title="My Logbook" id="ELA-6S-NZe"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6TY-oo-sy2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -270,7 +270,7 @@
         <image name="NoseCoverImage" width="769" height="505"/>
         <image name="house" catalog="system" width="128" height="110"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
-        <image name="person.circle" catalog="system" width="128" height="121"/>
+        <image name="person.crop.circle" catalog="system" width="128" height="121"/>
         <image name="plus.circle" catalog="system" width="128" height="121"/>
     </resources>
 </document>

@@ -71,6 +71,11 @@ class NearbyAreasViewController: UIViewController, UITableViewDelegate, UITableV
         self.nearbyAreasTableView.reloadData()
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        searchBar.resignFirstResponder()
+        return true
+    }
+    
     //TableView Functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredList.count
