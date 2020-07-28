@@ -256,6 +256,7 @@
                             <constraint firstItem="vJf-rP-6sY" firstAttribute="trailing" secondItem="lCk-zw-1CM" secondAttribute="trailing" constant="20" id="nP5-Dq-2hx"/>
                             <constraint firstItem="p97-sc-kJV" firstAttribute="leading" secondItem="vJf-rP-6sY" secondAttribute="leading" constant="20" id="oDs-Fx-xsV"/>
                             <constraint firstItem="0C5-rP-RhE" firstAttribute="top" secondItem="rx0-j5-q3Z" secondAttribute="bottom" constant="20" id="rQl-QC-UyM"/>
+                            <constraint firstItem="rx0-j5-q3Z" firstAttribute="width" secondItem="p97-sc-kJV" secondAttribute="width" id="zq6-6h-5Ne"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vJf-rP-6sY"/>
                     </view>
