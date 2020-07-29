@@ -15,12 +15,16 @@ class LogbookCell: UITableViewCell {
     @IBOutlet weak var routeHeight: UILabel!
     @IBOutlet weak var routeDate: UILabel!
     
-    //var trackedRoute: TrackedRoute?
+    var trackedRoute: TrackedRoute?
     
     override func awakeFromNib() {
-        //self.trackedRoute = nil
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        self.trackedRoute = nil
+        super.init(coder: aDecoder)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
