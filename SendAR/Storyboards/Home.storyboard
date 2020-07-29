@@ -42,7 +42,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rx0-j5-q3Z" userLabel="Log New Route" customClass="GreenButton" customModule="SendAR" customModuleProvider="target">
                                 <rect key="frame" x="217" y="394" width="177" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="177" id="3P7-DW-WwI"/>
                                     <constraint firstAttribute="height" constant="44" id="hhW-8T-CoH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
@@ -67,7 +66,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p97-sc-kJV" customClass="GreenButton" customModule="SendAR" customModuleProvider="target">
                                 <rect key="frame" x="20" y="394" width="177" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="177" id="0jY-Ib-7PY"/>
                                     <constraint firstAttribute="height" constant="44" id="cHo-uh-XLy"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
@@ -265,7 +263,7 @@
                     </tabBarItem>
                     <navigationItem key="navigationItem" title="Track" id="JcK-57-T1Y">
                         <barButtonItem key="backBarButtonItem" title="Home" id="aXt-NU-mN8"/>
-                        <barButtonItem key="leftBarButtonItem" title="Log New Route" image="plus.circle" catalog="system" id="pdM-Ic-XnN">
+                        <barButtonItem key="rightBarButtonItem" title="Log New Route" image="plus.circle" catalog="system" id="pdM-Ic-XnN">
                             <color key="tintColor" red="0.1960784314" green="0.6588235294" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="yQC-gZ-4lL" kind="show" id="kdo-UE-wmY"/>
@@ -280,6 +278,7 @@
                         <outlet property="routeName" destination="lCk-zw-1CM" id="NDl-d6-tTu"/>
                         <outlet property="startTime" destination="6Km-r2-T2P" id="efY-au-86F"/>
                         <outlet property="startingAltitude" destination="23k-Vg-3bn" id="NNd-nM-86f"/>
+                        <outlet property="stopButtonLabel" destination="rx0-j5-q3Z" id="kFh-IU-hu9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f1R-Xi-lQW" sceneMemberID="firstResponder"/>

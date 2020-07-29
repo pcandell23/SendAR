@@ -89,7 +89,9 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
         routePitches.resignFirstResponder()
         routeRating.resignFirstResponder()
         routeDescription.resignFirstResponder()
-        searchBar.resignFirstResponder()
+        if searchBar != nil {
+            searchBar.resignFirstResponder()
+        }
         return true
     }
     

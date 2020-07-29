@@ -23,9 +23,10 @@ class HomeViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     @IBOutlet weak var startingAltitude: UILabel!
     @IBOutlet weak var currentAltitude: UILabel!
     @IBOutlet weak var deltaAltitude: UILabel!
-    
     @IBOutlet weak var startTime: UILabel!
     @IBOutlet weak var elapsedTime: UILabel!
+    @IBOutlet weak var stopButtonLabel: GreenButton!
+    
     
     @IBOutlet weak var logbookTable: UITableView!
     
@@ -35,6 +36,10 @@ class HomeViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Track"
+        stopButtonLabel.setTitle("Reset", for: .normal)
+        
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
         
@@ -70,6 +75,8 @@ class HomeViewController: UIViewController, UITextFieldDelegate, UITableViewDele
                 tracker?.startTracking()
                 startingAltitude.text = "\(currentLocation.altitude)"
                 startTime.text = "\(Date())"
+                self.title = "Tracking"
+                stopButtonLabel.setTitle("Stop Tracking", for: .normal)
             } else {
                 Alert.showRouteNameInvalidAlert(on: self)
             }
@@ -87,6 +94,8 @@ class HomeViewController: UIViewController, UITextFieldDelegate, UITableViewDele
             tracking = false
             currentAltitude.text = "\(currentLocation.altitude)"
             elapsedTime.text = "stopTime - startTime"
+            self.title = "Track"
+            stopButtonLabel.setTitle("Reset", for: .normal)
         } else if !tracking {
             startingAltitude.text = "Ready"
             startTime.text = "Ready"
@@ -94,6 +103,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate, UITableViewDele
             elapsedTime.text = "0.0 minutes"
             deltaAltitude.text = "0.0 meters"
             routeName.text = nil
+            self.title = "Track"
         }
     }
     
