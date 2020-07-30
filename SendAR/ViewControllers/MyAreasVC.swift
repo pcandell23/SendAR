@@ -61,9 +61,8 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.myAreasTableView.reloadData()
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        searchBar.resignFirstResponder()
-        return true
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.searchBar.endEditing(true)
     }
     
     //TableView Functions
