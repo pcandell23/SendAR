@@ -14,6 +14,8 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet var myAreasTableView: UITableView!
+    @IBOutlet weak var editButtonTitle: UIBarButtonItem!
+    
     
     let delegate = AppDelegate.shared()
     
@@ -107,6 +109,16 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
                 tableView.deleteRows(at: [indexPath], with: .fade)
 
                 delegate.dataController?.saveContext()
+        }
+    }
+    
+    @IBAction func editButton(_ sender: Any) {
+        if(self.myAreasTableView.isEditing == true) {
+            self.myAreasTableView.isEditing = false
+            editButtonTitle.title = "Edit"
+        } else {
+            self.myAreasTableView.isEditing = true
+            editButtonTitle.title = "Done"
         }
     }
     

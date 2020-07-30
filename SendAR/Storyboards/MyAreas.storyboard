@@ -35,9 +35,14 @@
                         <viewLayoutGuide key="safeArea" id="LHo-cw-xLj"/>
                     </view>
                     <navigationItem key="navigationItem" title="My Areas" id="wPT-AI-cRa">
-                        <barButtonItem key="rightBarButtonItem" title="Edit" id="j4e-WX-oOn"/>
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="j4e-WX-oOn">
+                            <connections>
+                                <action selector="editButton:" destination="GvQ-rw-db8" id="cwc-eA-IwH"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="editButtonTitle" destination="j4e-WX-oOn" id="pdX-bc-acJ"/>
                         <outlet property="myAreasTableView" destination="cgZ-cq-XbB" id="G6W-36-Ms7"/>
                         <outlet property="searchBar" destination="lJe-8e-1ly" id="G5T-NZ-apU"/>
                         <segue destination="IKo-1G-Vf1" kind="presentation" identifier="MyAreasToArea" modalPresentationStyle="fullScreen" id="KNF-J1-GP8"/>
