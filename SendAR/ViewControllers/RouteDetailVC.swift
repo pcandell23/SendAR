@@ -18,6 +18,9 @@ class RouteDetailVC: UIViewController {
     @IBOutlet weak var routeDescription: UILabel!
     @IBOutlet weak var routeLocation: UILabel!
     
+    @IBOutlet weak var noImageLabel: UILabel!
+    @IBOutlet weak var noARLabel: UILabel!
+    
     var route: Route? = nil
     
     override func viewDidLoad() {
@@ -41,8 +44,25 @@ class RouteDetailVC: UIViewController {
             }
             
             self.routeDimensions.text = "\(route!.getType()), \(route!.getPitches()) pitches, \(route!.getAltitude()) feet"
+            
+            //Temporary
+            self.routeImage = nil
+            self.routeShape = nil
+            
             self.routeDescription.text = route!.getDescription()
             
+            
+            if self.routeImage != nil {
+                noImageLabel.text = ""
+            } else {
+                noImageLabel.text = "Image Unavailable"
+            }
+            
+            if self.routeShape != nil {
+                noARLabel.text = ""
+            } else {
+                noARLabel.text = "AR Unavailable"
+            }
         }
     }
     

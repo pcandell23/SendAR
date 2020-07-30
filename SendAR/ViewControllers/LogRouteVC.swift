@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreData
 
-class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDelegate, UITableViewDelegate, UITableViewDataSource {
+class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDelegate, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     // Stores delegate information for use of storing and fetching from persistant store
     let delegate = AppDelegate.shared()
@@ -45,9 +45,13 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
         //Second Page Setup
         
         //Third Page Setup
+        if searchBar != nil {
+            searchBar.delegate = self
+        }
         
         if nearbyAreasTable != nil {
             fetchNearbyCrags()
+            filteredCrags = crags
             let nib = UINib(nibName: "SuggestedAreaCell", bundle: nil)
             nearbyAreasTable.register(nib, forCellReuseIdentifier: "SuggestedAreaCell")
             nearbyAreasTable.delegate = self
@@ -60,19 +64,21 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
 
     //first page "Continue" button
     @IBAction func saveRouteDetails(_ sender: Any) {
-        newRouteName = routeName.text
-        newRouteGrade = routeGrade.text
-        newRouteType = routeType.text
-        newRoutePitches = Int16(routePitches.text ?? "0") ?? 0
-        newRouteHeight = Int32(routeHeight.text ?? "0") ?? 0
         
-        if routeRating.text != nil{
-            newRouteRating = (routeRating.text! as NSString).doubleValue
+        if routeName.text!.isEmpty || routeGrade.text!.isEmpty || routeType.text!.isEmpty || routePitches.text!.isEmpty || routeHeight.text!.isEmpty || routeRating.text!.isEmpty || routeDescription.text!.isEmpty {
+            Alert.showIncompleteRouteDataAlert(on: self)
+            print("Alert: Incomplete Route Data")
         } else {
-            newRouteRating = 0.0
+            newRouteName = routeName.text
+            newRouteGrade = routeGrade.text
+            newRouteType = routeType.text
+            newRoutePitches = Int16(routePitches.text ?? "0") ?? 0
+            newRouteHeight = Int32(routeHeight.text ?? "0") ?? 0
+            newRouteRating = (routeRating.text! as NSString).doubleValue
+            newRouteDescription = routeDescription.text
+            
+            performSegue(withIdentifier: "RouteDetailsToRouteLocation", sender: self)
         }
-        
-        newRouteDescription = routeDescription.text
         
     }
     
@@ -83,6 +89,9 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
         routePitches.resignFirstResponder()
         routeRating.resignFirstResponder()
         routeDescription.resignFirstResponder()
+        if searchBar != nil {
+            searchBar.resignFirstResponder()
+        }
         return true
     }
     
@@ -100,15 +109,17 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
     var routeLatitudeString: String? = nil
     var routeLongitudeString: String? = nil
     
-    init(locationCheck: LocationChecker, locationGetterForAltitude: CLLocation) {
+    init(locationCheck: LocationChecker, locationGetterForAltitude: CLLocation, routeCrag: Crag) {
         self.locationCheck = locationCheck
         self.locationGetterForAltitude = locationGetterForAltitude
+        self.routeCrag = routeCrag
         super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
         self.locationCheck = LocationChecker()
         self.locationGetterForAltitude = CLLocation()
+        self.routeCrag = Crag()
         super.init(coder: aDecoder)
     }
     
@@ -139,14 +150,21 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
     //MARK: - Third Page
     
     var crags: [Crag] = []
+    var filteredCrags: [Crag]!
+    var routeCrag: Crag
     
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var nearbyAreasTable: UITableView!
-        //show all crags in X (small) radius, allow user to tap to select
+        //sort crags by proximity or alphabetically, add search bar
     
     @IBAction func confirmButton(_ sender: Any) {
         storeNewRouteInfo()
-        //TODO: also record selected area
-        dismiss(animated: true, completion: nil)
+        if routeCrag.getName() != "" {
+            routeCrag.addRoute(newRoute: loggedRoute!)
+            performSegue(withIdentifier: "ConfirmToSuccess", sender: self)
+        } else {
+            Alert.showNoAreaSelectedAlert(on: self)
+        }
     }
     
     @IBAction func newAreaButton(_ sender: Any) {
@@ -157,7 +175,7 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
     
     @IBAction func notSureButton(_ sender: Any) {
         storeNewRouteInfo()
-        dismiss(animated: true, completion: nil)
+        performSegue(withIdentifier: "ConfirmToSuccess", sender: self)
     }
     
     //Stores the route in the data base. Takes an optional crag so that it can be used in any of the three above buttons.
@@ -182,17 +200,38 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
         delegate.dataController!.saveContext()
     }
     
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filteredCrags = []
+        
+        if searchText == "" {
+            filteredCrags = crags
+        } else {
+            for crag in crags {
+                if crag.getName().lowercased().contains(searchText.lowercased()) {
+                    filteredCrags.append(crag)
+                }
+            }
+        }
+        
+        self.nearbyAreasTable.reloadData()
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return crags.count
+        return filteredCrags.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SuggestedAreaCell", for: indexPath) as! SuggestedAreaCell
-        cell.crag = crags[indexPath.row]
-        cell.areaName.text = crags[indexPath.row].getName()
+        cell.crag = filteredCrags[indexPath.row]
+        cell.areaName.text = filteredCrags[indexPath.row].getName()
         cell.proximityToUser.text = cell.getProximity()
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        routeCrag = filteredCrags[indexPath.row]
+        print("\(crags[indexPath.row].getName()) selected as the crag.")
     }
     
     func fetchNearbyCrags(){

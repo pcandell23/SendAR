@@ -9,40 +9,43 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RouteCell" rowHeight="71" id="Y92-fO-l1a" customClass="RouteCell" customModule="SendAR" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="71"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RouteCell" rowHeight="63" id="Y92-fO-l1a" customClass="RouteCell" customModule="SendAR" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="63"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Y92-fO-l1a" id="Ewx-kB-9Kl">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="71"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="63"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Route Name Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BxX-qO-3Xl">
-                        <rect key="frame" x="20" y="10" width="190" height="25"/>
+                        <rect key="frame" x="20" y="10" width="190" height="20.5"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="25" id="umd-T5-ny4"/>
+                            <constraint firstAttribute="height" constant="20.5" id="vPL-oM-34q"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grade" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lyL-UT-meM">
-                        <rect key="frame" x="220" y="12" width="80" height="21"/>
+                        <rect key="frame" x="220" y="11.5" width="80" height="18"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="21" id="XS9-Rz-RDS"/>
+                            <constraint firstAttribute="height" constant="18" id="XS9-Rz-RDS"/>
                             <constraint firstAttribute="width" constant="80" id="m5Q-QV-wVV"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type - # Pitches, Height" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z96-Ru-7Ry" userLabel="Route Type">
-                        <rect key="frame" x="20" y="40" width="190" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="20" y="35" width="194" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="Y3l-Qd-WdO"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⭐️⭐️⭐️⭐️⭐️" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sai-z0-cj3">
-                        <rect key="frame" x="224" y="49.5" width="80" height="6"/>
+                        <rect key="frame" x="224" y="37.5" width="80" height="13.5"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="80" id="k2w-5e-wR2"/>
                         </constraints>
@@ -55,15 +58,14 @@
                     <constraint firstItem="lyL-UT-meM" firstAttribute="leading" secondItem="BxX-qO-3Xl" secondAttribute="trailing" constant="10" id="0Sb-W6-TFX"/>
                     <constraint firstItem="z96-Ru-7Ry" firstAttribute="leading" secondItem="Ewx-kB-9Kl" secondAttribute="leading" constant="20" id="1Pl-La-nKE"/>
                     <constraint firstAttribute="trailing" secondItem="lyL-UT-meM" secondAttribute="trailing" constant="20" id="3im-dU-LN5"/>
-                    <constraint firstItem="sai-z0-cj3" firstAttribute="centerY" secondItem="z96-Ru-7Ry" secondAttribute="centerY" constant="2" id="9rq-1p-No0"/>
-                    <constraint firstItem="sai-z0-cj3" firstAttribute="leading" secondItem="z96-Ru-7Ry" secondAttribute="trailing" constant="14" id="DGT-6X-14W"/>
+                    <constraint firstItem="sai-z0-cj3" firstAttribute="leading" secondItem="z96-Ru-7Ry" secondAttribute="trailing" constant="10" id="DGT-6X-14W"/>
                     <constraint firstAttribute="trailing" secondItem="sai-z0-cj3" secondAttribute="trailing" constant="16" id="Iq9-3s-EKF"/>
                     <constraint firstItem="BxX-qO-3Xl" firstAttribute="top" secondItem="Ewx-kB-9Kl" secondAttribute="top" constant="10" id="Iqr-wD-doP"/>
-                    <constraint firstAttribute="bottom" secondItem="z96-Ru-7Ry" secondAttribute="bottom" constant="10" id="LS6-8B-Fco"/>
-                    <constraint firstItem="z96-Ru-7Ry" firstAttribute="top" secondItem="BxX-qO-3Xl" secondAttribute="bottom" constant="5" id="TlY-0z-8Ky"/>
+                    <constraint firstAttribute="bottom" secondItem="z96-Ru-7Ry" secondAttribute="bottom" constant="10" id="J8x-pY-viZ"/>
+                    <constraint firstItem="z96-Ru-7Ry" firstAttribute="top" secondItem="BxX-qO-3Xl" secondAttribute="bottom" constant="4.5" id="TlY-0z-8Ky"/>
+                    <constraint firstItem="sai-z0-cj3" firstAttribute="centerY" secondItem="z96-Ru-7Ry" secondAttribute="centerY" id="VuQ-wb-88m"/>
                     <constraint firstItem="lyL-UT-meM" firstAttribute="firstBaseline" secondItem="BxX-qO-3Xl" secondAttribute="firstBaseline" id="W45-OM-t5t"/>
                     <constraint firstItem="BxX-qO-3Xl" firstAttribute="leading" secondItem="Ewx-kB-9Kl" secondAttribute="leading" constant="20" id="cxd-fc-CGM"/>
-                    <constraint firstAttribute="bottom" secondItem="sai-z0-cj3" secondAttribute="bottom" constant="15.5" id="fm5-Rb-B2a"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="rR6-PJ-Sff"/>
@@ -73,7 +75,7 @@
                 <outlet property="routeRating" destination="sai-z0-cj3" id="FKn-cF-lbK"/>
                 <outlet property="routeType" destination="z96-Ru-7Ry" id="4Ey-Nw-QjT"/>
             </connections>
-            <point key="canvasLocation" x="-20.289855072463769" y="222.65625"/>
+            <point key="canvasLocation" x="-20.289855072463769" y="219.97767857142856"/>
         </tableViewCell>
     </objects>
 </document>

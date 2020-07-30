@@ -49,6 +49,8 @@ class AreaDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
             let areaRegion = MKCoordinateRegion.init(center: areaLocation, latitudinalMeters: 7500, longitudinalMeters: 7500)
             areaMap.setRegion(areaRegion, animated: true)
             noLocationLabel.text = ""
+        } else {
+            noLocationLabel.text = "Location Unavailable"
         }
     }
 
@@ -80,7 +82,7 @@ class AreaDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         areaDescription.sizeToFit()
     }
     
-    //TableView Functions
+    //MARK: - TableView Functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return subAreasAndCrags.count
     }
