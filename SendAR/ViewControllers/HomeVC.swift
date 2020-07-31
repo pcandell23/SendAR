@@ -90,6 +90,18 @@ class HomeViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     
     @IBAction func stopTrackingButton(_ sender: Any) {
         if tracker != nil && routeName.text != nil && tracking {
+            //When finished tracking, presents Half Sheet Modal for save or discard
+            guard let reactionVC = storyboard?.instantiateViewController(withIdentifier: "DoneTrackingVC") as? DoneTrackingVC else {
+                assertionFailure("No view controller ID DoneTrackingVC in storyboard")
+                return
+            }
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
+                reactionVC.backingImage = self.tabBarController?.view.asImage()
+                reactionVC.modalPresentationStyle = .fullScreen
+                self.present(reactionVC, animated: false, completion: nil)
+            })
+            
             tracker!.stopTracking(stopTime: Date())
             tracking = false
             currentAltitude.text = "\(currentLocation.altitude)"

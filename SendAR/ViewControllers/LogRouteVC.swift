@@ -89,10 +89,11 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
         routePitches.resignFirstResponder()
         routeRating.resignFirstResponder()
         routeDescription.resignFirstResponder()
-        if searchBar != nil {
-            searchBar.resignFirstResponder()
-        }
         return true
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.searchBar.endEditing(true)
     }
     
     //MARK: - Second Page

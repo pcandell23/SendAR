@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		400E6B7E24D37C8B00E618BA /* DoneTrackingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400E6B7D24D37C8B00E618BA /* DoneTrackingVC.swift */; };
+		400E6B8024D37EDC00E618BA /* UIView+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400E6B7F24D37EDC00E618BA /* UIView+Snapshot.swift */; };
 		4010BDA324AFD7190082F7E2 /* RouteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4010BDA124AFD7190082F7E2 /* RouteCell.swift */; };
 		4010BDA424AFD7190082F7E2 /* RouteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4010BDA224AFD7190082F7E2 /* RouteCell.xib */; };
 		401F9A5724B390900035428B /* LocationChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401F9A5624B390900035428B /* LocationChecker.swift */; };
@@ -98,6 +100,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		400E6B7D24D37C8B00E618BA /* DoneTrackingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneTrackingVC.swift; sourceTree = "<group>"; };
+		400E6B7F24D37EDC00E618BA /* UIView+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Snapshot.swift"; sourceTree = "<group>"; };
 		4010BDA124AFD7190082F7E2 /* RouteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteCell.swift; sourceTree = "<group>"; };
 		4010BDA224AFD7190082F7E2 /* RouteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RouteCell.xib; sourceTree = "<group>"; };
 		401F9A5624B390900035428B /* LocationChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationChecker.swift; sourceTree = "<group>"; };
@@ -210,6 +214,7 @@
 				401F9A5624B390900035428B /* LocationChecker.swift */,
 				40EAF91C24B627C600CB7C08 /* Alert.swift */,
 				96A6431224C4FBCB00226EEC /* SceneLocationViewExtension.swift */,
+				400E6B7F24D37EDC00E618BA /* UIView+Snapshot.swift */,
 			);
 			path = "Helper Classes";
 			sourceTree = "<group>";
@@ -313,6 +318,7 @@
 			children = (
 				40EAA79424A8152300F41366 /* ViewController.swift */,
 				961F055E24AA64E8006DE4C5 /* HomeVC.swift */,
+				400E6B7D24D37C8B00E618BA /* DoneTrackingVC.swift */,
 				407A645B24AF963C006CDFCE /* LogRouteVC.swift */,
 				961F056024AA64F8006DE4C5 /* MapVC.swift */,
 				404FDE1324AEA524006AA33E /* NearbyAreas.swift */,
@@ -550,6 +556,7 @@
 				96A6430324C0E31800226EEC /* CLLocation+Extensions.swift in Sources */,
 				4044391324BE8B8400CDB237 /* CragCell.swift in Sources */,
 				407A645C24AF963C006CDFCE /* LogRouteVC.swift in Sources */,
+				400E6B8024D37EDC00E618BA /* UIView+Snapshot.swift in Sources */,
 				40C874DD24BA91EA00ED0214 /* AreaDetailVC.swift in Sources */,
 				405E556F24B57C9C00646237 /* SuggestedAreaCell.swift in Sources */,
 				96A6430224C0E31800226EEC /* CGPoint+Extensions.swift in Sources */,
@@ -597,6 +604,7 @@
 				96A642EE24C0E0ED00226EEC /* SceneLocationView+ARSCNViewDelegate.swift in Sources */,
 				961F056524AA658F006DE4C5 /* ARviewVC.swift in Sources */,
 				96A642F724C0E2F700226EEC /* PolylineNode.swift in Sources */,
+				400E6B7E24D37C8B00E618BA /* DoneTrackingVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

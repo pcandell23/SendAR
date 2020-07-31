@@ -71,9 +71,8 @@ class NearbyAreasViewController: UIViewController, UITableViewDelegate, UITableV
         self.nearbyAreasTableView.reloadData()
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        searchBar.resignFirstResponder()
-        return true
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.searchBar.endEditing(true)
     }
     
     //TableView Functions
