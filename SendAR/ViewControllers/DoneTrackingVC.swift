@@ -27,8 +27,17 @@ class DoneTrackingVC: UIViewController {
     
     var backingImage: UIImage?
     
+    //Variables For Displaying Data
+    @IBOutlet weak var routeName: UILabel!
+    @IBOutlet weak var routeHeight: UILabel!
+    @IBOutlet weak var routeTime: UILabel!
+    
+    @IBOutlet weak var discardButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupDiscardButton()
+        routeName.text = "Route Name"
 
         // update backing image view
         backingImageView.image = backingImage
@@ -69,6 +78,16 @@ class DoneTrackingVC: UIViewController {
         
         showCard()
     }
+    
+    @IBAction func saveTrackedRoute(_ sender: Any) {
+        //TODO: Save new TrackedRoute object
+    }
+    
+    @IBAction func discardTrackedRoute(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
     
     @IBAction func dimmerViewTapped(_ tapRecognizer: UITapGestureRecognizer) {
         hideCardAndGoBack()
@@ -112,6 +131,19 @@ class DoneTrackingVC: UIViewController {
         }
     }
     
+    func setupDiscardButton() {
+        discardButton.setTitleColor(.white, for: .normal)
+        discardButton.backgroundColor = UIColor.lightGray
+        discardButton.layer.shadowColor = UIColor.black.cgColor
+        discardButton.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        discardButton.layer.shadowRadius = 5
+        discardButton.layer.shadowOpacity = 0.25
+        discardButton.layer.cornerRadius = 5
+        discardButton.clipsToBounds = true
+        discardButton.layer.masksToBounds = false
+        
+    }
+    
     // MARK: - Animations
     private func showCard(atState: CardViewState = .normal) {
         self.view.layoutIfNeeded()
@@ -122,7 +154,7 @@ class DoneTrackingVC: UIViewController {
             if atState == .expanded {
                 cardViewTopConstraint.constant = 30.0
             } else {
-                cardViewTopConstraint.constant = (safeAreaHeight + bottomPadding) / 1.65 //from 2
+                cardViewTopConstraint.constant = (safeAreaHeight + bottomPadding) / 2
             }
             
             cardPanStartingTopConstraint = cardViewTopConstraint.constant
@@ -184,7 +216,7 @@ class DoneTrackingVC: UIViewController {
         }
         
         //when card view top constraint is equal to this, dimmer view alpha is dimmest
-        let fullDimPosition = (safeAreaHeight + bottomPadding) / 1.65 //from 2
+        let fullDimPosition = (safeAreaHeight + bottomPadding) / 2
         //when this, lightest
         let noDimPosition = safeAreaHeight + bottomPadding
         
