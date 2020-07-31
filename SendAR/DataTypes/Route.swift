@@ -35,6 +35,7 @@ extension Route {
     
     //Relationships
     @NSManaged public var crag: Crag?
+    @NSManaged public var trackedRoute: TrackedRoute?
     
     // MARK: - Getters
            
@@ -52,11 +53,7 @@ extension Route {
     }
        
     func getGrade() -> String{
-        if grade != nil{
-            return grade!
-        } else {
-            return ""
-        }
+        return grade ?? ""
     }
     
     func getPitches() -> Int16{
@@ -89,6 +86,10 @@ extension Route {
     
     func getUuid() -> UUID?{
         return uuid
+    }
+    
+    func getTrackedRoute() -> TrackedRoute?{
+        return trackedRoute
     }
     
     // MARK: - Setters
@@ -134,7 +135,11 @@ extension Route {
         self.routeDescription = newDescription
     }
     
-    func setInitialValues(name: String? = nil, grade: String? = nil, rating: Double = 0.0, height: Int32 = 0, type: String? = nil, pitches: Int16 = 0, crag: Crag? = nil, latitude: String? = nil, longitude: String? = nil, altitude: Int16 = 0, description: String? = nil){
+    func setTrackedRoute(_ newTrackedRoute: TrackedRoute){
+        self.trackedRoute = newTrackedRoute
+    }
+    
+    func setInitialValues(name: String? = nil, grade: String? = nil, rating: Double = 0.0, height: Int32 = 0, type: String? = nil, pitches: Int16 = 0, crag: Crag? = nil, latitude: String? = nil, longitude: String? = nil, altitude: Int16 = 0, description: String? = nil, trackedRoute: TrackedRoute? = nil){
         self.name = name
         self.grade = grade
         self.rating = rating
@@ -142,6 +147,8 @@ extension Route {
         self.pitches = pitches
         self.type = type
         self.routeDescription = description
+        
+        self.trackedRoute = trackedRoute
         
         self.crag = crag
         
@@ -162,5 +169,17 @@ extension Route {
     
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Route> {
         return NSFetchRequest<Route>(entityName: "Route")
+    }
+    
+    static func storeNewRouteInfo(newRouteName: String? = nil, newRouteGrade: String?, newRouteRating: Double = 0.0, newRouteHeight: Int32 = 0, newRouteType: String? = nil, newRoutePitches: Int16, crag: Crag? = nil, newRouteLatitude: String? = nil, newRouteLongitude: String? = nil, newRouteAltitude: Int16 = 0, newRouteDescription: String? = nil) -> Route{
+        
+        let newRoute = NSEntityDescription.insertNewObject(forEntityName: "Route", into: AppDelegate.shared().dataController!.persistentContainer.viewContext) as! Route
+        
+        newRoute.setInitialValues(name: newRouteName, grade: newRouteGrade, rating: newRouteRating, height: newRouteHeight, type: newRouteType, pitches: newRoutePitches, crag: crag, latitude: newRouteLatitude, longitude: newRouteLongitude, altitude: newRouteAltitude, description: newRouteDescription)
+        
+        
+        AppDelegate.shared().dataController!.saveContext()
+        
+        return newRoute
     }
 }

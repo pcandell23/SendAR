@@ -66,4 +66,15 @@ extension Crag {
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Crag> {
         return NSFetchRequest<Crag>(entityName: "Crag")
     }
+    
+    static public func storeNewCrag(name: String? = nil, description: String? = nil, fenceLatitude: String? = nil, fenceLongitude: String? = nil, fenceRadius: Int64 = 0, subAreas: NSSet? = nil, superArea: Area? = nil) -> Crag{
+        
+        let newCrag = NSEntityDescription.insertNewObject(forEntityName: "Crag", into: AppDelegate.shared().dataController!.persistentContainer.viewContext) as! Crag
+        
+        newCrag.setInitialValues(name: name, description: description, fenceLatitude: fenceLatitude, fenceLongitude: fenceLongitude, fenceRadius: fenceRadius, subAreas: subAreas, superArea: superArea)
+        
+        AppDelegate.shared().dataController!.saveContext()
+        
+        return newCrag
+    }
 }

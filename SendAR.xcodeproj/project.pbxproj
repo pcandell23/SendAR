@@ -34,7 +34,6 @@
 		40E0978524AE548A0022E965 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40E0978424AE548A0022E965 /* Settings.storyboard */; };
 		40E21AAA24CFB104005F8A0C /* LogbookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E21AA824CFB104005F8A0C /* LogbookCell.swift */; };
 		40E21AAB24CFB104005F8A0C /* LogbookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40E21AA924CFB104005F8A0C /* LogbookCell.xib */; };
-		40E21AAD24CFB40B005F8A0C /* TrackedRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E21AAC24CFB40B005F8A0C /* TrackedRoute.swift */; };
 		40EAA79124A8152300F41366 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EAA79024A8152300F41366 /* AppDelegate.swift */; };
 		40EAA79324A8152300F41366 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EAA79224A8152300F41366 /* SceneDelegate.swift */; };
 		40EAA79524A8152300F41366 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EAA79424A8152300F41366 /* ViewController.swift */; };
@@ -53,7 +52,6 @@
 		9694582C24B571430093D943 /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694582B24B571430093D943 /* Area.swift */; };
 		9694582E24B571580093D943 /* Crag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694582D24B571580093D943 /* Crag.swift */; };
 		9694583024B571610093D943 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694582F24B571610093D943 /* Route.swift */; };
-		9694583124B69CF10093D943 /* SendARData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9694581C24B56F7C0093D943 /* SendARData.xcdatamodeld */; };
 		9694583524B6A38A0093D943 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694583424B6A38A0093D943 /* DataController.swift */; };
 		9694583724BA6EAF0093D943 /* AreaDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9694583624BA6EAF0093D943 /* AreaDetail.storyboard */; };
 		9694583A24BA78390093D943 /* AreaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9694583924BA78390093D943 /* AreaCell.xib */; };
@@ -78,6 +76,8 @@
 		96A6430D24C0E32400226EEC /* SceneLocationEstimate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6430924C0E32400226EEC /* SceneLocationEstimate+Extensions.swift */; };
 		96A6431024C0E33B00226EEC /* AttributedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6430F24C0E33B00226EEC /* AttributedType.swift */; };
 		96A6431324C4FBCB00226EEC /* SceneLocationViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A6431224C4FBCB00226EEC /* SceneLocationViewExtension.swift */; };
+		96ED3F8A24D4788900537151 /* TrackedRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ED3F8824D4788900537151 /* TrackedRoute.swift */; };
+		96ED3F9024D47B3C00537151 /* AreaAndRouteData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 96ED3F8E24D47B3C00537151 /* AreaAndRouteData.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,7 +125,6 @@
 		40E0978424AE548A0022E965 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		40E21AA824CFB104005F8A0C /* LogbookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogbookCell.swift; sourceTree = "<group>"; };
 		40E21AA924CFB104005F8A0C /* LogbookCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogbookCell.xib; sourceTree = "<group>"; };
-		40E21AAC24CFB40B005F8A0C /* TrackedRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackedRoute.swift; sourceTree = "<group>"; };
 		40EAA78D24A8152300F41366 /* SendAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SendAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40EAA79024A8152300F41366 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40EAA79224A8152300F41366 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,7 +146,6 @@
 		961F056424AA658F006DE4C5 /* ARviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARviewVC.swift; sourceTree = "<group>"; };
 		961F056624AA66FC006DE4C5 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		967A62F424C614DF00890267 /* areaCragRouteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = areaCragRouteTests.swift; sourceTree = "<group>"; };
-		9694581D24B56F7C0093D943 /* Data.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Data.xcdatamodel; sourceTree = "<group>"; };
 		9694582B24B571430093D943 /* Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
 		9694582D24B571580093D943 /* Crag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crag.swift; sourceTree = "<group>"; };
 		9694582F24B571610093D943 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
@@ -175,6 +173,8 @@
 		96A6430924C0E32400226EEC /* SceneLocationEstimate+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SceneLocationEstimate+Extensions.swift"; sourceTree = "<group>"; };
 		96A6430F24C0E33B00226EEC /* AttributedType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedType.swift; sourceTree = "<group>"; };
 		96A6431224C4FBCB00226EEC /* SceneLocationViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneLocationViewExtension.swift; sourceTree = "<group>"; };
+		96ED3F8824D4788900537151 /* TrackedRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackedRoute.swift; sourceTree = "<group>"; };
+		96ED3F8F24D47B3C00537151 /* AreaAndRouteData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AreaAndRouteData.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -330,11 +330,11 @@
 		961F056C24AC01CB006DE4C5 /* DataTypes */ = {
 			isa = PBXGroup;
 			children = (
-				9694581C24B56F7C0093D943 /* SendARData.xcdatamodeld */,
 				9694582B24B571430093D943 /* Area.swift */,
 				9694582D24B571580093D943 /* Crag.swift */,
 				9694582F24B571610093D943 /* Route.swift */,
-				40E21AAC24CFB40B005F8A0C /* TrackedRoute.swift */,
+				96ED3F8824D4788900537151 /* TrackedRoute.swift */,
+				96ED3F8E24D47B3C00537151 /* AreaAndRouteData.xcdatamodeld */,
 			);
 			path = DataTypes;
 			sourceTree = "<group>";
@@ -547,7 +547,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9694583124B69CF10093D943 /* SendARData.xcdatamodeld in Sources */,
 				96A6430324C0E31800226EEC /* CLLocation+Extensions.swift in Sources */,
 				4044391324BE8B8400CDB237 /* CragCell.swift in Sources */,
 				407A645C24AF963C006CDFCE /* LogRouteVC.swift in Sources */,
@@ -558,6 +557,7 @@
 				401F9A5724B390900035428B /* LocationChecker.swift in Sources */,
 				96A6430024C0E31800226EEC /* SCNVector3+Extensions.swift in Sources */,
 				407A645A24AF8C83006CDFCE /* GreenButton.swift in Sources */,
+				96ED3F9024D47B3C00537151 /* AreaAndRouteData.xcdatamodeld in Sources */,
 				961F056124AA64F8006DE4C5 /* MapVC.swift in Sources */,
 				96A642F424C0E2F700226EEC /* ScalingScheme.swift in Sources */,
 				407A646024AFA64F006CDFCE /* MapButton.swift in Sources */,
@@ -577,11 +577,11 @@
 				96A6431024C0E33B00226EEC /* AttributedType.swift in Sources */,
 				9694583524B6A38A0093D943 /* DataController.swift in Sources */,
 				96A642EA24C0E0ED00226EEC /* SceneLocationViewEstimateDelegate.swift in Sources */,
-				40E21AAD24CFB40B005F8A0C /* TrackedRoute.swift in Sources */,
 				40EAA79124A8152300F41366 /* AppDelegate.swift in Sources */,
 				40D845C924B030DD0028CDAE /* Tracker.swift in Sources */,
 				96A6430A24C0E32400226EEC /* SceneLocationEstimate.swift in Sources */,
 				40C874DB24BA910E00ED0214 /* CragDetailVC.swift in Sources */,
+				96ED3F8A24D4788900537151 /* TrackedRoute.swift in Sources */,
 				96A642E824C0E0ED00226EEC /* SceneLocationView.swift in Sources */,
 				40EAA79324A8152300F41366 /* SceneDelegate.swift in Sources */,
 				96A6430D24C0E32400226EEC /* SceneLocationEstimate+Extensions.swift in Sources */,
@@ -771,13 +771,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A3UJWUP8W2;
+				DEVELOPMENT_TEAM = 9B6C5XW645;
 				INFOPLIST_FILE = SendAR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.SendAR.SendARAlt2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SendAR.SendAR1;
 				PRODUCT_NAME = SendAR;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -789,13 +789,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A3UJWUP8W2;
+				DEVELOPMENT_TEAM = 9B6C5XW645;
 				INFOPLIST_FILE = SendAR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.SendAR.SendARAlt2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SendAR.SendAR1;
 				PRODUCT_NAME = SendAR;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -936,13 +936,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		9694581C24B56F7C0093D943 /* SendARData.xcdatamodeld */ = {
+		96ED3F8E24D47B3C00537151 /* AreaAndRouteData.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				9694581D24B56F7C0093D943 /* Data.xcdatamodel */,
+				96ED3F8F24D47B3C00537151 /* AreaAndRouteData.xcdatamodel */,
 			);
-			currentVersion = 9694581D24B56F7C0093D943 /* Data.xcdatamodel */;
-			path = SendARData.xcdatamodeld;
+			currentVersion = 96ED3F8F24D47B3C00537151 /* AreaAndRouteData.xcdatamodel */;
+			path = AreaAndRouteData.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

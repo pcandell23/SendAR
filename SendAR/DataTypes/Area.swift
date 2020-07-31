@@ -176,5 +176,16 @@ extension Area {
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Area> {
         return NSFetchRequest<Area>(entityName: "Area")
     }
+    
+    static public func storeNewArea(name: String? = nil, description: String? = nil, fenceLatitude: String? = nil, fenceLongitude: String? = nil, fenceRadius: Int64 = 0, subAreas: NSSet? = nil, superArea: Area? = nil) -> Area{
+        
+        let newArea = NSEntityDescription.insertNewObject(forEntityName: "Area", into: AppDelegate.shared().dataController!.persistentContainer.viewContext) as! Area
+        
+        newArea.setInitialValues(name: name, description: description, fenceLatitude: fenceLatitude, fenceLongitude: fenceLongitude, fenceRadius: fenceRadius, subAreas: subAreas, superArea: superArea)
+        
+        AppDelegate.shared().dataController!.saveContext()
+        
+        return newArea
+    }
 }
 

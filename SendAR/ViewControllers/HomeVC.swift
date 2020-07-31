@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+import CoreData
 
 class HomeViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
     
@@ -61,6 +62,8 @@ class HomeViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         logbookTable.delegate = self
         logbookTable.dataSource = self
         
+        fetchLoggedRoutes()
+        
     }
     
     //MARK: - Tracker
@@ -70,7 +73,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         if !tracking {
             if let route = routeName.text, !route.isEmpty {
                 tracking = true
-                tracker = Tracker(routeName: routeName.text!, data: "", startTime: "\(Date())", stopTime: "", timer: timer, currentLocation: currentLocation, locationAccess: locationManager)
+                tracker = Tracker(routeName: routeName.text!, data: "", startTime: Date(), timer: timer, currentLocation: currentLocation, locationAccess: locationManager)
                 
                 tracker?.startTracking()
                 startingAltitude.text = "\(currentLocation.altitude)"
@@ -87,15 +90,16 @@ class HomeViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     
     @IBAction func stopTrackingButton(_ sender: Any) {
         if tracker != nil && routeName.text != nil && tracking {
-            tracker!.stopTracking(stopTime: "\(Date())")
-            
-            let saveToFile = UIActivityViewController(activityItems:[tracker!.data], applicationActivities: nil)
-            self.present(saveToFile, animated: true, completion: nil)
+            tracker!.stopTracking(stopTime: Date())
             tracking = false
             currentAltitude.text = "\(currentLocation.altitude)"
-            elapsedTime.text = "stopTime - startTime"
+            elapsedTime.text = "\(tracker!.timeCount)"
             self.title = "Track"
             stopButtonLabel.setTitle("Reset", for: .normal)
+            let storedRoute = tracker?.saveTrackedRoute()
+            if storedRoute != nil{
+                trackedRoutes.append(storedRoute!)
+            }
         } else if !tracking {
             startingAltitude.text = "Ready"
             startTime.text = "Ready"
@@ -116,14 +120,34 @@ class HomeViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     
     //MARK: - Logbook Table
     
+    func fetchLoggedRoutes(){
+        let moc = AppDelegate.shared().dataController?.persistentContainer.viewContext
+           if moc == nil{
+               print("Failed to fetch Logged routes.")
+               return
+           }
+           let requestRoutes = NSFetchRequest<TrackedRoute>(entityName: "TrackedRoute")
+           var fetched: [TrackedRoute]?
+           do {
+               fetched = try moc?.fetch(requestRoutes)
+           } catch {
+               print("Could not fetch. \(error)")
+           }
+           
+           if fetched != nil {
+               trackedRoutes = fetched!
+           }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return trackedRoutes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "LogbookCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LogbookCell", for: indexPath) as! LogbookCell
         //initialize cell data fields here
         
+        cell.routeName.text = trackedRoutes[indexPath.row].getName()
         return cell
     }
     

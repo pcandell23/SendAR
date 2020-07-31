@@ -21,25 +21,27 @@
         <attribute name="longitude" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="pitches" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="rating" optional="YES" attributeType="Double" minValueString="0" maxValueString="5" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="rating" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="routeDescription" optional="YES" attributeType="String"/>
         <attribute name="type" optional="YES" attributeType="String"/>
         <attribute name="uuid" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <relationship name="crag" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Crag" inverseName="routes" inverseEntity="Crag"/>
+        <relationship name="trackedRoute" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TrackedRoute" inverseName="route" inverseEntity="TrackedRoute"/>
     </entity>
     <entity name="TrackedRoute" representedClassName="TrackedRoute" syncable="YES">
-        <attribute name="dataCSV" optional="YES" attributeType="String"/>
+        <attribute name="data" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
-        <attribute name="startAltitude" optional="YES" attributeType="String"/>
-        <attribute name="startTime" optional="YES" attributeType="String"/>
-        <attribute name="stopAltitude" optional="YES" attributeType="String"/>
-        <attribute name="stopTime" optional="YES" attributeType="String"/>
+        <attribute name="startAltitude" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="startTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="stopAltitude" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="stopTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="uuid" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <relationship name="route" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Route" inverseName="trackedRoute" inverseEntity="Route"/>
     </entity>
     <elements>
-        <element name="Area" positionX="-63" positionY="-18" width="128" height="163"/>
-        <element name="Crag" positionX="-54" positionY="-9" width="128" height="58"/>
-        <element name="Route" positionX="-36" positionY="9" width="128" height="223"/>
-        <element name="TrackedRoute" positionX="-45" positionY="45" width="128" height="148"/>
+        <element name="Area" positionX="-63" positionY="-18" width="128" height="28"/>
+        <element name="Crag" positionX="-54" positionY="0" width="128" height="58"/>
+        <element name="Route" positionX="-36" positionY="72" width="128" height="238"/>
+        <element name="TrackedRoute" positionX="-18" positionY="153" width="128" height="163"/>
     </elements>
 </model>

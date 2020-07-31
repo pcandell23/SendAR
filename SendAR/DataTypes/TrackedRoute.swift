@@ -17,50 +17,69 @@ public class TrackedRoute: NSManagedObject {
 extension TrackedRoute {
     //MARK: - Attributes
     @NSManaged public var name: String?
-    //Probably have to change startTime and stopTime to type Date
-    @NSManaged public var startTime: String?
-    @NSManaged public var stopTime: String?
-    //Probably have to change startAltitude and stopAltitude to type Double
-    @NSManaged public var startAltitude: String?
-    @NSManaged public var stopAltitude: String?
-    @NSManaged public var dataCSV: String?
     
+    @NSManaged public var startTime: Date?
+    @NSManaged public var stopTime: Date?
+    
+    @NSManaged public var startAltitude: Double
+    @NSManaged public var stopAltitude: Double
+    
+    @NSManaged public var data: String?
     @NSManaged public var uuid: UUID?
+
+    @NSManaged public var route: Route?
     
+    
+
     //MARK: - Getters
     
     func getName() -> String {
         return name ?? ""
     }
     
-    func getStartTime() -> String {
-        return startTime ?? ""
+    func getStartTime() -> Date? {
+        return startTime
     }
     
-    func getStopTime() -> String {
-        return stopTime ?? ""
+    func getStopTime() -> Date? {
+        return stopTime
     }
     
-    func getStartAltitude() -> String {
-        return startAltitude ?? ""
+    func getStartAltitude() -> Double {
+        return startAltitude
     }
     
-    func getStopAltitude() -> String {
-        return stopAltitude ?? ""
+    func getStopAltitude() -> Double {
+        return stopAltitude
     }
     
-    func getDataCSV() -> String {
-        return dataCSV ?? ""
+    func getData() -> String {
+        return data ?? ""
     }
     
-    func getElapsedTime() -> String {
-        //TODO
-        return ""
+    func getElapsedTime() -> Double {
+        if stopTime != nil && startTime != nil{
+            return stopTime!.timeIntervalSince(startTime! as Date)
+        }else{
+          return 0.0
+        }
     }
     
-    func getElapsedAltitude() -> String {
-        //TODO
-        return ""
+    func getElapsedAltitude() -> Double {
+        return stopAltitude - startAltitude
+    }
+    
+    func getRoute() -> Route?{
+        return route
+    }
+    
+    func getParsedData() -> [[String]]{
+        if data != nil {
+            let parsedData = parseCSVString(csvStr: data!)
+            return parsedData
+        } else {
+            return [["","","",""]]
+        }
     }
     
     //MARK: - Setters
@@ -69,35 +88,49 @@ extension TrackedRoute {
         self.name = newName
     }
     
-    func setStartTime(_ newStartTime: String) {
+    func setStartTime(_ newStartTime: Date) {
         self.startTime = newStartTime
     }
     
-    func setStopTime(_ newStopTime: String) {
+    func setStopTime(_ newStopTime: Date) {
         self.stopTime = newStopTime
     }
     
-    func setStartAltitude(_ newStartAltitude: String) {
+    func setStartAltitude(_ newStartAltitude: Double) {
         self.startAltitude = newStartAltitude
     }
     
-    func setStopAltitude(_ newStopAltitude: String) {
+    func setStopAltitude(_ newStopAltitude: Double) {
         self.stopAltitude = newStopAltitude
     }
     
-    func setDataCSV(_ newDataCSV: String) {
-        self.dataCSV = newDataCSV
+    func setData(_ newData: String) {
+        self.data = newData
     }
     
-    func setInitialValues(name: String? = nil, startTime: String? = nil, stopTime: String? = nil, startAltitude: String? = nil, stopAltitude: String? = nil, dataCSV: String? = nil) {
+    func setRoute(_ newRoute: Route){
+        self.route = newRoute
+    }
+    
+    func setInitialValues(name: String? = nil, startTime: Date? = nil, stopTime: Date? = nil, startAltitude: Double, stopAltitude: Double, data: String? = nil, route: Route? = nil) {
         self.name = name
         self.startTime = startTime
         self.stopTime = stopTime
         self.startAltitude = startAltitude
         self.stopAltitude = stopAltitude
-        self.dataCSV = dataCSV
+        self.data = data
+        self.route = route
         
         self.uuid = UUID()
+    }
+    
+    func parseCSVString(csvStr: String) -> [[String]]{
+           let subs = csvStr.components(separatedBy: "\n")
+           var parsed = [[String]]()
+           for s in subs{
+               parsed.append(s.components(separatedBy: ", "))
+           }
+           return parsed
     }
     
     
@@ -112,5 +145,18 @@ extension TrackedRoute {
         return NSFetchRequest<TrackedRoute>(entityName: "TrackedRoute")
     }
     
+    static func storeNewTrackedRoute(name: String? = nil, startTime: Date? = nil, stopTime: Date? = nil, startAltitude: Double, stopAltitude: Double, data: String? = nil, route: Route? = nil) -> TrackedRoute{
+        
+        let newTrackedRoute = NSEntityDescription.insertNewObject(forEntityName: "TrackedRoute", into: AppDelegate.shared().dataController!.persistentContainer.viewContext) as! TrackedRoute
+        
+        newTrackedRoute.setInitialValues(name: name, startTime: startTime, stopTime: stopTime, startAltitude: startAltitude, stopAltitude: stopAltitude, data: data, route: route)
+        
+        AppDelegate.shared().dataController!.saveContext()
+        
+        return newTrackedRoute
+    }
+    
 }
+
+ 
 
