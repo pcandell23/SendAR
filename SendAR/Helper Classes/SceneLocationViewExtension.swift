@@ -65,7 +65,7 @@ extension SceneLocationView{
                parsed.append(s.components(separatedBy: ", "))
            }
            return parsed
-       }
+    }
     
     
 }

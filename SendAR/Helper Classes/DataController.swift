@@ -19,7 +19,7 @@ class DataController: NSObject{
          error conditions that could cause the creation of the store to fail.
         */
         
-        let container = NSPersistentContainer(name: "SendARData")
+        let container = NSPersistentContainer(name: "AreaAndRouteData")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
@@ -33,7 +33,7 @@ class DataController: NSObject{
                  * The store could not be migrated to the current model version.
                  Check the error message to determine what the actual problem was.
                  */
-                fatalError("Unresolved error \(error), \(error.userInfo)")
+                fatalError("Failed to create persistant store \(error), \(error.userInfo)")
             }
         })
         return container
@@ -64,6 +64,7 @@ class DataController: NSObject{
         fetchAreas()
         let moc = persistentContainer.viewContext
         if(areas.count != 0){
+            print("got to here?")
             return
             
 //            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Area")
@@ -100,6 +101,7 @@ class DataController: NSObject{
 //                // Error Handling
 //            }
         } else {
+            print("were here")
             areas = []
         }
         
