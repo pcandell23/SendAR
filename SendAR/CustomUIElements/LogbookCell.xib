@@ -37,7 +37,6 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWr-JR-tx6">
                         <rect key="frame" x="165" y="35" width="135" height="18"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="135" id="FXw-Xf-lf6"/>
                             <constraint firstAttribute="height" constant="18" id="pED-QX-X6o"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -56,6 +55,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="Mq8-55-voe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="0rj-O6-W94"/>
+                    <constraint firstItem="Mq8-55-voe" firstAttribute="width" secondItem="sWr-JR-tx6" secondAttribute="width" id="5GC-TW-TIl"/>
                     <constraint firstItem="lKq-Th-4ap" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="8RL-U9-RY6"/>
                     <constraint firstItem="sWr-JR-tx6" firstAttribute="firstBaseline" secondItem="Mq8-55-voe" secondAttribute="firstBaseline" id="Be8-tQ-HBI"/>
                     <constraint firstItem="5uq-HC-TMZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="JQt-e6-Shq"/>

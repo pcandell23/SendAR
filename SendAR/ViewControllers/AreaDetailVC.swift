@@ -45,8 +45,8 @@ class AreaDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     //Check if the area has a location; centers map on area
     func centerViewOnAreaLocation() {
         if area?.getFenceCoordinates() != nil {
-            let areaLocation = CLLocationCoordinate2D(latitude: (area?.getFenceLatitudeDouble())!, longitude: (area?.getFenceLongitudeDouble())!)
-            let areaRegion = MKCoordinateRegion.init(center: areaLocation, latitudinalMeters: 7500, longitudinalMeters: 7500)
+            let areaLocation    = CLLocationCoordinate2D(latitude: (area?.getFenceLatitudeDouble())!, longitude: (area?.getFenceLongitudeDouble())!)
+            let areaRegion      = MKCoordinateRegion.init(center: areaLocation, latitudinalMeters: 7500, longitudinalMeters: 7500)
             areaMap.setRegion(areaRegion, animated: true)
             noLocationLabel.text = ""
         } else {
@@ -57,9 +57,9 @@ class AreaDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
         if area != nil {
-            areaName.title = area!.getName()
-            self.subAreas = area!.getSubAreasAsArray()
-            self.areaDescription.text = area!.getDescription()
+            areaName.title              = area!.getName()
+            self.subAreas               = area!.getSubAreasAsArray()
+            self.areaDescription.text   = area!.getDescription()
         }
            // Do any additional setup after loading the view.
         

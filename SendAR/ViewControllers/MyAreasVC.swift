@@ -76,16 +76,16 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
         if self.filteredAreasAndCrags[indexPath.row] is Crag {
             let cragCell = tableView.dequeueReusableCell(withIdentifier: "CragCell", for: indexPath) as! CragCell
             
-            cragCell.cragName.text = (filteredAreasAndCrags[indexPath.row] as! Crag).getName()
-            cragCell.cragProximity.text = cragCell.getProximity()
-            cragCell.numberOfRoutes.text = String((filteredAreasAndCrags[indexPath.row] as! Crag).routeCount()) + " routes"
+            cragCell.cragName.text          = (filteredAreasAndCrags[indexPath.row] as! Crag).getName()
+            cragCell.cragProximity.text     = cragCell.getProximity()
+            cragCell.numberOfRoutes.text    = String((filteredAreasAndCrags[indexPath.row] as! Crag).routeCount()) + " routes"
             
             return cragCell
         } else {
             let areaCell = tableView.dequeueReusableCell(withIdentifier: "AreaCell", for: indexPath) as! AreaCell
             
-            areaCell.areaName.text = (filteredAreasAndCrags[indexPath.row] ).getName()
-            areaCell.areaProximity.text = areaCell.getProximity()
+            areaCell.areaName.text          = (filteredAreasAndCrags[indexPath.row] ).getName()
+            areaCell.areaProximity.text     = areaCell.getProximity()
             if (filteredAreasAndCrags[indexPath.row] ).subAreaCount() > 0 {
                 areaCell.subAreasLabel.text = String((filteredAreasAndCrags[indexPath.row] ).subAreaCount()) + " sub-areas"
             } else {

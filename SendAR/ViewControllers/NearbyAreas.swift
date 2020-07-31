@@ -84,8 +84,8 @@ class NearbyAreasViewController: UIViewController, UITableViewDelegate, UITableV
         if self.filteredList[indexPath.row] is Area  {
             let areaCell = tableView.dequeueReusableCell(withIdentifier: "AreaCell", for: indexPath) as! AreaCell
             
-            areaCell.areaName.text = (filteredList[indexPath.row] as! Area).getName()
-            areaCell.areaProximity.text = areaCell.getProximity()
+            areaCell.areaName.text          = (filteredList[indexPath.row] as! Area).getName()
+            areaCell.areaProximity.text     = areaCell.getProximity()
             if (filteredList[indexPath.row] as! Area).subAreaCount() > 0 {
                 areaCell.subAreasLabel.text = String((filteredList[indexPath.row] as! Area).subAreaCount()) + " sub-areas"
             } else {
@@ -97,9 +97,9 @@ class NearbyAreasViewController: UIViewController, UITableViewDelegate, UITableV
         } else if self.filteredList[indexPath.row] is Crag {
             let cragCell = tableView.dequeueReusableCell(withIdentifier: "CragCell", for: indexPath) as! CragCell
             
-            cragCell.cragName.text = (filteredList[indexPath.row] as! Crag).getName()
-            cragCell.cragProximity.text = cragCell.getProximity()
-            cragCell.numberOfRoutes.text = String((filteredList[indexPath.row] as! Crag).routeCount())
+            cragCell.cragName.text          = (filteredList[indexPath.row] as! Crag).getName()
+            cragCell.cragProximity.text     = cragCell.getProximity()
+            cragCell.numberOfRoutes.text    = String((filteredList[indexPath.row] as! Crag).routeCount())
             
             return cragCell
         }

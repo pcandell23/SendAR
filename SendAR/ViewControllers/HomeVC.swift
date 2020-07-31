@@ -12,6 +12,8 @@ import CoreData
 
 class HomeViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
     
+    let delegate = AppDelegate.shared()
+    
     var locationManager = CLLocationManager()
     var currentLocation = CLLocation()
     var timer = Timer()
@@ -33,7 +35,10 @@ class HomeViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     
     @IBAction func unwindToHome(_ sender: UIStoryboardSegue) {}
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        resetFields()
+        logbookTable.reloadData()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,14 +49,16 @@ class HomeViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
         
+        fetchLoggedRoutes()
+        
         if(CLLocationManager.authorizationStatus() == .authorizedWhenInUse || CLLocationManager.authorizationStatus() == .authorizedAlways) {
             //currentLocation = locationManager.location!
             
-            startingAltitude.text = "Ready"
-            currentAltitude.text = "\(currentLocation.altitude) meters"
-            deltaAltitude.text = "0.0 meters"
-            startTime.text = "Ready"
-            elapsedTime.text = "0.0 minutes"
+            startingAltitude.text   = "Ready"
+            currentAltitude.text    = "\(currentLocation.altitude) meters"
+            deltaAltitude.text      = "0.0 meters"
+            startTime.text          = "Ready"
+            elapsedTime.text        = "0.0 minutes"
             
         }
         
@@ -61,8 +68,6 @@ class HomeViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         logbookTable.register(nib, forCellReuseIdentifier: "LogbookCell")
         logbookTable.delegate = self
         logbookTable.dataSource = self
-        
-        fetchLoggedRoutes()
         
     }
     
@@ -76,9 +81,9 @@ class HomeViewController: UIViewController, UITextFieldDelegate, UITableViewDele
                 tracker = Tracker(routeName: routeName.text!, data: "", startTime: Date(), timer: timer, currentLocation: currentLocation, locationAccess: locationManager)
                 
                 tracker?.startTracking()
-                startingAltitude.text = "\(currentLocation.altitude)"
-                startTime.text = "\(Date())"
-                self.title = "Tracking"
+                startingAltitude.text   = "\(currentLocation.altitude)"
+                startTime.text          = "\(Date())"
+                self.title              = "Tracking"
                 stopButtonLabel.setTitle("Stop Tracking", for: .normal)
             } else {
                 Alert.showRouteNameInvalidAlert(on: self)
@@ -97,30 +102,36 @@ class HomeViewController: UIViewController, UITextFieldDelegate, UITableViewDele
             }
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
-                reactionVC.backingImage = self.tabBarController?.view.asImage()
-                reactionVC.modalPresentationStyle = .fullScreen
+                reactionVC.backingImage             = self.tabBarController?.view.asImage()
+                reactionVC.modalPresentationStyle   = .fullScreen
+                // should pass saved tracked route with below
+                reactionVC.trackedRoute             = self.tracker?.saveTrackedRoute()
                 self.present(reactionVC, animated: false, completion: nil)
             })
             
             tracker!.stopTracking(stopTime: Date())
             tracking = false
-            currentAltitude.text = "\(currentLocation.altitude)"
-            elapsedTime.text = "\(tracker!.timeCount)"
-            self.title = "Track"
+            currentAltitude.text    = "\(currentLocation.altitude)"
+            elapsedTime.text        = "\(tracker!.timeCount)"
+            self.title              = "Track"
             stopButtonLabel.setTitle("Reset", for: .normal)
             let storedRoute = tracker?.saveTrackedRoute()
             if storedRoute != nil{
                 trackedRoutes.append(storedRoute!)
             }
         } else if !tracking {
-            startingAltitude.text = "Ready"
-            startTime.text = "Ready"
-            currentAltitude.text = "\(currentLocation.altitude) meters"
-            elapsedTime.text = "0.0 minutes"
-            deltaAltitude.text = "0.0 meters"
-            routeName.text = nil
-            self.title = "Track"
+            resetFields()
         }
+    }
+    
+    func resetFields() {
+        startingAltitude.text   = "Ready"
+        startTime.text          = "Ready"
+        currentAltitude.text    = "\(currentLocation.altitude) meters"
+        elapsedTime.text        = "0.0 minutes"
+        deltaAltitude.text      = "0.0 meters"
+        routeName.text          = nil
+        self.title              = "Track"
     }
     
     
@@ -158,11 +169,31 @@ class HomeViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LogbookCell", for: indexPath) as! LogbookCell
         //initialize cell data fields here
-        
-        cell.routeName.text = trackedRoutes[indexPath.row].getName()
+        cell.routeName.text     = trackedRoutes[indexPath.row].getName()
+        let timeInMinutes       = (trackedRoutes[indexPath.row].getElapsedTime() / 60.0)
+        cell.routeTime.text     = String(format: "%.2f minutes", timeInMinutes)
+        let heightInMeters      = trackedRoutes[indexPath.row].getElapsedAltitude()
+        cell.routeHeight.text   = String(format: "%.1f m", heightInMeters)
+        if let routeStartTime   = trackedRoutes[indexPath.row].getStartTime() {
+            cell.routeDate.text = "\(routeStartTime)"
+        }
         return cell
     }
     
     //Make Editable
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){
+            if editingStyle == .delete {
+                let moc = delegate.dataController?.persistentContainer.viewContext
+                if moc == nil {
+                    return
+                }
+                let commit = trackedRoutes[indexPath.row]
+                moc!.delete(commit)
+                trackedRoutes.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+
+                delegate.dataController?.saveContext()
+        }
+    }
     
 }

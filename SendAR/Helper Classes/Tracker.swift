@@ -21,17 +21,17 @@ class Tracker {
     var timeCount: Int = 0
     
     init(routeName: String, data: String, startTime: Date, timer: Timer, currentLocation: CLLocation, locationAccess: CLLocationManager) {
-        self.routeName = routeName
-        self.data = data
-        self.startTime = startTime
-        self.timer = timer
-        self.currentLocation = currentLocation
-        self.locationAccess = locationAccess
+        self.routeName          = routeName
+        self.data               = data
+        self.startTime          = startTime
+        self.timer              = timer
+        self.currentLocation    = currentLocation
+        self.locationAccess     = locationAccess
     }
     
     func startTracking() {
-        data = ""
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.recordPosition), userInfo: nil, repeats: true)
+        data    = ""
+        timer   = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.recordPosition), userInfo: nil, repeats: true)
         
     }
     
