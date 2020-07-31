@@ -385,35 +385,37 @@
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <state key="normal" title="Discard"/>
                                         <connections>
-                                            <action selector="discardTrackedRoute:" destination="uM7-OD-ge1" eventType="touchUpInside" id="slc-s2-ve8"/>
+                                            <action selector="discardButtonPressed:" destination="uM7-OD-ge1" eventType="touchUpInside" id="slc-s2-ve8"/>
                                         </connections>
                                     </button>
-                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UGg-Dq-Z3P">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                        <items>
-                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="d6S-4D-wx9"/>
-                                            <barButtonItem title="Save" id="y54-qM-5PJ">
-                                                <connections>
-                                                    <action selector="saveTrackedRoute:" destination="uM7-OD-ge1" id="YCp-vu-xYf"/>
-                                                </connections>
-                                            </barButtonItem>
-                                        </items>
-                                    </toolbar>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NIg-Qd-GSP">
+                                        <rect key="frame" x="356" y="8" width="38" height="33"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="33" id="tmD-hQ-8my"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <state key="normal" title="Save">
+                                            <color key="titleColor" red="0.1960784314" green="0.6588235294" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="saveButtonPressed:" destination="uM7-OD-ge1" eventType="touchUpInside" id="hwn-8e-vHz"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstItem="UGg-Dq-Z3P" firstAttribute="leading" secondItem="n57-gf-ENF" secondAttribute="leading" id="20u-lq-fa1"/>
-                                    <constraint firstItem="6Ac-G9-L1a" firstAttribute="top" secondItem="UGg-Dq-Z3P" secondAttribute="bottom" id="2a4-uf-0F4"/>
-                                    <constraint firstAttribute="trailing" secondItem="UGg-Dq-Z3P" secondAttribute="trailing" id="3CX-hw-Asa"/>
+                                    <constraint firstItem="6Ac-G9-L1a" firstAttribute="top" secondItem="n57-gf-ENF" secondAttribute="top" constant="44" id="0kQ-dB-U44"/>
                                     <constraint firstAttribute="trailing" secondItem="Ot8-uZ-Ihq" secondAttribute="trailing" constant="20" id="F5b-ig-5wi"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ot8-uZ-Ihq" secondAttribute="bottom" priority="998" constant="74" id="FDk-IE-cC1"/>
                                     <constraint firstItem="plp-da-Gua" firstAttribute="top" secondItem="6Ac-G9-L1a" secondAttribute="bottom" constant="8.5" id="FxE-dc-Ert"/>
-                                    <constraint firstItem="UGg-Dq-Z3P" firstAttribute="top" secondItem="n57-gf-ENF" secondAttribute="top" id="K6Q-zx-X9a"/>
-                                    <constraint firstItem="Ot8-uZ-Ihq" firstAttribute="top" secondItem="n57-gf-ENF" secondAttribute="top" constant="704" id="N5Q-7N-X9J"/>
                                     <constraint firstItem="lJm-ec-OZ4" firstAttribute="top" secondItem="plp-da-Gua" secondAttribute="bottom" constant="8" id="NYt-fj-Y0k"/>
+                                    <constraint firstAttribute="trailing" secondItem="NIg-Qd-GSP" secondAttribute="trailing" constant="20" id="U8b-HD-zwX"/>
                                     <constraint firstAttribute="trailing" secondItem="6Ac-G9-L1a" secondAttribute="trailing" constant="20" id="Uh8-pF-9bg"/>
                                     <constraint firstItem="6Ac-G9-L1a" firstAttribute="leading" secondItem="n57-gf-ENF" secondAttribute="leading" constant="20" id="YbZ-Q6-b3b"/>
                                     <constraint firstItem="lJm-ec-OZ4" firstAttribute="leading" secondItem="n57-gf-ENF" secondAttribute="leading" constant="20" id="hIo-94-5Py"/>
+                                    <constraint firstItem="Ot8-uZ-Ihq" firstAttribute="top" secondItem="n57-gf-ENF" secondAttribute="top" constant="704" id="ihB-sw-3zi"/>
                                     <constraint firstItem="plp-da-Gua" firstAttribute="leading" secondItem="n57-gf-ENF" secondAttribute="leading" id="pwc-RX-eWV"/>
+                                    <constraint firstItem="NIg-Qd-GSP" firstAttribute="top" secondItem="n57-gf-ENF" secondAttribute="top" constant="8" id="ygb-Dp-ea0"/>
                                     <constraint firstAttribute="trailing" secondItem="plp-da-Gua" secondAttribute="trailing" id="yr6-Za-cgj"/>
                                     <constraint firstAttribute="trailing" secondItem="lJm-ec-OZ4" secondAttribute="trailing" constant="20" id="zhk-8Z-l9b"/>
                                     <constraint firstItem="Ot8-uZ-Ihq" firstAttribute="leading" secondItem="n57-gf-ENF" secondAttribute="leading" constant="20" id="zrD-ox-GKX"/>
@@ -453,6 +455,8 @@
                         <outlet property="cardViewTopConstraint" destination="9j7-q2-Kht" id="gRw-P6-394"/>
                         <outlet property="dimmerView" destination="mwf-DF-zf7" id="nxh-KU-dL6"/>
                         <outlet property="discardButton" destination="Ot8-uZ-Ihq" id="g9H-86-jhB"/>
+                        <outlet property="discardButtonBottomConstraint" destination="FDk-IE-cC1" id="rY1-Y6-BNH"/>
+                        <outlet property="discardButtonTopConstraint" destination="ihB-sw-3zi" id="Tri-ef-49N"/>
                         <outlet property="handleView" destination="lOs-ey-0fK" id="f7Z-6o-48e"/>
                         <outlet property="routeHeight" destination="SoU-49-kBT" id="LT1-1C-CCR"/>
                         <outlet property="routeName" destination="6Ac-G9-L1a" id="mqI-t7-b7o"/>

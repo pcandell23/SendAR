@@ -33,6 +33,8 @@ class DoneTrackingVC: UIViewController {
     @IBOutlet weak var routeTime: UILabel!
     
     @IBOutlet weak var discardButton: UIButton!
+    @IBOutlet weak var discardButtonTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var discardButtonBottomConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,14 +81,18 @@ class DoneTrackingVC: UIViewController {
         showCard()
     }
     
-    @IBAction func saveTrackedRoute(_ sender: Any) {
-        //TODO: Save new TrackedRoute object
+    @IBAction func saveButtonPressed(_ sender: Any) {
+        saveTrackedRoute()
+        hideCardAndGoBack()
     }
     
-    @IBAction func discardTrackedRoute(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+    @IBAction func discardButtonPressed(_ sender: Any) {
+        hideCardAndGoBack()
     }
     
+    func saveTrackedRoute() {
+        //TODO: saves tracked route
+    }
     
     
     @IBAction func dimmerViewTapped(_ tapRecognizer: UITapGestureRecognizer) {
@@ -111,6 +117,8 @@ class DoneTrackingVC: UIViewController {
         case .ended:
             //dismiss if user swipes down fast, expand if user swipes up fast
             if velocity.y > 1500.0 {
+                //saves by default, then dismisses
+                saveTrackedRoute()
                 hideCardAndGoBack()
                 return
             }
@@ -123,6 +131,8 @@ class DoneTrackingVC: UIViewController {
                     //show normal
                     showCard(atState: .normal)
                 } else {
+                    //saves by default, then dismisses
+                    saveTrackedRoute()
                     hideCardAndGoBack()
                 }
             }
@@ -141,6 +151,11 @@ class DoneTrackingVC: UIViewController {
         discardButton.layer.cornerRadius = 5
         discardButton.clipsToBounds = true
         discardButton.layer.masksToBounds = false
+        
+        
+        if let safeAreaHeight = UIApplication.shared.windows.filter({$0.isKeyWindow}).first?.safeAreaLayoutGuide.layoutFrame.size.height {
+            discardButtonTopConstraint.constant = (safeAreaHeight - (44 + discardButtonBottomConstraint.constant))
+        }
         
     }
     
