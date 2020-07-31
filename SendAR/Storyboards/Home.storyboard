@@ -211,9 +211,8 @@
                                     <constraint firstAttribute="height" constant="170" id="jeu-Ql-JB1"/>
                                 </constraints>
                             </stackView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bNT-WA-Ni5">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bNT-WA-Ni5">
                                 <rect key="frame" x="0.0" y="527" width="414" height="286"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0C5-rP-RhE">
@@ -249,11 +248,15 @@
                             <constraint firstItem="0C5-rP-RhE" firstAttribute="leading" secondItem="vJf-rP-6sY" secondAttribute="leading" id="RZa-PA-ReQ"/>
                             <constraint firstItem="vJf-rP-6sY" firstAttribute="trailing" secondItem="jvt-zY-fnE" secondAttribute="trailing" constant="20" id="Xw2-o9-RDP"/>
                             <constraint firstItem="jvt-zY-fnE" firstAttribute="top" secondItem="0C5-rP-RhE" secondAttribute="bottom" constant="10" id="ZQz-QC-qkI"/>
+                            <constraint firstItem="bNT-WA-Ni5" firstAttribute="leading" secondItem="vJf-rP-6sY" secondAttribute="leading" id="aOD-Jt-yUt"/>
                             <constraint firstItem="vJf-rP-6sY" firstAttribute="trailing" secondItem="rx0-j5-q3Z" secondAttribute="trailing" constant="20" id="aVc-RJ-day"/>
+                            <constraint firstItem="bNT-WA-Ni5" firstAttribute="bottom" secondItem="vJf-rP-6sY" secondAttribute="bottom" id="atQ-sx-CLx"/>
                             <constraint firstItem="p97-sc-kJV" firstAttribute="top" secondItem="N35-VH-wN5" secondAttribute="bottom" constant="20" id="dcC-eH-TdH"/>
                             <constraint firstItem="vJf-rP-6sY" firstAttribute="trailing" secondItem="lCk-zw-1CM" secondAttribute="trailing" constant="20" id="nP5-Dq-2hx"/>
                             <constraint firstItem="p97-sc-kJV" firstAttribute="leading" secondItem="vJf-rP-6sY" secondAttribute="leading" constant="20" id="oDs-Fx-xsV"/>
                             <constraint firstItem="0C5-rP-RhE" firstAttribute="top" secondItem="rx0-j5-q3Z" secondAttribute="bottom" constant="20" id="rQl-QC-UyM"/>
+                            <constraint firstItem="bNT-WA-Ni5" firstAttribute="trailing" secondItem="vJf-rP-6sY" secondAttribute="trailing" id="tK7-Za-gVH"/>
+                            <constraint firstItem="bNT-WA-Ni5" firstAttribute="top" secondItem="jvt-zY-fnE" secondAttribute="bottom" constant="8" id="tyz-jB-5Xt"/>
                             <constraint firstItem="rx0-j5-q3Z" firstAttribute="width" secondItem="p97-sc-kJV" secondAttribute="width" id="zq6-6h-5Ne"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vJf-rP-6sY"/>
