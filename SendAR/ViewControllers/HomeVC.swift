@@ -87,15 +87,31 @@ class HomeViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     
     @IBAction func stopTrackingButton(_ sender: Any) {
         if tracker != nil && routeName.text != nil && tracking {
-            tracker!.stopTracking(stopTime: "\(Date())")
+            //When finished tracking, presents Half Sheet Modal for save or discard
+            guard let reactionVC = storyboard?.instantiateViewController(withIdentifier: "DoneTrackingVC") as? DoneTrackingVC else {
+                assertionFailure("No view controller ID DoneTrackingVC in storyboard")
+                return
+            }
             
-            let saveToFile = UIActivityViewController(activityItems:[tracker!.data], applicationActivities: nil)
-            self.present(saveToFile, animated: true, completion: nil)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
+                reactionVC.backingImage = self.tabBarController?.view.asImage()
+                reactionVC.modalPresentationStyle = .fullScreen
+                self.present(reactionVC, animated: false, completion: nil)
+            })
+            
             tracking = false
             currentAltitude.text = "\(currentLocation.altitude)"
             elapsedTime.text = "stopTime - startTime"
             self.title = "Track"
             stopButtonLabel.setTitle("Reset", for: .normal)
+            
+//MARK:     //To Be Moved to Done Tracking probably
+            /*
+            tracker!.stopTracking(stopTime: "\(Date())")
+            
+            let saveToFile = UIActivityViewController(activityItems:[tracker!.data], applicationActivities: nil)
+            self.present(saveToFile, animated: true, completion: nil)
+ */
         } else if !tracking {
             startingAltitude.text = "Ready"
             startTime.text = "Ready"
