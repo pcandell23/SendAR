@@ -44,6 +44,12 @@ class LocationChecker: CLLocationManager, CLLocationManagerDelegate {
     
     func checkLocationAuthorization() {
         switch CLLocationManager.authorizationStatus() {
+        case .authorizedAlways:
+            locationManager.startUpdatingLocation()
+            locationManager.startUpdatingHeading()
+            print("Case: authorized always")
+            break
+            
         case .authorizedWhenInUse:
             locationManager.startUpdatingLocation()
             locationManager.startUpdatingHeading()
@@ -58,7 +64,7 @@ class LocationChecker: CLLocationManager, CLLocationManagerDelegate {
             
         case .notDetermined:
             // request permission
-            locationManager.requestWhenInUseAuthorization()
+            locationManager.requestAlwaysAuthorization()
             print("Case: requesting location authorization")
             break
             
@@ -66,12 +72,6 @@ class LocationChecker: CLLocationManager, CLLocationManagerDelegate {
             // show alert that user can't change this setting (parental controls)
 
             print("Case: location restricted")
-            break
-            
-        case .authorizedAlways:
-            locationManager.startUpdatingLocation()
-            locationManager.startUpdatingHeading()
-            print("Case: authorized always")
             break
             
         @unknown default:

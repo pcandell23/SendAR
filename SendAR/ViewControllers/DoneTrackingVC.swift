@@ -36,18 +36,26 @@ class DoneTrackingVC: UIViewController {
     @IBOutlet weak var discardButtonTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var discardButtonBottomConstraint: NSLayoutConstraint!
     
+    var trackedRoute: TrackedRoute?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupDiscardButton()
-        routeName.text = "Route Name"
+        routeName.text = trackedRoute?.getName()
+        if let heightInMeters = trackedRoute?.getElapsedAltitude() {
+            routeHeight.text = String(format: "%.1f m", heightInMeters)
+        }
+        if let timeInSeconds = trackedRoute?.getElapsedTime() {
+            routeTime.text = String(format: "%.2f minutes", (timeInSeconds / 60.0))
+        }
 
         // update backing image view
-        backingImageView.image = backingImage
+        backingImageView.image          = backingImage
         
         //round top left and top right corners of card view
-        cardView.clipsToBounds = true
-        cardView.layer.cornerRadius = 10.0
-        cardView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        cardView.clipsToBounds          = true
+        cardView.layer.cornerRadius     = 10.0
+        cardView.layer.maskedCorners    = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         
         //hide the card view at the bottom when the view first load
         // '.windows.filter({$0.isKeyWindow}).first?' replaces '.keyWindow?'
@@ -82,16 +90,12 @@ class DoneTrackingVC: UIViewController {
     }
     
     @IBAction func saveButtonPressed(_ sender: Any) {
-        saveTrackedRoute()
         hideCardAndGoBack()
     }
     
     @IBAction func discardButtonPressed(_ sender: Any) {
+        //TODO: delete route object from core data
         hideCardAndGoBack()
-    }
-    
-    func saveTrackedRoute() {
-        //TODO: saves tracked route
     }
     
     
@@ -118,7 +122,6 @@ class DoneTrackingVC: UIViewController {
             //dismiss if user swipes down fast, expand if user swipes up fast
             if velocity.y > 1500.0 {
                 //saves by default, then dismisses
-                saveTrackedRoute()
                 hideCardAndGoBack()
                 return
             }
@@ -132,7 +135,6 @@ class DoneTrackingVC: UIViewController {
                     showCard(atState: .normal)
                 } else {
                     //saves by default, then dismisses
-                    saveTrackedRoute()
                     hideCardAndGoBack()
                 }
             }
@@ -143,14 +145,14 @@ class DoneTrackingVC: UIViewController {
     
     func setupDiscardButton() {
         discardButton.setTitleColor(.white, for: .normal)
-        discardButton.backgroundColor = UIColor.lightGray
-        discardButton.layer.shadowColor = UIColor.black.cgColor
-        discardButton.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
-        discardButton.layer.shadowRadius = 5
-        discardButton.layer.shadowOpacity = 0.25
-        discardButton.layer.cornerRadius = 5
-        discardButton.clipsToBounds = true
-        discardButton.layer.masksToBounds = false
+        discardButton.backgroundColor       = UIColor.lightGray
+        discardButton.layer.shadowColor     = UIColor.black.cgColor
+        discardButton.layer.shadowOffset    = CGSize(width: 0.0, height: 0.0)
+        discardButton.layer.shadowRadius    = 5
+        discardButton.layer.shadowOpacity   = 0.25
+        discardButton.layer.cornerRadius    = 5
+        discardButton.clipsToBounds         = true
+        discardButton.layer.masksToBounds   = false
         
         
         if let safeAreaHeight = UIApplication.shared.windows.filter({$0.isKeyWindow}).first?.safeAreaLayoutGuide.layoutFrame.size.height {

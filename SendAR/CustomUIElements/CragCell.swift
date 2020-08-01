@@ -47,15 +47,15 @@ class CragCell: UITableViewCell, MKMapViewDelegate {
         }
         
         if crag!.getFenceLatitude() != "" && crag!.getFenceLongitude() != "" {
-            let cragLatitude = Double(crag!.getFenceLatitude())!
-            let cragLongitude = Double(crag!.getFenceLongitude())!
-            let cragLocation = CLLocationCoordinate2DMake(cragLatitude, cragLongitude)
+            let cragLatitude    = Double(crag!.getFenceLatitude())!
+            let cragLongitude   = Double(crag!.getFenceLongitude())!
+            let cragLocation    = CLLocationCoordinate2DMake(cragLatitude, cragLongitude)
             
-            let mapPoint1 = MKMapPoint.init(cragLocation)
-            let mapPoint2 = MKMapPoint.init(userLocation.coordinate)
+            let mapPoint1       = MKMapPoint.init(cragLocation)
+            let mapPoint2       = MKMapPoint.init(userLocation.coordinate)
             
-            proximityDouble = mapPoint1.distance(to: mapPoint2)
-            proximityString = "\(String(proximityDouble)) m"
+            proximityDouble     = mapPoint1.distance(to: mapPoint2)
+            proximityString     = "\(String(proximityDouble)) m"
         }
         
         return proximityString

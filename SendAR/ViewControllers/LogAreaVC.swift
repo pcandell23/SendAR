@@ -54,31 +54,31 @@ class LogAreaVC: UIViewController, MKMapViewDelegate, UITextFieldDelegate {
     }
     
     init(locationCheck: LocationChecker, latitude: Double, longitude: Double) {
-        self.locationCheck = locationCheck
-        self.latitude = latitude
-        self.longitude = longitude
+        self.locationCheck  = locationCheck
+        self.latitude       = latitude
+        self.longitude      = longitude
         super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
-        self.locationCheck = LocationChecker()
-        self.latitude = 0.0
-        self.longitude = 0.0
+        self.locationCheck  = LocationChecker()
+        self.latitude       = 0.0
+        self.longitude      = 0.0
         super.init(coder: aDecoder)
     }
     
     func centerViewOnUserLocation() {
-        if let location = locationCheck.location?.coordinate {
-            let region = MKCoordinateRegion.init(center: location, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
+        if let location     = locationCheck.location?.coordinate {
+            let region      = MKCoordinateRegion.init(center: location, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
             areaMap.setRegion(region, animated: true)
         }
     }
     
     func getCenterLocation(for areaMap: MKMapView) {
-        latitude = areaMap.centerCoordinate.latitude
-        longitude = areaMap.centerCoordinate.longitude
+        latitude    = areaMap.centerCoordinate.latitude
+        longitude   = areaMap.centerCoordinate.longitude
         
-        latitudeString = latitude.description
+        latitudeString  = latitude.description
         longitudeString = longitude.description
     }
     

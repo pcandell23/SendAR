@@ -69,12 +69,12 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
             Alert.showIncompleteRouteDataAlert(on: self)
             print("Alert: Incomplete Route Data")
         } else {
-            newRouteName = routeName.text
-            newRouteGrade = routeGrade.text
-            newRouteType = routeType.text
-            newRoutePitches = Int16(routePitches.text ?? "0") ?? 0
-            newRouteHeight = Int32(routeHeight.text ?? "0") ?? 0
-            newRouteRating = (routeRating.text! as NSString).doubleValue
+            newRouteName        = routeName.text
+            newRouteGrade       = routeGrade.text
+            newRouteType        = routeType.text
+            newRoutePitches     = Int16(routePitches.text ?? "0") ?? 0
+            newRouteHeight      = Int32(routeHeight.text ?? "0") ?? 0
+            newRouteRating      = (routeRating.text! as NSString).doubleValue
             newRouteDescription = routeDescription.text
             
             performSegue(withIdentifier: "RouteDetailsToRouteLocation", sender: self)
@@ -111,9 +111,9 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
     var routeLongitudeString: String? = nil
     
     init(locationCheck: LocationChecker, locationGetterForAltitude: CLLocation, routeCrag: Crag) {
-        self.locationCheck = locationCheck
-        self.locationGetterForAltitude = locationGetterForAltitude
-        self.routeCrag = routeCrag
+        self.locationCheck              = locationCheck
+        self.locationGetterForAltitude  = locationGetterForAltitude
+        self.routeCrag                  = routeCrag
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -135,16 +135,16 @@ class LogRouteViewController: UIViewController, UITextFieldDelegate, MKMapViewDe
     
     //second page "Confirm Location" button
     @IBAction func confirmLocation(_ sender: Any) {
-        routeLatitude = routeLocationMap.centerCoordinate.latitude
-        routeLongitude = routeLocationMap.centerCoordinate.longitude
-        routeAltitude = locationGetterForAltitude.altitude
+        routeLatitude           = routeLocationMap.centerCoordinate.latitude
+        routeLongitude          = routeLocationMap.centerCoordinate.longitude
+        routeAltitude           = locationGetterForAltitude.altitude
         
-        routeLatitudeString = routeLatitude.description
-        routeLongitudeString = routeLongitude.description
+        routeLatitudeString     = routeLatitude.description
+        routeLongitudeString    = routeLongitude.description
         
-        newRouteLatitude = routeLatitudeString
-        newRouteLongitude = routeLongitudeString
-        newRouteAltitude = Int16(routeAltitude)
+        newRouteLatitude        = routeLatitudeString
+        newRouteLongitude       = routeLongitudeString
+        newRouteAltitude        = Int16(routeAltitude)
         
     }
     

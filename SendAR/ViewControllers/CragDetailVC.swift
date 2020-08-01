@@ -46,9 +46,9 @@ class CragDetailVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, UI
         super.viewDidLoad()
         
         if crag != nil{
-            self.title = crag!.getName()
-            self.routes = crag!.getRoutesAsArray()
-            self.cragDescription.text = crag!.getDescription()
+            self.title                  = crag!.getName()
+            self.routes                 = crag!.getRoutesAsArray()
+            self.cragDescription.text   = crag!.getDescription()
         }
         
         let nib = UINib(nibName: "RouteCell", bundle: nil)
@@ -69,9 +69,9 @@ class CragDetailVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, UI
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RouteCell", for: indexPath) as! RouteCell
         
-        cell.routeName.text = routes[indexPath.row].getName()
-        cell.routeGrade.text = routes[indexPath.row].getGrade()
-        cell.routeType.text = routes[indexPath.row].getType() + " - " + String(routes[indexPath.row].getPitches()) + " Pitches, " + String(routes[indexPath.row].getAltitude()) + "ft"
+        cell.routeName.text     = routes[indexPath.row].getName()
+        cell.routeGrade.text    = routes[indexPath.row].getGrade()
+        cell.routeType.text     = routes[indexPath.row].getType() + " - " + String(routes[indexPath.row].getPitches()) + " Pitches, " + String(routes[indexPath.row].getAltitude()) + "ft"
         
         let rating = routes[indexPath.row].getRating()
         if rating > 4 && rating <= 5 {

@@ -48,16 +48,16 @@ class SuggestedAreaCell: UITableViewCell, MKMapViewDelegate {
         }
         
         if crag!.getFenceLatitude() != "" && crag!.getFenceLongitude() != "" {
-            let areaLatitude = Double(crag!.getFenceLatitude())!
-            let areaLongitude = Double(crag!.getFenceLongitude())!
-            let areaLocation = CLLocationCoordinate2DMake(areaLatitude, areaLongitude)
+            let areaLatitude    = Double(crag!.getFenceLatitude())!
+            let areaLongitude   = Double(crag!.getFenceLongitude())!
+            let areaLocation    = CLLocationCoordinate2DMake(areaLatitude, areaLongitude)
             
-            let mapPoint1 = MKMapPoint.init(areaLocation)
-            let mapPoint2 = MKMapPoint.init(userLocation.coordinate)
+            let mapPoint1       = MKMapPoint.init(areaLocation)
+            let mapPoint2       = MKMapPoint.init(userLocation.coordinate)
             
-            proximityDouble = mapPoint1.distance(to: mapPoint2)
+            proximityDouble     = mapPoint1.distance(to: mapPoint2)
             round(proximityDouble)
-            proximityString = "\(String(proximityDouble)) m"
+            proximityString     = "\(String(proximityDouble)) m"
         }
         
         return proximityString

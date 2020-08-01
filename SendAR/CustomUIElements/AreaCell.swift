@@ -70,15 +70,15 @@ class AreaCell: UITableViewCell {
         }
         
         if area!.getFenceLatitude() != "" && area!.getFenceLongitude() != "" {
-            let areaLatitude = Double(area!.getFenceLatitude())!
-            let areaLongitude = Double(area!.getFenceLongitude())!
-            let areaLocation = CLLocationCoordinate2DMake(areaLatitude, areaLongitude)
+            let areaLatitude    = Double(area!.getFenceLatitude())!
+            let areaLongitude   = Double(area!.getFenceLongitude())!
+            let areaLocation    = CLLocationCoordinate2DMake(areaLatitude, areaLongitude)
             
-            let mapPoint1 = MKMapPoint.init(areaLocation)
-            let mapPoint2 = MKMapPoint.init(userLocation.coordinate)
+            let mapPoint1       = MKMapPoint.init(areaLocation)
+            let mapPoint2       = MKMapPoint.init(userLocation.coordinate)
             
-            proximityDouble = mapPoint1.distance(to: mapPoint2)
-            proximityString = "\(String(proximityDouble)) m"
+            proximityDouble     = mapPoint1.distance(to: mapPoint2)
+            proximityString     = "\(String(proximityDouble)) m"
         }
         
         return proximityString
