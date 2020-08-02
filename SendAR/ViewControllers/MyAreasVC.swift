@@ -123,7 +123,6 @@ class MyAreasViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //TODO
         if segue.identifier == "MyAreasToArea"{
             let navVC = segue.destination as! UINavigationController
             let vc = navVC.viewControllers.first as! AreaDetailVC

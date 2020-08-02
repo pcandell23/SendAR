@@ -30,6 +30,7 @@
 		40CE769C24B8EB0400CE3507 /* LogAreaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CE769B24B8EB0400CE3507 /* LogAreaVC.swift */; };
 		40D845C924B030DD0028CDAE /* Tracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D845C824B030DD0028CDAE /* Tracker.swift */; };
 		40DC780F24AE465900DC5AF2 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40DC780E24AE465900DC5AF2 /* Home.storyboard */; };
+		40E0629C24D73A6D00F93E95 /* TrackedRouteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E0629B24D73A6D00F93E95 /* TrackedRouteVC.swift */; };
 		40E0977F24AE530B0022E965 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40E0977E24AE530B0022E965 /* Map.storyboard */; };
 		40E0978124AE53B40022E965 /* AR.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40E0978024AE53B40022E965 /* AR.storyboard */; };
 		40E0978324AE54290022E965 /* MyAreas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40E0978224AE54290022E965 /* MyAreas.storyboard */; };
@@ -123,6 +124,7 @@
 		40CE769B24B8EB0400CE3507 /* LogAreaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogAreaVC.swift; sourceTree = "<group>"; };
 		40D845C824B030DD0028CDAE /* Tracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracker.swift; sourceTree = "<group>"; };
 		40DC780E24AE465900DC5AF2 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		40E0629B24D73A6D00F93E95 /* TrackedRouteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackedRouteVC.swift; sourceTree = "<group>"; };
 		40E0977E24AE530B0022E965 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		40E0978024AE53B40022E965 /* AR.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AR.storyboard; sourceTree = "<group>"; };
 		40E0978224AE54290022E965 /* MyAreas.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyAreas.storyboard; sourceTree = "<group>"; };
@@ -319,6 +321,7 @@
 				40EAA79424A8152300F41366 /* ViewController.swift */,
 				961F055E24AA64E8006DE4C5 /* HomeVC.swift */,
 				400E6B7D24D37C8B00E618BA /* DoneTrackingVC.swift */,
+				40E0629B24D73A6D00F93E95 /* TrackedRouteVC.swift */,
 				407A645B24AF963C006CDFCE /* LogRouteVC.swift */,
 				961F056024AA64F8006DE4C5 /* MapVC.swift */,
 				404FDE1324AEA524006AA33E /* NearbyAreas.swift */,
@@ -578,6 +581,7 @@
 				96A6430124C0E31800226EEC /* BaseTypes+Extensions.swift in Sources */,
 				40EAA79524A8152300F41366 /* ViewController.swift in Sources */,
 				961F055F24AA64E8006DE4C5 /* HomeVC.swift in Sources */,
+				40E0629C24D73A6D00F93E95 /* TrackedRouteVC.swift in Sources */,
 				96A642F624C0E2F700226EEC /* LocationNode.swift in Sources */,
 				40E21AAA24CFB104005F8A0C /* LogbookCell.swift in Sources */,
 				96A6430424C0E31800226EEC /* FloatingPoint+Radians.swift in Sources */,

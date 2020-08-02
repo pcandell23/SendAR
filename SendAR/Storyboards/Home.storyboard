@@ -282,11 +282,93 @@
                         <outlet property="startTime" destination="6Km-r2-T2P" id="efY-au-86F"/>
                         <outlet property="startingAltitude" destination="23k-Vg-3bn" id="NNd-nM-86f"/>
                         <outlet property="stopButtonLabel" destination="rx0-j5-q3Z" id="kFh-IU-hu9"/>
+                        <segue destination="6Dm-dh-NGK" kind="show" identifier="HomeToTrackedRoute" id="EO3-fn-hVS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f1R-Xi-lQW" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="771.01449275362324" y="-287.27678571428572"/>
+        </scene>
+        <!--TrackedRoute-->
+        <scene sceneID="OLV-fX-Onx">
+            <objects>
+                <viewController storyboardIdentifier="TrackedRouteVC" id="6Dm-dh-NGK" userLabel="TrackedRoute" customClass="TrackedRouteVC" customModule="SendAR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yop-o0-zyB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QA8-zt-oFE">
+                                <rect key="frame" x="20" y="148" width="374" height="51"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gOo-ln-7Nv">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elevation Gain:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2d0-Ql-mus">
+                                                <rect key="frame" x="0.0" y="0.0" width="274" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X meters" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8c4-uq-2T4">
+                                                <rect key="frame" x="274" y="0.0" width="100" height="20.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="Mk2-I3-euA"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="8c4-uq-2T4" firstAttribute="firstBaseline" secondItem="2d0-Ql-mus" secondAttribute="firstBaseline" id="cxi-nW-Tym"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jFD-n6-bSB">
+                                        <rect key="frame" x="0.0" y="30.5" width="374" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elapsed Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFf-l3-TFv">
+                                                <rect key="frame" x="0.0" y="0.0" width="274" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X minutes" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Msy-SE-mza">
+                                                <rect key="frame" x="274" y="0.0" width="100" height="20.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="j2z-pB-zvC"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Msy-SE-mza" firstAttribute="firstBaseline" secondItem="eFf-l3-TFv" secondAttribute="firstBaseline" id="5Ls-C3-YZI"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="QaZ-VN-jzj"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="kzj-Bz-61K" firstAttribute="trailing" secondItem="QA8-zt-oFE" secondAttribute="trailing" constant="20" id="2vL-pk-naf"/>
+                            <constraint firstItem="QA8-zt-oFE" firstAttribute="leading" secondItem="kzj-Bz-61K" secondAttribute="leading" constant="20" id="HZF-op-YK8"/>
+                            <constraint firstItem="QA8-zt-oFE" firstAttribute="top" secondItem="kzj-Bz-61K" secondAttribute="top" constant="8" id="s2B-ko-AOh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kzj-Bz-61K"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Route Name" id="jH9-9U-D49"/>
+                    <connections>
+                        <outlet property="routeHeight" destination="8c4-uq-2T4" id="Rdh-hm-nra"/>
+                        <outlet property="routeTime" destination="Msy-SE-mza" id="Vyl-Eq-ncd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tmf-e5-9Vz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="771" y="423"/>
         </scene>
         <!--LogNewRoute-->
         <scene sceneID="RSH-bh-ZBl">
