@@ -13,6 +13,7 @@
 		4010BDA424AFD7190082F7E2 /* RouteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4010BDA224AFD7190082F7E2 /* RouteCell.xib */; };
 		401F9A5724B390900035428B /* LocationChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401F9A5624B390900035428B /* LocationChecker.swift */; };
 		40343F0624B5261D00507926 /* LogNewRoute.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40343F0524B5261D00507926 /* LogNewRoute.storyboard */; };
+		4036C25724D9D55400AB27A7 /* ExploreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4036C25624D9D55400AB27A7 /* ExploreVC.swift */; };
 		4039FB7924B50F2C00D9F927 /* RouteDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4039FB7824B50F2C00D9F927 /* RouteDetailVC.swift */; };
 		4044391324BE8B8400CDB237 /* CragCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4044391124BE8B8400CDB237 /* CragCell.swift */; };
 		4044391424BE8B8400CDB237 /* CragCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4044391224BE8B8400CDB237 /* CragCell.xib */; };
@@ -30,7 +31,8 @@
 		40CE769C24B8EB0400CE3507 /* LogAreaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CE769B24B8EB0400CE3507 /* LogAreaVC.swift */; };
 		40D845C924B030DD0028CDAE /* Tracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D845C824B030DD0028CDAE /* Tracker.swift */; };
 		40DC780F24AE465900DC5AF2 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40DC780E24AE465900DC5AF2 /* Home.storyboard */; };
-		40E0977F24AE530B0022E965 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40E0977E24AE530B0022E965 /* Map.storyboard */; };
+		40E0629C24D73A6D00F93E95 /* TrackedRouteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E0629B24D73A6D00F93E95 /* TrackedRouteVC.swift */; };
+		40E0977F24AE530B0022E965 /* Explore.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40E0977E24AE530B0022E965 /* Explore.storyboard */; };
 		40E0978124AE53B40022E965 /* AR.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40E0978024AE53B40022E965 /* AR.storyboard */; };
 		40E0978324AE54290022E965 /* MyAreas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40E0978224AE54290022E965 /* MyAreas.storyboard */; };
 		40E0978524AE548A0022E965 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40E0978424AE548A0022E965 /* Settings.storyboard */; };
@@ -106,6 +108,7 @@
 		4010BDA224AFD7190082F7E2 /* RouteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RouteCell.xib; sourceTree = "<group>"; };
 		401F9A5624B390900035428B /* LocationChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationChecker.swift; sourceTree = "<group>"; };
 		40343F0524B5261D00507926 /* LogNewRoute.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogNewRoute.storyboard; sourceTree = "<group>"; };
+		4036C25624D9D55400AB27A7 /* ExploreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreVC.swift; sourceTree = "<group>"; };
 		4039FB7824B50F2C00D9F927 /* RouteDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteDetailVC.swift; sourceTree = "<group>"; };
 		4044391124BE8B8400CDB237 /* CragCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CragCell.swift; sourceTree = "<group>"; };
 		4044391224BE8B8400CDB237 /* CragCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CragCell.xib; sourceTree = "<group>"; };
@@ -123,7 +126,8 @@
 		40CE769B24B8EB0400CE3507 /* LogAreaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogAreaVC.swift; sourceTree = "<group>"; };
 		40D845C824B030DD0028CDAE /* Tracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracker.swift; sourceTree = "<group>"; };
 		40DC780E24AE465900DC5AF2 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		40E0977E24AE530B0022E965 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
+		40E0629B24D73A6D00F93E95 /* TrackedRouteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackedRouteVC.swift; sourceTree = "<group>"; };
+		40E0977E24AE530B0022E965 /* Explore.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Explore.storyboard; sourceTree = "<group>"; };
 		40E0978024AE53B40022E965 /* AR.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AR.storyboard; sourceTree = "<group>"; };
 		40E0978224AE54290022E965 /* MyAreas.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyAreas.storyboard; sourceTree = "<group>"; };
 		40E0978424AE548A0022E965 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -243,14 +247,14 @@
 			children = (
 				40EAA79624A8152300F41366 /* Main.storyboard */,
 				40DC780E24AE465900DC5AF2 /* Home.storyboard */,
+				40E0977E24AE530B0022E965 /* Explore.storyboard */,
 				40343F0524B5261D00507926 /* LogNewRoute.storyboard */,
-				40E0977E24AE530B0022E965 /* Map.storyboard */,
+				40CE769924B8EA8D00CE3507 /* LogNewArea.storyboard */,
 				9694583624BA6EAF0093D943 /* AreaDetail.storyboard */,
 				40C874D624BA90D200ED0214 /* CragDetail.storyboard */,
 				40C874D824BA90E900ED0214 /* RouteDetail.storyboard */,
 				40E0978024AE53B40022E965 /* AR.storyboard */,
 				40E0978224AE54290022E965 /* MyAreas.storyboard */,
-				40CE769924B8EA8D00CE3507 /* LogNewArea.storyboard */,
 				40E0978424AE548A0022E965 /* Settings.storyboard */,
 			);
 			path = Storyboards;
@@ -319,7 +323,9 @@
 				40EAA79424A8152300F41366 /* ViewController.swift */,
 				961F055E24AA64E8006DE4C5 /* HomeVC.swift */,
 				400E6B7D24D37C8B00E618BA /* DoneTrackingVC.swift */,
+				40E0629B24D73A6D00F93E95 /* TrackedRouteVC.swift */,
 				407A645B24AF963C006CDFCE /* LogRouteVC.swift */,
+				4036C25624D9D55400AB27A7 /* ExploreVC.swift */,
 				961F056024AA64F8006DE4C5 /* MapVC.swift */,
 				404FDE1324AEA524006AA33E /* NearbyAreas.swift */,
 				40C874DC24BA91EA00ED0214 /* AreaDetailVC.swift */,
@@ -515,7 +521,7 @@
 				9694583724BA6EAF0093D943 /* AreaDetail.storyboard in Resources */,
 				4010BDA424AFD7190082F7E2 /* RouteCell.xib in Resources */,
 				40EAA79A24A8152400F41366 /* Assets.xcassets in Resources */,
-				40E0977F24AE530B0022E965 /* Map.storyboard in Resources */,
+				40E0977F24AE530B0022E965 /* Explore.storyboard in Resources */,
 				40343F0624B5261D00507926 /* LogNewRoute.storyboard in Resources */,
 				40CE769A24B8EA8D00CE3507 /* LogNewArea.storyboard in Resources */,
 				40E0978524AE548A0022E965 /* Settings.storyboard in Resources */,
@@ -565,6 +571,7 @@
 				96A6430024C0E31800226EEC /* SCNVector3+Extensions.swift in Sources */,
 				407A645A24AF8C83006CDFCE /* GreenButton.swift in Sources */,
 				96ED3F9024D47B3C00537151 /* AreaAndRouteData.xcdatamodeld in Sources */,
+				4036C25724D9D55400AB27A7 /* ExploreVC.swift in Sources */,
 				961F056124AA64F8006DE4C5 /* MapVC.swift in Sources */,
 				96A642F424C0E2F700226EEC /* ScalingScheme.swift in Sources */,
 				407A646024AFA64F006CDFCE /* MapButton.swift in Sources */,
@@ -578,6 +585,7 @@
 				96A6430124C0E31800226EEC /* BaseTypes+Extensions.swift in Sources */,
 				40EAA79524A8152300F41366 /* ViewController.swift in Sources */,
 				961F055F24AA64E8006DE4C5 /* HomeVC.swift in Sources */,
+				40E0629C24D73A6D00F93E95 /* TrackedRouteVC.swift in Sources */,
 				96A642F624C0E2F700226EEC /* LocationNode.swift in Sources */,
 				40E21AAA24CFB104005F8A0C /* LogbookCell.swift in Sources */,
 				96A6430424C0E31800226EEC /* FloatingPoint+Radians.swift in Sources */,

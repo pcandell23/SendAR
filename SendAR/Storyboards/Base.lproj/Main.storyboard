@@ -16,11 +16,11 @@
             </objects>
             <point key="canvasLocation" x="-3946" y="-343"/>
         </scene>
-        <!--Map-->
+        <!--Explore-->
         <scene sceneID="Kpw-gt-ryD">
             <objects>
-                <viewControllerPlaceholder storyboardName="Map" id="uWV-Jk-aHh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" id="K9A-xS-g0P"/>
+                <viewControllerPlaceholder storyboardName="Explore" id="uWV-Jk-aHh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Explore" image="magnifyingglass" catalog="system" id="K9A-xS-g0P"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qp8-SW-zdE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -83,7 +83,7 @@
     <resources>
         <image name="arkit" catalog="system" width="128" height="128"/>
         <image name="gear" catalog="system" width="128" height="119"/>
-        <image name="map" catalog="system" width="128" height="113"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="star" catalog="system" width="128" height="116"/>
     </resources>
