@@ -34,8 +34,6 @@ class HomeViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     
     @IBOutlet weak var logbookTable: UITableView!
     
-    @IBAction func unwindToHome(_ sender: UIStoryboardSegue) {}
-    
     override func viewWillAppear(_ animated: Bool) {
         resetFields()
         logbookTable.reloadData()

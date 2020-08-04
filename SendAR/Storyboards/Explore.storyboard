@@ -17,6 +17,16 @@
             </objects>
             <point key="canvasLocation" x="1143" y="743"/>
         </scene>
+        <!--LogNewRoute-->
+        <scene sceneID="fff-uy-OGY">
+            <objects>
+                <viewControllerPlaceholder storyboardName="LogNewRoute" id="BFK-m4-2rf" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="eCP-8a-ixR"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="byz-VR-3bN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2270" y="-540"/>
+        </scene>
         <!--ExploreVC-->
         <scene sceneID="Heg-Ov-xwI">
             <objects>
@@ -53,6 +63,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="6g1-2Y-Mw8">
                         <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" title="LogNewRoute" image="plus.circle" catalog="system" id="KEU-Ag-VWj">
+                            <connections>
+                                <segue destination="BFK-m4-2rf" kind="show" id="hbZ-vA-xQv"/>
+                            </connections>
+                        </barButtonItem>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="He4-Sr-I30">
                             <rect key="frame" x="118.5" y="5.5" width="177" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -192,5 +207,6 @@
     <resources>
         <image name="location" catalog="system" width="128" height="115"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="plus.circle" catalog="system" width="128" height="121"/>
     </resources>
 </document>

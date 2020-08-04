@@ -247,14 +247,14 @@
 			children = (
 				40EAA79624A8152300F41366 /* Main.storyboard */,
 				40DC780E24AE465900DC5AF2 /* Home.storyboard */,
-				40343F0524B5261D00507926 /* LogNewRoute.storyboard */,
 				40E0977E24AE530B0022E965 /* Explore.storyboard */,
+				40343F0524B5261D00507926 /* LogNewRoute.storyboard */,
+				40CE769924B8EA8D00CE3507 /* LogNewArea.storyboard */,
 				9694583624BA6EAF0093D943 /* AreaDetail.storyboard */,
 				40C874D624BA90D200ED0214 /* CragDetail.storyboard */,
 				40C874D824BA90E900ED0214 /* RouteDetail.storyboard */,
 				40E0978024AE53B40022E965 /* AR.storyboard */,
 				40E0978224AE54290022E965 /* MyAreas.storyboard */,
-				40CE769924B8EA8D00CE3507 /* LogNewArea.storyboard */,
 				40E0978424AE548A0022E965 /* Settings.storyboard */,
 			);
 			path = Storyboards;

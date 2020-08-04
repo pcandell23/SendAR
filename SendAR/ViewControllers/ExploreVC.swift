@@ -12,6 +12,8 @@ class ExploreVC: UIViewController {
     
     @IBOutlet weak var exploreList: UIView!
     @IBOutlet weak var exploreMap: UIView!
+    
+    @IBAction func unwindToExplore(_ sender: UIStoryboardSegue) {}
 
     override func viewDidLoad() {
         super.viewDidLoad()
