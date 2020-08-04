@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZfW-1i-Xrj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZfW-1i-Xrj">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -174,34 +174,49 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Xcy-xk-l01">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="105" width="414" height="620"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <searchBar key="tableHeaderView" contentMode="redraw" id="IDj-AM-pVM">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                </searchBar>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Explore" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0uL-SX-dEf">
+                                <rect key="frame" x="20" y="3" width="119" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="T3c-Wb-cNA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Z3n-IH-gH9">
+                                <rect key="frame" x="0.0" y="49" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="Z3n-IH-gH9" firstAttribute="top" secondItem="0uL-SX-dEf" secondAttribute="bottom" constant="5" id="7Na-uE-NgE"/>
                             <constraint firstItem="Xcy-xk-l01" firstAttribute="leading" secondItem="bpm-35-qOm" secondAttribute="leading" id="7bX-pr-35F"/>
                             <constraint firstItem="Xcy-xk-l01" firstAttribute="bottom" secondItem="bpm-35-qOm" secondAttribute="bottom" id="8wM-nX-bl6"/>
                             <constraint firstItem="Xcy-xk-l01" firstAttribute="trailing" secondItem="bpm-35-qOm" secondAttribute="trailing" id="DIR-r5-KOK"/>
-                            <constraint firstItem="Xcy-xk-l01" firstAttribute="top" secondItem="gK6-Zz-sbu" secondAttribute="top" id="zVf-VG-HOt"/>
+                            <constraint firstItem="0uL-SX-dEf" firstAttribute="leading" secondItem="gK6-Zz-sbu" secondAttribute="leading" constant="20" id="FE1-Hm-rnb"/>
+                            <constraint firstItem="Z3n-IH-gH9" firstAttribute="leading" secondItem="bpm-35-qOm" secondAttribute="leading" id="FMe-jI-Qdv"/>
+                            <constraint firstItem="bpm-35-qOm" firstAttribute="trailing" secondItem="Z3n-IH-gH9" secondAttribute="trailing" id="RZt-yI-tr1"/>
+                            <constraint firstItem="0uL-SX-dEf" firstAttribute="top" secondItem="gK6-Zz-sbu" secondAttribute="top" constant="3" id="ecQ-TB-dDU"/>
+                            <constraint firstItem="Z3n-IH-gH9" firstAttribute="top" relation="greaterThanOrEqual" secondItem="bpm-35-qOm" secondAttribute="top" id="m8N-hp-vL5"/>
+                            <constraint firstItem="Xcy-xk-l01" firstAttribute="top" secondItem="Z3n-IH-gH9" secondAttribute="bottom" id="xF3-cD-T4d"/>
+                            <constraint firstItem="Z3n-IH-gH9" firstAttribute="centerX" secondItem="bpm-35-qOm" secondAttribute="centerX" id="zBK-0Z-2i9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bpm-35-qOm"/>
                     </view>
                     <connections>
                         <outlet property="nearbyAreasTableView" destination="Xcy-xk-l01" id="Gep-26-eE7"/>
-                        <outlet property="searchBar" destination="IDj-AM-pVM" id="1tI-89-SEV"/>
+                        <outlet property="searchBar" destination="Z3n-IH-gH9" id="AEE-f3-tCs"/>
                         <segue destination="NE2-vx-NK1" kind="presentation" identifier="NearbyAreasToArea" modalPresentationStyle="fullScreen" id="byd-gb-onj"/>
                         <segue destination="mtr-o1-keK" kind="presentation" identifier="NearbyAreasToCrag" modalPresentationStyle="fullScreen" id="QOt-aB-Njw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TZp-Nz-Qyg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1375" y="383"/>
+            <point key="canvasLocation" x="1373.913043478261" y="382.70089285714283"/>
         </scene>
     </scenes>
     <resources>

@@ -18,6 +18,7 @@ class ExploreVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupNavBar()
         // Do any additional setup after loading the view.
     }
     
@@ -29,6 +30,15 @@ class ExploreVC: UIViewController {
             exploreList.alpha = 0
             exploreMap.alpha = 1
         }
+    }
+    
+    func setupNavBar() {
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.configureWithOpaqueBackground()
+        navBarAppearance.shadowColor = .clear
+        navBarAppearance.shadowImage = UIImage()
+        navigationController?.navigationBar.standardAppearance = navBarAppearance
+        navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
     }
     
 
