@@ -20,6 +20,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     var tracker: Tracker?
     var tracking: Bool = false
     var trackedRoutes: [TrackedRoute] = []
+    var routeIndex: Int = 0
     
     @IBOutlet weak var routeName: UITextField!
     
@@ -32,8 +33,6 @@ class HomeViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     
     
     @IBOutlet weak var logbookTable: UITableView!
-    
-    @IBAction func unwindToHome(_ sender: UIStoryboardSegue) {}
     
     override func viewWillAppear(_ animated: Bool) {
         resetFields()
@@ -181,7 +180,11 @@ class HomeViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
         tableView.deselectRow(at: indexPath, animated: true)
+        routeIndex = indexPath.row
+        
+        performSegue(withIdentifier: "HomeToTrackedRoute", sender: cell)
     }
     
     //Make Editable
@@ -197,6 +200,13 @@ class HomeViewController: UIViewController, UITextFieldDelegate, UITableViewDele
                 tableView.deleteRows(at: [indexPath], with: .fade)
 
                 delegate.dataController?.saveContext()
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "HomeToTrackedRoute" {
+            let vc = segue.destination as! TrackedRouteVC
+            vc.trackedRoute = trackedRoutes[routeIndex]
         }
     }
     

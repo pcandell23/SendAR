@@ -139,7 +139,7 @@
                                     <color key="titleColor" red="0.1960784314" green="0.6588235294" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="c9K-Jz-u2q" kind="unwind" unwindAction="unwindToHome:" id="Q2m-xw-5eR"/>
+                                    <segue destination="c9K-Jz-u2q" kind="unwind" unwindAction="unwindToExplore:" id="Ivt-Xg-MB1"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -156,7 +156,7 @@
                     <navigationItem key="navigationItem" title="Success!" id="Qjy-7Z-Wgw">
                         <barButtonItem key="rightBarButtonItem" title="Exit" image="xmark" catalog="system" id="0cf-dX-snW">
                             <connections>
-                                <segue destination="c9K-Jz-u2q" kind="unwind" unwindAction="unwindToHome:" id="X1k-6e-baM"/>
+                                <segue destination="c9K-Jz-u2q" kind="unwind" unwindAction="unwindToExplore:" id="S05-uy-4gR"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
