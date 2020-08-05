@@ -10,7 +10,7 @@
         <scene sceneID="D30-Kl-ls8">
             <objects>
                 <viewControllerPlaceholder storyboardName="Home" id="FCL-r0-6zX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Track" image="person" catalog="system" id="gjl-sh-cuL"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="gjl-sh-cuL"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="77E-JJ-cM9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -83,8 +83,8 @@
     <resources>
         <image name="arkit" catalog="system" width="128" height="128"/>
         <image name="gear" catalog="system" width="128" height="119"/>
+        <image name="house" catalog="system" width="128" height="110"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
-        <image name="person" catalog="system" width="128" height="117"/>
         <image name="star" catalog="system" width="128" height="116"/>
     </resources>
 </document>

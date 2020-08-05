@@ -24,11 +24,11 @@ class ExploreVC: UIViewController {
     
     @IBAction func switchViews(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
-            exploreList.alpha = 1
-            exploreMap.alpha = 0
+            exploreList.isHidden = false
+            exploreMap.isHidden = true
         } else {
-            exploreList.alpha = 0
-            exploreMap.alpha = 1
+            exploreList.isHidden = true
+            exploreMap.isHidden = false
         }
     }
     
