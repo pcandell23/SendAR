@@ -26,7 +26,7 @@ class HomeViewController: UIViewController {
         logbookView.isHidden = true
         
         trackButtonText.setTitleColor(UIColor.label, for: .normal)
-        logbookButtonText.setTitleColor(UIColor.darkGray, for: .normal)
+        logbookButtonText.setTitleColor(UIColor.secondaryLabel, for: .normal)
         
     }
 
@@ -36,7 +36,7 @@ class HomeViewController: UIViewController {
             logbookView.isHidden = true
             
             trackButtonText.setTitleColor(UIColor.label, for: .normal)
-            logbookButtonText.setTitleColor(UIColor.lightGray, for: .normal)
+            logbookButtonText.setTitleColor(UIColor.secondaryLabel, for: .normal)
             
             onTrackPage = true
         }
@@ -47,7 +47,7 @@ class HomeViewController: UIViewController {
             trackView.isHidden = true
             logbookView.isHidden = false
             
-            trackButtonText.setTitleColor(UIColor.lightGray, for: .normal)
+            trackButtonText.setTitleColor(UIColor.secondaryLabel, for: .normal)
             logbookButtonText.setTitleColor(UIColor.label, for: .normal)
             
             onTrackPage = false
