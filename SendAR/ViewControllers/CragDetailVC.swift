@@ -10,10 +10,20 @@ import UIKit
 import MapKit
 
 class CragDetailVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var contentViewHeightConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var descriptionView: UIView!
+    @IBOutlet weak var descriptionViewHeight: NSLayoutConstraint!
+    
+    @IBOutlet weak var routesView: UIView!
+    @IBOutlet weak var routesViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var routesTableViewHeightConstraint: NSLayoutConstraint!
 
     var cragName: String = "Crag Name"
     var crag: Crag? = nil
     var routes: [Route] = []
+    
     
     @IBOutlet weak var cragDescription: UILabel!
     @IBOutlet weak var cragMap: MKMapView!
@@ -56,10 +66,36 @@ class CragDetailVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, UI
         routeTable.delegate = self
         routeTable.dataSource = self
         
+        formatViews()
     }
     
     override func viewWillLayoutSubviews() {
         cragDescription.sizeToFit()
+    }
+    
+    func formatViews() {
+        cragMap.clipsToBounds = true
+        cragMap.layer.cornerRadius = 10.0
+        
+        descriptionView.clipsToBounds = true
+        descriptionView.layer.cornerRadius = 10.0
+        let maximumLabelSize: CGSize = CGSize(width: 334, height: 9999)
+        let expectedLabelSize: CGSize = cragDescription.sizeThatFits(maximumLabelSize)
+        // create a frame that is filled with the UILabel frame data
+        var newFrame: CGRect = cragDescription.frame
+        // resizing the frame to calculated size
+        newFrame.size.height = expectedLabelSize.height
+        // put calculated frame into UILabel frame
+        cragDescription.frame = newFrame
+        
+        descriptionViewHeight.constant = 69 + cragDescription.frame.height
+        
+        routesView.clipsToBounds = true
+        routesView.layer.cornerRadius = 10.0
+        routesTableViewHeightConstraint.constant = CGFloat(routes.count * 63)
+        routesViewHeightConstraint.constant = routesTableViewHeightConstraint.constant + 70.5
+        
+        contentViewHeightConstraint.constant = 270 + descriptionViewHeight.constant + routesViewHeightConstraint.constant
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

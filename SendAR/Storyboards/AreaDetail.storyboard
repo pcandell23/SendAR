@@ -37,7 +37,7 @@
                                 <rect key="frame" x="0.0" y="140" width="414" height="756"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uYK-yP-Eye" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                         <subviews>
                                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="hybrid" translatesAutoresizingMaskIntoConstraints="NO" id="Awg-dz-Umr">
                                                 <rect key="frame" x="20" y="10" width="374" height="200"/>
@@ -80,7 +80,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rzl-c2-GdE" userLabel="ListView">
-                                                <rect key="frame" x="20" y="344.5" width="374" height="635.5"/>
+                                                <rect key="frame" x="20" y="344.5" width="374" height="443.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sub-Areas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pb9-5a-nSl">
                                                         <rect key="frame" x="20" y="15" width="334" height="25.5"/>
@@ -92,7 +92,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QpX-uB-f04">
-                                                        <rect key="frame" x="10" y="50.5" width="354" height="575"/>
+                                                        <rect key="frame" x="10" y="50.5" width="354" height="383"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="63" id="xXS-GZ-4ig"/>
@@ -126,7 +126,7 @@
                                             <constraint firstItem="Awg-dz-Umr" firstAttribute="leading" secondItem="uYK-yP-Eye" secondAttribute="leading" constant="20" id="AHy-CQ-8RP"/>
                                             <constraint firstItem="Awg-dz-Umr" firstAttribute="top" secondItem="uYK-yP-Eye" secondAttribute="top" constant="10" id="Baq-Ve-hkU"/>
                                             <constraint firstItem="gIo-j0-ZTS" firstAttribute="centerX" secondItem="Awg-dz-Umr" secondAttribute="centerX" id="IvH-vM-1rN"/>
-                                            <constraint firstAttribute="height" constant="1000" id="PUP-MO-WlV"/>
+                                            <constraint firstAttribute="height" constant="808" id="PUP-MO-WlV"/>
                                             <constraint firstItem="o39-0s-mIt" firstAttribute="top" secondItem="Awg-dz-Umr" secondAttribute="bottom" constant="20" id="SFk-lj-olK"/>
                                             <constraint firstItem="o39-0s-mIt" firstAttribute="leading" secondItem="uYK-yP-Eye" secondAttribute="leading" constant="20" id="SHD-H8-MVF"/>
                                             <constraint firstAttribute="trailing" secondItem="Rzl-c2-GdE" secondAttribute="trailing" constant="20" id="VfK-0I-1eJ"/>
