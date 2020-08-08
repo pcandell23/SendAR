@@ -116,7 +116,7 @@ class AreaDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         subAreaTableViewHeightConstraint.constant = CGFloat(subAreasAndCrags.count * 63)
         subAreaViewHeightConstraint.constant = subAreaTableViewHeightConstraint.constant + 70.5
         
-        contentViewHeightConstraint.constant = 280 + descriptionViewHeight.constant + subAreaViewHeightConstraint.constant
+        contentViewHeightConstraint.constant = 270 + descriptionViewHeight.constant + subAreaViewHeightConstraint.constant
     }
     
     //MARK: - TableView Functions
