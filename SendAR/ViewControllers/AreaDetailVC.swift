@@ -21,6 +21,15 @@ class AreaNavC: UINavigationController{
 
 class AreaDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource, MKMapViewDelegate {
     
+    @IBOutlet weak var contentViewHeightConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var descriptionView: UIView!
+    @IBOutlet weak var descriptionViewHeight: NSLayoutConstraint!
+    
+    @IBOutlet weak var subAreaView: UIView!
+    @IBOutlet weak var subAreaViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var subAreaTableViewHeightConstraint: NSLayoutConstraint!
+    
     @IBOutlet weak var areaName: UINavigationItem!
     @IBOutlet weak var areaDescription: UILabel!
     @IBOutlet weak var subAreaTableView: UITableView!
@@ -76,10 +85,38 @@ class AreaDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         for each in crags {
             subAreasAndCrags.append(each)
         }
+        
+        formatViews()
+        
     }
     
     override func viewWillLayoutSubviews() {
         areaDescription.sizeToFit()
+    }
+    
+    func formatViews() {
+        areaMap.clipsToBounds = true
+        areaMap.layer.cornerRadius = 10.0
+        
+        descriptionView.clipsToBounds = true
+        descriptionView.layer.cornerRadius = 10.0
+        let maximumLabelSize: CGSize = CGSize(width: 334, height: 9999)
+        let expectedLabelSize: CGSize = areaDescription.sizeThatFits(maximumLabelSize)
+        // create a frame that is filled with the UILabel frame data
+        var newFrame: CGRect = areaDescription.frame
+        // resizing the frame to calculated size
+        newFrame.size.height = expectedLabelSize.height
+        // put calculated frame into UILabel frame
+        areaDescription.frame = newFrame
+        
+        descriptionViewHeight.constant = 69 + areaDescription.frame.height
+        
+        subAreaView.clipsToBounds = true
+        subAreaView.layer.cornerRadius = 10.0
+        subAreaTableViewHeightConstraint.constant = CGFloat(subAreasAndCrags.count * 63)
+        subAreaViewHeightConstraint.constant = subAreaTableViewHeightConstraint.constant + 70.5
+        
+        contentViewHeightConstraint.constant = 280 + descriptionViewHeight.constant + subAreaViewHeightConstraint.constant
     }
     
     //MARK: - TableView Functions
