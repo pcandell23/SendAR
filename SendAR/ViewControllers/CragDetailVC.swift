@@ -69,16 +69,13 @@ class CragDetailVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, UI
         formatViews()
     }
     
-    override func viewWillLayoutSubviews() {
-        cragDescription.sizeToFit()
-    }
-    
     func formatViews() {
         cragMap.clipsToBounds = true
         cragMap.layer.cornerRadius = 10.0
         
         descriptionView.clipsToBounds = true
         descriptionView.layer.cornerRadius = 10.0
+        
         let cragDescriptionLength = crag?.getDescription().height(withConstrainedWidth: 354, font: UIFont.systemFont(ofSize: 17.0))
         
         if crag != nil {

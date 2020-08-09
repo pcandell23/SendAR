@@ -90,16 +90,13 @@ class AreaDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         
     }
     
-    override func viewWillLayoutSubviews() {
-        areaDescription.sizeToFit()
-    }
-    
     func formatViews() {
         areaMap.clipsToBounds = true
         areaMap.layer.cornerRadius = 10.0
         
         descriptionView.clipsToBounds = true
         descriptionView.layer.cornerRadius = 10.0
+        
         let areaDescriptionLength = area?.getDescription().height(withConstrainedWidth: 354, font: UIFont.systemFont(ofSize: 17.0))
         
         if area != nil {
