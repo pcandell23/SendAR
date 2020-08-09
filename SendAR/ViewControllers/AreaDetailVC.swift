@@ -100,7 +100,7 @@ class AreaDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         let font = UIFont.systemFont(ofSize: 17.0)
         var areaDescriptionLength: CGFloat =  17.0
         if area != nil {
-            areaDescriptionLength = heightForView(text: area!.getDescription(), font: font, width: 354)
+            areaDescriptionLength = heightForView(text: area!.getDescription(), font: font, width: 364)
             descriptionViewHeight.constant = areaDescriptionLength + 51
         } else {
             descriptionViewHeight.constant = 88

@@ -21,7 +21,7 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="20.5" id="vPL-oM-34q"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>

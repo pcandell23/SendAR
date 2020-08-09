@@ -79,7 +79,7 @@ class CragDetailVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, UI
         let font = UIFont.systemFont(ofSize: 17.0)
         var cragDescriptionLength: CGFloat =  17.0
         if crag != nil {
-            cragDescriptionLength = heightForView(text: crag!.getDescription(), font: font, width: 354)
+            cragDescriptionLength = heightForView(text: crag!.getDescription(), font: font, width: 364)
             descriptionViewHeight.constant = cragDescriptionLength + 51 //71
         } else {
             descriptionViewHeight.constant = 88
