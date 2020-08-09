@@ -79,21 +79,18 @@ class CragDetailVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, UI
         
         descriptionView.clipsToBounds = true
         descriptionView.layer.cornerRadius = 10.0
-        let maximumLabelSize: CGSize = CGSize(width: 334, height: 9999)
-        let expectedLabelSize: CGSize = cragDescription.sizeThatFits(maximumLabelSize)
-        // create a frame that is filled with the UILabel frame data
-        var newFrame: CGRect = cragDescription.frame
-        // resizing the frame to calculated size
-        newFrame.size.height = expectedLabelSize.height
-        // put calculated frame into UILabel frame
-        cragDescription.frame = newFrame
+        let cragDescriptionLength = crag?.getDescription().height(withConstrainedWidth: 354, font: UIFont.systemFont(ofSize: 17.0))
         
-        descriptionViewHeight.constant = 69 + cragDescription.frame.height
+        if crag != nil {
+            descriptionViewHeight.constant = 71 + cragDescriptionLength!
+        } else {
+            descriptionViewHeight.constant = 88
+        }
         
         routesView.clipsToBounds = true
         routesView.layer.cornerRadius = 10.0
         routesTableViewHeightConstraint.constant = CGFloat(routes.count * 63)
-        routesViewHeightConstraint.constant = routesTableViewHeightConstraint.constant + 70.5
+        routesViewHeightConstraint.constant = routesTableViewHeightConstraint.constant + 41
         
         contentViewHeightConstraint.constant = 270 + descriptionViewHeight.constant + routesViewHeightConstraint.constant
     }

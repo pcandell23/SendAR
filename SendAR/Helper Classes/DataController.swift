@@ -117,7 +117,7 @@ class DataController: NSObject{
         c.addRoute(newRoute: routes[1])
 
         
-        areas.append(storeNewAreaInfo(moc: moc, newAreaName: "Yosemite Valley EX", latitude: "37.7272727", longitude: "-119.6251977", radius: 3000, subAreas: [areas[0]], superArea: nil, description: "The mecca of rock climbing, the birthplace of big wall, and the home of El Capitan"))
+        areas.append(storeNewAreaInfo(moc: moc, newAreaName: "Yosemite Valley EX", latitude: "37.7272727", longitude: "-119.6251977", radius: 3000, subAreas: [areas[0]], superArea: nil, description: "The mecca of rock climbing, the birthplace of big wall, and the home of El Capitan."))
         
         areas[0].setSuperArea(newSuperArea: areas[1])
         

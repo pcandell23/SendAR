@@ -46,21 +46,21 @@
                                                 </constraints>
                                             </mapView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o39-0s-mIt" userLabel="DescriptionView">
-                                                <rect key="frame" x="20" y="230" width="374" height="94.5"/>
+                                                <rect key="frame" x="20" y="230" width="374" height="72"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHD-XP-3Iu">
-                                                        <rect key="frame" x="20" y="15" width="334" height="24"/>
+                                                        <rect key="frame" x="10" y="10" width="354" height="26"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="24" id="HXa-PG-xWb"/>
+                                                            <constraint firstAttribute="height" constant="26" id="HXa-PG-xWb"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Area Description Text" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SXp-bN-gbO">
-                                                        <rect key="frame" x="20" y="49" width="334" height="25.5"/>
+                                                        <rect key="frame" x="10" y="41" width="354" height="21"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20.5" id="sEF-7D-yBl"/>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="sEF-7D-yBl"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
@@ -69,30 +69,30 @@
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="SXp-bN-gbO" secondAttribute="trailing" constant="20" id="658-ps-vgk"/>
-                                                    <constraint firstItem="SXp-bN-gbO" firstAttribute="leading" secondItem="o39-0s-mIt" secondAttribute="leading" constant="20" id="6FZ-fd-C7U"/>
-                                                    <constraint firstItem="JHD-XP-3Iu" firstAttribute="leading" secondItem="o39-0s-mIt" secondAttribute="leading" constant="20" id="8GA-eD-Rik"/>
-                                                    <constraint firstAttribute="trailing" secondItem="JHD-XP-3Iu" secondAttribute="trailing" constant="20" id="RmR-Sa-fyY"/>
-                                                    <constraint firstItem="JHD-XP-3Iu" firstAttribute="top" secondItem="o39-0s-mIt" secondAttribute="top" constant="15" id="hpq-dg-WTJ"/>
-                                                    <constraint firstAttribute="bottom" secondItem="SXp-bN-gbO" secondAttribute="bottom" constant="20" id="jGi-Xj-vHB"/>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="94.5" id="lFb-4t-G3y"/>
-                                                    <constraint firstItem="SXp-bN-gbO" firstAttribute="top" secondItem="JHD-XP-3Iu" secondAttribute="bottom" constant="10" id="lnP-Ln-Shd"/>
+                                                    <constraint firstAttribute="trailing" secondItem="SXp-bN-gbO" secondAttribute="trailing" constant="10" id="658-ps-vgk"/>
+                                                    <constraint firstItem="SXp-bN-gbO" firstAttribute="leading" secondItem="o39-0s-mIt" secondAttribute="leading" constant="10" id="6FZ-fd-C7U"/>
+                                                    <constraint firstItem="JHD-XP-3Iu" firstAttribute="leading" secondItem="o39-0s-mIt" secondAttribute="leading" constant="10" id="8GA-eD-Rik"/>
+                                                    <constraint firstAttribute="trailing" secondItem="JHD-XP-3Iu" secondAttribute="trailing" constant="10" id="RmR-Sa-fyY"/>
+                                                    <constraint firstItem="JHD-XP-3Iu" firstAttribute="top" secondItem="o39-0s-mIt" secondAttribute="top" constant="10" id="hpq-dg-WTJ"/>
+                                                    <constraint firstAttribute="bottom" secondItem="SXp-bN-gbO" secondAttribute="bottom" constant="10" id="jGi-Xj-vHB"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="72" id="lFb-4t-G3y"/>
+                                                    <constraint firstItem="SXp-bN-gbO" firstAttribute="top" secondItem="JHD-XP-3Iu" secondAttribute="bottom" constant="5" id="lnP-Ln-Shd"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rzl-c2-GdE" userLabel="ListView">
-                                                <rect key="frame" x="20" y="344.5" width="374" height="443.5"/>
+                                                <rect key="frame" x="20" y="322" width="374" height="466"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sub-Areas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pb9-5a-nSl">
-                                                        <rect key="frame" x="20" y="15" width="334" height="25.5"/>
+                                                        <rect key="frame" x="10" y="10" width="354" height="26"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="25.5" id="5cc-Jo-GDN"/>
+                                                            <constraint firstAttribute="height" constant="26" id="5cc-Jo-GDN"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QpX-uB-f04">
-                                                        <rect key="frame" x="10" y="50.5" width="354" height="383"/>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QpX-uB-f04">
+                                                        <rect key="frame" x="0.0" y="41" width="374" height="425"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="63" id="xXS-GZ-4ig"/>
@@ -101,14 +101,14 @@
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
-                                                    <constraint firstItem="QpX-uB-f04" firstAttribute="top" secondItem="pb9-5a-nSl" secondAttribute="bottom" constant="10" id="4Lf-sx-2iG"/>
-                                                    <constraint firstAttribute="trailing" secondItem="pb9-5a-nSl" secondAttribute="trailing" constant="20" id="5tv-Tc-gdb"/>
-                                                    <constraint firstItem="pb9-5a-nSl" firstAttribute="top" secondItem="Rzl-c2-GdE" secondAttribute="top" constant="15" id="Exf-Dv-yIe"/>
-                                                    <constraint firstAttribute="trailing" secondItem="QpX-uB-f04" secondAttribute="trailing" constant="10" id="FJs-C2-W5V"/>
+                                                    <constraint firstItem="QpX-uB-f04" firstAttribute="top" secondItem="pb9-5a-nSl" secondAttribute="bottom" constant="5" id="4Lf-sx-2iG"/>
+                                                    <constraint firstAttribute="trailing" secondItem="pb9-5a-nSl" secondAttribute="trailing" constant="10" id="5tv-Tc-gdb"/>
+                                                    <constraint firstItem="pb9-5a-nSl" firstAttribute="top" secondItem="Rzl-c2-GdE" secondAttribute="top" constant="10" id="Exf-Dv-yIe"/>
+                                                    <constraint firstAttribute="trailing" secondItem="QpX-uB-f04" secondAttribute="trailing" id="FJs-C2-W5V"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="138.5" id="QMG-U3-ORA"/>
-                                                    <constraint firstAttribute="bottom" secondItem="QpX-uB-f04" secondAttribute="bottom" constant="10" id="lZb-Ao-8RI"/>
-                                                    <constraint firstItem="QpX-uB-f04" firstAttribute="leading" secondItem="Rzl-c2-GdE" secondAttribute="leading" constant="10" id="myx-Qt-zH8"/>
-                                                    <constraint firstItem="pb9-5a-nSl" firstAttribute="leading" secondItem="Rzl-c2-GdE" secondAttribute="leading" constant="20" id="r4b-2g-Cp5"/>
+                                                    <constraint firstAttribute="bottom" secondItem="QpX-uB-f04" secondAttribute="bottom" id="lZb-Ao-8RI"/>
+                                                    <constraint firstItem="QpX-uB-f04" firstAttribute="leading" secondItem="Rzl-c2-GdE" secondAttribute="leading" id="myx-Qt-zH8"/>
+                                                    <constraint firstItem="pb9-5a-nSl" firstAttribute="leading" secondItem="Rzl-c2-GdE" secondAttribute="leading" constant="10" id="r4b-2g-Cp5"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Location Data Available" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIo-j0-ZTS">
