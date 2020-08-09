@@ -76,10 +76,11 @@ class CragDetailVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, UI
         descriptionView.clipsToBounds = true
         descriptionView.layer.cornerRadius = 10.0
         
-        let cragDescriptionLength = crag?.getDescription().height(withConstrainedWidth: 354, font: UIFont.systemFont(ofSize: 17.0))
-        
+        let font = UIFont.systemFont(ofSize: 17.0)
+        var cragDescriptionLength: CGFloat =  17.0
         if crag != nil {
-            descriptionViewHeight.constant = 71 + cragDescriptionLength!
+            cragDescriptionLength = heightForView(text: crag!.getDescription(), font: font, width: 354)
+            descriptionViewHeight.constant = cragDescriptionLength + 51 //71
         } else {
             descriptionViewHeight.constant = 88
         }
@@ -91,6 +92,17 @@ class CragDetailVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, UI
         
         contentViewHeightConstraint.constant = 270 + descriptionViewHeight.constant + routesViewHeightConstraint.constant
     }
+    
+    func heightForView(text:String, font:UIFont, width:CGFloat) -> CGFloat{
+           let label:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: width, height: CGFloat.greatestFiniteMagnitude))
+           label.numberOfLines = 0
+           label.lineBreakMode = NSLineBreakMode.byWordWrapping
+           label.font = font
+           label.text = text
+
+           label.sizeToFit()
+           return label.frame.height
+       }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return routes.count

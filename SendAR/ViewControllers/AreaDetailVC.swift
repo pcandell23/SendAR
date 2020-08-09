@@ -97,10 +97,11 @@ class AreaDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         descriptionView.clipsToBounds = true
         descriptionView.layer.cornerRadius = 10.0
         
-        let areaDescriptionLength = area?.getDescription().height(withConstrainedWidth: 354, font: UIFont.systemFont(ofSize: 17.0))
-        
+        let font = UIFont.systemFont(ofSize: 17.0)
+        var areaDescriptionLength: CGFloat =  17.0
         if area != nil {
-            descriptionViewHeight.constant = 71 + areaDescriptionLength!
+            areaDescriptionLength = heightForView(text: area!.getDescription(), font: font, width: 354)
+            descriptionViewHeight.constant = areaDescriptionLength + 51
         } else {
             descriptionViewHeight.constant = 88
         }
@@ -111,6 +112,17 @@ class AreaDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         subAreaViewHeightConstraint.constant = subAreaTableViewHeightConstraint.constant + 41
         
         contentViewHeightConstraint.constant = 270 + descriptionViewHeight.constant + subAreaViewHeightConstraint.constant
+    }
+    
+    func heightForView(text:String, font:UIFont, width:CGFloat) -> CGFloat{
+        let label:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: width, height: CGFloat.greatestFiniteMagnitude))
+        label.numberOfLines = 0
+        label.lineBreakMode = NSLineBreakMode.byWordWrapping
+        label.font = font
+        label.text = text
+
+        label.sizeToFit()
+        return label.frame.height
     }
     
     //MARK: - TableView Functions
@@ -171,21 +183,3 @@ class AreaDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         }
     }
 }
-
-//MARK: - Extensions
-extension String {
-    func height(withConstrainedWidth width: CGFloat, font: UIFont) -> CGFloat {
-        let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
-        let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
-
-        return ceil(boundingBox.height)
-    }
-
-    func width(withConstrainedHeight height: CGFloat, font: UIFont) -> CGFloat {
-        let constraintRect = CGSize(width: .greatestFiniteMagnitude, height: height)
-        let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
-
-        return ceil(boundingBox.width)
-    }
-}
-

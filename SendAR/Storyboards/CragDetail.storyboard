@@ -63,7 +63,7 @@
                                                     <constraint firstItem="57k-Bb-AhM" firstAttribute="leading" secondItem="n9G-Z7-fMD" secondAttribute="leading" constant="10" id="3SL-7F-FdT"/>
                                                     <constraint firstItem="57k-Bb-AhM" firstAttribute="top" secondItem="n9G-Z7-fMD" secondAttribute="top" constant="10" id="Azg-WZ-VQ8"/>
                                                     <constraint firstAttribute="bottom" secondItem="Vef-uq-alY" secondAttribute="bottom" constant="10" id="Fui-fU-vMY"/>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="72" id="cT3-vL-tVH"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="750" constant="72" id="cT3-vL-tVH"/>
                                                     <constraint firstItem="Vef-uq-alY" firstAttribute="leading" secondItem="n9G-Z7-fMD" secondAttribute="leading" constant="10" id="jFd-C6-Ic0"/>
                                                     <constraint firstItem="Vef-uq-alY" firstAttribute="top" secondItem="57k-Bb-AhM" secondAttribute="bottom" constant="5" id="reo-mX-jKX"/>
                                                     <constraint firstAttribute="trailing" secondItem="Vef-uq-alY" secondAttribute="trailing" constant="10" id="zPz-P5-nhG"/>
@@ -109,7 +109,7 @@
                                             <constraint firstAttribute="trailing" secondItem="yvW-kx-D0k" secondAttribute="trailing" constant="20" id="7av-Qt-xlm"/>
                                             <constraint firstItem="YEL-9F-hr9" firstAttribute="centerX" secondItem="S2F-db-LEm" secondAttribute="centerX" id="7e2-C1-yij"/>
                                             <constraint firstItem="n9G-Z7-fMD" firstAttribute="leading" secondItem="S2F-db-LEm" secondAttribute="leading" constant="20" id="IWZ-ac-EH7"/>
-                                            <constraint firstAttribute="height" constant="756" id="Jdy-PQ-zWQ"/>
+                                            <constraint firstAttribute="height" priority="750" constant="756" id="Jdy-PQ-zWQ"/>
                                             <constraint firstItem="yvW-kx-D0k" firstAttribute="top" secondItem="n9G-Z7-fMD" secondAttribute="bottom" constant="20" id="Oce-La-OKl"/>
                                             <constraint firstItem="yvW-kx-D0k" firstAttribute="leading" secondItem="S2F-db-LEm" secondAttribute="leading" constant="20" id="Rk7-y0-2Em"/>
                                             <constraint firstItem="YEL-9F-hr9" firstAttribute="centerY" secondItem="wQj-3t-yrD" secondAttribute="centerY" id="VuZ-gE-Q8E"/>
