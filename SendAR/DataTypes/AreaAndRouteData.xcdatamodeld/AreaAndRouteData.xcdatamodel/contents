@@ -23,6 +23,7 @@
         <attribute name="pitches" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="rating" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="routeDescription" optional="YES" attributeType="String"/>
+        <attribute name="routeLocation" optional="YES" attributeType="String"/>
         <attribute name="type" optional="YES" attributeType="String"/>
         <attribute name="uuid" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <relationship name="crag" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Crag" inverseName="routes" inverseEntity="Crag"/>
@@ -41,7 +42,7 @@
     <elements>
         <element name="Area" positionX="-63" positionY="-18" width="128" height="28"/>
         <element name="Crag" positionX="-54" positionY="0" width="128" height="58"/>
-        <element name="Route" positionX="-36" positionY="72" width="128" height="238"/>
+        <element name="Route" positionX="-36" positionY="72" width="128" height="253"/>
         <element name="TrackedRoute" positionX="-18" positionY="153" width="128" height="163"/>
     </elements>
 </model>

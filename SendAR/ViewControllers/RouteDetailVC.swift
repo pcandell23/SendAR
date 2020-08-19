@@ -10,6 +10,13 @@ import UIKit
 
 class RouteDetailVC: UIViewController {
 
+    @IBOutlet weak var infoView: UIView!
+    @IBOutlet weak var descriptionView: UIView!
+    @IBOutlet weak var locationView: UIView!
+    
+    @IBOutlet weak var descriptionViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var locationViewHeight: NSLayoutConstraint!
+    
     @IBOutlet weak var routeGrade: UILabel!
     @IBOutlet weak var routeRating: UILabel!
     @IBOutlet weak var routeDimensions: UILabel! //interpolated string of type, pitches and height
@@ -25,6 +32,8 @@ class RouteDetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        formatViews()
         
         if route != nil {
             self.title = route!.getName()
@@ -69,6 +78,60 @@ class RouteDetailVC: UIViewController {
     override func viewWillLayoutSubviews() {
         routeDescription.sizeToFit()
         routeLocation.sizeToFit()
+    }
+    
+    func formatViews() {
+        infoView.clipsToBounds = true
+        infoView.layer.cornerRadius = 10.0
+        
+        descriptionView.clipsToBounds = true
+        descriptionView.layer.cornerRadius = 10.0
+        
+        locationView.clipsToBounds = true
+        locationView.layer.cornerRadius = 10.0
+        
+        let font = UIFont.systemFont(ofSize: 17.0)
+        var routeDescriptionLength: CGFloat = 17.0
+        var routeLocationLength: CGFloat = 17.0
+        if route != nil {
+            if route!.getDescription() != "" {
+                routeDescriptionLength = heightForView(text: route!.getDescription(), font: font, width: 364)
+                descriptionViewHeight.constant = routeDescriptionLength + 51
+            } else {
+                descriptionViewHeight.constant = 72
+                routeDescription.text = "No Description"
+            }
+            
+            if route!.getLocation() != "" {
+                routeLocationLength = heightForView(text: route!.getLocation(), font: font, width: 364)
+                locationViewHeight.constant = routeLocationLength + 51
+            } else {
+                locationViewHeight.constant = 72
+                routeLocation.text = "No Location"
+            }
+        }
+        
+        routeImage.clipsToBounds = true
+        routeImage.layer.cornerRadius = 10.0
+        
+        routeShape.clipsToBounds = true
+        routeShape.layer.cornerRadius = 10.0
+        
+    }
+    
+    func heightForView(text:String, font:UIFont, width:CGFloat) -> CGFloat{
+        let label:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: width, height: CGFloat.greatestFiniteMagnitude))
+        label.numberOfLines = 0
+        label.lineBreakMode = NSLineBreakMode.byWordWrapping
+        label.font = font
+        label.text = text
+
+        label.sizeToFit()
+        return label.frame.height
+    }
+    
+    @IBAction func exitButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
 
