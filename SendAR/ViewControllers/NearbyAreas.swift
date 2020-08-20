@@ -18,8 +18,8 @@ class NearbyAreasViewController: UIViewController, UITableViewDelegate, UITableV
     
     var areas: [Area] = []
     var crags: [Crag] = []
-    var nearbyAreasAndCrags = [AnyObject]()
-    var filteredList: [AnyObject]!
+    var nearbyAreasAndCrags = [Area]()
+    var filteredList: [Area]!
     
     var areaIndex: Int = 0
     
@@ -35,14 +35,6 @@ class NearbyAreasViewController: UIViewController, UITableViewDelegate, UITableV
         nearbyAreasTableView.delegate = self
         nearbyAreasTableView.dataSource = self
         fetchAreas()
-        
-        for each in areas {
-            nearbyAreasAndCrags.append(each)
-        }
-        for each in crags {
-            nearbyAreasAndCrags.append(each)
-        }
-        
         filteredList = nearbyAreasAndCrags
     
     }
@@ -55,15 +47,8 @@ class NearbyAreasViewController: UIViewController, UITableViewDelegate, UITableV
             filteredList = nearbyAreasAndCrags
         } else {
             for areaOrCrag in nearbyAreasAndCrags {
-                //this part doesnt yet work
-                if let indexIsCrag = areaOrCrag as? Crag {
-                    if indexIsCrag.getName().lowercased().contains(searchText.lowercased()) {
-                        filteredList.append(areaOrCrag)
-                    }
-                } else if let indexIsArea = areaOrCrag as? Area {
-                    if indexIsArea.getName().lowercased().contains(searchText.lowercased()) {
-                        filteredList.append(areaOrCrag)
-                    }
+               if areaOrCrag.getName().lowercased().contains(searchText.lowercased()) {
+                   filteredList.append(areaOrCrag)
                 }
             }
         }
@@ -81,30 +66,28 @@ class NearbyAreasViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if self.filteredList[indexPath.row] is Area  {
+        if self.filteredList[indexPath.row] is Crag {
+            let cragCell = tableView.dequeueReusableCell(withIdentifier: "CragCell", for: indexPath) as! CragCell
+            
+            cragCell.cragName.text          = (filteredList[indexPath.row] as! Crag).getName()
+            cragCell.cragProximity.text     = cragCell.getProximity()
+            cragCell.numberOfRoutes.text    = String((filteredList[indexPath.row] as! Crag).routeCount()) + " routes"
+            
+            return cragCell
+        } else {
             let areaCell = tableView.dequeueReusableCell(withIdentifier: "AreaCell", for: indexPath) as! AreaCell
             
-            areaCell.areaName.text          = (filteredList[indexPath.row] as! Area).getName()
+            areaCell.areaName.text          = (filteredList[indexPath.row] ).getName()
             areaCell.areaProximity.text     = areaCell.getProximity()
-            if (filteredList[indexPath.row] as! Area).subAreaCount() > 0 {
-                areaCell.subAreasLabel.text = String((filteredList[indexPath.row] as! Area).subAreaCount()) + " sub-areas"
+            if (filteredList[indexPath.row] ).subAreaCount() > 0 {
+                areaCell.subAreasLabel.text = String((filteredList[indexPath.row] ).subAreaCount()) + " sub-areas"
             } else {
                 areaCell.subAreasLabel.text = "No sub-areas"
             }
             
             return areaCell
             
-        } else if self.filteredList[indexPath.row] is Crag {
-            let cragCell = tableView.dequeueReusableCell(withIdentifier: "CragCell", for: indexPath) as! CragCell
-            
-            cragCell.cragName.text          = (filteredList[indexPath.row] as! Crag).getName()
-            cragCell.cragProximity.text     = cragCell.getProximity()
-            cragCell.numberOfRoutes.text    = String((filteredList[indexPath.row] as! Crag).routeCount())
-            
-            return cragCell
         }
-        
-        return UITableViewCell()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -112,11 +95,11 @@ class NearbyAreasViewController: UIViewController, UITableViewDelegate, UITableV
         if segue.identifier == "NearbyAreasToArea"{
             let navVC = segue.destination as! UINavigationController
             let vc = navVC.viewControllers.first as! AreaDetailVC
-            vc.area = areas[areaIndex]
+            vc.area = filteredList[areaIndex]
         } else if segue.identifier == "NearbyAreasToCrag"{
             let navVC = segue.destination as! UINavigationController
             let vc = navVC.viewControllers.first as! CragDetailVC
-            vc.crag = areas[areaIndex] as? Crag
+            vc.crag = filteredList[areaIndex] as? Crag
         }
     }
     
@@ -125,7 +108,7 @@ class NearbyAreasViewController: UIViewController, UITableViewDelegate, UITableV
         tableView.deselectRow(at: indexPath, animated: true)
         areaIndex = indexPath.row
         
-        if type(of: areas[areaIndex]) == Crag.self{
+        if type(of: filteredList[areaIndex]) == Crag.self{
             performSegue(withIdentifier: "NearbyAreasToCrag", sender: cell)
         } else {
             performSegue(withIdentifier: "NearbyAreasToArea", sender: cell)
@@ -149,12 +132,8 @@ class NearbyAreasViewController: UIViewController, UITableViewDelegate, UITableV
         }
         
         if fetched != nil {
-            areas = fetched!
+            nearbyAreasAndCrags = fetched!
         }
-    }
-    
-    func fetchCrags() {
-        //TODO
     }
     
 }

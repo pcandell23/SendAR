@@ -21,6 +21,15 @@ class AreaNavC: UINavigationController{
 
 class AreaDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource, MKMapViewDelegate {
     
+    @IBOutlet weak var contentViewHeightConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var descriptionView: UIView!
+    @IBOutlet weak var descriptionViewHeight: NSLayoutConstraint!
+    
+    @IBOutlet weak var subAreaView: UIView!
+    @IBOutlet weak var subAreaViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var subAreaTableViewHeightConstraint: NSLayoutConstraint!
+    
     @IBOutlet weak var areaName: UINavigationItem!
     @IBOutlet weak var areaDescription: UILabel!
     @IBOutlet weak var subAreaTableView: UITableView!
@@ -76,10 +85,44 @@ class AreaDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         for each in crags {
             subAreasAndCrags.append(each)
         }
+        
+        formatViews()
+        
     }
     
-    override func viewWillLayoutSubviews() {
-        areaDescription.sizeToFit()
+    func formatViews() {
+        areaMap.clipsToBounds = true
+        areaMap.layer.cornerRadius = 10.0
+        
+        descriptionView.clipsToBounds = true
+        descriptionView.layer.cornerRadius = 10.0
+        
+        let font = UIFont.systemFont(ofSize: 17.0)
+        var areaDescriptionLength: CGFloat =  17.0
+        if area != nil {
+            areaDescriptionLength = heightForView(text: area!.getDescription(), font: font, width: 364)
+            descriptionViewHeight.constant = areaDescriptionLength + 51
+        } else {
+            descriptionViewHeight.constant = 88
+        }
+        
+        subAreaView.clipsToBounds = true
+        subAreaView.layer.cornerRadius = 10.0
+        subAreaTableViewHeightConstraint.constant = CGFloat(subAreasAndCrags.count * 63)
+        subAreaViewHeightConstraint.constant = subAreaTableViewHeightConstraint.constant + 41
+        
+        contentViewHeightConstraint.constant = 270 + descriptionViewHeight.constant + subAreaViewHeightConstraint.constant
+    }
+    
+    func heightForView(text:String, font:UIFont, width:CGFloat) -> CGFloat{
+        let label:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: width, height: CGFloat.greatestFiniteMagnitude))
+        label.numberOfLines = 0
+        label.lineBreakMode = NSLineBreakMode.byWordWrapping
+        label.font = font
+        label.text = text
+
+        label.sizeToFit()
+        return label.frame.height
     }
     
     //MARK: - TableView Functions
