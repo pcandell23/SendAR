@@ -50,6 +50,7 @@
 		961F056324AA6517006DE4C5 /* MyAreasVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961F056224AA6517006DE4C5 /* MyAreasVC.swift */; };
 		961F056524AA658F006DE4C5 /* ARviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961F056424AA658F006DE4C5 /* ARviewVC.swift */; };
 		961F056724AA66FC006DE4C5 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961F056624AA66FC006DE4C5 /* SettingsVC.swift */; };
+		9643F11D24DA21360033A764 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9643F11C24DA21360033A764 /* Line.swift */; };
 		967A62F524C614DF00890267 /* areaCragRouteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967A62F424C614DF00890267 /* areaCragRouteTests.swift */; };
 		9694582C24B571430093D943 /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694582B24B571430093D943 /* Area.swift */; };
 		9694582E24B571580093D943 /* Crag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694582D24B571580093D943 /* Crag.swift */; };
@@ -149,6 +150,7 @@
 		961F056224AA6517006DE4C5 /* MyAreasVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAreasVC.swift; sourceTree = "<group>"; };
 		961F056424AA658F006DE4C5 /* ARviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARviewVC.swift; sourceTree = "<group>"; };
 		961F056624AA66FC006DE4C5 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		9643F11C24DA21360033A764 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		967A62F424C614DF00890267 /* areaCragRouteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = areaCragRouteTests.swift; sourceTree = "<group>"; };
 		9694582B24B571430093D943 /* Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
 		9694582D24B571580093D943 /* Crag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crag.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				40EAF91C24B627C600CB7C08 /* Alert.swift */,
 				96A6431224C4FBCB00226EEC /* SceneLocationViewExtension.swift */,
 				400E6B7F24D37EDC00E618BA /* UIView+Snapshot.swift */,
+				9643F11C24DA21360033A764 /* Line.swift */,
 			);
 			path = "Helper Classes";
 			sourceTree = "<group>";
@@ -593,6 +596,7 @@
 				40EAA79324A8152300F41366 /* SceneDelegate.swift in Sources */,
 				96A6430D24C0E32400226EEC /* SceneLocationEstimate+Extensions.swift in Sources */,
 				9694583024B571610093D943 /* Route.swift in Sources */,
+				9643F11D24DA21360033A764 /* Line.swift in Sources */,
 				961F056724AA66FC006DE4C5 /* SettingsVC.swift in Sources */,
 				404FDE1424AEA524006AA33E /* NearbyAreas.swift in Sources */,
 				96A6430B24C0E32400226EEC /* LocationManager.swift in Sources */,
@@ -779,13 +783,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A3UJWUP8W2;
+				DEVELOPMENT_TEAM = 9B6C5XW645;
 				INFOPLIST_FILE = SendAR/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.SendAR.SendARB;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SendAR.SendAR;
 				PRODUCT_NAME = SendAR;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -797,13 +802,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A3UJWUP8W2;
+				DEVELOPMENT_TEAM = 9B6C5XW645;
 				INFOPLIST_FILE = SendAR/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.SendAR.SendARB;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SendAR.SendAR;
 				PRODUCT_NAME = SendAR;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

@@ -125,12 +125,15 @@ extension TrackedRoute {
     }
     
     func parseCSVString(csvStr: String) -> [[String]]{
-           let subs = csvStr.components(separatedBy: "\n")
-           var parsed = [[String]]()
-           for s in subs{
-               parsed.append(s.components(separatedBy: ", "))
-           }
-           return parsed
+        let subs = csvStr.components(separatedBy: "\n")
+        var parsed = [[String]]()
+        for s in subs{
+            parsed.append(s.components(separatedBy: ", "))
+        }
+        if parsed[parsed.count-1] == [""]{
+            parsed.removeLast()
+        }
+        return parsed
     }
     
     
@@ -154,6 +157,22 @@ extension TrackedRoute {
         AppDelegate.shared().dataController!.saveContext()
         
         return newTrackedRoute
+    }
+    
+    public static func fetchTrackedRoutes(/* TODO: Add in options */) -> [TrackedRoute]?{
+        let moc = AppDelegate.shared().dataController?.persistentContainer.viewContext
+        if moc == nil{
+            print("Failed to fetch tracked routes.")
+            return nil
+        }
+        let request = NSFetchRequest<TrackedRoute>(entityName: "TrackedRoute")
+        var fetched: [TrackedRoute]?
+        do {
+            fetched = try moc?.fetch(request)
+        } catch {
+            print("Could not fetch. \(error)")
+        }
+        return fetched
     }
     
 }

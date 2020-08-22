@@ -16,12 +16,19 @@ open class AnnotationNode: SCNNode {
     public var view: UIView?
     public var image: UIImage?
     public var layer: CALayer?
+    
+    //Added for SendAR by Peter Candell
+    public var line: SCNGeometry?
 
-    public init(view: UIView?, image: UIImage?, layer: CALayer? = nil) {
+    //Added ", line: SCNGeometry? = nil" for SendAR by Peter Candell
+    public init(view: UIView?, image: UIImage?, layer: CALayer? = nil, line: SCNGeometry? = nil) {
         super.init()
         self.view = view
         self.image = image
         self.layer = layer
+        
+        //Added for SendAR by Peter Candell
+        self.line = line
     }
 
     required public init?(coder aDecoder: NSCoder) {

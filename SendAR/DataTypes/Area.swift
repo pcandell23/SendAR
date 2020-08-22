@@ -187,5 +187,21 @@ extension Area {
         
         return newArea
     }
+    
+    public static func fetchTrackedRoutes(/* TODO: Add in options */) -> [Area]?{
+        let moc = AppDelegate.shared().dataController?.persistentContainer.viewContext
+        if moc == nil{
+            print("Failed to fetch areas.")
+            return nil
+        }
+        let requestAreas = NSFetchRequest<Area>(entityName: "Area")
+        var fetched: [Area]?
+        do {
+            fetched = try moc?.fetch(requestAreas)
+        } catch {
+            print("Could not fetch. \(error)")
+        }
+        return fetched
+    }
 }
 

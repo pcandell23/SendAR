@@ -14,6 +14,7 @@ import MapKit
 
 class ARViewController: UIViewController {
     
+    let delegate = AppDelegate.shared()
     var locationCheck: LocationChecker
     var sceneLocationView = SceneLocationView()
     
@@ -25,12 +26,14 @@ class ARViewController: UIViewController {
         
         sceneLocationView.run()
         
-        sceneLocationView.addRoute(locations: casa, name: "Casa")
-        sceneLocationView.addRoute(locations: royalArches, name: "RoyalArches")
-        print(sceneLocationView.routes)
+        //sceneLocationView.addRoute(locations: casa, name: "Casa")
+        //sceneLocationView.addRoute(locations: royalArches, name: "RoyalArches")
+        //print(sceneLocationView.routes)
         
-        sceneLocationView.drawRoute(name: "Casa")
-        sceneLocationView.drawRoute(name: "RoyalArches")
+        //sceneLocationView.drawRoute(name: "Casa")
+        //sceneLocationView.drawRoute(name: "RoyalArches")
+        
+        showLogBookRoutes()
         
         view.addSubview(sceneLocationView)
     }
@@ -51,7 +54,19 @@ class ARViewController: UIViewController {
         super.init(coder: aDecoder)
     }
     
-    
+
+    func showLogBookRoutes(){
+        let logged = TrackedRoute.fetchTrackedRoutes()
+        if logged == nil {
+            return
+        }
+        for r in logged!{
+            sceneLocationView.addRoute(locations: r.getParsedData(), name: r.getName())
+            sceneLocationView.drawRoute(name: r.getName())
+        }
+        
+    }
+
     
    
     

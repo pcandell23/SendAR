@@ -8,6 +8,7 @@
 import Foundation
 import SceneKit
 import CoreLocation
+import ARKit
 
 /// A `LocationNode` which has an attached `AnnotationNode`.
 open class LocationAnnotationNode: LocationNode {
@@ -18,7 +19,7 @@ open class LocationAnnotationNode: LocationNode {
     /// The default value of 1.1 places the label at a pleasing height above the node.
     /// To draw the label exactly on the true location, use a value of 0. To draw it below the true location,
     /// use a negative value.
-    public var annotationHeightAdjustmentFactor = 1.1
+    public var annotationHeightAdjustmentFactor = 0
 
     public init(location: CLLocation?, image: UIImage) {
         let plane = SCNPlane(width: image.size.width / 100, height: image.size.height / 100)
@@ -121,6 +122,25 @@ open class LocationAnnotationNode: LocationNode {
 
         onCompletion()
     }
+    
+    //Added for SendAR by Peter Candell
+    public init(location: CLLocation?, line: SCNNode) {
+        
+        annotationNode = AnnotationNode(view: nil, image: nil, layer: nil)
+        annotationNode.geometry = line.geometry
+        annotationNode.removeFlicker()
+        annotationNode.eulerAngles = line.eulerAngles
+
+        super.init(location: location)
+
+        let billboardConstraint = SCNBillboardConstraint()
+        billboardConstraint.freeAxes = SCNBillboardAxis.Y
+        constraints = [billboardConstraint]
+
+        addChildNode(annotationNode)
+    }
+    
+    //End Added -----------------------------------------------------------------------
 }
 
 // MARK: - Image from View
