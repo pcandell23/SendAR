@@ -40,11 +40,8 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         super.init(coder: aDecoder)
     }
     
-    //hides nav bar on map
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     //shows nav bar on next page

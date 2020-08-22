@@ -10,10 +10,20 @@ import UIKit
 import MapKit
 
 class CragDetailVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var contentViewHeightConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var descriptionView: UIView!
+    @IBOutlet weak var descriptionViewHeight: NSLayoutConstraint!
+    
+    @IBOutlet weak var routesView: UIView!
+    @IBOutlet weak var routesViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var routesTableViewHeightConstraint: NSLayoutConstraint!
 
     var cragName: String = "Crag Name"
     var crag: Crag? = nil
     var routes: [Route] = []
+    
     
     @IBOutlet weak var cragDescription: UILabel!
     @IBOutlet weak var cragMap: MKMapView!
@@ -56,11 +66,43 @@ class CragDetailVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, UI
         routeTable.delegate = self
         routeTable.dataSource = self
         
+        formatViews()
     }
     
-    override func viewWillLayoutSubviews() {
-        cragDescription.sizeToFit()
+    func formatViews() {
+        cragMap.clipsToBounds = true
+        cragMap.layer.cornerRadius = 10.0
+        
+        descriptionView.clipsToBounds = true
+        descriptionView.layer.cornerRadius = 10.0
+        
+        let font = UIFont.systemFont(ofSize: 17.0)
+        var cragDescriptionLength: CGFloat =  17.0
+        if crag != nil {
+            cragDescriptionLength = heightForView(text: crag!.getDescription(), font: font, width: 364)
+            descriptionViewHeight.constant = cragDescriptionLength + 51 //71
+        } else {
+            descriptionViewHeight.constant = 88
+        }
+        
+        routesView.clipsToBounds = true
+        routesView.layer.cornerRadius = 10.0
+        routesTableViewHeightConstraint.constant = CGFloat(routes.count * 63)
+        routesViewHeightConstraint.constant = routesTableViewHeightConstraint.constant + 41
+        
+        contentViewHeightConstraint.constant = 270 + descriptionViewHeight.constant + routesViewHeightConstraint.constant
     }
+    
+    func heightForView(text:String, font:UIFont, width:CGFloat) -> CGFloat{
+           let label:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: width, height: CGFloat.greatestFiniteMagnitude))
+           label.numberOfLines = 0
+           label.lineBreakMode = NSLineBreakMode.byWordWrapping
+           label.font = font
+           label.text = text
+
+           label.sizeToFit()
+           return label.frame.height
+       }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return routes.count
