@@ -102,7 +102,7 @@ class CragDetailVC: UIViewController, MKMapViewDelegate, UITableViewDelegate, UI
 
            label.sizeToFit()
            return label.frame.height
-       }
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return routes.count
